@@ -6,7 +6,7 @@ AI-driven UX simulation engine that deploys LLM-powered autonomous agents (“pe
 
 ## Complete flow (high level)
 
-```mermaid
+```
 flowchart TB
     subgraph CLI["throngs (CLI)"]
         A[Parse --url, --goal?, --personas, etc.]
