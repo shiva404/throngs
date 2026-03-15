@@ -1,0 +1,382 @@
+═══════════════════════════════════════════════════════════
+  CLEARWATER ACCOUNTING SERVICES — BOOKKEEPER DIARY
+  Martha Henderson | Wednesday, Week 1
+  "Patience is not the absence of frustration —
+   it's what you do while you wait on hold."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      9h 30min
+Clients worked on:       1  (Parker Dental)
+QB Online sessions:      3  (101 min total)
+QB Payroll issues:       1  (required support call)
+Hold time with QB Support: 41 minutes
+Transactions reviewed:   28
+Reports generated:       7
+Printed reports filed:   8
+
+07:45 AM - 08:15 AM  [30 min] MORNING SETUP
+  Early start. Made coffee, pulled the Parker Dental binder — my thickest
+  client binder, nearly two inches. Dr. Karen Parker has been a Clearwater
+  client for eleven years. She came over to QBO about eighteen months ago.
+  She also uses QBO's built-in Payroll module, which is — and I want to be
+  careful how I say this — functional but finicky.
+
+  Parker Dental vital stats:
+    - Checking account: First National Bank of Clearwater
+    - February ending balance: $41,227.88
+    - March statement should show ending balance (I'll pull it)
+    - Payroll: biweekly, last run 03/15, next was 03/31
+    - Employees: 7 (Dr. Parker, Dr. Nguyen, 2 dental assistants, 2 hygienists,
+      1 office manager/receptionist)
+    - Gross payroll per period: ~$14,400 (varies slightly with part-time hours)
+    - Dental suppliers on AP: Patterson Dental, Henry Schein, local labs
+
+  Dr. Parker emailed Monday saying: "Martha, my CPA called about Q1 taxes.
+  Can you make sure everything is tidy before end of week? He wants the
+  P&L and balance sheet." That's what today is for.
+
+  Also, she mentioned she "got a notice from QuickBooks about payroll taxes."
+  That's what worries me.
+
+08:15 AM - 09:10 AM  [55 min] QB ONLINE — PARKER DENTAL (SESSION 1)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:15 AM – 09:10 AM, 55 min]
+
+  Logged in, switched to Parker Dental. First thing: checked payroll.
+  Payroll > Overview. The payroll dashboard showed: "Last payroll 03/15/2024
+  — Completed." Under "Upcoming" it showed: "03/31 payroll — ATTENTION
+  REQUIRED."
+
+  Clicked into the 03/31 payroll. It should have been auto-processed — Dr.
+  Parker has autopay enabled. But the status showed "On Hold - Tax Setup
+  Incomplete." A yellow warning banner said: "Federal unemployment tax (FUTA)
+  rate for Q1 may need verification. Please review payroll tax settings."
+
+  I know what FUTA is. I know the rate is 6.0% on the first $7,000 of wages
+  per employee. What I do not know is why QBO is flagging it as "setup
+  incomplete" when it was set up correctly eighteen months ago.
+
+  I clicked the "Review" button. It took me to a Payroll Tax screen showing
+  the FUTA rate as... blank. The field was empty. The SUTA (state unemployment)
+  rate was there (2.7% for Florida). The federal withholding tables were there.
+  But the FUTA rate field was empty.
+
+  I tried to enter 6.0% manually. The field accepted it. I clicked Save. Got
+  a message: "Tax rate changes require verification. Please contact QuickBooks
+  Payroll Support or have your payroll admin approve this change."
+
+  Payroll admin. That would be Dr. Parker herself, since it's her company file.
+  I don't have admin rights on the payroll module — I have accountant access,
+  which is different. In Desktop, with the old payroll add-on, I had full
+  access. Here there's an "accountant" permission level that doesn't allow
+  payroll tax rate changes. This is a known limitation that I accept, but
+  it means I need to get Dr. Parker on the phone.
+
+  At 08:50 I called Dr. Karen Parker. She was with a patient. The receptionist
+  (Angela) took a message. I explained it was about payroll — urgent, needs
+  to be resolved today. She said Dr. Parker had a 9:30 opening.
+
+09:10 AM - 09:30 AM  [20 min] CONTINUING WHILE WAITING — TRANSACTION REVIEW
+  While waiting for Dr. Parker to call, I reviewed the March transactions that
+  had auto-categorized through the bank feed. Parker Dental's First National
+  account IS connected to QBO properly — no OAuth errors here, thankfully.
+
+  Reviewed 28 pulled transactions. Most looked correct. Found one issue:
+    03/14: "HENRY SCHEIN #4421" — $1,847.20 — auto-categorized as "Office
+    Supplies." This is dental supplies, which should go under "Medical/Dental
+    Supplies" (a separate COGS-adjacent account Dr. Parker uses for
+    professional supplies). Fixed the categorization.
+
+  Also flagged: a $500.00 transfer on 03/20 from the checking to a savings
+  account. QBO had left this as "Uncategorized." This is a regular monthly
+  transfer Dr. Parker does to her equipment reserve fund. I coded it as a
+  transfer between the two accounts in QBO (not an expense). Making sure
+  it doesn't inflate expenses or show as income on the P&L.
+
+09:30 AM - 09:45 AM  [15 min] CALL — DR. PARKER RE: PAYROLL
+  Dr. Parker called at 9:33. Explained the FUTA situation. She was puzzled
+  — "Didn't we set that up when we switched to QBO?" Yes, we did. Something
+  must have happened in an update or the rate field got cleared somehow.
+
+  I walked her through it: Payroll > Payroll Settings > Tax Setup > Federal
+  Unemployment. She navigated there on her phone (she uses the QBO mobile app).
+  She could see the blank FUTA field. She entered 6.0%. She clicked Approve.
+  She got a green confirmation. Total time: 12 minutes. Good.
+
+  But now I need to check: did any prior payroll runs in Q1 calculate FUTA
+  incorrectly? If the field was blank, did QBO omit FUTA from those runs?
+
+09:45 AM - 10:30 AM  [45 min] QB ONLINE — PARKER DENTAL — PAYROLL AUDIT
+
+  Still in QBO. Payroll > Payroll History. Filtered for Q1 2024 (Jan–Mar).
+  Four payroll runs:
+    - 01/12/2024  — $14,388.00 gross
+    - 01/26/2024  — $14,392.50 gross
+    - 02/09/2024  — $14,210.00 gross
+    - 02/23/2024  — $14,388.00 gross
+    - 03/08/2024  — $14,388.00 gross
+    - 03/15/2024  — $14,407.20 gross  (part-time hours varied slightly)
+    - 03/31/2024  — ON HOLD (still not processed)
+
+  Six completed runs. I clicked into each and looked at the tax detail line
+  by line. FUTA line: on all six runs it showed $0.00. The rate field was
+  indeed blank for all of Q1.
+
+  Deep breath. This is a real problem. FUTA should have been withheld and
+  remitted. FUTA is an employer-only tax (not withheld from employee wages),
+  so the employees aren't affected. But Dr. Parker owes FUTA for the year.
+  The total Q1 gross wages were approximately $85,773.70. FUTA at 6.0% on
+  first $7,000 per employee per year...
+
+  Let me calculate manually (I always double-check payroll math on paper):
+  7 employees × $7,000 = $49,000 total FUTA-taxable wages maximum per year.
+  For Q1, all employees are still under $7,000 for the year if we spread
+  $85,773.70 across 7 employees — average $12,248 per employee for the quarter.
+  But FUTA only applies to first $7,000 per employee per YEAR.
+
+  Checking individual wages from the payroll detail:
+    Dr. Parker:         $22,500.00 Q1  → FUTA taxable: $7,000
+    Dr. Nguyen:         $18,750.00 Q1  → FUTA taxable: $7,000
+    Office Mgr:          $9,750.00 Q1  → FUTA taxable: $7,000
+    Hygienist 1:         $9,750.00 Q1  → FUTA taxable: $7,000
+    Hygienist 2:         $9,750.00 Q1  → FUTA taxable: $7,000
+    Dental Asst. 1:      $7,500.00 Q1  → FUTA taxable: $7,000
+    Dental Asst. 2:      $8,773.70 Q1  → FUTA taxable: $7,000
+  Total FUTA taxable wages Q1: $49,000.00
+  FUTA owed: $49,000 × 6.0% = $2,940.00
+  Less standard 5.4% FUTA credit (for SUTA paid): $49,000 × 5.4% = $2,646.00
+  Net FUTA liability: $294.00
+
+  That's actually a manageable number — the net effective FUTA rate after the
+  credit is just 0.6%. But it still needs to be paid and the 941/940 forms
+  will need to reflect this. This is beyond my role — I handle books, not
+  payroll tax filings. But I need to flag it to both Dr. Parker and her CPA.
+
+  At this point I needed to call QBO Payroll Support to understand why the
+  FUTA field got cleared and whether the past payroll runs can be retroactively
+  corrected in QBO's payroll records (or if corrections need to happen at the
+  federal level via 941-X amendment).
+
+10:30 AM - 11:15 AM  [45 min] QB PAYROLL SUPPORT — HOLD & CALL
+
+  Called QB Payroll Support: 1-800-XXX-XXXX (number from QBO's Help > Contact
+  Us page).
+
+  Hold music. And hold. And hold. I timed it: 41 minutes on hold.
+
+  I put the phone on speaker, muted myself, and worked on Parker Dental's
+  accounts payable while waiting. Reviewed AP: two bills outstanding from
+  Patterson Dental and one from a local dental lab.
+
+  Finally connected at 11:09 with a support rep named "Jason." Explained the
+  situation: FUTA rate field was blank for all of Q1, payroll processed without
+  FUTA, need to know if QBO can retroactively apply the rate or if we need
+  amended filings.
+
+  Jason: "I'm showing your account was on QuickBooks Payroll Core. The FUTA
+  rate is auto-populated from the federal tax tables. It may have reset during
+  a system update in January."
+
+  Me: "Can you retroactively correct the six Q1 payroll runs?"
+
+  Jason: "The payroll runs are locked after payment. You'd need to create a
+  prior-period adjustment in QBO. But for federal filing purposes, your client
+  may need to work with a CPA or payroll specialist for 940 amendment."
+
+  Me: "So QBO can't fix its own error in the filings?"
+
+  Jason: "The 940 annual filing is done at year-end. Since we're in Q1, the
+  impact will be on the annual 940. We recommend consulting your tax
+  professional."
+
+  He then offered to "open a case" and send a technical review to the payroll
+  team. I said yes please. Case number: QB-20240403-88241. He said response
+  within 3–5 business days. I wrote this down, read it back, confirmed it.
+
+  At least I have a case number. In Desktop with the old payroll add-on, a
+  rep could walk me through a manual adjustment directly. Here the tools are
+  more constrained and I'm told to "consult a tax professional" for a problem
+  the software likely caused. Frustrating, but I documented everything.
+
+11:15 AM - 12:00 PM  [45 min] QB ONLINE — PARKER DENTAL (SESSION 2)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [11:15 AM – 12:00 PM, 45 min]
+
+  Back to the books. Focused on accounts payable review before moving to
+  reconciliation.
+
+  AP outstanding:
+    Patterson Dental — Inv. PD-22481   03/08   $3,214.40  (net 30 — due 04/08)
+    Patterson Dental — Inv. PD-22609   03/22   $1,876.55  (net 30 — due 04/22)
+    Henry Schein — Inv. HS-99021       03/14   $1,847.20  (net 30 — due 04/14)
+    Clearwater Dental Lab — Inv. CDL-  03/27   $642.00    (net 15 — due 04/11)
+    Total AP outstanding:              $7,580.15
+
+  All within terms. No past-due AP. Good.
+
+  Entered three bills I found in Dr. Parker's paper folder that hadn't been
+  entered yet:
+    - Clearwater Electric  03/31  $612.44  (Utilities)
+    - City Water           03/31  $188.20  (Utilities)
+    - Business insurance   03/01  $892.00  (Insurance Expense — monthly)
+
+  Also noted: Dr. Parker has a lease payment for her dental equipment that
+  goes out automatically on the 1st of each month — $1,450.00 to Clearwater
+  Capital Leasing. This was in the bank statement but had been categorized
+  by the auto-rule as "Equipment." This is wrong — it should be split between
+  principal (reduction of lease liability) and interest (interest expense).
+  I've set up this split before. The current balance sheet shows the lease
+  at $67,800.00 remaining. Interest portion this month: approximately $282.75
+  (roughly 5% annual rate on declining balance). Principal: $1,167.25.
+  Edited the transaction to split accordingly. In QBO you can split a
+  transaction in the banking screen by using the "Split" function — I've
+  learned this one. Took about five minutes.
+
+12:00 PM - 12:45 PM  [45 min] LUNCH
+  Ate at my desk again. Not proud of it. Spent part of lunch drafting a note
+  to send Dr. Parker and her CPA explaining the FUTA situation. I want it in
+  writing with the case number, the estimated liability ($294.00 net), and the
+  recommendation that the CPA review the 940 filing needs.
+
+12:45 PM - 02:00 PM  [75 min] QB ONLINE — PARKER DENTAL (SESSION 3)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [12:45 PM – 02:00 PM, 75 min]
+
+  Bank reconciliation. Accounting > Reconcile > Parker Dental Checking.
+  Statement ending balance: $38,114.09 (from the First National March PDF).
+  Beginning balance: $41,227.88.
+
+  Worked through the cleared items systematically. Deposits first:
+  Six payroll direct deposit batches were separate line items — noted that
+  QBO shows each payroll as one lump sum debit, not individual employee checks.
+  That's fine from a reconciliation standpoint.
+
+  Cleared all deposits and matched all major debits. One item I couldn't match:
+  a $175.00 debit on 03/25 labeled "FNB WIRE FEE 0325." Dr. Parker sent a
+  wire somewhere? I didn't have a record of this. Called her office — Angela
+  checked. Dr. Parker had wired a deposit to a dental conference registration
+  in Atlanta and forgot to tell me. (The full conference fee of $1,500 will be
+  on the April statement, but the wire fee of $175 hit in March.) I entered
+  the $175 as "Professional Development / Conference Fees." Went back to
+  reconcile.
+
+  Difference: $0.00. Reconciliation complete.
+
+  Generated Q1 reports:
+    - P&L January 1 – March 31, 2024 (accrual basis):
+        Revenue (patient billing):     $187,420.00
+        COGS (dental supplies/labs):    $32,814.30
+        Gross Profit:                  $154,605.70  (82.5% — typical for dental)
+        Payroll & Benefits:             $85,773.70  (6 runs; 7th pending)
+        Rent:                           $12,600.00  (3 months × $4,200)
+        Equipment Lease:                 $4,350.00  (3 months × $1,450)
+        Insurance:                       $2,676.00  (3 months)
+        Utilities:                       $2,417.88
+        Other Operating Expenses:        $3,841.22
+        Total Operating Exp:           $111,658.80
+        Net Income Q1:                  $42,946.90
+
+    - Balance Sheet as of 03/31/2024
+    - Q1 Payroll Summary
+    - AP Aging Summary
+    - AR Aging Summary (patient payments mostly handled by billing service,
+      but some self-pay AR: $8,243.00 outstanding)
+    - March Reconciliation Report
+    - March P&L (standalone)
+
+  Printed all seven reports. Eight pages total with the recon being two pages.
+  Filed in Parker Dental binder under Q1 2024 tab and March 2024 tab.
+
+  Note for CPA packet: I need to attach the FUTA note and the QB support case
+  number to the Q1 summary. Printed that as a cover memo.
+
+02:00 PM - 02:45 PM  [45 min] CORRESPONDENCE — PARKER DENTAL
+  Emailed Dr. Parker and CC'd her CPA (Goldstein & Associates):
+    - Attached: Q1 P&L, Balance Sheet, Payroll Summary
+    - Included written explanation of FUTA issue, estimated $294.00 liability,
+      QB case number QB-20240403-88241
+    - Recommended CPA review 940 filing requirements for Q1
+    - Noted 03/31 payroll still on hold — Dr. Parker will need to release it
+      now that FUTA rate is corrected. Reminded her to do this TODAY so
+      employees are paid on time.
+
+  Called Dr. Parker to make sure she saw the email and knew to release the
+  payroll. She had already done it (Angela walked her through it in the app).
+  Employees will be paid Thursday. Good.
+
+  Drafted and mailed physical report packet to Dr. Parker per her preference.
+  She likes having a paper copy "for the office files." I respect that.
+
+02:45 PM - 03:15 PM  [30 min] BREAK & ADMIN
+  Made a fresh pot of coffee. Filed the week's correspondence. Updated my
+  master client status log (a paper grid on my wall — client name, last
+  reconciliation date, next due, outstanding issues). Updated Parker Dental:
+    - March reconciliation: DONE
+    - Q1 reports: DONE
+    - Outstanding issue: FUTA — refer to CPA, QB case open
+    - 03/31 payroll: RELEASED 04/03
+
+03:15 PM - 04:15 PM  [60 min] PREP FOR THURSDAY — RIVERVIEW CAFÉ
+  Thursday is Riverview Café. This is a new client — Sylvia and Marco Benedetti,
+  husband and wife, opened the café in October. They have been keeping books
+  by hand on paper ledgers and a shoebox of receipts. They want to get onto
+  QBO. I'm setting them up.
+
+  I've already created their company file in QBO (done three weeks ago). The
+  Chart of Accounts is set up. What I haven't done yet: enter any actual
+  transactions. They gave me a banker's box of receipts covering October
+  through March — six months of paper records. Thursday I start entering them.
+
+  This is going to be slow. Six months of a busy café: food vendors, labor,
+  rent, utilities, insurance, equipment payments, daily sales receipts. I've
+  done this kind of retroactive entry before. It requires discipline and a
+  very systematic approach.
+
+  Organized the Benedetti box tonight: sorted receipts by month and category.
+  Estimated transaction count: 180–200 items for the six months. Thursday
+  I'll tackle October and November. That's maybe 60–70 entries if I'm lucky.
+
+04:15 PM - 05:15 PM  [60 min] END-OF-DAY NOTES
+  Wrote up my daily log. The FUTA issue took up most of the morning and will
+  require follow-up. I'm not panicking — it's a small liability and the CPA
+  can handle the 940 amendment. But it's one more example of QBO's payroll
+  module doing something quietly wrong that I only caught because I look closely.
+
+  Forty-one minutes on hold is not acceptable. I understand call centers are
+  busy. But this was a problem created by QBO's own system (rate field reset
+  during an update, apparently) and the solution was "call your tax professional."
+  Desktop Payroll had its quirks too, but at least the support reps had more
+  direct access to the payroll records and could walk you through corrections.
+
+END OF DAY — MARTHA'S REFLECTION
+───────────────────────────────────────────────────────────
+  Long day. Harder day than yesterday, mostly because of the payroll situation.
+  I know bookkeeping and I know accounting. I knew exactly what the problem was
+  the moment I saw the blank FUTA field — I just needed software access to fix
+  it, and the software said no.
+
+  That's the thing about QBO that nobody tells you when they're selling you the
+  upgrade from Desktop: you lose some control. In Desktop, I was the one in
+  charge. I had administrator access to everything. Here, there are "roles" and
+  "permissions" and certain things only the business owner can approve, even if
+  the bookkeeper is the one who knows what's actually wrong.
+
+  I don't doubt that the permission structure is there for a good reason —
+  probably to prevent fraud. But in a small business context where the
+  bookkeeper is trusted and the owner is busy filling cavities all day, it
+  slows everything down.
+
+  Dr. Parker is a good client and she handled it graciously. The books are
+  clean. The Q1 summary is done. The CPA has everything he needs. I'll call
+  it a win, even if it took 41 minutes of hold music to get there.
+
+  TO-DO FOR TOMORROW:
+  □ Riverview Café — begin retroactive entry: October & November (approx 60–70)
+  □ Riverview Café — set up bank accounts in QBO (they have two: checking +
+    savings, both at Suncoast Credit Union)
+  □ Riverview Café — confirm opening balances for October 1 with Sylvia
+  □ Check QB case QB-20240403-88241 for any response (don't expect one yet)
+  □ Remind Dr. Parker: confirm payroll direct deposits went through Thursday
+  □ Draft expense category cheat sheet for Dennis (still haven't done this)

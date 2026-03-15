@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Throngs — Agent State</title>
+  <style>
+    :root {
+      --bg: #1a1b26;
+      --panel: #24283b;
+      --accent: #7aa2f7;
+      --green: #9ece6a;
+      --yellow: #e0af68;
+      --red: #f7768e;
+      --text: #c0caf5;
+      --muted: #565f89;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 1.25rem;
+      margin: 0 0 1rem 0;
+      color: var(--accent);
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    @media (max-width: 800px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+    .panel {
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .panel h2 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 0 0 0.5rem 0;
+    }
+    /* Sims-style thought bubble */
+    .thought-wrap {
+      position: relative;
+      min-height: 100px;
+    }
+    .thought-bubble {
+      background: var(--panel);
+      border: 2px solid var(--accent);
+      border-radius: 20px;
+      padding: 1rem 1.25rem;
+      position: relative;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .thought-bubble::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 24px;
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 14px solid var(--accent);
+    }
+    .thought-bubble .empty { color: var(--muted); font-style: italic; }
+    /* Need bar (Sims-style frustration) */
+    .need-bar {
+      margin: 0.5rem 0;
+    }
+    .need-bar label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      margin-bottom: 0.25rem;
+    }
+    .need-bar .bar-track {
+      height: 12px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .need-bar .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      transition: width 0.3s ease, background 0.3s ease;
+    }
+    .need-bar.frustration .bar-fill {
+      background: linear-gradient(90deg, var(--green), var(--yellow), var(--red));
+    }
+    .need-bar.clutter .bar-fill {
+      background: var(--yellow);
+    }
+    /* Location / action */
+    .location {
+      font-size: 0.85rem;
+      word-break: break-all;
+      color: var(--muted);
+    }
+    .location strong { color: var(--text); }
+    .action-badge {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.25rem 0.6rem;
+      background: rgba(122, 162, 247, 0.2);
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: var(--accent);
+    }
+    /* Memory snapshot */
+    .memory-box {
+      font-size: 0.8rem;
+      max-height: 180px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .memory-box .session { margin-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.5rem; }
+    /* Status line */
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .status .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--muted);
+      animation: pulse 2s infinite;
+    }
+    .status.connected .dot { background: var(--green); }
+    .status.disconnected .dot { background: var(--red); }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    .step-badge {
+      background: rgba(255,255,255,0.08);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+    }
+    .outcome {
+      padding: 0.35rem 0.6rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .outcome.success { background: rgba(158, 206, 106, 0.2); color: var(--green); }
+    .outcome.failure { background: rgba(247, 118, 142, 0.2); color: var(--red); }
+  </style>
+</head>
+<body>
+  <h1>Throngs — Agent State</h1>
+  <div class="status disconnected" id="status">
+    <span class="dot"></span>
+    <span id="statusText">Connecting to stream…</span>
+    <span class="step-badge" id="stepBadge">Step 0 / 0</span>
+    <span id="outcome"></span>
+  </div>
+
+  <div class="layout">
+    <div class="main">
+      <div class="panel thought-wrap">
+        <h2>Thought</h2>
+        <div class="thought-bubble" id="thought">
+          <span class="empty">No agent state yet. Run throngs with --dashboard-url to stream.</span>
+        </div>
+      </div>
+      <div class="panel" style="margin-top: 1rem;">
+        <h2>Where I am</h2>
+        <div class="location" id="location">
+          <strong>URL</strong>: —<br />
+          <strong>Page</strong>: —
+        </div>
+        <div class="action-badge" id="actionBadge">—</div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="panel">
+        <h2>Frustration</h2>
+        <div class="need-bar frustration">
+          <label><span>Frustration</span><span id="frustLabel">0 / 50</span></label>
+          <div class="bar-track">
+            <div class="bar-fill" id="frustBar" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Clutter (perceived)</h2>
+        <div class="need-bar clutter">
+          <label><span>1–10</span><span id="clutterLabel">0</span></label>
+          <div class="bar-track">
+            <div class="bar-fill" id="clutterBar" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Mood</h2>
+        <div id="mood" style="font-size: 0.9rem;">—</div>
+      </div>
+      <div class="panel">
+        <h2>Goal</h2>
+        <div id="goal" style="font-size: 0.85rem; color: var(--muted);">—</div>
+      </div>
+      <div class="panel">
+        <h2>Memory snapshot</h2>
+        <div class="memory-box" id="memory">—</div>
+      </div>
+      <div class="panel">
+        <h2>Session notes</h2>
+        <div class="memory-box" id="sessionNotes">—</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const streamUrl = (function () {
+        const base = window.location.origin;
+        return base + '/stream';
+      })();
+
+      const statusEl = document.getElementById('status');
+      const statusText = document.getElementById('statusText');
+      const stepBadge = document.getElementById('stepBadge');
+      const outcomeEl = document.getElementById('outcome');
+      const thoughtEl = document.getElementById('thought');
+      const locationEl = document.getElementById('location');
+      const actionBadge = document.getElementById('actionBadge');
+      const frustLabel = document.getElementById('frustLabel');
+      const frustBar = document.getElementById('frustBar');
+      const clutterLabel = document.getElementById('clutterLabel');
+      const clutterBar = document.getElementById('clutterBar');
+      const moodEl = document.getElementById('mood');
+      const goalEl = document.getElementById('goal');
+      const memoryEl = document.getElementById('memory');
+      const sessionNotesEl = document.getElementById('sessionNotes');
+
+      function setConnected(ok) {
+        statusEl.classList.toggle('connected', ok);
+        statusEl.classList.toggle('disconnected', !ok);
+        statusText.textContent = ok ? 'Live' : 'Disconnected';
+      }
+
+      function render(data) {
+        const step = data.step ?? 0;
+        const maxSteps = data.max_steps ?? 100;
+        const frustration = data.frustration ?? 0;
+        const budget = data.patience_budget ?? 50;
+        const pct = Math.min(100, (frustration / budget) * 100);
+        const clutter = data.clutter_rating ?? 0;
+        const clutterPct = (clutter / 10) * 100;
+
+        stepBadge.textContent = 'Step ' + step + ' / ' + maxSteps;
+        if (data.outcome) {
+          outcomeEl.innerHTML = '<span class="outcome ' + data.outcome + '">' + data.outcome + '</span>';
+        } else {
+          outcomeEl.textContent = '';
+        }
+
+        thoughtEl.innerHTML = data.thought
+          ? data.thought.replace(/\n/g, '<br/>')
+          : '<span class="empty">(no thought yet)</span>';
+
+        locationEl.innerHTML =
+          '<strong>URL</strong>: ' + (data.current_url || '—') + '<br/>' +
+          '<strong>Page</strong>: ' + (data.page_title || '—');
+        const action = [data.action_type, data.target_element_id, data.target_element_name].filter(Boolean).join(' ');
+        actionBadge.textContent = action || '—';
+
+        frustLabel.textContent = frustration + ' / ' + budget;
+        frustBar.style.width = pct + '%';
+        clutterLabel.textContent = clutter + ' / 10';
+        clutterBar.style.width = clutterPct + '%';
+        moodEl.textContent = data.emotional_state || '—';
+        goalEl.textContent = data.goal || '—';
+        memoryEl.textContent = data.memory_snapshot || '—';
+        sessionNotesEl.textContent = data.session_notes || '—';
+      }
+
+      const es = new EventSource(streamUrl);
+      es.onopen = function () { setConnected(true); };
+      es.onerror = function () { setConnected(false); };
+      es.onmessage = function (ev) {
+        try {
+          const data = JSON.parse(ev.data);
+          if (data.event === 'agent_state') render(data);
+        } catch (e) {}
+      };
+    })();
+  </script>
+</body>
+</html>

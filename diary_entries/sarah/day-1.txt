@@ -1,0 +1,328 @@
+═══════════════════════════════════════════════════════════
+  PAGE TURNER BOOKS — OWNER DIARY
+  Sarah Mitchell | Monday, Week 1
+  "The week always feels full of possibility on Monday morning."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      10h 45min
+Customer interactions:   14
+Sales transactions:      11  ($386.50)
+QuickBooks sessions:     3  (38 min total)
+Steps walked (est.):     ~6,200
+
+───────────────────────────────────────────────────────────
+MORNING — Getting started
+───────────────────────────────────────────────────────────
+
+6:45 AM - 7:05 AM  [20 min] PERSONAL
+  Wake up, coffee, scan news headlines on phone. Notice a review of a new
+  debut novel in the Guardian — mental note to check if it's on our next
+  Ingram order. Shower, dress in the usual shop uniform: jeans, Page Turner
+  tote bag tee, comfortable shoes. Feet matter more than I ever expected
+  when I took this on.
+
+7:05 AM - 7:20 AM  [15 min] COMMUTE
+  10-minute drive to the shop. Listened to the bookseller podcast on the way.
+  Episode about indie shop survival strategies. Nothing I haven't heard but
+  good to stay motivated.
+
+7:20 AM - 7:35 AM  [15 min] OPENING — Pre-open checklist
+  - Disarm alarm, turn on lights (front, shelving, reading nook)
+  - Check that the front window display didn't shift over the weekend
+    (the "Spring Reads" stack leaned — fixed)
+  - Flip sign to OPEN at exactly 7:30 (some customers show up right on
+    the dot — Mr. Hartwell always does on Mondays)
+  - Put on background music: indie acoustic playlist
+  - Kettle on for the day's tea supply
+
+7:35 AM - 8:00 AM  [25 min] INVENTORY FLOOR WALK
+  Walk every section. Check for:
+  - Face-out titles that need restocking (pulled 3 from back stock:
+    "Tomorrow & Tomorrow & Tomorrow" x2, a Hamnet reprint)
+  - Shelf labels that slipped or fell (fiction A–D labels needed retaping)
+  - Weekend damage check (none — good)
+  Noted: YA section is looking thin after the weekend. Need to move some
+  stock from the back before the school crowd comes in at 3 PM.
+
+───────────────────────────────────────────────────────────
+  ⬛ QUICKBOOKS SESSION 1  [8:00 AM – 8:22 AM, 22 min]
+───────────────────────────────────────────────────────────
+
+8:00 AM - 8:22 AM  [22 min] QB — Weekly Monday review
+  Logged in to QuickBooks Online (company: Page Turner Books LLC).
+
+  TASKS COMPLETED:
+  ├─ Reviewed Friday + Saturday + Sunday sales totals
+  │    Fri:  $312.40 (12 transactions)
+  │    Sat:  $581.90 (28 transactions) ← strong weekend
+  │    Sun:  $198.20 (7 transactions)
+  │    Weekend total: $1,092.50
+  ├─ Checked bank feed — synced overnight, no discrepancies
+  ├─ Flagged 1 outstanding payable: Ingram Spark invoice #IS-7742
+  │    Amount: $824.16 | Due: this Friday | STATUS: unpaid
+  ├─ Reviewed last week's P&L snapshot:
+  │    Revenue:   $2,140.80
+  │    COGS:      $1,028.50 (48.0% — slightly high, target is 45%)
+  │    Gross:     $1,112.30
+  │    Operating: $640.00 (rent + utilities partial)
+  │    Net est.:  ~$472.30
+  ├─ Set reminder in QB for Ingram payment by Thursday EOD
+  └─ Exported weekly sales CSV for monthly spreadsheet tracker
+
+  NOTES: COGS crept up because of the special-order hardcovers last week.
+  Need to watch this — margin compression is real for small shops.
+
+───────────────────────────────────────────────────────────
+MORNING — Shop open
+───────────────────────────────────────────────────────────
+
+8:22 AM - 8:35 AM  [13 min] CUSTOMER — Mr. Hartwell (regular)
+  As predicted, Mr. Hartwell arrives at 8:30. He's 72, retired professor,
+  comes in every Monday for a new history or biography title. Today he wants
+  something about the Roman Republic. Recommended "SPQR" by Mary Beard (in
+  stock) and "Rubicon" by Tom Holland (pulled one from reserves). He took
+  both. Chatted 8 minutes about the current political climate. He says
+  bookshops are "civic infrastructure." I agree.
+  Transaction: $42.00 (cash)
+  Entered sale on POS. Gave him a loyalty stamp — his 9th this card.
+
+8:35 AM - 9:10 AM  [35 min] OPERATIONS — Monday admin block
+  ├─ Answered 4 emails:
+  │    → School librarian (Meadowbrook Primary): requesting 18x copies of
+  │      "Holes" for Year 5 reading programme. Replied with quote:
+  │      $180.00 (bulk rate), 5–7 days delivery via Gardners.
+  │      FLAGGED: need to confirm Gardners stock level before confirming.
+  │    → Customer asking about gift wrapping (yes, complimentary over $20)
+  │    → Local author wanting consignment space (3rd request — need to
+  │      address this week, consignment policy becoming unclear)
+  │    → Newsletter unsubscribe (noted, actioned)
+  ├─ Updated shop Instagram (@pageturnerbks):
+  │    Posted a flat-lay photo of 5 "Monday Mood" picks with short
+  │    captions. Took 12 min. Instagram is time-consuming but drives
+  │    weekend foot traffic more than anything else.
+  └─ Called Gardners re: "Holes" stock — 18 copies available, confirmed
+     order verbally. Will send PO this afternoon.
+
+9:10 AM - 9:25 AM  [15 min] CUSTOMER — Walk-in browsers (3 people)
+  - Young woman, early 20s: bought "Pachinko" and a greetings card. $24.50.
+  - Couple browsing travel section: no purchase but spent 10 min, left
+    email for newsletter signup. Good sign — may return.
+  - Man looking for a cooking gift: recommended "Salt Fat Acid Heat."
+    In stock. $38.00. He seemed relieved. First-time customer.
+
+9:25 AM - 9:40 AM  [15 min] SUPPLIER — Ingram delivery arrives
+  UPS van. 2 boxes. Verified packing slip against PO #PT-0089:
+  - 6 titles, 24 units total
+  - 1 discrepancy: "The Heaven & Earth Grocery Store" ordered 3 copies,
+    received 2. Will chase with Ingram — might be out of stock on their end.
+  Unpacked boxes in the back room, stickered spines with our price labels,
+  shelved 22 units. 2 units held back (pre-orders for customers).
+  Made note to call Ingram re: short-ship on "Heaven & Earth."
+
+───────────────────────────────────────────────────────────
+MID-MORNING — Busier period
+───────────────────────────────────────────────────────────
+
+9:40 AM - 10:00 AM  [20 min] CUSTOMER RUSH — 4 transactions
+  Steady stream. Processed:
+  1. "The Women" (Kristin Hannah hardcover) — $34.99
+  2. Two children's picture books — $28.00
+  3. "Demon Copperhead" + bookmarks — $19.50
+  4. Gift certificate ($50.00)
+  Used the POS (Square integrated with QB). All receipts emailed.
+  The gift certificate is always a little manual — I need to track those
+  better. Currently in a separate spreadsheet. Should migrate to QB properly.
+  *** ACTION ITEM: Research QB gift card tracking this week ***
+
+10:00 AM - 10:15 AM  [15 min] PHONE — Ingram supplier call
+  Called Ingram customer service re: PO #PT-0089 short-ship.
+  Hold time: 6 minutes. Rep (Marcus) confirmed "Heaven & Earth Grocery
+  Store" is on back-order. ETA 2 weeks. He offered a credit note or
+  substitution. Took credit note — $16.40 to apply to next invoice.
+  Logged credit note memo in QB notes section.
+
+10:15 AM - 10:55 AM  [40 min] OPERATIONS — Purchase Order for school
+  Created formal PO for Meadowbrook Primary:
+  - 18x "Holes" by Louis Sachar @ $10.00 each = $180.00
+  - Sent PO to Gardners wholesale via their online portal
+  - Emailed quote confirmation to school librarian (Mrs. Okonkwo)
+  - Created invoice in QuickBooks (#1094) for the school order
+    Net 30 terms (schools always pay slow — flagged for follow-up)
+  Also ordered 5 more copies of "The Women" (selling fast) and restocked
+  3 of our regular movers: Elena Ferrante, Richard Osman, and Colleen
+  Hoover titles.
+
+10:55 AM - 11:30 AM  [35 min] READING NOOK EVENT PREP
+  We host a weekly "Reading Circle" Tuesday evenings. Need to:
+  - Set up the nook area: 8 chairs arranged, small table for tea things
+  - Print handouts: 3 discussion questions for "Lessons in Chemistry"
+  - Update the chalkboard sign by the window
+  - Email the 12 registered attendees with Zoom backup link (in case)
+  Took longer than expected because the printer ran out of cyan. Had to
+  reprint in greyscale. Fine.
+
+───────────────────────────────────────────────────────────
+LUNCH
+───────────────────────────────────────────────────────────
+
+11:30 AM - 12:00 PM  [30 min] LUNCH — at the shop desk
+  Sandwich from the deli next door ($8.50 — expense tracked). Ate while
+  reading the Bookseller weekly digest. Competitor shop two miles away is
+  closing. Mixed feelings — sad for them, aware of what it means for local
+  foot traffic potentially shifting our way. Noted their closing sale date:
+  last Saturday of the month.
+
+───────────────────────────────────────────────────────────
+AFTERNOON
+───────────────────────────────────────────────────────────
+
+12:00 PM - 12:45 PM  [45 min] CUSTOMER PEAK — 6 transactions
+  Lunch-hour crowd (office workers on break):
+  1. 3x copies of the same thriller — "The Covenant of Water" — $71.97
+     (confirmed she's buying for a book club — got her email for a
+     group discount card)
+  2. "Fourth Wing" — young woman, very certain, in and out in 4 min — $28.00
+  3. "Remarkably Bright Creatures" — $17.99
+  4. Travel guide (Italy) + novel — $44.50
+  5. 2x birthday cards, 1 gift wrap — $14.00
+  6. Return: customer brought back a duplicate gift. No receipt.
+     Offered exchange or store credit. She took store credit ($24.99).
+     Processed credit note in QB.
+  Total afternoon session: $201.45 (minus $24.99 return = $176.46 net)
+
+12:45 PM - 1:15 PM  [30 min] SOCIAL MEDIA + MARKETING
+  ├─ Responded to 6 Instagram comments from morning post
+  ├─ Drafted Facebook post for Tuesday's Reading Circle (3 spots left)
+  ├─ Checked Google Business listing — 2 new reviews:
+  │    ⭐⭐⭐⭐⭐ "Best indie shop in town, Sarah always has great recs!"
+  │    ⭐⭐⭐⭐   "Good selection but parking nearby is awful" (not our problem
+  │               but noted — can't control the council)
+  │    Replied to both: thanked the 5-star, acknowledged and empathised
+  │    with the parking comment
+  └─ Scheduled Wednesday Instagram story: "New Arrivals" reel
+
+1:15 PM - 2:00 PM  [45 min] ADMIN & ACCOUNTS
+  ├─ Processed today's morning transactions in QB (batch entry)
+  ├─ Filed the Ingram credit note ($16.40) against invoice IS-7742
+  ├─ Drafted purchase order for Gardners (school order) — sent
+  ├─ Chased 2 unpaid invoices:
+  │    Invoice #1078: Local corporate client, $155.00, 45 days overdue
+  │    → Sent polite but firm follow-up email with bank details
+  │    Invoice #1085: Individual special order, $67.00, 22 days overdue
+  │    → Left voicemail
+  └─ Updated QB expense log: printer ink £18.99, sandwich £8.50,
+     printer paper £12.00
+
+2:00 PM - 2:30 PM  [30 min] SUPPLIER CALL — local stationery vendor
+  Benny's Wholesale Cards & Gifts. Monthly check-in call.
+  - Confirmed next greeting cards delivery: Thursday morning
+  - Reviewed sell-through on birthday card range: 68% in 4 weeks (good)
+  - Benny offered a new "local artist" card range on consignment —
+    40/60 split (me/him). Agreed to take 20 cards on trial.
+  - Also ordered: 50x Page Turner branded bookmarks (running low)
+    Cost: $38.50 — flagged in QB as "Marketing Supplies" expense
+
+2:30 PM - 3:30 PM  [60 min] CUSTOMER AFTERNOON WAVE
+  School pick-up crowd and after-work early birds:
+  - 2 children with parents: picture books, activity pads. $52.00
+  - Teen looking for "Divergent" for school. Had it. $10.99.
+  - Regular customer (Mrs. Patel) browsing crime fiction — spent 25 min,
+    bought 2 books: "The Thursday Murder Club" + "Magpie Murders." $38.98.
+    She asked about the Tuesday book club — gave her a flyer. She's been
+    in 3 times without joining. Sixth time lucky maybe.
+  - Walk-in: man with list of 5 specific titles. Had 3 in stock.
+    Special ordered the other 2 — $47.50 deposit taken (non-refundable).
+    Created customer order card and entered in QB as deferred revenue.
+  Total: ~$149.47
+
+3:30 PM - 4:00 PM  [30 min] BANK RUN
+  Needed to deposit weekend cash takings (kept in safe over weekend).
+  Took $320.00 cash to Midland Bank branch 4 blocks away.
+  Deposit slip retained for QB bank reconciliation.
+  While at bank: spoke to our business manager (brief, in queue) re:
+  credit facility renewal due in 6 weeks. She'll send paperwork. Noted.
+
+───────────────────────────────────────────────────────────
+  ⬛ QUICKBOOKS SESSION 2  [4:00 PM – 4:18 PM, 18 min]
+───────────────────────────────────────────────────────────
+
+4:00 PM - 4:18 PM  [18 min] QB — Afternoon reconciliation
+  ├─ Entered bank deposit transaction: $320.00 (matched to cash drawer)
+  ├─ Reconciled morning POS transactions against QB (11 transactions,
+  │    all matched — Square sync worked cleanly today)
+  ├─ Reviewed today's running total:
+  │    Sales today (so far):    $386.50
+  │    Returns/credits:         -$24.99
+  │    Net revenue today:       $361.51
+  ├─ Checked accounts payable summary: total owed = $1,108.66
+  │    (Ingram $824.16 + Gardners $189.00 + Benny's $38.50 + misc $57.00)
+  └─ Set reminder: pay Ingram by Thursday
+
+───────────────────────────────────────────────────────────
+EVENING
+───────────────────────────────────────────────────────────
+
+4:18 PM - 5:30 PM  [72 min] CLOSING PREP + CUSTOMERS
+  Light customer flow. 3 transactions: $68.00 total.
+  Used quiet time to:
+  - Deep-tidy the children's section (always a disaster by 4 PM)
+  - Rearrange the "Staff Picks" shelf with 2 new additions
+  - Write shelf-talker cards for the new Ingram arrivals
+    (handwritten on the little card holders — customers love these)
+  - Updated the website "New Arrivals" page (8 new titles added)
+  - Sent weekly newsletter draft to myself for review tonight
+
+5:30 PM - 5:50 PM  [20 min] CLOSING CHECKLIST
+  - Cash drawer counted: $214.00 cash on hand (matches expected)
+  - POS end-of-day report run and saved
+  - Lights off (shelves, reading nook, window display left on timer)
+  - Set alarm
+  - Locked up
+
+5:50 PM - 6:05 PM  [15 min] COMMUTE HOME
+
+───────────────────────────────────────────────────────────
+  ⬛ QUICKBOOKS SESSION 3  [8:30 PM – 8:44 PM, 14 min]
+───────────────────────────────────────────────────────────
+
+8:30 PM - 8:44 PM  [14 min] QB — Evening wrap-up (home)
+  After dinner. Habit I can't shake.
+  ├─ Entered last 3 afternoon transactions
+  ├─ Reviewed day-end P&L:
+  │    Total revenue:       $429.51 (transactions + deposit)
+  │    Expenses logged:     $97.99
+  │    Estimated net:       $331.52
+  └─ Final note in QB journal: "Strong Monday. Ingram short-ship minor
+     issue. School order confirmed. Watch COGS ratio."
+  Closed laptop. Reminded myself that I'm not allowed to check QB after
+  9 PM on weekdays. Mostly succeeding at this rule.
+
+───────────────────────────────────────────────────────────
+END OF DAY — SARAH'S REFLECTION
+───────────────────────────────────────────────────────────
+
+  Today felt good. The weekend numbers were solid and this morning had
+  real momentum. The school order is exciting — $180 in one go is the
+  kind of B2B income that smooths out the slow weeks.
+
+  The Ingram short-ship is annoying but minor. What's really on my mind
+  is the local author consignment question. I've been avoiding it but
+  three people have asked in two weeks. Need to write a clear policy.
+
+  Money worry of the day: Ingram invoice due Friday. Cash should cover
+  it but it's tight this week. Need the corporate client to pay that
+  overdue £155.
+
+  Win of the day: Mr. Hartwell's face when I suggested Rubicon. That's
+  why I do this.
+
+  TO-DO FOR TOMORROW:
+  □ Follow up: corporate invoice #1078 (if no reply by noon)
+  □ Prepare for Tuesday Reading Circle (6:30 PM)
+  □ Write local author consignment policy draft
+  □ Check Gardners order confirmation
+  □ Post "New Arrivals" Instagram reel
+
+═══════════════════════════════════════════════════════════

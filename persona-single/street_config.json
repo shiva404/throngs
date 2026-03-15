@@ -1,0 +1,22 @@
+{
+  "company_places": {
+    "Marcus_Plumbing_LLC": "plumbing_shop"
+  },
+  "persona_display": {
+    "Marcus_Mobile_Plumber": { "place": "plumbing_shop", "role": "owner", "emoji": "🔧" }
+  },
+  "places": {
+    "shops": [
+      {
+        "id": "plumbing_shop",
+        "name": "Marcus Plumbing",
+        "emoji": "🔧",
+        "color": 15561230,
+        "hex": "#ed6c0e",
+        "floor": 16773592,
+        "pos": [0, 0, 0]
+      }
+    ],
+    "rooms": []
+  }
+}

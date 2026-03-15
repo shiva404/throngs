@@ -1,0 +1,344 @@
+═══════════════════════════════════════════════════════════
+  NEXUS ANALYTICS — FOUNDER DIARY
+  Jake Okafor | Thursday, Week 1
+  "Payroll day is the realest day."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      12h 30min
+Meetings:                5 (incl. board prep + board call)
+QB Online sessions:      2  (41 min total)
+Times I Googled "gross margin":  2 (once at 7am, once at 9:45am)
+Board call duration:     90 min
+Accounting terms I had to pretend to know:  4
+Carol on standby:        yes (she's a hero)
+Payroll amount processed: $44,860
+
+07:00 AM - 07:45 AM  [45 min] MORNING — GROSS MARGIN RESEARCH
+  First thing. Before coffee. This is how important the gross margin
+  situation is. I did not want to walk into a board call not knowing
+  the one number Ashley flagged.
+
+  Googled: "gross margin SaaS company formula"
+
+  Okay. Gross Margin = (Revenue - Cost of Goods Sold) / Revenue x 100.
+
+  For SaaS, COGS is: hosting/infrastructure, any costs directly tied to
+  delivering the service. NOT payroll (usually). NOT rent. Those are
+  operating expenses.
+
+  Our COGS = cloud infrastructure (AWS): $8,100/month = $24,300 for Q1.
+  Our Revenue (Q1, accrual): $57,300.
+  Gross Profit: $57,300 - $24,300 = $33,000.
+  Gross Margin: $33,000 / $57,300 = 57.6%.
+
+  Is 57.6% good? Googled: "what is a good gross margin for B2B SaaS"
+
+  Most sources say 70-85% is good for SaaS. 57% is below average.
+  The main reason is probably that our AWS costs are high relative to
+  revenue at this stage. As revenue scales, infrastructure costs as a
+  percentage should drop.
+
+  So my answer for the board: "Gross margin is currently 57%, which
+  reflects our stage — infrastructure costs are relatively fixed and
+  will compress as ARR scales. We expect to be at 70%+ by Series B."
+
+  I practiced this sentence six times out loud. It sounds like I know
+  what I'm talking about. Technically everything in it is true.
+
+  Made coffee. Feeling dangerous.
+
+07:50 AM - 08:30 AM  [40 min] PRE-BOARD SOLO DECK RUN-THROUGH
+  Ran through the deck alone, timer on, talking out loud like I was
+  presenting. 24 minutes for 12 slides. Good pace. The financial section
+  took 8 minutes because I kept second-guessing myself but on the third
+  pass I was down to 3 minutes.
+
+  Texted Carol: "You're on standby from 11am-1pm today right? Just
+  in case anyone asks something accounting-y that I can't answer?"
+
+  Carol: "Yes. Text me any question. I'll reply in under 2 minutes."
+
+  Carol: "Also please don't open QB during the call."
+
+  Me: "I wasn't going to."
+
+  Carol: "Jake."
+
+  Me: "I WASN'T GOING TO."
+
+  (I was probably going to.)
+
+08:35 AM - 09:30 AM  [55 min] QUICKBOOKS ONLINE — SESSION 1
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:35 AM – 09:16 AM, 41 min]
+
+  Opened QB to check payroll. Today is payroll day and I always get
+  anxious about it — not because I don't trust Gusto, but because
+  I want to verify that QB reflects the outflow correctly.
+
+  Actually, let me back up. I need to explain something to myself that
+  I figured out last quarter and keep forgetting: Gusto is our payroll
+  processor. Gusto is not QuickBooks. They talk to each other (there's
+  an integration Carol set up) but they are separate systems. Gusto
+  runs payroll and moves the money. QB records that it happened.
+
+  Navigated to the Payroll section in QB. Found it under the "Employees"
+  menu. QB Payroll is actually a different product from regular QB that
+  you can add on — we don't use QB Payroll, we use Gusto, which syncs
+  to QB. This distinction confused me for my entire first year in business.
+
+  The sync shows payroll will hit today as a $44,860 expense. Breakdown
+  in Gusto:
+    - 8 employees
+    - Total gross wages: $38,200
+    - Employer payroll taxes: $3,440
+    - Employer health insurance contribution: $3,220
+    Total employer cost: $44,860
+
+  That matches what I expect. $44,860 going out today. Ouch. Real ouch
+  every two weeks. But this is what it takes.
+
+  Checked that the bank account has enough in operating to cover payroll
+  without dipping into Series A reserve. Operating account: $127,440.
+  Payroll: $44,860. After payroll: ~$82,580. Comfortable.
+
+  While in QB, I noticed something I hadn't clicked before: there was
+  a tab that said "Payroll Tax Center." I clicked it. Big mistake.
+  It opened a screen full of words like "Federal 941 deposit," "FUTA
+  liability," "SUTA remittance," and a calendar with compliance due dates.
+
+  I stared at this for 45 seconds. Googled: "what is federal 941 deposit"
+  It's the quarterly payroll tax filing. Also apparently there are due
+  dates for this and we might have one coming up.
+
+  Texted Carol: "Hey, there's something called a Federal 941 deposit
+  that apparently has a due date — are we on top of this?"
+
+  Carol: "Yes. Gusto handles it automatically. You don't need to do
+  anything. Please close the Payroll Tax Center."
+
+  Me: "Already closed."
+
+  I was still looking at it. I closed it.
+
+  Also quick check: the four invoices I sent Tuesday — any payments?
+    Thornwood Capital: Paid! $1,300 received. (They move fast.)
+    Kellerton Group: Marked as "In Review" by their AP team.
+    Meridian Data Corp: Still outstanding, expected within the week.
+    Prism Financial Services: No response yet.
+
+  Thornwood's $1,300 hitting this week means it lands in Q1, which
+  bumps my cash-basis revenue slightly. Accrual basis it was already
+  counted. I am now 15% more comfortable with accrual accounting
+  than I was on Monday.
+
+  On the way out of QB, accidentally hovered over the "Accountant Tools"
+  section that appears in the navigation when you're in the accountant
+  view. There's a sub-menu with things called "Reclassify Transactions,"
+  "Write Off Invoices," and "Voiding & Deleting." I did not click any
+  of them. But "Write Off Invoices" made me curious. Is that what
+  I do with NovaBridge? I'll ask Carol later when the board thing is over.
+
+09:20 AM - 10:45 AM  [85 min] BOARD PREP — INVESTOR QUESTIONS PREP
+  Dev and I had a 90-minute prep call walking through likely questions
+  from the Harrington team. Top questions we anticipated:
+
+  1. "Walk us through the Q1 financials." — I'm ready.
+  2. "What's the gross margin?" — I'm ready ($57.6%. Scaling story.)
+  3. "What's your path to profitability?" — I'm ready (Slide 11.)
+  4. "How is your pipeline looking for Q2?" — I'm ready.
+  5. "What's the burn rate?" — I'm ready ($43K net, $57K gross).
+  6. "What's your LTV/CAC?" — Dev pulled this yesterday: 4.2x. Good.
+  7. "Tell me about churn." — NDR 107%. Negative net churn. I love this.
+  8. "What are you going to use the remainder of the Series A for?" — Hiring,
+     infrastructure optimization, Salesforce integration. Prepared.
+
+  The one question I'm NOT prepared for is anything that requires me to
+  explain GAAP accounting principles. If Marcus (the Harrington partner,
+  not my Marcus) starts asking about deferred revenue or COGS methodology
+  I'm going to say "our bookkeeper Carol handles the accounting treatment,
+  I can follow up in writing." That's a real answer. CEOs say that.
+
+10:50 AM - 11:00 AM  [10 min] QUICK TEAM HUDDLE PRE-BOARD
+  Let the team know I'd be in the board call 11-1. Asked for no Slack
+  pings unless it was a production incident. Marcus (my Marcus) gives
+  me a thumbs up. Priya has already pre-loaded all the metrics I might
+  need into a shared doc. She gets a raise in Q2 regardless of anything.
+
+11:00 AM - 12:35 PM  [95 min] QUARTERLY BOARD CALL — HARRINGTON CAPITAL
+  The call.
+
+  Attendees: Me, Dev (advisor), Ashley (Harrington, lead partner),
+  Marcus H. (Harrington, operating partner), and one quiet associate
+  who I think was taking notes the whole time and never spoke.
+
+  It went well. Mostly.
+
+  Product section: strong. Dashboard feature demoed live (Marcus/eng
+  had it in staging, I screen-shared it). Genuine positive reactions
+  from Ashley. "This is clean, Jake." Dev nodded in the smug way Dev
+  nods when things go well.
+
+  Metrics section: NDR 107%, MRR $61.2K (Stripe), pipeline ACV $187K.
+  All fine. Marcus H. asked about CAC, I had it: $4,200 blended average.
+  LTV/CAC 4.2x. He wrote something down.
+
+  Financial section: here we go.
+
+  Ashley: "Walk us through the Q1 P&L."
+
+  Me: "Q1 revenue was $57.3 million — sorry, $57.3 thousand. Q1 revenue
+  was $57,300 on an accrual basis. Operating expenses were $186,300,
+  giving us a net operating loss of $129,000 for the quarter, or roughly
+  $43K monthly net burn. Gross cash out is approximately $57K per month."
+
+  Marcus H.: "And gross margin?"
+
+  Me: "57.6%. Revenue minus COGS — primarily cloud infrastructure — over
+  revenue. We're below the SaaS benchmark of 70-80%, and that's a function
+  of AWS costs being relatively fixed at this stage. As ARR scales we
+  expect margin to compress to sub-10% of revenue, which gets us into
+  the 70% range by $120K MRR."
+
+  Marcus H.: (nodding) "How are you categorizing customer success costs?"
+
+  I froze for 1.5 seconds. Customer success costs. In the P&L. I have
+  a Slack channel called #customer-success. That's me and Priya.
+  Are our salaries in COGS or OpEx?
+
+  I texted Carol under the table: "customer success salaries — COGS or
+  opex for gross margin?"
+
+  Carol (47 seconds later): "OpEx for us at your stage. Not in COGS.
+  Gross margin is just infra for you right now."
+
+  Me (to Marcus H.): "We're treating customer success as operating
+  expense, not cost of goods sold, which is why our gross margin number
+  reflects infrastructure as the primary COGS component. That's consistent
+  with how we'd expect a Series B investor to look at the business."
+
+  I said this with complete confidence. I knew nothing 50 seconds earlier.
+  Carol is a miracle.
+
+  The rest of the call was product roadmap and hiring. Dev raised a
+  concern about technical debt in the data pipeline layer. Marcus had
+  follow-up questions about the Salesforce integration timeline. Ashley
+  asked about the contract engineer we're hiring. All fine.
+
+  One moment I did not love: Ashley asked "have you had your financials
+  reviewed by your auditors yet for Q1?" I said we don't have a formal
+  audit yet at this stage, we have a part-time bookkeeper and clean
+  records, and we'll get an audit engagement as part of Series B prep.
+  She accepted this. Filed: get a proper audit engagement before Series B.
+
+  End of call, Ashley said: "Good quarter, Jake. Keep the NDR above 100
+  and hit $80K MRR by year end and we're in great shape for the next round."
+
+  $80K MRR by year end. We're at $61.2K. That's $18.8K more in 9 months.
+  Call it 4 new enterprise accounts, or steady expansion on existing ones.
+  Doable. Harder than it sounds but doable.
+
+12:40 PM - 01:15 PM  [35 min] POST-BOARD DEBRIEF WITH DEV
+  Decompressed with Dev. His overall take: "Strong call. Gross margin
+  answer was good. Try to get the financials audited before you even
+  think about the Series B process." Noted.
+
+  Dev also said: "You clearly looked up gross margin this morning."
+
+  Me: "What? No."
+
+  Dev: "Jake."
+
+  Me: "...I looked it up at 7am."
+
+  Dev: "I know. It's fine. You answered it right."
+
+01:20 PM - 02:30 PM  [70 min] QUICKBOOKS ONLINE — SESSION 2
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [01:20 PM – 01:39 PM, 19 min]
+
+  Post-board cleanup. Wanted to verify Gusto payroll sync hit QB correctly.
+
+  Navigated to Expenses > Recent. The $44,860 Gusto payroll is showing —
+  correctly categorized as "Payroll Expenses." Good.
+
+  Also checked: Thornwood Capital's $1,300 payment is showing correctly
+  as a received payment on the invoice I created Tuesday. Balance of the
+  invoice is $0. Customer balance $0. Clean.
+
+  One thing I noticed: there's a "Recurring Transactions" section I
+  found by accident (Reports > Recurring Templates). QB is auto-recording
+  some of our fixed monthly charges — rent $4,200, AWS ~$8,100, Slack
+  $210, various SaaS tools. Carol set these up. This is genuinely clever
+  and I would have had no idea this existed if I hadn't accidentally
+  found it.
+
+  Quick math check on the recurring templates: $4,200 + $8,100 + $210
+  + HubSpot $600 + other tools ~$1,200 = ~$14,310 in fixed costs that
+  are auto-recorded monthly. Before payroll. This is useful to know.
+
+  Nothing broken. Nothing panicked. Short session, clean, informational.
+  This is what QB sessions should feel like. They rarely do.
+
+02:35 PM - 04:00 PM  [85 min] FOLLOW-UPS + STRATEGY
+  Drafted the post-board action items document:
+    1. Get auditors engaged — search for a firm that works with Series A
+       SaaS companies. Budget for this in Q2.
+    2. AWS reserved instances — finalize this week.
+    3. Gross margin improvement plan — as ARR grows, margin improves
+       naturally. No action needed immediately.
+    4. $80K MRR target by end of year — discussed with Priya. She built
+       a model. It's aggressive but achievable if the two late-stage
+       deals close.
+    5. Salesforce integration — contract engineer hire accelerates this.
+
+04:05 PM - 05:30 PM  [85 min] ENGINEERING + PRODUCT
+  Checked in on dashboard feature staging deployment. Live to 5 beta
+  customers by tomorrow morning. Set up the beta feedback doc.
+  Responded to a bunch of Slack. Normal engineering conversations about
+  nothing that needs to be recorded in a diary.
+
+05:30 PM - 07:00 PM  [90 min] ADMIN + VENDOR
+  Sent the Vercel hosting contract renewal — bumping to a higher tier
+  since we're growing. +$200/month. Worth it.
+
+  Confirmed AWS reserved instance paperwork with Marcus (engineer).
+  He's kicking it off today. $16,200 upfront for year-round savings.
+  This will show as a big cash outflow in QB next week. I am mentally
+  prepared for this. (Carol will need to handle the accounting treatment.
+  Prepaid expense. I don't know what that means but Carol will.)
+
+───────────────────────────────────────────────────────────
+END OF DAY — JAKE'S REFLECTION
+───────────────────────────────────────────────────────────
+  That was the board call I needed it to be. Not perfect — I definitely
+  googled gross margin this morning and I had Carol texting me the answer
+  to one question mid-call — but the story is good and the numbers
+  support it. Ashley said "good quarter." That's enough.
+
+  The part that sticks with me: I build a product that gives other
+  companies real-time, accurate, understandable financial and operational
+  data. I spent the last four days wrestling with my own basic financial
+  statements. I'm not sure if that's ironic or just normal. Probably
+  both. Probably what every founder deals with.
+
+  The payroll going out ($44,860) never stops being a real feeling.
+  Eight people depending on this thing working. The $82K left in operating
+  after payroll is fine, we have the reserve, but that reality doesn't
+  fully become abstract. I don't think it should.
+
+  Tomorrow: dashboard feature launch to beta users. That's the good part.
+
+  Also: I need to look up what "deferred revenue" means before someone
+  asks me about it. I've been faking understanding of that one for six months.
+
+  TO-DO FOR TOMORROW:
+  □ Dashboard beta launch — monitor closely, respond to early feedback
+  □ Send board call follow-up email to Ashley (with action items)
+  □ Write off or escalate NovaBridge invoices (ask Carol about "write off"
+    process — but do NOT click "Write Off Invoices" myself)
+  □ Follow up on Meridian and Prism outstanding invoices
+  □ Look up "deferred revenue" (genuine this time)
+  □ Send Carol a coffee gift card — she deserves it

@@ -1,0 +1,330 @@
+═══════════════════════════════════════════════════════════
+  SUMMIT DISTRIBUTION — AR CLERK DIARY
+  Priya Sharma | Tuesday, Week 1
+  "First time running a real report. Please let it be right."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      9h 10min
+Invoices processed:      3
+QB Online sessions:      5  (134 min total)
+Payments recorded:       0
+Reports run:             1  (AR Aging — 3 attempts to get formatting right)
+Raj consultations:       2
+Excel backup entries:    3 new + aging report cross-check
+
+08:00 AM - 08:25 AM  [25 min] MORNING SETUP + OVERNIGHT EMAIL REVIEW
+
+  Got in exactly at 8. Opened email. Good news: Mesa Pacific Goods replied to
+  yesterday's reminder — they said the payment for INV-2803 ($3,400.00) is
+  "in process" and should clear by end of the week. I logged that note in
+  Excel next to INV-2803: "Customer confirmed payment in progress 3/11."
+
+  No reply yet from Branford Catering (7-day overdue, $1,850.00). I flagged
+  this to review with Raj later. Cascade Hospitality acknowledged their
+  reminder but didn't confirm a payment date, just said "noted." Not sure
+  what to do with that. I'll ask Raj.
+
+  Also: 3 new invoice requests in the AR inbox from yesterday afternoon/
+  evening. Small batch today compared to Monday. Printed all three.
+
+  Then I saw an email from Raj, sent at 7:52 AM (he's always here before me):
+    "Priya — can you run the AR Aging Summary report for me by 2pm today?
+     Finance needs it for month-end prep. Let me know if you have questions."
+
+  My stomach dropped a little. I've never run the aging report on my own.
+  I watched Raj do it once in my second week and I took notes, but I've never
+  done it myself. I have it on my cheat sheet — barely. Let me find the page.
+
+  Found it. My notes say: "Reports > All Reports > Who Owes You > Accounts
+  Receivable Aging Summary." That's all I wrote. I didn't note what settings
+  to change or if there are options. I emailed Raj back:
+    "Hi Raj, absolutely — I'll have it ready by 2. Quick question: are there
+     any specific settings I should use for the date range or aging buckets?
+     I want to make sure I pull it the way finance expects it."
+
+  Raj replied in 10 minutes: "Run it as of today's date, default aging buckets
+  are fine (Current, 1-30, 31-60, 61-90, 91+). Just export it to PDF and email
+  it to me and copy finance@summitdist.com. Don't overthink it."
+
+  "Don't overthink it." He knows me already.
+
+08:25 AM - 09:15 AM  [50 min] QB ONLINE — MORNING INVOICE ENTRY
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:27 AM – 09:12 AM, 45 min]
+
+  Entered the three new invoices before tackling the aging report. I wanted
+  to get them done while my head was fresh and not panicked about the report.
+
+    INV-2859 | Meridian Kitchen Supply | $1,460.00 | Due Mar 25
+      Second invoice this week for Meridian. Different line items — mostly
+      serving utensils (12 units at $65, 8 units at $80, 4 units at $90).
+      Previewed. Amounts correct. Saved and sent.
+
+    INV-2860 | Pinehurst Catering | $2,890.00 | Due Apr 14
+      Pinehurst is Net 45. First time I've processed an invoice for them —
+      double-checked their customer record in QB to confirm their terms.
+      Customer record shows "Net 45 — invoices to AP@pinehurst-catering.com."
+      Made sure the send address matched. Previewed twice. Saved and sent.
+
+    INV-2861 | Lakeside Banquet Facilities | $775.00 | Due Mar 25
+      Routine entry. No complications. Saved and sent.
+
+  Logged all three in Excel. Day total so far: 3 invoices processed.
+
+09:15 AM - 09:30 AM  [15 min] READING + PREP BEFORE AGING REPORT
+
+  Before opening the aging report section in QB I read through the QB help
+  article "Run an accounts receivable aging report" twice. It's fairly short
+  and confirms what Raj told me — the default buckets are fine. There's a note
+  about making sure to use the "Accrual" basis vs. "Cash" basis toggle. I
+  didn't know there was a toggle. I messaged Raj:
+
+    Me: "Hi Raj, the QB help article mentions a cash vs. accrual basis option
+        on the aging report. Should I use accrual or cash?"
+    Raj: "Accrual. Always accrual for AR."
+
+  Added that to my cheat sheet: "AR Aging report = ACCRUAL basis."
+
+09:30 AM - 10:45 AM  [75 min] QB ONLINE — AR AGING REPORT (ATTEMPTS 1-3)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [09:32 AM – 10:44 AM, 72 min]
+
+  ATTEMPT 1 — 09:32 AM:
+    Navigated to Reports > All Reports > Who Owes You > Accounts Receivable
+    Aging Summary. Report loaded. It looked... right? There were customer names
+    and dollar amounts in different columns (Current, 1-30 days, etc.).
+    Total at the bottom: $62,840.25.
+
+    But then I looked more carefully and something seemed off. One customer —
+    Branford Catering — showed up in the "91+" column with a very old balance
+    I didn't recognize: $320.00. That didn't match anything in my recent
+    records. I thought: did I do something wrong? Did I pull the wrong data?
+    Is this a mistake I caused?
+
+    I sat there for about 4 minutes just staring at it. Then I took a breath
+    and reminded myself: I haven't done anything that could have created a
+    $320 balance from 91+ days ago. That balance was there before I started.
+    This is historical data. I didn't break anything.
+
+    But I wasn't confident enough to just export it and send it without
+    flagging it. What if finance asks about it? I should at least know
+    what it is.
+
+  ATTEMPT 2 — Investigating the Branford $320:
+    Clicked on the $320.00 in the 91+ column to drill down (QB lets you
+    click amounts to see detail — I learned this from the help article).
+    It showed INV-2693 from December, for $320.00, status: Open.
+    Oh. That's an old open invoice. It predates me. I need to ask Raj about
+    this but I don't want to derail the whole report just for this one line.
+
+    I exported the report to PDF first (Customize > Run Report > Export >
+    Export to PDF). PDF came out fine — readable, proper formatting.
+
+    But then I realized: I had the date set to 03/11/2026 which is correct,
+    but I hadn't switched to Accrual. I had left it on Cash by default.
+    I went back to check — Report Basis at the top showed "Cash." NO.
+    I need to redo this.
+
+  ATTEMPT 3 — 10:12 AM:
+    Clicked Customize (top right of the report), found the "Accounting method"
+    option, switched from Cash to Accrual, clicked Run Report. Report refreshed.
+    Total changed slightly: $63,160.25. The difference is $320 — so it was
+    the Branford invoice again. Under cash basis that old invoice wasn't being
+    shown (I think — not 100% sure why, I don't fully understand the
+    cash vs. accrual difference in practice, just that I need to use accrual).
+
+    Exported this version to PDF. Named the file:
+    "AR_Aging_Summary_20260311_Accrual.pdf"
+
+    Reviewed the PDF carefully:
+      - Summit Distribution name in header: correct
+      - Report date: 03/11/2026 — correct
+      - Accounting method: Accrual — correct
+      - Customer list looks complete (I cross-checked the first 6 names
+        against my Excel log — they match)
+      - Aging buckets: Current, 1-30, 31-60, 61-90, 91+ — exactly as Raj said
+      - Total AR balance: $63,160.25
+      - Branford 91+ balance: $320.00 — flagged for Raj
+
+    I feel okay about this. I think it's right. But I have that nagging feeling
+    like: what if I'm missing something? What if the accrual/cash thing did
+    something weird I'm not seeing?
+
+    I decided I'd send it to Raj with a note about the Branford balance rather
+    than just silently sending it to finance. Better to surface potential issues
+    than to have finance ask and me not know the answer.
+
+10:44 AM - 11:00 AM  [16 min] SENDING THE AGING REPORT + RAJ CONSULTATION
+
+  Composed the email to Raj (CC'd finance):
+    Subject: AR Aging Summary — 03/11/2026 (Accrual Basis)
+
+    "Hi Raj, please find attached the AR Aging Summary as of today, run on
+     accrual basis. Total open AR: $63,160.25.
+
+     One item I wanted to flag: Branford Catering has a $320.00 balance in
+     the 91+ days bucket (INV-2693, from December). This predates me — wanted
+     to make sure you're aware in case finance asks about it. Happy to follow
+     up on it if there's something I should do on my end.
+
+     Let me know if you need any adjustments to the report format. Thanks,
+     Priya"
+
+  Sent. Then I sat with my hands in my lap for about two minutes just feeling
+  relieved it was done.
+
+  Raj replied at 11:10:
+    "Good. That's correct. The Branford $320 is a known issue — don't worry
+     about it, I'm handling it. Report format is fine. Thanks."
+
+  He's handling it. I don't know what "handling it" means — whether it's a
+  credit memo or a write-off or something else entirely — but it's his problem,
+  not mine, and I'm keeping my hands off it. Both of those words ("credit memo"
+  and "write-off") are on my DO NOT TOUCH list.
+
+  I genuinely felt proud for about 30 seconds. I ran a real report. It was
+  right. I caught a thing and flagged it. This is progress.
+
+11:00 AM - 12:00 PM  [60 min] INBOX + FILING + CHEAT SHEET UPDATES
+
+  Added a full new page to my cheat sheet for the AR Aging report:
+    - Path: Reports > All Reports > Who Owes You > AR Aging Summary
+    - ALWAYS use Accrual basis (Customize > Accounting method > Accrual)
+    - Date: run as of today
+    - Default buckets: Current / 1-30 / 31-60 / 61-90 / 91+
+    - Export: Export to PDF
+    - File naming: AR_Aging_Summary_YYYYMMDD_Accrual.pdf
+    - Send to: Raj + finance@summitdist.com
+    - Include brief note on any unusual items
+
+  Filed paper copies of today's 3 invoices in the AR binder.
+  Printed the aging report PDF and put it in the "Reports" folder in the binder.
+
+12:00 PM - 12:40 PM  [40 min] LUNCH
+
+  Went to the café around the corner with Ananya from HR. She asked how the
+  job was going and I said "good, it's a lot to learn but I like it." That's
+  only about 70% true. It's a lot to learn and I'm not sure I fully like it
+  yet, but I like having a routine and I like being good at things, and slowly
+  I am getting better. Ananya said she felt that way for her first six months
+  too. That was nice to hear.
+
+12:40 PM - 01:40 PM  [60 min] QB ONLINE — PAYMENT TRACKING + OVERDUE REVIEW
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [12:43 PM – 01:15 PM, 32 min]
+
+  Ran the Overdue filter again on Sales > Invoices. Status:
+    - INV-2791 | Branford Catering | $1,850.00 | 8 days overdue — no payment
+    - INV-2803 | Mesa Pacific Goods | $3,400.00 | 5 days overdue — customer
+      said "in process" per this morning's email
+    - INV-2812 | Cascade Hospitality LLC | $675.00 | 3 days overdue — "noted"
+    - INV-2694 | Thornbury Market | $414.00 | 2 days overdue — new one I
+      hadn't noticed yesterday (it crossed into overdue overnight)
+
+  I can only send one reminder per invoice per week (Raj's policy, he doesn't
+  want to harass customers). I sent yesterday's reminders yesterday, so no
+  action needed on those three. The Thornbury one is new — sent a reminder.
+  Logged in Excel.
+
+  Also looked at the full open invoices list to see if anything else was
+  approaching due. Six invoices have due dates of Mar 17 or earlier — I'll
+  keep an eye on those through the week.
+
+01:40 PM - 02:10 PM  [30 min] QB ONLINE — CUSTOMER RECORDS REVIEW
+
+  ⬛ QUICKBOOKS ONLINE SESSION 4  [01:42 PM – 02:08 PM, 26 min]
+
+  Started a practice I've been wanting to do: going through customer records
+  in QB to make sure my cheat sheet for "special terms" customers is complete.
+  Went to Sales > Customers and scrolled through. Confirmed:
+    - Hartwell Grocery Group: Net 45 ✓
+    - Dunmore Wholesale Foods: Net 45 ✓
+    - Pinehurst Catering: Net 45 ✓ (confirmed today when I entered their invoice)
+    - Everyone else: Net 30 (as far as I can tell)
+
+  Also noticed that two customers have a note in their QB record saying
+  "Credit Hold" — Devlin's Food Market and Paxton Grocers. I had no idea.
+  I've never processed an invoice for either of them, but if I ever see a
+  sales order from one of them I need to flag it before entering anything.
+  Added both to my cheat sheet: "CREDIT HOLD — Do not invoice without Raj
+  approval: Devlin's Food Market, Paxton Grocers."
+
+  I don't know what a credit hold means in terms of what happened, and I
+  don't need to know. I just need to know not to process them.
+
+02:10 PM - 02:30 PM  [20 min] QB ONLINE — BRIEF END-OF-AFTERNOON SCAN
+
+  ⬛ QUICKBOOKS ONLINE SESSION 5  [02:12 PM – 02:27 PM, 15 min]
+
+  Verified all today's invoices show status "Sent" in QB (3 of 3 confirmed).
+  Updated my Excel sheet for the day. Everything matches.
+
+02:30 PM - 04:00 PM  [90 min] PROCESS DOCUMENTATION PROJECT (PERSONAL)
+
+  Raj mentioned a few weeks ago that I should eventually document my daily
+  processes so that "if you're ever out, someone can cover." I haven't done
+  this formally yet, but I started drafting a Word document called
+  "AR Daily Process — Priya S." on my own, not because he asked me to do it
+  today, but because writing things out helps me understand them.
+
+  Wrote out the daily invoice workflow, the overdue reminder workflow, and
+  everything I know about running the aging report. This is separate from
+  my cheat sheet — the cheat sheet is for me in the moment ("what button do
+  I click"); the documentation is a proper write-up for someone else.
+
+  Probably overkill for month 3 of the job. But it helped me realize there
+  are still steps I'm fuzzy on. Specifically: I realize I don't fully know
+  what happens after I record a payment in QB. Like, does it automatically
+  close the invoice? Does it send a receipt? I should ask Raj.
+
+04:00 PM - 04:50 PM  [50 min] END-OF-DAY WRAP-UP + TOMORROW PREP
+
+  Filed everything. Updated Excel. Printed the open invoices list for tomorrow.
+  Closed QB.
+
+  Before I left I messaged Raj one more time:
+    Me: "Hey Raj, quick process question for my own understanding — when I
+        record a payment in QB, does the invoice automatically close/mark as
+        paid, or is there a separate step? And does QB automatically send a
+        receipt to the customer?"
+    Raj: "Yes, applying a payment to an invoice marks it paid and closes it.
+         QB does have an option to send a receipt but we don't use it — we
+         let customers keep their own records. Just apply payment to invoice
+         and you're done."
+
+  Good to know. Added to cheat sheet.
+
+══════════════════════════════════════════════════════════════
+END OF DAY — PRIYA'S REFLECTION
+───────────────────────────────────────────────────────────
+  Today was genuinely harder than yesterday but I also feel better about today
+  than yesterday, if that makes sense. The aging report thing was stressful
+  but I did it right. I noticed the accrual/cash mistake BEFORE I sent it to
+  finance. Raj said it was correct. That is a win.
+
+  The thing I keep thinking about is how I don't understand some things at a
+  deeper level — like I know to use accrual but I couldn't explain to you why
+  accrual vs. cash gives different totals on the aging report. That gap between
+  "I know what button to press" and "I understand why" feels uncomfortable.
+  My accounting degree gave me the theory but theory and QuickBooks are two
+  different things.
+
+  Also the credit hold thing — I'm glad I found that myself. What would have
+  happened if a sales order came in for Devlin's Food Market and I just
+  processed it without knowing? I'd have sent an invoice to a customer on
+  credit hold. That seems like a really bad mistake. I feel like there are
+  landmines everywhere and I'm only finding them one by one.
+
+  Tomorrow: I should ask Raj if there's a full list somewhere of customers
+  with special statuses, rather than me discovering them by accident.
+
+  TO-DO FOR TOMORROW:
+  □ Check if Mesa Pacific payment came through (they said end of week)
+  □ Check Branford Catering — 9 days overdue, no payment, may need Raj's
+    input on whether to escalate
+  □ Ask Raj: is there a master list of customers with credit holds or
+    special billing terms? I want to not discover these by accident
+  □ Continue process documentation Word doc
+  □ File today's invoices in binder (forgot to do it before leaving)

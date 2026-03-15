@@ -1,0 +1,148 @@
+═══════════════════════════════════════════════════════════
+  SWEET SPOT BAKERY — OWNER DIARY
+  Linda Torres | Tuesday, Week 1
+  "Some days the bakery wins. Today the bakery destroyed me."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      13h 45min
+Customers served:        ~39 (lost count during the oven crisis)
+QB Online sessions:      1  (22 min total — rough session)
+Receipts entered today:  5 (with at least 2 mistakes I know of)
+Oven emergencies:        1
+Times I almost cried:    2
+
+04:45 AM - 05:30 AM  [45 min] OPEN BAKERY / PREP
+  Started my usual routine. Sourdoughs in, cases wiped, espresso machine warmed up. Noticed
+  the convection oven was making that grinding noise again - worse than yesterday. I turned it
+  off and back on and it seemed okay. Told myself it was fine. It was not fine.
+
+05:30 AM - 07:15 AM  [105 min] MORNING BAKE — THEN DISASTER
+  I had two sheet pans of croissants in the big convection oven at 6:20. The oven started making
+  a sound like a shopping cart with a broken wheel, then - nothing. Fan stopped. Heat just gone.
+  I opened the door: half-baked croissants. Pale, doughy, not even close.
+
+  I cannot describe the feeling of watching $60-70 of product just sitting there, undone.
+
+  Pulled them out. Tried to finish them in my smaller countertop oven - only fits one pan at a
+  time and it runs hot on the right side. The first batch came out uneven. Sold what I could.
+  Threw out about 14 croissants that weren't presentable. Called the repair company - they
+  said "tomorrow or Thursday at the earliest." I said some words I won't write down.
+
+  Dani doesn't work Tuesdays. So I was alone.
+
+07:15 AM - 09:30 AM  [135 min] DAMAGE CONTROL / REDUCED OPENING
+  Put a handwritten sign on the door: "Limited pastry selection today - we appreciate your
+  patience!" Ran on muffins, scones, and the focaccia from yesterday. A few people were
+  disappointed about the croissants. Mrs. Okafor said she'd come back Wednesday. I gave her
+  a free scone for the trouble. I know I shouldn't keep giving things away but I couldn't help it.
+
+  Register running slow - by 9:30 only about $140.
+
+09:30 AM - 11:00 AM  [90 min] EMERGENCY BAKE ADAPTATION
+  Shifted to things I can make in the smaller oven or on the stovetop. Did two batches of
+  snickerdoodles, a pan of brownies, some shortbread. It's not my usual lineup but it's something.
+  My feet were killing me. Forgot to eat breakfast.
+
+11:00 AM - 01:00 PM  [120 min] SALES FLOOR + PHONE CALLS
+  Called my supplier to make sure Thursday's flour delivery was still on. Confirmed. Called
+  my landlord to ask (again) about the electrical situation - the oven repair guy last time
+  said the voltage in the kitchen was "inconsistent." Landlord said he'd "look into it."
+  That's his favorite phrase.
+
+  A catering inquiry came in via email - someone wants two dozen assorted pastries for a
+  Friday morning office thing. I said yes. Added it to my calendar. Then remembered I have no
+  working convection oven. Texted the repair shop again.
+
+  Lunch total around $310. Not terrible given the circumstances, but $80-100 off a normal Tuesday.
+
+01:00 PM - 03:30 PM  [150 min] AFTERNOON + CLEANUP
+  Things slowed down. Sold out of the brownies, which made me feel better. Made a note to put
+  brownies on the regular menu. Cleaned the oven (the broken one) like that would somehow help
+  it. Swept. Wiped. Counted the drawer: $387.00 for the day. I usually do closer to $475 on
+  Tuesdays. That's almost $90 gone.
+
+  I did rough math on the croissant loss: about 14 at $3.50 each = $49. Plus the time, the
+  stress, the repair bill coming. I felt tired in a bone-deep way.
+
+03:30 PM - 05:30 PM  [120 min] SUPPLY RUN + HOME
+  Drove to Restaurant Depot for butter (ran lower than expected) and heavy cream. Spent $61.40.
+  Got home. Sat on the couch. Told myself I'd do QB after dinner.
+
+05:30 PM - 06:30 PM  [60 min] DINNER
+  My neighbor Gloria knocked to drop off tamales (bless her). We talked for 45 minutes on the
+  porch. I probably needed that more than I knew. She asked how business was going. I said "the
+  oven broke." She said "that's the bakery talking." We laughed.
+
+06:30 PM - 07:00 PM  [30 min] FAILED QB ATTEMPT
+  Sat down at the table. Opened QB. The dashboard again. I noticed it said my checking account
+  hadn't been updated since... February 18th? That seems like a long time. I don't know how
+  that updates. Does it sync automatically? Did I set that up? I honestly don't remember.
+
+  I got distracted trying to figure out the bank sync thing and ended up on the wrong page
+  (something called "Chart of Accounts") which had all these intimidating words: General
+  Ledger, Accounts Receivable, Equity, Retained Earnings. I felt like I was reading a foreign
+  language. Closed the tab. Sat there for a minute. Opened it back up.
+
+07:00 PM - 07:00 PM  → Called Maria (my daughter). She's 27, works in tech, very patient with me
+  about computers. She said she'd come over Wednesday evening after work. "Mom just don't touch
+  anything big until I get there." I promised.
+
+07:00 PM - 09:00 PM  [120 min] QB — LATE NIGHT (BAD IDEA)
+  Couldn't sleep anyway. Decided to just do receipts, nothing complicated.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [09:02 PM – 09:24 PM, 22 min]
+
+  Entered 5 more receipts from the shoebox. It was late and I was tired and I made some errors:
+
+    - Restaurant Depot, today: $61.40 (butter, heavy cream)
+      → entered under "Cost of Goods Sold" — I think that's right
+      → MISTAKE: I accidentally typed $614.00 instead of $61.40. Caught it. Fixed it.
+        (I think I fixed it. I hit save and then second-guessed myself and hit save again.
+        Now I'm not sure if there are two of them.)
+
+    - Gordon's Food Service, Feb 19: $94.20 (eggs, butter, vanilla extract)
+      → put under "Office Supplies" (I'm still doing the flour/food thing wrong, I can
+        feel it, but I don't have the energy to figure out the right category tonight)
+
+    - PG&E, February: $201.50 (electric - bakery)
+      → put under "Utilities" — this one I'm sure about
+
+    - Insurance premium, Feb: $143.00 (general liability, monthly installment)
+      → put under... I searched for "Insurance" in the categories and found it.
+        Put it under "Insurance." Felt good about that.
+
+    - Repair invoice from plumber, March 2: $240.00 (same sink drain, it clogged again)
+      → put under "Repairs and Maintenance"
+
+  After the 5th one I started getting confused about whether I was on the Expense page or
+  something else - the screen looked slightly different but I wasn't sure why. I checked the
+  transaction list and there might have been a duplicate of the Restaurant Depot one. I
+  couldn't tell. I closed the browser. I'm too tired.
+
+  I'm going to let Maria look at it tomorrow.
+
+END OF DAY — LINDA'S REFLECTION
+───────────────────────────────────────────────────────────
+  What a day. The oven, the lost croissants, the reduced sales, the tamales from Gloria saving
+  what was left of my evening. $387 on a day that should've been $475+. And the repair bill is
+  coming. I don't even want to guess what a commercial convection oven repair costs.
+
+  I got 5 more receipts into QB but honestly I shouldn't have done it that tired. I think I
+  duplicated the Restaurant Depot entry. And I know the food supply stuff is in the wrong
+  category - I've been doing it wrong for months and I just keep doing it wrong because I don't
+  know how to fix it all.
+
+  Maria coming tomorrow is the best news of the week. She's going to sigh at me a little but
+  she'll help and she won't make me feel stupid about it. I love that kid.
+
+  The catering order Friday is still on. I need the oven back. Please let the oven come back.
+
+  TO-DO FOR TOMORROW:
+  □ Oven repair guy — call first thing, push for Wednesday
+  □ Maria arrives ~6pm — prep questions for her (the category thing, the duplicate, the bank sync)
+  □ Write a list of "things I've been doing wrong in QB" before she gets here
+  □ Don't enter anything in QB until Maria looks at it
+  □ Dani works Wednesday — ask her to handle floor so I have time for books
+  □ Double-check the Restaurant Depot duplicate entry

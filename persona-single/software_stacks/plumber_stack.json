@@ -1,0 +1,28 @@
+{
+  "software": [
+    {
+      "software_type": "accounting",
+      "url": "https://app.qbo.intuit.com",
+      "label": "QuickBooks Online",
+      "login_required": true,
+      "is_primary": false
+    },
+    {
+      "software_type": "email",
+      "url": "https://mail.google.com",
+      "label": "Gmail",
+      "login_required": true,
+      "is_primary": true
+    }
+  ],
+  "event_routes": {
+    "PHONE_CALL": "",
+    "CREATE_ESTIMATE": "accounting",
+    "SEND_INVOICE": "accounting",
+    "RECORD_PAYMENT": "accounting",
+    "CHECK_PL": "accounting",
+    "CHECK_BANK_FEED": "accounting",
+    "CHECK_EMAIL": "email",
+    "REPLY_EMAIL": "email"
+  }
+}

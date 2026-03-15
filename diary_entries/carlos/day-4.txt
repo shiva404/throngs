@@ -1,0 +1,365 @@
+═══════════════════════════════════════════════════════════
+  RODRIGUEZ & ASSOCIATES CPA — ACCOUNTANT DIARY
+  Carlos Rodriguez, CPA | Thursday, Week 1
+  "A clean reconciliation is not luck. It's discipline."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      11h 05min
+Clients handled:         5
+QB Online sessions:      11  (263 min total)
+Billable hours logged:   8.5h
+Billable revenue (est.): $1,487.50
+Bank reconciliations completed: 7 (across 4 clients, multiple accounts)
+Reconciliations with zero difference: 6
+Reconciliations that required debugging: 1 (Bloom Legal — see below)
+Outstanding items identified: $43,200 across all clients
+
+07:30 AM - 08:00 AM  [30 min] EARLY START — PREP FOR MARATHON DAY
+  In at 7:30. Today is quarterly review day. Four clients: Ortega Medical Supply,
+  Henderson Plumbing, Nakamura Restaurant Group, and Bloom Legal Services. Plus one
+  carryover item — Westbrook Fitness memo to Sarah.
+
+  The Henderson and Ortega books are reasonably clean from yesterday's corrections.
+  Nakamura will be quick now that I've fixed the categorization issues. Bloom Legal
+  I have concerns about — I've been doing their books for 18 months and the attorney
+  (Patricia Bloom) does her own initial categorization. She's organized but I've never
+  fully trusted the books. Today I'll find out.
+
+  Drafted and sent the Westbrook Fitness Millbrook analysis memo to Sarah before 8:00.
+  Two pages: analysis of the margin compression by category (instructor comp, rent,
+  aging equipment), financial summary of the equipment replacement economics, and
+  a recommendation to request a lease renewal proposal from the landlord no later
+  than Q3 2025 (12 months before expiration gives negotiating room). Clean, professional.
+  Sent. Done.
+
+08:00 AM - 10:30 AM  [150 min] QUARTERLY REVIEW — ORTEGA MEDICAL SUPPLY (Q4 2024)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1 (CLIENT: Ortega Medical Supply)  [08:05 AM – 10:25 AM, 140 min]
+
+  Dr. Maya Ortega runs a medical supply distributorship — she sources from Cardinal Health
+  and McKesson and resells to small medical practices. Her business is straightforward
+  but margin-sensitive. She's on accrual basis, which is correct for a business with
+  meaningful accounts receivable and payable.
+
+  Q4 2024 review scope: October, November, December.
+
+  BANK RECONCILIATION — Q4 (3 months, combined):
+  Ortega has two accounts: a main operating account at Wells Fargo and a separate savings
+  account she uses for tax reserves. Reconciling three months at once for a quarterly
+  client is standard for me — I get the bank statements, load them up, and work through.
+
+  Wells Fargo Operating Account:
+  October: 87 transactions. Cleared clean. One outstanding check from September (check
+  #3341 to Cardinal Health, $2,180) cleared in October — noted. Difference: $0.00.
+  November: 94 transactions. Cleared clean. Difference: $0.00.
+  December: 112 transactions (holiday season, more purchasing activity). Two items needed
+  investigation:
+    - A $4,400 debit I couldn't immediately match to any recorded expense. Pulled up the
+      transaction in QB, opened the bank statement PDF side by side. The transaction
+      reference was "ACH DEBIT ORTEGA MED LLC 12/18" — our own account number. Looked
+      more carefully. This was an internal transfer to the tax savings account that Maya
+      processed herself without recording it in QB. Created a transfer entry. Matched.
+    - An outstanding deposit of $6,800 still uncleared at December 31. Confirmed with
+      Maya via text: check from a client mailed December 29, likely cleared January 2.
+      Noted as an outstanding deposit. Correct.
+  Difference after adjustments: $0.00.
+
+  Tax Savings Account: minimal activity. 4 quarterly deposits from the operating account.
+  Reconciled in 8 minutes. Difference: $0.00.
+
+  Six reconciliations by 10:00 AM. I love this.
+
+  ACCOUNTS RECEIVABLE AGING — Q4:
+  AR aging is where I always start my quarterly P&L review for Ortega. Her receivables
+  tend to accumulate because her clients (small medical practices) are sometimes slow
+  payers.
+
+  Current (0–30 days): $34,200
+  31–60 days: $18,400
+  61–90 days: $7,600
+  Over 90 days: $4,100
+
+  The $4,100 over 90 days is from a single client — Valley Primary Care. Maya knows
+  about this. I flagged it again in my notes. If it hits 120 days, I'll recommend she
+  consider a collections letter.
+
+  P&L — Q4 2024:
+  Revenue: $287,400
+  COGS: $201,180 (70% — typical for distribution)
+  Gross Profit: $86,220 (30% gross margin)
+  Operating Expenses: $54,300
+  Net Income: $31,920
+  Net Margin: 11.1% — solid for medical distribution.
+
+  Year-end 2024 summary:
+  Full-year net income: $118,600. Up 14% from 2023 ($103,900). Good year.
+  I'll use these figures for her 2024 tax return preparation.
+
+  Q4 JOURNAL ENTRIES:
+  - Depreciation: warehouse shelving system, delivery van, and two forklifts. Total
+    monthly depreciation $1,840, booked for October, November, December.
+  - Year-end inventory adjustment: physical count at December 31 found a $3,200
+    discrepancy (excess inventory on hand vs. QB count). Created an inventory
+    adjustment entry debiting inventory, crediting inventory adjustment. Will investigate
+    with Maya whether this is a receiving error or a count error.
+  - Year-end accruals: one large order shipped December 30 but not invoiced until January.
+    Revenue recognized in December (accrual basis — shipped = earned). Journal entry:
+    debit AR $14,400, credit Revenue $14,400.
+
+  QB performed well throughout this session. Three reports ran without loading failures.
+  The bank reconciliation workflow in QB is genuinely well-designed — the split-screen
+  view showing the bank statement side vs. the QB books side makes it easy to match
+  items. I consistently appreciate this feature.
+
+  Quarterly review for Ortega Medical Supply — Q4 2024: COMPLETE.
+
+10:30 AM - 10:45 AM  [15 min] BREAK + COFFEE
+
+10:45 AM - 01:15 PM  [150 min] QUARTERLY REVIEW — HENDERSON PLUMBING (Q1 2025)
+  Rich Henderson confirmed the 3 uninvoiced change orders. Total: $18,400.
+  He sent me the details this morning. All three are legitimate completed jobs, just
+  never invoiced. I created the invoices in QB. Total AR increase: $18,400.
+  Two of the three customers are long-standing clients of Henderson's. One is new.
+
+  ⬛ QUICKBOOKS ONLINE SESSIONS 2–4 (CLIENT: Henderson Plumbing)  [10:50 AM – 01:10 PM, 140 min]
+
+  Henderson Plumbing is my "difficult books" client this quarter. I knew it coming in.
+  Rich is an exceptional plumber and a poor bookkeeper. This is extremely common. He
+  runs a 6-person crew, has vehicles, equipment, and highly variable job revenue. His
+  assistant Linda does initial data entry but she's part-time and sometimes falls behind.
+
+  BANK RECONCILIATION — Q4 2024 (October, November, December) — 3 months:
+
+  Business Checking: Henderson's main account.
+  October: 104 transactions. Working through these...
+
+  At 11:15 AM: QB shows "Please wait while we load your transactions." I am loading
+  Henderson's October 2024 bank transactions — 104 items. This is not an unusual
+  number. I wait. 1 minute. 2 minutes. "Loading." 3 minutes.
+
+  I closed the tab and re-opened Henderson's QB file from the Accountant dashboard.
+  Navigated back to Reconcile. The October reconciliation was partially saved from
+  my earlier session — QB preserved my progress, which I appreciate. The transactions
+  reloaded in 28 seconds this time.
+
+  However, October was the messiest month. 23 transactions needed manual review:
+  - 8 payroll direct deposits from Henderson's payroll processor (Gusto) that QB
+    couldn't match because Gusto's bank description format changed in October 2024.
+    New format: "GUSTO NET PAY [employee last 4 SSN]" instead of just "GUSTO NET PAY."
+    QB's matching engine didn't recognize the new format. I manually matched each one.
+  - 4 fuel purchases from an unfamiliar station (the crew worked a job in a different
+    service area and bought fuel at stations not in Henderson's vendor history).
+    Categorized as Fuel & Vehicle Expense.
+  - 3 subcontractor payments that were not in QB at all — Rich paid them cash and forgot
+    to record them. Called Rich. He confirmed: two jobs, subcontractors paid $1,400 and
+    $2,200 in cash. I created the expense entries. Made a note in the file: "Rich — all
+    subcontractor payments need to be in QB within 7 days of payment for accurate books.
+    We've discussed this. It creates 1099 compliance risk when I can't see them."
+  - The remaining 8 were minor — two returned checks, three bank fee charges he'd
+    forgotten to record, one interest income item.
+
+  November: 118 transactions. Better than October. 11 items needed attention, mostly
+  the same Gusto payroll format issue (I batch-matched these now that I understood the
+  pattern). One significant finding: a $9,200 check to a company I didn't recognize —
+  "Pacific Drainage Solutions LLC." Called Rich immediately. Confirmed: a subcontractor
+  for a large commercial job. Not in QB. Created vendor, recorded expense. Another
+  unrecorded subcontractor payment — this one is $9,200 and therefore definitely in
+  1099 territory ($600 threshold, same as always). Confirmed with Rich that he received
+  a W-9 from Pacific Drainage. He said "I think so." I told him I need the W-9 before
+  year-end (which has already passed). We may have a 1099 filing issue. I flagged this
+  for follow-up.
+
+  December: 96 transactions. Cleared with 7 manual items.
+
+  Final reconciliation difference for Henderson Q4: $0.00. It took me 2 hours and 20
+  minutes for what should have been a 90-minute reconciliation, but it cleared clean.
+
+  Total outstanding items in Henderson's books at December 31:
+  - Uncleared checks: 3 (including the $7,400 voided per yesterday's note)
+  - Outstanding deposits: 1 ($3,400 from a job that paid January 3)
+  - Possible 1099 compliance gap: Pacific Drainage Solutions (need W-9 immediately)
+
+  P&L — Q4 2024:
+  Revenue: $198,400
+  Job Materials (COGS): $89,280
+  Subcontractor costs (COGS): $41,200
+  Gross Profit: $67,920 (34.2%)
+  Operating Expenses: $44,100
+  Net Income: $23,820
+
+  Q4 is typically Henderson's strongest quarter (weather permits outdoor work in SoCal).
+  Full-year 2024 net income: approximately $82,000 (I'll confirm when I have Q1–Q3 final
+  figures in front of me for the full-year review).
+
+  One QB moment during this session that I want to note positively: when I was
+  manually matching the Gusto payroll transactions, QB suggested matches automatically
+  after I manually matched the first two — it recognized the pattern and offered the
+  remaining 6 as a batch suggestion. I accepted them all. That's the ML categorization
+  working correctly in real time, learning from my manual corrections within the session.
+  When it does this, it is genuinely impressive.
+
+  Quarterly review for Henderson Plumbing — Q4 2024: COMPLETE (with caveats noted above).
+
+01:15 PM - 02:00 PM  [45 min] LUNCH + NAKAMURA QUICK REVIEW
+
+  ⬛ QUICKBOOKS ONLINE SESSION 5 (CLIENT: Nakamura Restaurant Group)  [01:20 PM – 01:55 PM, 35 min]
+
+  Ate lunch at desk. Pulled up Nakamura to do a lighter quarterly review — Ken is
+  monthly-close adjacent; his books are cleaner than most quarterly clients.
+
+  Q4 2024: 312 transactions combined across both locations. Post my Wednesday corrections,
+  the books are accurate. Bank reconciliation for both accounts: cleared clean in 45
+  minutes combined. I had already corrected the major categorization errors, so this was
+  a review, not a rescue.
+
+  One new finding: Harbor Fusion is approaching breakeven. Q4 2024 was their first
+  profitable quarter — net income $4,100. Small but meaningful. Ken needs to know this.
+  Sent him a quick message: "Ken — Harbor Fusion posted its first profitable quarter in
+  Q4 2024 ($4,100 net income). Important milestone as you head into Year 2. Good news
+  to have ahead of the S-Corp election conversation."
+
+  He replied with three exclamation points. Good.
+
+02:00 PM - 05:15 PM  [195 min] QUARTERLY REVIEW — BLOOM LEGAL SERVICES (Q4 2024)
+  This is the one I was worried about.
+
+  ⬛ QUICKBOOKS ONLINE SESSIONS 6–9 (CLIENT: Bloom Legal Services)  [02:05 PM – 05:10 PM, 185 min]
+
+  Patricia Bloom runs a 4-attorney civil litigation practice. She's organized and
+  intelligent, but her chart of accounts is a disaster — she set it up herself when
+  she started the firm 5 years ago, before she became my client, and she's been fighting
+  me on restructuring it ever since. "The accounts mean something to me," she says.
+  I understand. Attorneys know things. This is not one of them.
+
+  BANK RECONCILIATION — Q4 2024:
+
+  Business Operating Account (City National Bank):
+  October and November reconciled clean. 134 and 97 transactions respectively.
+  December: 141 transactions. I started the reconciliation and hit a $14,700 difference.
+
+  A $14,700 discrepancy at December 31.
+
+  This is not a rounding error. This is not a timing difference. This is wrong and I
+  need to find it.
+
+  I spent 47 minutes debugging the December reconciliation. I am going to document this
+  because it was an excellent example of systematic debugging:
+
+  Step 1: Check that the opening balance matches November's ending balance. ✓ It does.
+  Step 2: Confirm all December deposits match the bank statement. Found it on pass 3:
+  a $14,700 deposit on December 22 is in the bank statement but NOT in QB. The bank
+  shows "WIRE CREDIT — SETTLEMENT FUNDS 12/22." Patricia received a settlement payment
+  from a case and it was deposited directly to the operating account. She did not record
+  it in QB. The wire hit the bank but there is no corresponding revenue entry.
+
+  This is a significant omission. A $14,700 unreported revenue item. If this had sailed
+  through to the tax return without being caught, it would have been underreported income.
+
+  I called Patricia immediately. She confirmed: yes, that's the Hendricks v. Pacific
+  settlement, her firm's contingency fee for a case that settled December 20. She had
+  the settlement in her calendar but forgot to tell me or record it. She'd assumed "QB
+  would pick it up from the bank feed." QB does pick up bank feed transactions — but
+  she has QB set to "manual approval" mode for the operating account, meaning transactions
+  don't auto-enter until approved. She saw the wire in the bank feed queue but hadn't
+  approved it.
+
+  I want to be clear: this is not QB's fault. This is a user workflow issue. Patricia
+  has her bank feed set to require manual approval, which is the right setting for an
+  attorney trust account (IOLTA) but less critical for the operating account. I've
+  suggested she switch the operating account to auto-enter. She hasn't.
+
+  But here's the QB element: the bank feed approval queue had 47 pending items in it
+  when I opened it. The $14,700 wire was buried in the middle of the queue, listed as
+  "Bank of America Wire" with no additional description. Not flagged. Not highlighted.
+  QB's UI treats a $14,700 wire credit identically to a $4.99 Spotify charge in the
+  pending queue — same row, same visual weight. A high-value, unusual transaction type
+  (wire credit) should surface differently. This is a reasonable UX criticism.
+
+  Approved the transaction. Categorized as Legal Fees Earned. Reconciliation cleared.
+  Difference: $0.00.
+
+  Then I ran the AR aging report. Bloom Legal has $67,400 in outstanding receivables.
+  This is high for a 4-attorney firm. Oldest item: $8,200 from a client billed in
+  August 2024. Patricia says they're "in discussion." I have a standard line for this
+  situation: "They're in discussion, or they're not paying?"
+
+  She said she'll follow up.
+
+  P&L — Q4 2024 (post-correction):
+  Legal Fees Revenue: $214,600 (includes the $14,700 settlement fee now recorded)
+  Operating Expenses: $87,400
+  Net Income: $127,200
+  Q4 is Bloom Legal's strongest quarter — big cases often settle at year-end.
+
+  QB issue during Bloom session: one loading spinner, 2 minutes 18 seconds, when
+  trying to run the AR Aging report. This is the sixth loading failure this week.
+  I am now officially logging every instance with a timestamp and client name.
+
+  After the reconciliation, I spent 40 minutes reviewing the general ledger for
+  categorization accuracy (given Wednesday's findings). Found 4 misfires (the two
+  I already corrected Wednesday, plus two new ones in December). Fixed.
+
+  Quarterly review for Bloom Legal Services — Q4 2024: COMPLETE.
+
+05:15 PM - 06:35 PM  [80 min] EOD ADMIN — INVOICING, NOTES, PREP
+
+  Invoiced: Ortega ($350), Henderson ($560), Nakamura ($262.50), Bloom ($490).
+
+  Sent detailed written summaries to each client:
+  - Ortega: clean books, one AR follow-up needed, good year overall.
+  - Henderson: sent a firm note about the subcontractor recording requirements and the
+    Pacific Drainage 1099 issue. Attached W-9 request template for him to send to
+    Pacific Drainage immediately.
+  - Bloom: sent a follow-up about the $14,700 omission (framed constructively), a
+    recommendation to switch the operating account bank feed to auto-enter mode,
+    and the AR aging summary with a request she chase the August invoice.
+
+  Tomorrow's schedule: three client emails to respond to, and I plan to do a deeper
+  dive into the bank matching algorithm issue I noticed today in one of the sessions.
+  Something is not matching correctly in QB's reconciliation engine — I've been seeing
+  it all week and today it crystallized into something I can document.
+
+END OF DAY — CARLOS'S REFLECTION
+───────────────────────────────────────────────────────────
+  Long day. 11 hours, which is more than I prefer. But Henderson and Bloom both needed
+  the time, and the work is complete.
+
+  The $14,700 omission at Bloom Legal is the find of the week. If I had done a cursory
+  reconciliation and reported the difference as a "timing item" — something some
+  practitioners do when a discrepancy is small enough to rationalize — I would have
+  missed unreported income on a client's tax return. That could be a penalty, potentially
+  an audit, and certainly a malpractice conversation. Instead: found it, corrected it,
+  documented it, and counseled the client on the workflow change needed to prevent it.
+  That's what a CPA does.
+
+  I'm going to say something positive about QB tonight: the reconciliation workflow
+  saved me at the critical moment. When I was debugging the $14,700 difference, I used
+  QB's "Mark All" feature to uncheck everything and work through the deposits one by one.
+  The visual split-screen between bank statement and QB ledger made the missing transaction
+  visible. An older, spreadsheet-based process would have been slower. Credit where due.
+
+  The loading failures this week: six documented instances. Total time lost: approximately
+  18 minutes. Not catastrophic. But consistent. And the retroactive re-categorization issue
+  from Wednesday is still the bigger concern — the loading spinner wastes my time, but
+  a wrong category can file a wrong tax return.
+
+  I want to also document: I have been considering recommending Xero to Patricia Bloom.
+  She's a small but complex client and she does not use QB well. Xero has a better
+  bank feed approval queue (high-value transactions are surfaced more prominently), and
+  its trust account handling is slightly better suited to legal practices. I'm not making
+  the recommendation yet — migration is disruptive and she's not complaining — but I'm
+  watching QB's continued issues and I'm keeping Xero in my back pocket. If QB's ML
+  categorization problem isn't resolved in the next 60 days, I will have that conversation.
+
+  TO-DO FOR TOMORROW:
+  □ Respond to 3 client emails (Ramirez — P&L question, Chen — loan classification
+    follow-up, Pioneer — bank feed alias update)
+  □ Investigate QB bank matching algorithm anomaly — document and post to Community
+  □ Follow up: Henderson W-9 from Pacific Drainage Solutions
+  □ Henderson: check if 1099 for Pacific Drainage Solutions needs amendment filing
+  □ Check QB Community — auto-categorization bug update
+  □ Send Sarah Westbrook SEP vs. Solo 401(k) analysis (promised by Friday)
+  □ Call prospective new client
+  □ Log all QB loading failures for the week — prepare formal summary

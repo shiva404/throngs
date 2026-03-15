@@ -1,0 +1,344 @@
+═══════════════════════════════════════════════════════════
+  SUMMIT DISTRIBUTION — AR CLERK DIARY
+  Priya Sharma | Thursday, Week 1
+  "The check was for $3,100. The invoice is $3,400. Now what?"
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      9h 5min
+Invoices processed:      5
+QB Online sessions:      5  (109 min total)
+Payments recorded:       0  (pending — partial payment situation unresolved)
+Raj consultations:       4  (including one 25-min conversation)
+Excel backup entries:    5 new + partial payment notes
+
+08:00 AM - 08:35 AM  [35 min] MORNING SETUP + INBOX
+
+  Slept badly last night. Woke up thinking about the Shoreline dispute and
+  the Mesa Pacific payment. Both are probably fine. My brain doesn't care.
+
+  Email check:
+    1. Cascade Hospitality paid! Check notification in the accounts email:
+       $675.00 payment received yesterday afternoon. I'll record this today.
+       Good.
+
+    2. Physical mail — Raj emailed at 8:03 saying he'd picked up a check from
+       the mail batch and it's on my desk. For Hartwell Grocery Group.
+       The check amount: $3,100.00. INV-2849 (from Monday) was for $6,102.00.
+       Wait. That's not a match. Also it's only been 3 days since I sent the
+       invoice. Hartwell is Net 45 — their invoice isn't even due yet.
+       This is not a partial payment — is it? Or is it?
+       I don't know what to do with a check that doesn't match any open
+       invoice amount.
+
+    3. Shoreline update from Raj: "We're issuing Shoreline a credit memo for
+       $120. I'm handling it. You don't need to do anything in QB."
+       Good. I don't need to do anything with a credit memo. I know I'm not
+       supposed to touch credit memos and honestly the phrase makes me nervous
+       enough that I wouldn't touch it even if I wanted to.
+
+    4. New invoice requests: 5. Printed.
+
+  I picked up the Hartwell check from my desk. It's a real paper check:
+  Hartwell Grocery Group, dated 03/11/2026, $3,100.00. In the memo line:
+  "Partial — INV-2849." So it IS a partial payment. They are paying $3,100
+  of a $6,102.00 invoice, three weeks before it's due.
+
+  I've never dealt with a partial payment. I feel like there must be a right
+  and wrong way to record this in QB and I do not want to guess.
+
+08:35 AM - 08:45 AM  [10 min] INITIAL RESEARCH — PARTIAL PAYMENTS
+
+  Went to the QB help center. Searched "partial payment invoice." Found the
+  article: "Record a partial payment on an invoice." Read it once quickly.
+  It seems like you can apply a payment for less than the invoice total and
+  QB will leave the invoice open with a remaining balance.
+
+  The article also mentions an "underpayment" scenario where you can either
+  leave the difference as outstanding or write it off as bad debt. The "write
+  off" phrase made my stomach clench. That is NOT something I'm doing without
+  Raj's explicit instruction. I wrote in my notes: "Do NOT write off. Escalate
+  to Raj. Read help article but wait for guidance."
+
+  Also: the check is dated 03/11 (yesterday). So if I record it, the payment
+  date should be 03/11, not today.
+
+  Messaged Raj:
+    Me: "Hi Raj — there's a check on my desk from Hartwell for $3,100.00.
+        The memo says 'Partial — INV-2849' but the invoice is for $6,102.00
+        and it's not even due yet (Net 45, due Apr 7). I've never processed
+        a partial payment before. Can I get 5 minutes of your time to make
+        sure I handle this correctly?"
+    Raj: "Sure, come over in 20 minutes."
+
+08:45 AM - 09:15 AM  [30 min] QB ONLINE — RECORDING CASCADE PAYMENT
+
+  While waiting for the Raj meeting I handled the easy one.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:47 AM – 09:13 AM, 26 min]
+
+  Recorded the Cascade Hospitality payment:
+    Sales > Customers > Cascade Hospitality LLC > Receive Payment
+    Payment date: 03/12/2026 (the check notification email said it arrived
+    yesterday)
+    Method: ACH (payment notification said "ACH transfer")
+    Reference: their ACH reference number from the notification: ACH-8841-2026
+    Amount received: $675.00
+    Applied to: INV-2812 ($675.00 — exact match)
+    Difference: $0.00
+
+  Read through the form twice. Saved & Close.
+  INV-2812 now shows PAID. Activity log confirms the $675 payment.
+  Logged in Excel.
+
+  Verified INV-2803 (Mesa Pacific, recorded yesterday) while I was in the
+  customer section — still showing PAID correctly. Good.
+
+09:15 AM - 09:40 AM  [25 min] RAJ CONSULTATION — PARTIAL PAYMENT
+
+  Went to Raj's desk at 9:16. He pulled out a chair and we went through it.
+
+  Raj's explanation:
+    "Partial payments happen sometimes. Hartwell probably has a cash flow
+     thing or they're paying off a chunk to stay current. Here's what you do:
+     record the $3,100 against INV-2849, same way you'd record any payment.
+     QB will apply it and leave INV-2849 open with a remaining balance of
+     $3,002. The invoice will show as 'Partial' in the system. When the rest
+     of the payment comes in — probably before the Apr 7 due date — you
+     record that too and it'll close out."
+
+  Me: "What if they only ever pay $3,100 and not the full amount?"
+  Raj: "Then after the due date we'd have a problem. But don't worry about
+       that now. Apply the partial, note it in the system, and we'll watch
+       it as we get closer to Apr 7."
+
+  Me: "Should I send Hartwell any kind of confirmation or acknowledgement
+      that we received the partial?"
+  Raj: "No, we don't typically do that for partials. They know what they paid.
+       If anything, let me know when it's recorded and I'll note it on my end."
+
+  Me: "One more thing — the check is dated 03/11 but it arrived today.
+      Do I use the check date or today's date?"
+  Raj: "Use the check date. 03/11."
+  Me: "Got it."
+
+  I wrote all of this down on my notepad in real time. Raj is patient about
+  me taking notes during these conversations. He never makes me feel dumb for
+  asking. I know he's busy but he's never made me feel like a burden.
+
+09:40 AM - 10:15 AM  [35 min] QB ONLINE — PARTIAL PAYMENT RECORDING ATTEMPT
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [09:43 AM – 10:14 AM, 31 min]
+
+  Okay. Here we go. Hartwell Grocery Group partial payment.
+
+  Sales > Customers > Hartwell Grocery Group > Receive Payment
+
+  Form loaded. Hartwell has two open invoices listed:
+    - INV-2849: $6,102.00 (the one being partially paid)
+    - INV-2864: $4,775.00 (the one I sent today — wait, that shouldn't be
+      showing yet since I sent it today... actually it does show because I
+      entered and sent it this morning)
+
+  Fields I filled in:
+    - Payment date: 03/11/2026
+    - Payment method: Check
+    - Reference/Check #: I looked at the physical check. Check number: 10847
+    - Amount received: $3,100.00
+
+  QB auto-assigned the $3,100 to INV-2849 first (because it's older). This is
+  what I want. But I hovered over the form for a while verifying:
+    - Amount received: $3,100.00 ✓
+    - Applied to INV-2849: $3,100.00 ✓
+    - Applied to INV-2864: $0.00 ✓ (I do NOT want to accidentally apply any
+      of this to the new invoice — they haven't even received it yet)
+    - Amount to apply: $3,100.00 ✓
+    - Amount to credit: $0.00 ✓ (if this showed anything other than zero I
+      would have stopped and asked Raj)
+    - Difference: $0.00 ✓
+
+  Read through everything again. Read it a third time. Took a breath.
+
+  Clicked Save & Close.
+
+  Went to INV-2849. Status: "Partial." Amount paid: $3,100.00. Balance due:
+  $3,002.00. Due date: Apr 7, 2026. This looks exactly like Raj described.
+
+  Printed the invoice screen showing the partial status and put it in my
+  physical file. Logged in Excel with a note: "Partial — $3,100 received
+  03/11 (ck#10847). Balance $3,002 due Apr 7."
+
+  Texted Raj (we sometimes use the internal messaging app): "Hartwell partial
+  recorded — $3,100 against INV-2849, balance $3,002 due Apr 7."
+  He replied: "Good."
+
+  That "Good" felt amazing.
+
+10:15 AM - 11:30 AM  [75 min] QB ONLINE — NEW INVOICE BATCH
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [10:18 AM – 11:24 AM, 66 min]
+
+  Five new invoice requests to process:
+
+    INV-2866 | Meridian Kitchen Supply | $2,105.00 | Due Mar 27
+      Third invoice this week for Meridian. They're busy. Previewed. Saved.
+
+    INV-2867 | Gorman & Associates | $1,890.00 | Due Mar 27
+      No PO suffix issue this time — PO# G-4472, clean and simple. Saved.
+
+    INV-2868 | Mesa Pacific Goods | $4,650.00 | Due Apr 27
+      Mesa Pacific is apparently back to ordering. They just paid their
+      overdue invoice yesterday and already have a new one. I checked their
+      terms in QB to confirm Net 45 — confirmed. Due Apr 27. Previewed. Saved.
+
+    INV-2869 | Redstone Food Co. | $1,760.00 | Due Mar 27
+      Routine. Saved.
+
+    INV-2870 | Valley Fresh Distributors | $3,400.00 | Due Mar 27
+      Also routine. One thing I noticed: Valley Fresh's email on file in QB
+      ends in "@valleyfreshfoods.com" but the sales contact on the order lists
+      "@valleyfresh.net". I'm not sure which is right. I checked the last
+      invoice I sent them (INV-2854 from Monday). I had sent it to
+      @valleyfreshfoods.com without noticing the discrepancy, and I didn't
+      get a bounce. So that address probably works. But the discrepancy still
+      bugs me.
+
+      Messaged Raj:
+        Me: "Quick one — Valley Fresh has two different email domains on
+            file. QB has @valleyfreshfoods.com; the sales order says
+            @valleyfresh.net. Monday's invoice sent to the .com address with
+            no bounce. Should I update the record or leave it?"
+        Raj: "Leave it for now. I'll confirm with the sales rep which is
+             canonical and update the customer record. Send to .com for now."
+
+      Sent to .com. Logged.
+
+  All 5 invoices sent. Total today so far: 5.
+
+11:30 AM - 12:15 PM  [45 min] OVERDUE + FOLLOW-UPS
+
+  ⬛ QUICKBOOKS ONLINE SESSION 4  [11:33 AM – 11:52 AM, 19 min]
+
+  Checked overdue. Updated status:
+    - INV-2791 | Branford Catering | $1,850.00 | 10 days — still no payment.
+      I flagged this to Raj via message: "Branford Catering INV-2791 is 10 days
+      overdue, $1,850. I've sent 2 reminders (Mon + Wed). Should I send a
+      third or is it time for you to take over?" Raj replied: "I'll call them
+      today."
+    - INV-2812 | Cascade Hospitality | $675.00 | PAID (recorded this morning)
+    - INV-2694 | Thornbury Market | $414.00 | 4 days — sent reminder Wednesday.
+      Sent a second reminder today. Logged.
+    - INV-2855 | Shoreline | $1,100.00 | UNDER DISPUTE — credit memo pending.
+      Do not send reminders.
+
+12:15 PM - 01:00 PM  [45 min] LUNCH
+
+  Went out. Needed the break after the Hartwell partial payment stress.
+  I know it worked out fine. But the fear going into it — that I'd apply
+  it wrong or accidentally apply it to the new invoice or do something that
+  couldn't be undone — that fear is exhausting to carry.
+
+  I wonder if everyone feels this way at first. Or if some people just...
+  aren't scared of things going wrong. Maybe if I'd made more mistakes early
+  on and survived them I'd be less scared? But the "accidentally sent a draft
+  invoice" thing in week two scarred me a little. I still cringe thinking
+  about it. I'd been in QB for three days, I wasn't sure if I was in draft
+  or final mode, and I hit Send without realizing the line items weren't
+  complete. Raj had to email the client directly to explain and send a
+  corrected version. The client was understanding but I was mortified.
+
+  I double-check things so many times because of that. I know it slows me
+  down. But slow is better than wrong.
+
+01:00 PM - 03:00 PM  [120 min] PROCESS DOC + CHEAT SHEET + ADMIN
+
+  Updated cheat sheet with a new page for Partial Payments:
+    - Go to Receive Payment for the customer (same path as full payment)
+    - Enter the check date (NOT today's date if check is older)
+    - Enter check number from physical check
+    - Enter amount received (the actual check amount)
+    - QB will auto-apply to oldest invoice — VERIFY which invoice it's being
+      applied to before saving
+    - Verify: Amount to credit = $0.00 and Difference = $0.00 before saving
+    - Invoice will show status "Partial" with remaining balance
+    - Log in Excel: note partial amount, check#, remaining balance, due date
+    - Notify Raj once recorded
+
+  Added the Valley Fresh email issue to my cheat sheet customer notes:
+  "Valley Fresh — email domain unclear, use .com until Raj confirms."
+
+  Looked up Thornbury Market's payment status one more time. Still unpaid.
+  $414.00, 4 days overdue. Second reminder sent. Logged.
+
+  Raj popped by my desk at 2:15: "Called Branford. They're sending a check
+  tomorrow." Good to know. I noted this in Excel: "INV-2791 — Raj called
+  3/13, Branford says check coming 3/14."
+
+03:00 PM - 03:30 PM  [30 min] QB ONLINE — AFTERNOON VERIFICATION PASS
+
+  ⬛ QUICKBOOKS ONLINE SESSION 5  [03:03 PM – 03:30 PM, 27 min]
+
+  Did a full verification pass on everything I've touched today:
+    - INV-2812 (Cascade): PAID — confirmed ✓
+    - INV-2803 (Mesa Pacific): PAID — confirmed ✓ (re-verified as planned)
+    - INV-2849 (Hartwell partial): shows "Partial" with $3,002 balance ✓
+    - All 5 new invoices (INV-2866 through INV-2870): SENT — confirmed ✓
+    - Shoreline INV-2855: still Open with QB memo noting the dispute ✓
+    - Shoreline INV-2863 (held): still Draft with hold note ✓
+
+  Excel logged and up to date. Open invoices printed for the day.
+
+03:30 PM - 04:45 PM  [75 min] END-OF-DAY SLOW PERIOD + LEARNING
+
+  Raj sent an update on Shoreline: "Credit memo issued for $120. Invoice
+  amended. Shoreline has been notified. Once the corrected invoice is settled
+  you can release INV-2863. Probably next week." I logged this note.
+
+  I didn't ask what "invoice amended" means technically in QB — I assume it
+  means the credit memo offsets the $120 so the customer effectively owes
+  $980. But I didn't ask. I'm not touching that invoice and I'm not going
+  to poke around trying to understand the mechanics in case I accidentally
+  click something.
+
+  Spent the rest of the afternoon reviewing my month-to-date totals in Excel:
+    - Invoices processed this week so far: 24 (Mon 12, Tue 3, Wed 4, Thu 5)
+    - Total invoiced this week: ~$72,000 (rough sum from Excel)
+    - Payments received this week: 2 full ($3,400 Mesa Pacific + $675 Cascade),
+      1 partial ($3,100 Hartwell — $3,002 still outstanding)
+    - Open disputes: 1 (Shoreline, in Raj's hands)
+    - Overdue reminders sent: 7 total (across various customers this week)
+
+  That actually looks like a real job. I am doing a real job.
+
+══════════════════════════════════════════════════════════════
+END OF DAY — PRIYA'S REFLECTION
+───────────────────────────────────────────────────────────
+  The Hartwell partial payment was today's main event. I spent more time
+  researching it than it took to actually record it. The entry itself was
+  maybe 8 minutes. The anxiety and prep and the meeting with Raj and the
+  verification pass were about two hours. That ratio is not sustainable
+  forever, but I think it's probably okay for month three.
+
+  The thing that helped most was asking Raj before I did it, and then doing it
+  exactly the way he said. I didn't try to figure it out on my own. That's
+  a lesson I keep relearning: I don't always have to solve things myself.
+  Asking is part of the job. Raj has never made me feel bad for asking.
+
+  I also keep thinking about the "accidentally sent a draft invoice" thing.
+  That was my worst mistake so far. But it was also week 2, my third day in
+  QB, when I didn't understand the difference between Save as Draft and Send.
+  I understand that now. I understand a lot more things than I did in week 2.
+
+  Tomorrow is Friday. I'm expecting it to be quieter. I need it to be quieter.
+
+  TO-DO FOR TOMORROW:
+  □ Check if Branford check arrives (Raj said they'd send 3/14) — if it comes
+    I'll record the payment
+  □ Check Thornbury Market — now 5 days overdue, consider third reminder or
+    flag to Raj
+  □ Follow up on Mesa Pacific new invoice (INV-2868) — anything to do?
+  □ Ask Raj about end-of-week routine — is there a Friday thing I should be
+    doing that I don't know about?
+  □ Update process documentation with partial payment section
+  □ File all of this week's paper invoices properly in binder (getting behind)

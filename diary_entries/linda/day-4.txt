@@ -1,0 +1,198 @@
+═══════════════════════════════════════════════════════════
+  SWEET SPOT BAKERY — OWNER DIARY
+  Linda Torres | Thursday, Week 1
+  "The reconcile thing. I tried. I got pretty far. Then I stopped."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      12h 15min
+Customers served:        ~44
+QB Online sessions:      2  (1h 47min total)
+Receipts entered today:  18 (the last of the shoebox — almost)
+Reconciliation progress: 70% (February statement)
+YouTube tutorials watched: 1
+Times I said "okay I think I get it" out loud to no one: 4
+
+04:45 AM - 05:15 AM  [30 min] OPEN BAKERY
+  Normal morning. Thank God for normal. Oven came on first try. The sound it makes is
+  slightly different now — smoother. Travis did good work. Got the sourdoughs in and started
+  the croissant dough that had been retarding in the fridge overnight.
+
+05:15 AM - 09:00 AM  [225 min] BAKING + MORNING RUSH
+  Dani doesn't work Thursdays. Solo all day. The morning rush was solid - the croissants were
+  beautiful, which after Tuesday felt like a minor miracle. Sold all 18 by 8:30.
+
+  A woman came in asking about custom orders for a baby shower next month - 4 dozen mini
+  cupcakes and a small decorated cake. I took her number. That's real money if I can do it.
+  Need to follow up.
+
+  Register by 9am: ~$210.
+
+09:00 AM - 12:30 PM  [210 min] MIDDAY BAKE + SALES
+  Second bake wave: muffins, scones, a sheet pan of brownies (those are earning their spot on
+  the menu). Also the flour delivery came in at 10:15 — two guys with a hand truck, everything
+  I ordered: 50lb bread flour ($42.00), 25lb pastry flour ($24.50), 10lb almond flour ($38.00).
+  Total: $104.50. They handed me the invoice. I put it on the desk next to my shoebox. One more
+  receipt to enter.
+
+  Running total by 12:30: ~$360.
+
+12:30 PM - 01:15 PM  [45 min] LUNCH + QB RECEIPT CATCH-UP
+  Finally ate a real lunch. Heated up yesterday's leftover soup. Then I sat with the shoebox
+  and did a sweep — pulled out everything left. Counted: 19 more receipts. Nineteen. I've
+  come so far.
+
+01:15 PM - 03:00 PM  [105 min] FIRST QB SESSION — RECEIPTS
+  Sat in the back office with the door propped so I could hear if anyone came in.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [01:20 PM – 02:45 PM, 85 min]
+
+  Plowed through the remaining receipts. Methodical. I even made myself check each category
+  before saving, which slowed me down but felt more responsible:
+
+    - Flour delivery, today: $104.50 → Cost of Goods Sold (not Office Supplies, Linda)
+    - Amazon, Mar 1: $31.45 (parchment, bags, twist ties, cake boxes)
+      → I looked up "packaging supplies" in categories. Not there. Went with "Supplies" —
+        different from "Office Supplies," seemed more appropriate. Not sure if right.
+    - Amazon, Feb 20: $18.99 (dish soap, sponges, sanitizer spray)
+      → "Janitorial" — I found that category yesterday. Using it.
+    - Amazon, Feb 5: $44.99 (new bench scraper set, 2 dough cutters, a digital thermometer)
+      → I wasn't sure. These are tools. I put them under "Equipment" but then deleted it
+        and put them under "Supplies" because I didn't know if "Equipment" meant big equipment
+        like the oven. Left it as "Supplies." Will ask Robert.
+    - Comcast, Jan: $89.00 (internet — bakery uses it for the Square reader and the wifi)
+      → "Utilities" — seemed right
+    - Comcast, Feb: $89.00 → same
+    - Comcast, Mar: $89.00 → same
+    - Square processing fees, Jan: $47.20 (from the Square monthly statement)
+      → I found "Bank Charges" — put it there. Or maybe it's "Merchant Fees?" QB had both.
+        Picked "Bank Charges." Will check with Maria or Robert.
+    - Square processing fees, Feb: $51.80 → same category
+    - Square processing fees, Mar (partial): $32.10 → same
+    - Health insurance premium, Jan: $218.00 (my personal plan through the marketplace)
+      → I wasn't sure if this was a business expense. I think it is since I'm self-employed?
+        Put it under "Insurance." Will verify with Robert.
+    - Health insurance, Feb: $218.00 → Insurance
+    - Health insurance, Mar: $218.00 → Insurance
+    - Business liability insurance, Mar: $143.00 → Insurance (already entered for Feb,
+      this is March's installment)
+    - Rent, January: $1,450.00
+      → I looked for "Rent." Found it. Easy.
+    - Rent, February: $1,450.00 → Rent
+    - Rent, March: $1,450.00 → Rent (I almost entered this as $1,540 — caught it)
+    - Phone bill (my cell, used for bakery): $67.00/month
+      → entered for Jan, Feb, Mar under "Telephone." Close enough I think.
+
+  That's 19 receipts plus the phone x3 = I went through everything. The shoebox is basically
+  empty. I held it upside down and shook it. One lone receipt fell out — a coffee receipt from
+  a gas station in February for $3.80. I entered it under "Meals and Entertainment" and felt
+  very official about it.
+
+  The shoebox is done.
+
+  I looked at the transaction list. It's... substantial. But it's all in there.
+
+02:45 PM - 03:30 PM  [45 min] DAILY SALES ENTRY
+  I remembered from Wednesday's to-do: I haven't entered this week's sales at all. And I
+  looked back and realized I haven't entered daily sales since... February 6th. That's over a
+  month of income not recorded.
+
+  I went to my handwritten sales notebook (I keep this religiously, every single day). Found
+  all the daily register totals going back to Feb 7. Entered them as income:
+
+  Used "Sales > New Transaction > Sales Receipt" — or maybe it was Invoice. I wasn't sure.
+  I used Sales Receipt each time. For the category I used "Bakery Sales" which is a custom
+  category I created a long time ago and it still exists.
+
+  Entered Feb 7 through March 9 (yesterday) — about 27 entries. It took 30 minutes but I
+  did them all. Totals ranged from $320 on a slow Sunday to $618 on a busy Saturday.
+
+  I did NOT enter this week's days yet because I don't have them written up. Will do Friday
+  and Saturday together when I have final numbers.
+
+03:30 PM - 04:30 PM  [60 min] CLOSE + DAILY TASKS
+  Slower afternoon. Sold the last of the brownies (again - definitely keeping them). Counted
+  drawer: $487.00. Solid Thursday.
+
+  Cleaned up, locked the cases, got ready to go. Thought about the reconciliation thing that
+  Maria mentioned. Pulled out the February bank statement from its envelope. Looked at it.
+  Pages and pages of line items. Okay.
+
+04:30 PM - 05:15 PM  [45 min] DINNER BREAK
+  Home. Pasta. A glass of wine. Deserved.
+
+05:15 PM - 07:30 PM  [135 min] SECOND QB SESSION — RECONCILIATION
+  Watched a YouTube video first. I searched "how to reconcile bank account in QuickBooks Online
+  for beginners" and found one that was 11 minutes long with a calm lady explaining it. She
+  said: "Reconciliation just means you're checking that what QuickBooks says happened matches
+  what your bank says happened." That I understood. That language I can work with.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [05:30 PM – 07:30 PM, 120 min]
+
+  Found the reconcile feature. Accounting > Reconcile. It asked for:
+    - Account: I chose my checking account
+    - Statement ending date: February 28
+    - Ending balance: I looked at the bank statement — $8,214.33
+
+  Typed in $8,214.33. Hit Start Reconciling.
+
+  A list appeared — two columns. QB transactions on one side, basically. I was supposed to
+  check off each one that matched a line on my bank statement. The YouTube lady made it look
+  easy. It was... not easy. Not terrible, but not easy.
+
+  I started going down the list with the paper bank statement next to my laptop:
+  - Checked off each deposit (daily sales receipts) — most matched, some were off by a day
+    because I deposit cash in batches, not every single day. The YouTube lady said this was
+    okay as long as the totals matched.
+  - Checked off utility payments — PG&E, water, Comcast. Found them.
+  - Rent payments — found them.
+  - Credit card payments — I have one business credit card (used for Amazon orders mostly).
+    Found those.
+
+  I was doing pretty well. The "difference" number at the bottom was going down as I checked
+  things off. Got it down to $47.20 remaining difference. Then I hit a stretch where I had
+  bank transactions I couldn't find a match for in QB:
+    - A $23.00 withdrawal I don't recognize. Maybe a bank fee?
+    - A $24.20 charge that... I think might be a Square processing fee from January that I
+      entered but under a slightly different date?
+    - A $0.00 "adjustment" line on the bank statement that I don't understand
+
+  I stared at this for a while. The $47.20 difference was there no matter what I did. I
+  started to feel the familiar "I'm in over my head" feeling. My hands got a little hot.
+
+  I called Maria. She didn't answer — probably in bed early. Left a voice message.
+
+  I did NOT hit "Finish Now" on the reconciliation. I'm afraid that if I close it wrong it'll
+  mess something up. I left the reconcile screen open, closed the laptop lid gently (does
+  that pause it?), and told myself I'd deal with it tomorrow.
+
+  70% done. That's real.
+
+END OF DAY — LINDA'S REFLECTION
+───────────────────────────────────────────────────────────
+  The shoebox is empty. That felt incredible. I stood there holding it upside down and I felt
+  like I'd actually done something real today. All the receipts are in, even if some of the
+  categories are questionable (Amazon tools going into "Supplies" instead of "Equipment" — I
+  still don't know if I did that right).
+
+  The reconciliation got me 70% of the way there. I think the $47.20 difference is one of the
+  Square processing fees that I entered but maybe on the wrong date, or the bank fee I didn't
+  enter yet. I'll figure it out tomorrow. Or I'll ask Robert. One or the other.
+
+  I entered 27 days of income that I'd forgotten to put in. That makes me wonder: was my
+  P&L this whole quarter showing like no income? It must have looked like I was losing money
+  massively. Now it probably looks different. I'll check tomorrow with fresh eyes.
+
+  $487 today. Total for the week so far: $531 + $387 + $561 + $487 = $1,966. Not a bad week
+  for being a disaster.
+
+  Robert's going to call tomorrow. I feel a little more ready than I did Monday. A little.
+
+  TO-DO FOR TOMORROW:
+  □ Finish the reconciliation — the $47.20 difference
+  □ Check if the "bank fee" is something I need to enter
+  □ Enter this week's daily sales (Mon-Fri) once the day is done
+  □ Robert is going to want reports — find out how to pull the P&L and the expenses summary
+  □ The catering order prep — 2 dozen pastries for the office, Friday morning delivery
+  □ Follow up with baby shower inquiry lady (the number is on a Post-it on the register)

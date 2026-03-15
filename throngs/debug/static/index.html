@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Throngs — Component Debugger</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #232736;
+    --border: #2e3345;
+    --text: #e2e4eb;
+    --text-dim: #8b8fa3;
+    --accent: #6c5ce7;
+    --accent2: #a29bfe;
+    --green: #00b894;
+    --red: #e17055;
+    --yellow: #fdcb6e;
+    --blue: #74b9ff;
+    --radius: 10px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* Header */
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  header .subtitle { color: var(--text-dim); font-size: 13px; }
+
+  /* Capture bar */
+  .capture-bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .capture-bar input[type="text"] {
+    flex: 1;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 14px;
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .capture-bar input:focus { border-color: var(--accent); }
+
+  .capture-bar .dims {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  .capture-bar .dims input {
+    width: 60px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 6px 8px;
+    color: var(--text);
+    font-size: 13px;
+    text-align: center;
+  }
+
+  /* Buttons */
+  .btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-sm { padding: 6px 14px; font-size: 12px; }
+  .btn-outline {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+  }
+  .btn-green { background: var(--green); }
+  .btn-red { background: var(--red); }
+
+  /* Status badge */
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .status-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--text-dim);
+  }
+  .status.ready .status-dot { background: var(--green); }
+  .status.loading .status-dot { background: var(--yellow); animation: pulse 1s infinite; }
+  .status.error .status-dot { background: var(--red); }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  /* Tab navigation */
+  .tabs {
+    display: flex;
+    gap: 2px;
+    padding: 0 24px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+  }
+  .tab {
+    padding: 12px 18px;
+    font-size: 13px;
+    color: var(--text-dim);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active {
+    color: var(--accent2);
+    border-bottom-color: var(--accent);
+  }
+
+  /* Panels */
+  .panels { padding: 20px 24px; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--accent2);
+  }
+  .card p.desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  /* Form controls */
+  .form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .form-group label {
+    font-size: 12px;
+    color: var(--text-dim);
+    font-weight: 500;
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: var(--text);
+    font-size: 13px;
+    outline: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--accent);
+  }
+  .form-group textarea { min-height: 80px; resize: vertical; font-family: inherit; }
+
+  /* Results */
+  .result-area {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 12px;
+    max-height: 600px;
+    overflow: auto;
+  }
+  .result-area pre {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text);
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .metric-box {
+    background: var(--surface2);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+  }
+  .metric-box .value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent2);
+  }
+  .metric-box .label {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 4px;
+  }
+
+  /* Screenshot/Heatmap display */
+  .img-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .img-container .img-box {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+  }
+  .img-box img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .img-box .img-label {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0,0,0,0.7);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  /* Element table */
+  .el-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  .el-table th {
+    background: var(--surface2);
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-dim);
+    position: sticky;
+    top: 0;
+  }
+  .el-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .el-table tr:hover td { background: var(--surface2); }
+  .flag-badge {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    margin: 1px;
+  }
+  .flag-badge.warn { background: rgba(253,203,110,0.2); color: var(--yellow); }
+  .flag-badge.error { background: rgba(225,112,85,0.2); color: var(--red); }
+  .flag-badge.ok { background: rgba(0,184,148,0.2); color: var(--green); }
+
+  /* Scatter canvas */
+  .scatter-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--surface2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .scatter-container canvas {
+    display: block;
+  }
+
+  /* Geographic grid */
+  .geo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    max-width: 500px;
+    margin-top: 12px;
+  }
+  .geo-cell {
+    aspect-ratio: 16/9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 20px;
+    transition: all 0.3s;
+  }
+  .geo-cell .sector-label {
+    font-size: 10px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    margin-top: 4px;
+  }
+
+  /* Loading spinner */
+  .spinner {
+    display: inline-block;
+    width: 16px; height: 16px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Two column layout */
+  .split { display: flex; gap: 20px; flex-wrap: wrap; }
+  .split > * { flex: 1; min-width: 350px; }
+
+  /* Frustration bar */
+  .frust-bar {
+    height: 20px;
+    border-radius: 4px;
+    background: var(--surface2);
+    overflow: hidden;
+    margin-top: 8px;
+  }
+  .frust-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s, background 0.5s;
+  }
+
+  /* Toast */
+  .toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .toast {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 13px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    animation: slideIn 0.3s;
+  }
+  @keyframes slideIn { from { transform: translateX(100px); opacity: 0; } }
+
+  .upload-area {
+    border: 2px dashed var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  .upload-area:hover { border-color: var(--accent); }
+  .upload-area input { display: none; }
+
+  .checkbox-row {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .checkbox-row input[type="checkbox"] { accent-color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Throngs Component Debugger</h1>
+  <span class="subtitle">Test individual subsystems in isolation</span>
+  <div style="margin-left:auto;">
+    <span id="captureStatus" class="status">
+      <span class="status-dot"></span>
+      <span>No capture</span>
+    </span>
+  </div>
+</header>
+
+<div class="capture-bar">
+  <input type="text" id="urlInput" placeholder="Enter URL to capture (e.g. https://example.com)" value="">
+  <div class="dims">
+    <input type="number" id="vpWidth" value="1280" title="Viewport width"> x
+    <input type="number" id="vpHeight" value="720" title="Viewport height">
+  </div>
+  <button class="btn" id="captureBtn" onclick="captureUrl()">Capture URL</button>
+  <label class="upload-area" style="padding: 8px 16px; border-style: solid; border-width: 1px; display: inline-block;">
+    Upload Screenshot
+    <input type="file" id="screenshotUpload" accept="image/*" onchange="handleUpload(this)">
+  </label>
+</div>
+
+<div class="tabs">
+  <div class="tab active" data-panel="saliency">Saliency Heatmap</div>
+  <div class="tab" data-panel="perception">Visual Perception</div>
+  <div class="tab" data-panel="frustration">Frustration</div>
+  <div class="tab" data-panel="motor">Motor Errors</div>
+  <div class="tab" data-panel="hesitation">Hesitation</div>
+  <div class="tab" data-panel="distraction">Distraction</div>
+  <div class="tab" data-panel="a11y">A11y Tree</div>
+  <div class="tab" data-panel="geographic">F-Pattern</div>
+  <div class="tab" data-panel="elements">Elements</div>
+</div>
+
+<div class="panels">
+  <!-- ═══ Saliency Heatmap ═══ -->
+  <div class="panel active" id="panel-saliency">
+    <div class="card">
+      <h3>Saliency Heatmap (Eye-Tracking Prediction)</h3>
+      <p class="desc">Spectral Residual algorithm predicts where the human eye is drawn. 
+        Blue = ignored, Green = noticed, Yellow/Red = immediate fixation.</p>
+      <button class="btn" onclick="runSaliency()">Generate Heatmap</button>
+      <div class="metric-grid" id="saliencyMetrics" style="display:none;"></div>
+      <div class="img-container" id="saliencyImages"></div>
+    </div>
+  </div>
+
+  <!-- ═══ Visual Perception ═══ -->
+  <div class="panel" id="panel-perception">
+    <div class="card">
+      <h3>Visual Perception Engine (4-Phase Pipeline)</h3>
+      <p class="desc">Phase 1: DOM penalties (size, contrast, color) — Phase 2: Saliency — 
+        Phase 3: True Visibility Score + blindspot — Phase 4: Cognitive overload detection.</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Perception Level</label>
+          <select id="perceptionLevel">
+            <option value="basic">basic (a11y only)</option>
+            <option value="dom">dom (+ size/contrast/color)</option>
+            <option value="saliency">saliency (+ heatmap)</option>
+            <option value="hybrid" selected>hybrid (+ blindspot filter)</option>
+            <option value="full">full (+ overload detection)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Goal (for overload distractor detection)</label>
+          <input type="text" id="perceptionGoal" value="" placeholder="e.g. Find the invoice">
+        </div>
+        <div class="form-group" style="align-self:flex-end;">
+          <div class="checkbox-row">
+            <input type="checkbox" id="perceptionRtl">
+            <label>RTL layout</label>
+          </div>
+        </div>
+        <button class="btn" onclick="runPerception()">Run Pipeline</button>
+      </div>
+      <div id="perceptionResults"></div>
+    </div>
+  </div>
+
+  <!-- ═══ Frustration ═══ -->
+  <div class="panel" id="panel-frustration">
+    <div class="card">
+      <h3>Frustration Engine</h3>
+      <p class="desc">Calculates dynamic frustration from cognitive load heuristics:
+        visual clutter, jargon density, action loops, familiarity decay, visual overload.</p>
+      <div class="split">
+        <div>
+          <h3 style="margin-top:0">Persona</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Name</label>
+              <input type="text" id="frustPersonaName" value="Debug User"></div>
+            <div class="form-group"><label>Tech Literacy (1-10)</label>
+              <input type="number" id="frustTech" value="5" min="1" max="10"></div>
+            <div class="form-group"><label>Domain Literacy (1-10)</label>
+              <input type="number" id="frustDomain" value="5" min="1" max="10"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Patience Budget</label>
+              <input type="number" id="frustPatience" value="50" min="1"></div>
+            <div class="form-group"><label>Base Frustration</label>
+              <input type="number" id="frustBase" value="0" step="0.1" min="0"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Trigger Words (comma-sep)</label>
+              <input type="text" id="frustTrigger" value="depreciation,amortization" style="width:200px;"></div>
+            <div class="form-group"><label>Friendly Words (comma-sep)</label>
+              <input type="text" id="frustFriendly" value="invoice,payment,balance" style="width:200px;"></div>
+          </div>
+          <div class="form-group"><label>Page Text (for jargon analysis)</label>
+            <textarea id="frustText" placeholder="Paste page text or leave empty to use captured text"></textarea>
+          </div>
+          <div class="form-row">
+            <button class="btn" onclick="runFrustration()">Calculate</button>
+            <button class="btn btn-outline btn-sm" onclick="resetFrustration()">Reset Engine</button>
+          </div>
+        </div>
+        <div id="frustrationResults"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Motor Errors ═══ -->
+  <div class="panel" id="panel-motor">
+    <div class="split">
+      <!-- Click Scatter -->
+      <div class="card">
+        <h3>Click Scatter (Fat Finger)</h3>
+        <p class="desc">Gaussian scatter simulates motor imprecision. Lower precision = wider spread.</p>
+        <div class="form-row">
+          <div class="form-group"><label>Motor Precision (0-1)</label>
+            <input type="number" id="scatterPrecision" value="0.95" step="0.05" min="0" max="1"></div>
+          <div class="form-group"><label>Device</label>
+            <select id="scatterDevice">
+              <option value="desktop">Desktop</option>
+              <option value="mobile">Mobile</option>
+            </select></div>
+          <div class="form-group"><label>Trials</label>
+            <input type="number" id="scatterTrials" value="100" min="1" max="500"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Target X</label>
+            <input type="number" id="scatterX" value="640"></div>
+          <div class="form-group"><label>Target Y</label>
+            <input type="number" id="scatterY" value="360"></div>
+          <div class="form-group"><label>Width</label>
+            <input type="number" id="scatterW" value="120"></div>
+          <div class="form-group"><label>Height</label>
+            <input type="number" id="scatterH" value="40"></div>
+        </div>
+        <button class="btn" onclick="runScatter()">Run Scatter</button>
+        <div id="scatterResults"></div>
+      </div>
+      <!-- Typo Injection -->
+      <div class="card">
+        <h3>Typo Injection</h3>
+        <p class="desc">QWERTY-adjacent key swaps, duplications, and omissions.</p>
+        <div class="form-row">
+          <div class="form-group" style="flex:1;"><label>Text</label>
+            <input type="text" id="typoText" value="Hello World 2024" style="width:100%;"></div>
+          <div class="form-group"><label>Typo Rate</label>
+            <input type="number" id="typoRate" value="0.1" step="0.01" min="0" max="1"></div>
+          <div class="form-group"><label>Trials</label>
+            <input type="number" id="typoTrials" value="20" min="1"></div>
+        </div>
+        <button class="btn" onclick="runTypos()">Inject Typos</button>
+        <div id="typoResults"></div>
+      </div>
+    </div>
+    <!-- Proximity Anxiety -->
+    <div class="card">
+      <h3>Proximity Anxiety Detection</h3>
+      <p class="desc">Detects when critical/destructive buttons are too close together
+        (below WCAG min spacing). Triggers hesitation for low risk-tolerance personas.
+        Uses captured page elements or manual element specification.</p>
+      <div class="form-row">
+        <div class="form-group"><label>Device</label>
+          <select id="proxDevice">
+            <option value="desktop">Desktop</option>
+            <option value="mobile">Mobile</option>
+          </select></div>
+        <div class="form-group"><label>Target Element ID</label>
+          <input type="text" id="proxTargetId" value="" placeholder="e.g. e12"></div>
+        <button class="btn" style="align-self:flex-end;" onclick="runProximity()">Check Proximity</button>
+      </div>
+      <div id="proximityResults"></div>
+    </div>
+  </div>
+
+  <!-- ═══ Hesitation ═══ -->
+  <div class="panel" id="panel-hesitation">
+    <div class="card">
+      <h3>Hesitation / Risk Aversion Engine</h3>
+      <p class="desc">LLM-driven risk analysis dynamically classifies any element + page context. 
+        Falls back to regex for known keywords (pay, submit, delete...).
+        Risk level is compared against persona's risk_tolerance to decide whether to trigger.</p>
+      <div class="form-row">
+        <div class="form-group" style="flex:1;"><label>Element Name</label>
+          <input type="text" id="hesElementName" value="total amount" style="width:100%;"></div>
+        <div class="form-group"><label>Element Role</label>
+          <input type="text" id="hesElementRole" value="button" style="width:120px;"></div>
+        <div class="form-group"><label>Action Type</label>
+          <select id="hesActionType">
+            <option value="click">click</option>
+            <option value="type">type</option>
+            <option value="hover">hover</option>
+          </select></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group" style="flex:1;"><label>Page URL (context)</label>
+          <input type="text" id="hesPageUrl" placeholder="e.g. https://app.example.com/invoices" style="width:100%;"></div>
+        <div class="form-group" style="flex:1;"><label>Goal (context)</label>
+          <input type="text" id="hesGoal" placeholder="e.g. Pay the Smith invoice" style="width:100%;"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Risk Tolerance (1-10)</label>
+          <input type="range" id="hesRisk" min="1" max="10" value="5" oninput="this.nextElementSibling.textContent=this.value">
+          <span>5</span></div>
+        <div class="form-group"><label>Trials</label>
+          <input type="number" id="hesTrials" value="50" min="1"></div>
+        <button class="btn" style="align-self:flex-end;" onclick="runHesitation()">Test Hesitation</button>
+      </div>
+      <div id="hesitationResults"></div>
+    </div>
+  </div>
+
+  <!-- ═══ Distraction ═══ -->
+  <div class="panel" id="panel-distraction">
+    <div class="card">
+      <h3>Distraction Engine (LLM-Driven Chaos Monkey)</h3>
+      <p class="desc">Generates persona-aware, context-sensitive interruptions. The LLM invents realistic
+        distractions matching who the persona is and what they're doing — a bakery owner gets a supplier call,
+        a startup founder gets an investor Slack ping, a new hire gets pulled into a meeting.</p>
+
+      <div class="split">
+        <div>
+          <h3 style="margin-top:0">Persona</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Name</label>
+              <input type="text" id="distPersonaName" value="Linda_Small_Biz_Owner"></div>
+            <div class="form-group"><label>Tech Literacy (1-10)</label>
+              <input type="number" id="distTech" value="4" min="1" max="10"></div>
+            <div class="form-group"><label>Domain Literacy (1-10)</label>
+              <input type="number" id="distDomain" value="4" min="1" max="10"></div>
+          </div>
+          <div class="form-group"><label>Description</label>
+            <textarea id="distPersonaDesc" rows="2" style="min-height:50px;">51-year-old bakery owner. Does her own books reluctantly. Easily overwhelmed by too many options.</textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Device</label>
+              <select id="distDevice">
+                <option value="desktop">Desktop</option>
+                <option value="mobile">Mobile</option>
+              </select></div>
+            <div class="form-group"><label>Patience Budget</label>
+              <input type="number" id="distPatience" value="35" min="1"></div>
+          </div>
+
+          <h3 style="margin-top:16px;">Environment Context</h3>
+          <div class="form-row">
+            <div class="form-group" style="flex:1;"><label>Goal</label>
+              <input type="text" id="distGoal" placeholder="e.g. Create a new invoice" style="width:100%;"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group" style="flex:1;"><label>Page URL</label>
+              <input type="text" id="distUrl" placeholder="Auto-filled from capture" style="width:100%;"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group" style="flex:1;"><label>Page Title</label>
+              <input type="text" id="distPageTitle" placeholder="Auto-filled from capture" style="width:100%;"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Step Number</label>
+              <input type="number" id="distStep" value="5" min="1"></div>
+            <div class="form-group" style="flex:1;"><label>Last Action</label>
+              <input type="text" id="distLastAction" value="click on 'Create Invoice'" style="width:100%;"></div>
+          </div>
+
+          <h3 style="margin-top:16px;">Trigger Probability</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Interruption Probability (0-1)</label>
+              <input type="range" id="distProb" min="0" max="1" step="0.01" value="0.05"
+                     oninput="this.nextElementSibling.textContent=(this.value*100).toFixed(0)+'%'">
+              <span>5%</span></div>
+            <div class="form-group"><label>Trials (for trigger rate)</label>
+              <input type="number" id="distTrials" value="200" min="1"></div>
+          </div>
+          <div class="form-row" style="margin-top:8px;">
+            <button class="btn" onclick="runDistraction()">Generate Distraction</button>
+            <button class="btn btn-outline btn-sm" onclick="runDistraction('quick')">Quick (No LLM)</button>
+          </div>
+        </div>
+
+        <div id="distractionResults"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ A11y Tree ═══ -->
+  <div class="panel" id="panel-a11y">
+    <div class="card">
+      <h3>A11y Tree Formatter</h3>
+      <p class="desc">Formats the a11y element list into the text representation sent to the LLM.
+        Elements below the blindspot threshold are excluded — the LLM doesn't know they exist.</p>
+      <div class="form-row">
+        <div class="form-group"><label>Patience Budget</label>
+          <input type="number" id="a11yPatience" value="100" min="1"></div>
+        <div class="form-group" style="align-self:flex-end;">
+          <div class="checkbox-row">
+            <input type="checkbox" id="a11ySkimming">
+            <label>Enable skimming (truncates at low patience)</label>
+          </div>
+        </div>
+        <button class="btn" style="align-self:flex-end;" onclick="runA11yTree()">Format Tree</button>
+      </div>
+      <div id="a11yResults"></div>
+    </div>
+  </div>
+
+  <!-- ═══ F-Pattern ═══ -->
+  <div class="panel" id="panel-geographic">
+    <div class="card">
+      <h3>F-Pattern / I-Pattern Geographic Weighting</h3>
+      <p class="desc">Divides the viewport into a 3x3 grid. Each sector has a multiplier reflecting
+        eye-tracking research on reading patterns. Desktop uses F-Pattern, mobile uses I-Pattern.</p>
+      <div class="form-row">
+        <div class="form-group"><label>Viewport Width</label>
+          <input type="number" id="geoWidth" value="1280"></div>
+        <div class="form-group"><label>Viewport Height</label>
+          <input type="number" id="geoHeight" value="720"></div>
+        <div class="form-group" style="align-self:flex-end;">
+          <div class="checkbox-row">
+            <input type="checkbox" id="geoRtl">
+            <label>RTL</label>
+          </div>
+        </div>
+        <button class="btn" style="align-self:flex-end;" onclick="runGeographic()">Visualize</button>
+      </div>
+      <div id="geoResults"></div>
+    </div>
+  </div>
+
+  <!-- ═══ Elements Inspector ═══ -->
+  <div class="panel" id="panel-elements">
+    <div class="card">
+      <h3>Visual Signals (Detected Alerts, Errors, Toasts, Banners)</h3>
+      <p class="desc">Visual feedback signals detected on the captured page via DOM analysis.
+        These are injected into the agent's perception and can trigger Squirrel distractions.</p>
+      <div id="visualSignalsDisplay">
+        <p style="color: var(--text-dim);">Capture a URL to detect visual signals.</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Captured Elements Inspector</h3>
+      <p class="desc">Browse all interactive elements detected on the captured page.</p>
+      <div id="elementsTable">
+        <p style="color: var(--text-dim);">Capture a URL first to see elements here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container" id="toasts"></div>
+
+<script>
+// ── State ──
+let capturedData = null;
+let screenshotFile = null;
+
+// ── Tab switching ──
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
+  });
+});
+
+// ── Toast ──
+function toast(msg, type = 'info') {
+  const el = document.createElement('div');
+  el.className = 'toast';
+  el.style.borderLeftColor = type === 'error' ? 'var(--red)' : type === 'success' ? 'var(--green)' : 'var(--blue)';
+  el.style.borderLeftWidth = '3px';
+  el.textContent = msg;
+  document.getElementById('toasts').appendChild(el);
+  setTimeout(() => el.remove(), 4000);
+}
+
+function setStatus(state, text) {
+  const el = document.getElementById('captureStatus');
+  el.className = 'status ' + state;
+  el.querySelector('span:last-child').textContent = text;
+}
+
+// ── API helper ──
+async function api(path, body, isFormData = false) {
+  const opts = { method: 'POST' };
+  if (isFormData) {
+    opts.body = body;
+  } else {
+    opts.headers = { 'Content-Type': 'application/json' };
+    opts.body = JSON.stringify(body);
+  }
+  const res = await fetch(path, opts);
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ error: res.statusText }));
+    throw new Error(err.error || err.message || res.statusText);
+  }
+  return res.json();
+}
+
+// ── Capture ──
+async function captureUrl() {
+  const url = document.getElementById('urlInput').value.trim();
+  if (!url) { toast('Enter a URL', 'error'); return; }
+  const btn = document.getElementById('captureBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Capturing...';
+  setStatus('loading', 'Capturing...');
+  try {
+    const data = await api('/api/capture', {
+      url,
+      viewport_width: parseInt(document.getElementById('vpWidth').value) || 1280,
+      viewport_height: parseInt(document.getElementById('vpHeight').value) || 720,
+    });
+    capturedData = data;
+    setStatus('ready', `${data.element_count} elements — ${data.title || url}`);
+    toast(`Captured ${data.element_count} elements from ${data.title || url}`, 'success');
+    renderElementsTable();
+    renderVisualSignals();
+    // Auto-fill distraction environment fields
+    if (data.url) document.getElementById('distUrl').value = data.url;
+    if (data.title) document.getElementById('distPageTitle').value = data.title;
+    // Auto-fill hesitation page URL
+    if (data.url) document.getElementById('hesPageUrl').value = data.url;
+  } catch (e) {
+    setStatus('error', 'Capture failed');
+    toast('Capture failed: ' + e.message, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Capture URL';
+  }
+}
+
+function handleUpload(input) {
+  const file = input.files[0];
+  if (!file) return;
+  screenshotFile = file;
+  const reader = new FileReader();
+  reader.onload = () => {
+    const b64 = reader.result.split(',')[1];
+    if (!capturedData) capturedData = {};
+    capturedData.screenshot_b64 = b64;
+    setStatus('ready', `Screenshot uploaded: ${file.name}`);
+    toast('Screenshot uploaded', 'success');
+  };
+  reader.readAsDataURL(file);
+}
+
+// ── Saliency ──
+async function runSaliency() {
+  if (!capturedData?.screenshot_b64 && !screenshotFile) {
+    toast('Capture a URL or upload a screenshot first', 'error');
+    return;
+  }
+  const form = new FormData();
+  if (screenshotFile) {
+    form.append('screenshot', screenshotFile);
+  } else {
+    const blob = b64toBlob(capturedData.screenshot_b64, 'image/png');
+    form.append('screenshot', blob, 'screenshot.png');
+  }
+  form.append('viewport_width', document.getElementById('vpWidth').value || '1280');
+  form.append('viewport_height', document.getElementById('vpHeight').value || '720');
+  try {
+    const data = await api('/api/saliency', form, true);
+    document.getElementById('saliencyMetrics').style.display = 'grid';
+    document.getElementById('saliencyMetrics').innerHTML = `
+      <div class="metric-box"><div class="value">${data.high_intensity_pct}%</div><div class="label">High Intensity</div></div>
+      <div class="metric-box"><div class="value">${data.max_intensity}</div><div class="label">Max Intensity</div></div>
+      <div class="metric-box"><div class="value">${data.mean_intensity}</div><div class="label">Mean Intensity</div></div>
+      <div class="metric-box"><div class="value">${data.shape[1]}x${data.shape[0]}</div><div class="label">Heatmap Size</div></div>
+    `;
+    const origSrc = capturedData?.screenshot_b64 ? 'data:image/png;base64,' + capturedData.screenshot_b64 : '';
+    document.getElementById('saliencyImages').innerHTML = `
+      ${origSrc ? `<div class="img-box"><div class="img-label">Original</div><img src="${origSrc}"></div>` : ''}
+      <div class="img-box"><div class="img-label">Saliency Overlay</div><img src="data:image/png;base64,${data.heatmap_overlay_b64}"></div>
+    `;
+    toast('Saliency heatmap generated', 'success');
+  } catch (e) {
+    toast('Saliency failed: ' + e.message, 'error');
+  }
+}
+
+// ── Perception ──
+async function runPerception() {
+  if (!capturedData?.screenshot_b64) {
+    toast('Capture a URL first', 'error'); return;
+  }
+  try {
+    const data = await api('/api/perception', {
+      screenshot_b64: capturedData.screenshot_b64,
+      elements: capturedData.elements || [],
+      viewport_width: capturedData.viewport_width || 1280,
+      viewport_height: capturedData.viewport_height || 720,
+      perception_level: document.getElementById('perceptionLevel').value,
+      goal: document.getElementById('perceptionGoal').value,
+      rtl: document.getElementById('perceptionRtl').checked,
+    });
+    let html = '';
+    if (data.heatmap_overlay_b64) {
+      html += `<div class="img-container">
+        <div class="img-box"><div class="img-label">Original</div><img src="data:image/png;base64,${capturedData.screenshot_b64}"></div>
+        <div class="img-box"><div class="img-label">Saliency + Perception</div><img src="data:image/png;base64,${data.heatmap_overlay_b64}"></div>
+      </div>`;
+    }
+
+    const ol = data.overload;
+    html += `<div class="metric-grid">
+      <div class="metric-box"><div class="value">${data.elements.length}</div><div class="label">Elements</div></div>
+      <div class="metric-box"><div class="value">${data.elements.filter(e => e.passed_blindspot).length}</div><div class="label">Visible (pass blindspot)</div></div>
+      <div class="metric-box"><div class="value">${data.elements.filter(e => !e.passed_blindspot).length}</div><div class="label">Hidden (blindspot)</div></div>
+      <div class="metric-box"><div class="value">${ol.high_saliency_pct}%</div><div class="label">High Saliency %</div></div>
+      <div class="metric-box"><div class="value" style="color:${ol.overload_triggered ? 'var(--red)' : 'var(--green)'}">${ol.overload_triggered ? 'YES' : 'NO'}</div><div class="label">Overload Triggered</div></div>
+      ${ol.top_distractor ? `<div class="metric-box"><div class="value" style="font-size:14px;">${ol.top_distractor}</div><div class="label">Top Distractor</div></div>` : ''}
+    </div>`;
+
+    if (ol.distraction_note) {
+      html += `<div style="margin-top:12px;padding:12px;background:rgba(225,112,85,0.1);border-radius:8px;font-size:13px;color:var(--red);">
+        ${ol.distraction_note}</div>`;
+    }
+
+    // Elements table
+    html += '<div style="max-height:400px;overflow:auto;margin-top:16px;">';
+    html += `<table class="el-table"><thead><tr>
+      <th>ID</th><th>Role</th><th>Name</th><th>Saliency</th><th>Visibility</th><th>Blindspot</th><th>Flags</th>
+    </tr></thead><tbody>`;
+    for (const el of data.elements) {
+      const flagHtml = (el.visual_flags || []).map(f =>
+        `<span class="flag-badge warn">${f}</span>`
+      ).join('');
+      const bsColor = el.passed_blindspot ? 'var(--green)' : 'var(--red)';
+      html += `<tr>
+        <td>${el.element_id}</td>
+        <td>${el.role}</td>
+        <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${esc(el.name)}">${esc(el.name)}</td>
+        <td>${el.saliency_intensity}</td>
+        <td>${el.true_visibility_score}</td>
+        <td style="color:${bsColor}">${el.passed_blindspot ? 'VISIBLE' : 'HIDDEN'}</td>
+        <td>${flagHtml || '-'}</td>
+      </tr>`;
+    }
+    html += '</tbody></table></div>';
+
+    document.getElementById('perceptionResults').innerHTML = html;
+    toast('Perception pipeline complete', 'success');
+  } catch (e) {
+    toast('Perception failed: ' + e.message, 'error');
+  }
+}
+
+// ── Frustration ──
+async function runFrustration() {
+  try {
+    const triggerWords = document.getElementById('frustTrigger').value.split(',').map(s=>s.trim()).filter(Boolean);
+    const friendlyWords = document.getElementById('frustFriendly').value.split(',').map(s=>s.trim()).filter(Boolean);
+    const data = await api('/api/frustration', {
+      persona: {
+        name: document.getElementById('frustPersonaName').value,
+        tech_literacy: parseInt(document.getElementById('frustTech').value),
+        domain_literacy: parseInt(document.getElementById('frustDomain').value),
+        patience_budget: parseInt(document.getElementById('frustPatience').value),
+        trigger_words: triggerWords,
+        friendly_words: friendlyWords,
+      },
+      visible_text: document.getElementById('frustText').value || undefined,
+      base_frustration: parseFloat(document.getElementById('frustBase').value) || 0,
+    });
+
+    const pct = Math.min(data.total_frustration / data.patience_budget * 100, 100);
+    const barColor = pct < 40 ? 'var(--green)' : pct < 70 ? 'var(--yellow)' : 'var(--red)';
+
+    let html = `
+      <h3 style="margin-top:0">Results</h3>
+      <div class="metric-grid">
+        <div class="metric-box"><div class="value" style="color:${barColor}">${data.total_frustration}</div><div class="label">Total Frustration</div></div>
+        <div class="metric-box"><div class="value">${data.capped_delta}</div><div class="label">Step Delta</div></div>
+        <div class="metric-box"><div class="value">${data.carried_frustration}</div><div class="label">Carried</div></div>
+        <div class="metric-box"><div class="value" style="color:${data.rage_quit ? 'var(--red)' : 'var(--green)'}">${data.rage_quit ? 'RAGE QUIT' : 'Continuing'}</div><div class="label">Status</div></div>
+      </div>
+      <div class="frust-bar"><div class="frust-bar-fill" style="width:${pct}%;background:${barColor}"></div></div>
+      <p style="font-size:12px;color:var(--text-dim);margin-top:4px;">${data.total_frustration.toFixed(1)} / ${data.patience_budget} patience</p>
+      <div class="metric-grid" style="margin-top:12px;">
+        <div class="metric-box"><div class="value">${data.visual_clutter_score}</div><div class="label">Clutter Score</div></div>
+        <div class="metric-box"><div class="value">${data.interactable_node_count}</div><div class="label">Elements</div></div>
+        <div class="metric-box"><div class="value">${data.jargon_penalty}</div><div class="label">Jargon Penalty</div></div>
+        <div class="metric-box"><div class="value">${data.friendly_relief}</div><div class="label">Friendly Relief</div></div>
+        <div class="metric-box"><div class="value">${data.loop_penalty}</div><div class="label">Loop Penalty</div></div>
+        <div class="metric-box"><div class="value">${data.familiarity_discount}</div><div class="label">Familiarity</div></div>
+        <div class="metric-box"><div class="value">${data.tech_scaling_factor}</div><div class="label">Tech Scaling</div></div>
+        <div class="metric-box"><div class="value">${data.progress_relief}</div><div class="label">Progress Relief</div></div>
+      </div>`;
+    if (data.reasoning && data.reasoning.length) {
+      html += '<div class="result-area" style="margin-top:12px"><pre>';
+      data.reasoning.forEach(r => html += '• ' + esc(r) + '\n');
+      html += '</pre></div>';
+    }
+    document.getElementById('frustrationResults').innerHTML = html;
+    toast('Frustration calculated: ' + data.total_frustration.toFixed(1), 'success');
+  } catch (e) {
+    toast('Frustration failed: ' + e.message, 'error');
+  }
+}
+
+async function resetFrustration() {
+  await api('/api/frustration/reset', {});
+  toast('Frustration engine reset', 'success');
+}
+
+// ── Motor: Scatter ──
+async function runScatter() {
+  try {
+    const targetEl = {
+      element_id: 'target',
+      role: 'button',
+      name: 'Target Button',
+      x: parseFloat(document.getElementById('scatterX').value),
+      y: parseFloat(document.getElementById('scatterY').value),
+      width: parseFloat(document.getElementById('scatterW').value),
+      height: parseFloat(document.getElementById('scatterH').value),
+    };
+    const data = await api('/api/motor/scatter', {
+      target_element: targetEl,
+      all_elements: [targetEl],
+      motor_precision: parseFloat(document.getElementById('scatterPrecision').value),
+      viewport_width: parseInt(document.getElementById('vpWidth').value) || 1280,
+      viewport_height: parseInt(document.getElementById('vpHeight').value) || 720,
+      device: document.getElementById('scatterDevice').value,
+      trials: parseInt(document.getElementById('scatterTrials').value) || 100,
+    });
+
+    let html = `<div class="metric-grid">
+      <div class="metric-box"><div class="value">${data.misclick_rate}%</div><div class="label">Misclick Rate</div></div>
+      <div class="metric-box"><div class="value">${data.misclick_count}/${data.trials}</div><div class="label">Misclicks / Trials</div></div>
+    </div>`;
+
+    // Draw scatter plot
+    html += '<div class="scatter-container"><canvas id="scatterCanvas" width="400" height="300"></canvas></div>';
+    document.getElementById('scatterResults').innerHTML = html;
+
+    const canvas = document.getElementById('scatterCanvas');
+    const ctx = canvas.getContext('2d');
+    const t = data.target;
+    const scale = Math.min(400 / (t.w * 6), 300 / (t.h * 6));
+    const cx = 200, cy = 150;
+    const tw = t.w * scale, th = t.h * scale;
+
+    ctx.fillStyle = '#232736';
+    ctx.fillRect(0, 0, 400, 300);
+
+    // Target rect
+    ctx.fillStyle = 'rgba(108, 92, 231, 0.3)';
+    ctx.strokeStyle = '#6c5ce7';
+    ctx.lineWidth = 2;
+    ctx.fillRect(cx - tw/2, cy - th/2, tw, th);
+    ctx.strokeRect(cx - tw/2, cy - th/2, tw, th);
+
+    // Scatter points
+    const targetCx = t.x + t.w / 2;
+    const targetCy = t.y + t.h / 2;
+    for (const pt of data.scatter_points) {
+      const px = cx + (pt.x - targetCx) * scale;
+      const py = cy + (pt.y - targetCy) * scale;
+      ctx.beginPath();
+      ctx.arc(px, py, 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = pt.misclick ? 'rgba(225, 112, 85, 0.8)' : 'rgba(0, 184, 148, 0.6)';
+      ctx.fill();
+    }
+
+    // Legend
+    ctx.fillStyle = '#8b8fa3';
+    ctx.font = '11px Inter, sans-serif';
+    ctx.fillText('Green = hit, Red = misclick', 10, 290);
+
+    toast(`Scatter: ${data.misclick_rate}% misclick rate`, 'success');
+  } catch (e) {
+    toast('Scatter failed: ' + e.message, 'error');
+  }
+}
+
+// ── Motor: Typos ──
+async function runTypos() {
+  try {
+    const data = await api('/api/motor/typos', {
+      text: document.getElementById('typoText').value,
+      typo_rate: parseFloat(document.getElementById('typoRate').value),
+      trials: parseInt(document.getElementById('typoTrials').value),
+    });
+    let html = `<div class="metric-grid">
+      <div class="metric-box"><div class="value">${data.injection_rate}%</div><div class="label">Injection Rate</div></div>
+      <div class="metric-box"><div class="value">${data.injection_count}/${data.trials}</div><div class="label">Affected / Trials</div></div>
+    </div><div class="result-area"><pre>Original: "${esc(data.original)}"\n\nSamples:\n`;
+    for (const s of data.samples) {
+      const marker = s.had_typo ? '✗' : '✓';
+      const style = s.had_typo ? 'color:var(--red)' : 'color:var(--green)';
+      html += `<span style="${style}">${marker}</span> "${esc(s.mutated)}"\n`;
+    }
+    html += '</pre></div>';
+    document.getElementById('typoResults').innerHTML = html;
+    toast(`Typos: ${data.injection_rate}% injection rate`, 'success');
+  } catch (e) {
+    toast('Typo test failed: ' + e.message, 'error');
+  }
+}
+
+// ── Motor: Proximity ──
+async function runProximity() {
+  if (!capturedData?.elements?.length) {
+    toast('Capture a URL first to get elements for proximity check', 'error');
+    return;
+  }
+  try {
+    const targetId = document.getElementById('proxTargetId').value.trim();
+    let targetEl = capturedData.elements.find(e => e.element_id === targetId);
+    if (!targetEl) {
+      targetEl = capturedData.elements.find(e => e.role === 'button') || capturedData.elements[0];
+      if (!targetEl) { toast('No elements found', 'error'); return; }
+    }
+    const device = document.getElementById('proxDevice').value;
+
+    const data = await api('/api/motor/proximity', {
+      target_element: targetEl,
+      all_elements: capturedData.elements,
+      device,
+    });
+
+    const anxColor = data.proximity_anxiety ? 'var(--red)' : 'var(--green)';
+    let html = `<div class="metric-grid" style="margin-top:12px;">
+      <div class="metric-box"><div class="value" style="color:${anxColor}">${data.proximity_anxiety ? 'YES' : 'NO'}</div><div class="label">Proximity Anxiety</div></div>
+      <div class="metric-box"><div class="value">${data.target_element_id}</div><div class="label">Target Element</div></div>
+      <div class="metric-box"><div class="value">${data.device}</div><div class="label">Device</div></div>
+      <div class="metric-box"><div class="value">${data.min_margin_px}px</div><div class="label">Min Margin Required</div></div>
+    </div>`;
+    if (data.proximity_anxiety) {
+      html += `<div style="margin-top:12px;padding:12px;background:rgba(225,112,85,0.1);border:1px solid rgba(225,112,85,0.3);border-radius:8px;font-size:13px;color:var(--red);">
+        <b>Proximity anxiety triggered:</b> critical buttons are closer than ${data.min_margin_px}px on ${data.device}. This can cause accidental clicks on destructive actions.</div>`;
+    }
+    document.getElementById('proximityResults').innerHTML = html;
+    toast(`Proximity: ${data.proximity_anxiety ? 'ANXIETY DETECTED' : 'OK'} for ${data.target_element_id}`, data.proximity_anxiety ? 'error' : 'success');
+  } catch (e) {
+    toast('Proximity check failed: ' + e.message, 'error');
+  }
+}
+
+// ── Hesitation ──
+async function runHesitation() {
+  try {
+    const data = await api('/api/hesitation', {
+      element_name: document.getElementById('hesElementName').value,
+      action_type: document.getElementById('hesActionType').value,
+      risk_tolerance: parseInt(document.getElementById('hesRisk').value),
+      element_role: document.getElementById('hesElementRole').value,
+      page_url: document.getElementById('hesPageUrl').value || capturedData?.url || '',
+      goal: document.getElementById('hesGoal').value,
+      trials: parseInt(document.getElementById('hesTrials').value),
+    });
+    const rate = data.trigger_rate;
+    const ra = data.risk_analysis || {};
+    const riskLevel = ra.risk_level || 0;
+    const barColor = rate > 60 ? 'var(--red)' : rate > 20 ? 'var(--yellow)' : 'var(--green)';
+    const riskColor = riskLevel >= 7 ? 'var(--red)' : riskLevel >= 4 ? 'var(--yellow)' : 'var(--green)';
+    const sourceTag = ra.source === 'llm' ? '🤖 LLM' : ra.source === 'regex' ? '⚡ Regex' : '⚪ Fallback';
+
+    let html = `<div class="metric-grid">
+      <div class="metric-box"><div class="value" style="color:${riskColor}">${riskLevel}/10</div><div class="label">Risk Level</div></div>
+      <div class="metric-box"><div class="value" style="font-size:14px;">${ra.risk_category || 'safe'}</div><div class="label">Risk Category</div></div>
+      <div class="metric-box"><div class="value" style="font-size:14px;">${sourceTag}</div><div class="label">Detection Source</div></div>
+      <div class="metric-box"><div class="value" style="color:${ra.is_high_stakes ? 'var(--red)' : 'var(--green)'}">${ra.is_high_stakes ? 'YES' : 'NO'}</div><div class="label">High Stakes</div></div>
+      <div class="metric-box"><div class="value" style="color:${barColor}">${rate}%</div><div class="label">Trigger Rate</div></div>
+      <div class="metric-box"><div class="value">${data.trigger_count}/${data.trials}</div><div class="label">Triggers / Trials</div></div>
+      <div class="metric-box"><div class="value">${data.risk_tolerance}</div><div class="label">Persona Risk Tolerance</div></div>
+      <div class="metric-box"><div class="value">${data.regex_matched ? '✓' : '✗'}</div><div class="label">Regex Fast-Path</div></div>
+    </div>`;
+
+    if (ra.reasoning) {
+      html += `<div style="margin-top:12px;padding:12px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;font-size:13px;">
+        <b>Risk reasoning:</b> ${esc(ra.reasoning)}</div>`;
+    }
+
+    if (data.gate_reason) {
+      html += `<div style="margin-top:12px;padding:12px;background:rgba(225,112,85,0.1);border:1px solid rgba(225,112,85,0.3);border-radius:8px;font-size:13px;color:var(--red);">
+        <b>Not triggered:</b> ${esc(data.gate_reason)}</div>`;
+    }
+    if (data.hesitation_prompt) {
+      html += `<div class="result-area" style="margin-top:12px">
+        <pre style="color:var(--yellow)">${esc(data.hesitation_prompt)}</pre>
+      </div>`;
+    }
+    html += `<div style="margin-top:12px;padding:12px;background:var(--surface2);border-radius:8px;font-size:12px;color:var(--text-dim);">
+      <b>Detection pipeline:</b><br>
+      1. <b>Regex fast-path</b>: known keywords (<code>pay, submit, delete, transfer...</code>) → instant risk_level=8.<br>
+      2. <b>LLM analysis</b> ${data.llm_available ? '(active ✓)' : '(unavailable — using fallback)'}: dynamically classifies element + page context → risk_level 1-10.<br>
+      3. <b>Risk gate</b>: risk_level &gt; tolerance+2 → always trigger; risk_level &gt; tolerance → 50% chance; else → no trigger.
+    </div>`;
+    document.getElementById('hesitationResults').innerHTML = html;
+    toast(`Hesitation: risk=${riskLevel}/10, ${rate}% trigger rate (${ra.source})`, data.trigger_count > 0 ? 'success' : 'info');
+  } catch (e) {
+    toast('Hesitation test failed: ' + e.message, 'error');
+  }
+}
+
+// ── Distraction ──
+async function runDistraction(mode) {
+  try {
+    const persona = {
+      name: document.getElementById('distPersonaName').value || 'Debug User',
+      description: document.getElementById('distPersonaDesc').value || '',
+      tech_literacy: parseInt(document.getElementById('distTech').value) || 5,
+      domain_literacy: parseInt(document.getElementById('distDomain').value) || 5,
+      patience_budget: parseInt(document.getElementById('distPatience').value) || 50,
+      usage_device: document.getElementById('distDevice').value,
+    };
+    const payload = {
+      persona,
+      goal: document.getElementById('distGoal').value || '',
+      current_url: document.getElementById('distUrl').value || capturedData?.url || '',
+      page_title: document.getElementById('distPageTitle').value || capturedData?.title || '',
+      step: parseInt(document.getElementById('distStep').value) || 5,
+      last_action: document.getElementById('distLastAction').value || '',
+      visual_signals: capturedData?.visual_signals || [],
+      interruption_probability: parseFloat(document.getElementById('distProb').value),
+      trials: parseInt(document.getElementById('distTrials').value),
+    };
+    if (mode === 'quick') {
+      payload.persona.description = '';
+    }
+
+    const data = await api('/api/distraction', payload);
+    const rate = data.trigger_rate;
+
+    const variantColors = {
+      'COFFEE_BREAK': 'var(--yellow)',
+      'TAB_SWITCH': 'var(--blue)',
+      'POPUP_SQUIRREL': 'var(--red)',
+    };
+    const variantEmoji = {
+      'COFFEE_BREAK': '☕',
+      'TAB_SWITCH': '🔀',
+      'POPUP_SQUIRREL': '🐿️',
+    };
+    const vc = variantColors[data.variant] || 'var(--text)';
+    const ve = variantEmoji[data.variant] || '❓';
+
+    let html = `<h3 style="margin-top:0">Generated Distraction</h3>`;
+    html += `<div class="metric-grid">
+      <div class="metric-box"><div class="value" style="color:${vc};font-size:16px;">${ve} ${data.variant}</div><div class="label">Variant</div></div>
+      <div class="metric-box"><div class="value">${data.memory_wipe_lines}</div><div class="label">Memory Wipe (lines)</div></div>
+      <div class="metric-box"><div class="value">${data.estimated_away_minutes || 0} min</div><div class="label">Away Time</div></div>
+      <div class="metric-box"><div class="value" style="font-size:14px;">${data.llm_available ? '🤖 LLM' : '📋 Template'}</div><div class="label">Source</div></div>
+    </div>`;
+
+    if (data.narrative) {
+      html += `<div style="margin-top:12px;padding:14px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;border-left:3px solid ${vc};">
+        <div style="font-size:11px;color:var(--text-dim);margin-bottom:6px;font-weight:600;">NARRATIVE (what happened to ${esc(data.persona_name)})</div>
+        <div style="font-size:13px;line-height:1.6;">${esc(data.narrative)}</div>
+      </div>`;
+    }
+
+    html += `<div class="result-area" style="margin-top:12px">
+      <div style="font-size:11px;color:var(--text-dim);margin-bottom:6px;font-weight:600;">RE-ORIENTATION PROMPT (injected into agent)</div>
+      <pre style="color:${vc}">${esc(data.reorientation_prompt)}</pre>
+    </div>`;
+
+    if (data.squirrel_detected) {
+      html += `<div style="margin-top:12px;padding:12px;background:rgba(225,112,85,0.1);border:1px solid rgba(225,112,85,0.3);border-radius:8px;font-size:13px;">
+        <b>🐿️ Squirrel detected:</b> ${esc(data.squirrel_message)}</div>`;
+    }
+
+    html += `<div style="margin-top:16px;padding-top:12px;border-top:1px solid var(--border);">
+      <div style="font-size:11px;color:var(--text-dim);margin-bottom:8px;font-weight:600;">TRIGGER PROBABILITY SIMULATION</div>
+      <div class="metric-grid">
+        <div class="metric-box"><div class="value">${rate}%</div><div class="label">Actual Trigger Rate</div></div>
+        <div class="metric-box"><div class="value">${data.trigger_count}/${data.trials}</div><div class="label">Triggers / Steps</div></div>
+        <div class="metric-box"><div class="value">${(data.interruption_probability*100).toFixed(0)}%</div><div class="label">Configured Prob</div></div>
+        <div class="metric-box"><div class="value">${data.visual_signals_count}</div><div class="label">Visual Signals</div></div>
+      </div>
+    </div>`;
+
+    document.getElementById('distractionResults').innerHTML = html;
+    toast(`${data.variant} distraction generated for ${data.persona_name}`, 'success');
+  } catch (e) {
+    toast('Distraction test failed: ' + e.message, 'error');
+  }
+}
+
+// ── A11y Tree ──
+async function runA11yTree() {
+  if (!capturedData?.elements?.length) {
+    toast('Capture a URL first to get elements', 'error'); return;
+  }
+  try {
+    const data = await api('/api/a11y-tree', {
+      elements: capturedData.elements,
+      patience_budget: parseInt(document.getElementById('a11yPatience').value),
+      skimming_enabled: document.getElementById('a11ySkimming').checked,
+    });
+    let html = `<div class="metric-grid">
+      <div class="metric-box"><div class="value">${data.total_elements}</div><div class="label">Total Elements</div></div>
+      <div class="metric-box"><div class="value" style="color:var(--green)">${data.visible_elements}</div><div class="label">Visible</div></div>
+      <div class="metric-box"><div class="value" style="color:var(--red)">${data.hidden_by_blindspot}</div><div class="label">Hidden (blindspot)</div></div>
+    </div>
+    <div class="result-area" style="margin-top:12px">
+      <pre>${esc(data.tree_text)}</pre>
+    </div>`;
+    document.getElementById('a11yResults').innerHTML = html;
+    toast('A11y tree formatted', 'success');
+  } catch (e) {
+    toast('A11y tree failed: ' + e.message, 'error');
+  }
+}
+
+// ── Geographic ──
+async function runGeographic() {
+  try {
+    const data = await api('/api/geographic', {
+      viewport_width: parseInt(document.getElementById('geoWidth').value),
+      viewport_height: parseInt(document.getElementById('geoHeight').value),
+      rtl: document.getElementById('geoRtl').checked,
+      elements: capturedData?.elements || [],
+    });
+    const labels = [
+      ['Top-Left', 'Top-Center', 'Top-Right'],
+      ['Mid-Left', 'Mid-Center', 'Mid-Right'],
+      ['Bot-Left', 'Bot-Center', 'Bot-Right'],
+    ];
+    let html = `<p style="font-size:14px;font-weight:600;color:var(--accent2);margin-bottom:8px;">${data.pattern_name}</p>`;
+    html += '<div class="geo-grid">';
+    for (let r = 0; r < 3; r++) {
+      for (let c = 0; c < 3; c++) {
+        const val = data.matrix[r][c];
+        const intensity = Math.round((val / 1.5) * 255);
+        const bg = `rgba(108, 92, 231, ${val / 1.5 * 0.8})`;
+        const elCount = data.element_sectors.filter(e => e.row === r && e.col === c).length;
+        html += `<div class="geo-cell" style="background:${bg}">
+          ${val}x
+          <span class="sector-label">${labels[r][c]}${elCount ? ` (${elCount} els)` : ''}</span>
+        </div>`;
+      }
+    }
+    html += '</div>';
+
+    if (data.element_sectors.length) {
+      html += '<div style="margin-top:16px;max-height:300px;overflow:auto;">';
+      html += '<table class="el-table"><thead><tr><th>Element</th><th>Sector</th><th>Multiplier</th></tr></thead><tbody>';
+      for (const es of data.element_sectors.slice(0, 30)) {
+        const color = es.multiplier >= 1.2 ? 'var(--green)' : es.multiplier <= 0.6 ? 'var(--red)' : 'var(--text)';
+        html += `<tr>
+          <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${esc(es.name)}">${esc(es.name)}</td>
+          <td>R${es.row} C${es.col}</td>
+          <td style="color:${color};font-weight:600;">${es.multiplier}x</td>
+        </tr>`;
+      }
+      html += '</tbody></table></div>';
+    }
+
+    document.getElementById('geoResults').innerHTML = html;
+    toast('Geographic pattern visualized', 'success');
+  } catch (e) {
+    toast('Geographic failed: ' + e.message, 'error');
+  }
+}
+
+// ── Visual Signals display ──
+function renderVisualSignals() {
+  const container = document.getElementById('visualSignalsDisplay');
+  const signals = capturedData?.visual_signals || [];
+  if (!signals.length) {
+    container.innerHTML = '<p style="color: var(--text-dim);">No visual signals detected on this page.</p>';
+    return;
+  }
+  const severityColors = { error: 'var(--red)', warning: 'var(--yellow)', info: 'var(--blue)', success: 'var(--green)' };
+  const severityEmoji = { error: '🔴', warning: '🟡', info: '🔵', success: '🟢' };
+  let html = `<div class="metric-grid" style="margin-bottom:12px;">
+    <div class="metric-box"><div class="value">${signals.length}</div><div class="label">Total Signals</div></div>
+    <div class="metric-box"><div class="value" style="color:var(--red)">${signals.filter(s => s.severity === 'error').length}</div><div class="label">Errors</div></div>
+    <div class="metric-box"><div class="value" style="color:var(--yellow)">${signals.filter(s => s.severity === 'warning').length}</div><div class="label">Warnings</div></div>
+    <div class="metric-box"><div class="value" style="color:var(--blue)">${signals.filter(s => s.severity === 'info' || s.severity === 'success').length}</div><div class="label">Info/Success</div></div>
+  </div>`;
+  html += '<div style="max-height:400px;overflow:auto;">';
+  for (const sig of signals) {
+    const sev = sig.severity || 'info';
+    const color = severityColors[sev] || 'var(--text)';
+    const emoji = severityEmoji[sev] || '⚪';
+    const sigType = sig.signal_type || sig.type || 'unknown';
+    const msg = sig.message || sig.text || '';
+    html += `<div style="padding:10px;margin-bottom:6px;background:var(--surface2);border-radius:6px;border-left:3px solid ${color};">
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:4px;">
+        <span>${emoji}</span>
+        <span style="font-size:12px;font-weight:600;color:${color};text-transform:uppercase;">${esc(sev)}</span>
+        <span style="font-size:12px;color:var(--text-dim);">${esc(sigType)}</span>
+      </div>
+      <div style="font-size:13px;line-height:1.5;">${esc(msg.substring(0, 300))}</div>
+    </div>`;
+  }
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+// ── Elements table ──
+function renderElementsTable() {
+  if (!capturedData?.elements?.length) return;
+  let html = `<div style="margin-bottom:12px;color:var(--text-dim);font-size:13px;">
+    ${capturedData.elements.length} elements from <b>${esc(capturedData.url || '')}</b>
+  </div>`;
+  html += '<div style="max-height:600px;overflow:auto;">';
+  html += `<table class="el-table"><thead><tr>
+    <th>ID</th><th>Role</th><th>Name</th><th>Position</th><th>Size</th><th>Colors</th>
+  </tr></thead><tbody>`;
+  for (const el of capturedData.elements) {
+    html += `<tr>
+      <td>${el.element_id}</td>
+      <td>${el.role}</td>
+      <td style="max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${esc(el.name)}">${esc(el.name)}</td>
+      <td>${Math.round(el.x)}, ${Math.round(el.y)}</td>
+      <td>${Math.round(el.width)}x${Math.round(el.height)}</td>
+      <td>
+        ${el.text_color ? `<span style="color:${el.text_color}">T</span>` : ''}
+        ${el.bg_color ? `<span style="display:inline-block;width:14px;height:14px;border-radius:2px;background:${el.bg_color};vertical-align:middle;border:1px solid var(--border);"></span>` : ''}
+      </td>
+    </tr>`;
+  }
+  html += '</tbody></table></div>';
+
+  if (capturedData.screenshot_b64) {
+    html += `<div style="margin-top:16px"><img src="data:image/png;base64,${capturedData.screenshot_b64}" style="max-width:100%;border-radius:8px;border:1px solid var(--border);"></div>`;
+  }
+
+  document.getElementById('elementsTable').innerHTML = html;
+}
+
+// ── Utilities ──
+function esc(s) {
+  if (!s) return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function b64toBlob(b64, type) {
+  const bin = atob(b64);
+  const arr = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+  return new Blob([arr], { type });
+}
+
+// Load config on startup
+fetch('/api/config').then(r => r.json()).then(cfg => {
+  document.getElementById('perceptionLevel').value = cfg.perception_level || 'hybrid';
+  document.getElementById('vpWidth').value = cfg.viewport_width || 1280;
+  document.getElementById('vpHeight').value = cfg.viewport_height || 720;
+  document.getElementById('geoWidth').value = cfg.viewport_width || 1280;
+  document.getElementById('geoHeight').value = cfg.viewport_height || 720;
+}).catch(() => {});
+</script>
+</body>
+</html>

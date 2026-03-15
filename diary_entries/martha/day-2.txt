@@ -1,0 +1,355 @@
+═══════════════════════════════════════════════════════════
+  CLEARWATER ACCOUNTING SERVICES — BOOKKEEPER DIARY
+  Martha Henderson | Tuesday, Week 1
+  "The numbers don't lie — but sometimes the software
+   makes them very hard to find."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      9h 10min
+Clients worked on:       1  (Sunset Hardware)
+QB Online sessions:      4  (139 min total)
+Transactions entered:    51
+Invoices reviewed:       22
+Overdue AR follow-up:    3 client contacts made
+Support articles read:   5  (trying to find moved menu items)
+Printed reports filed:   6
+
+07:50 AM - 08:20 AM  [30 min] MORNING SETUP
+  Came in ten minutes early again. The coffee maker was already on — Gary from
+  tax prep must have beaten me in. Good man.
+
+  Set up at my desk with the Sunset Hardware folder. Owner is Dennis Park,
+  runs a mid-sized hardware store on Route 9. Good client, pays Clearwater's
+  fees on time, but his bookkeeping tends to get away from him between our
+  monthly sessions because he enters some things himself and doesn't always
+  follow the proper account codes. I've been his bookkeeper for nine years.
+  He came over to QBO with us about fourteen months ago. He was on Desktop
+  before that too.
+
+  His February ending balance on the business checking was $22,441.18.
+  March statement downloaded from his Wells Fargo account — $19,876.53.
+  That's a drop of about $2,500, which seems about right for a slow March
+  in hardware retail. Will confirm when the P&L is done.
+
+  Also noted from last month: three overdue invoices flagged in February AR:
+    - Inv. #1047 — Clearwater School District   $1,842.00   (74 days overdue)
+    - Inv. #1052 — Harmon Construction          $1,200.00   (61 days overdue)
+    - Inv. #1058 — Harmon Construction          $1,275.00   (48 days overdue)
+  Total: $4,317.00 outstanding. Dennis needs to know about these.
+
+08:20 AM - 08:55 AM  [35 min] QB ONLINE — SUNSET HARDWARE (SESSION 1)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:20 AM – 08:55 AM, 35 min]
+
+  Logged into QBO. Switched company to Sunset Hardware. And immediately
+  noticed something wrong.
+
+  The left navigation bar looked different. Yesterday when I worked on Bella's,
+  the menu items along the left side were: Dashboard, Banking, Sales, Expenses,
+  Employees, Reports, Taxes, Accounting, My Accountant. Today — same browser,
+  same account — it shows: Dashboard, Transactions, Sales, Expenses,
+  Payroll, Reports, Taxes, Accounting, My Accountant.
+
+  "Banking" became "Transactions." And "Employees" became "Payroll."
+
+  QBO updated overnight. I know they do this — they have a banner sometimes
+  that says "We've made improvements!" — but they don't warn you that the
+  menu words changed. I sat there for a full minute trying to figure out if
+  I was in the right company file.
+
+  I searched my notepad where I write navigation paths. "Banking > Bank
+  Accounts" was my note. Clicked "Transactions." The bank accounts were there.
+  So it's the same screen, just renamed. Fine. But I had to relearn where it
+  was in my memory. Annoying.
+
+  Also: the "Accounting" menu used to say "Chart of Accounts" at the top when
+  I clicked it. Today it shows "Reconcile" first and "Chart of Accounts"
+  second. The order changed. Small thing, I know. But when you're working
+  from muscle memory, small things matter.
+
+  Wrote in my notepad: NEW menu: Transactions (was Banking). Payroll (was
+  Employees). Gear > Your Company > Chart of Accounts — SAME. Reconcile is
+  under Accounting, still there.
+
+  Navigated to the AR to check overdue invoices. Sales > Invoices. The list
+  loaded. I sorted by "Due Date" to get the oldest first. The three overdue
+  invoices were right at the top. Good.
+
+  I needed to add an aging note to each — something I do in Sunset Hardware's
+  file as a reminder when Dennis reviews with me. In Desktop, I could add a
+  memo right on the invoice record. In QBO... clicked into Invoice #1047.
+  There's a "Message on invoice" field at the bottom and a "Memo" field. The
+  Memo field said it was for internal use. I added: "74 days past due as of
+  4/1 — follow up with school district billing dept." Saved.
+
+  Did the same for #1052 and #1058 (Harmon Construction). Added notes.
+
+  Then I noticed something: Invoice #1052 shows an amount of $1,200.00 but in
+  my paper file I had noted $1,250.00 from last month's printout. $50 off.
+  Possible Dennis edited it? Clicked the activity log on the invoice — QBO
+  shows a little audit trail at the bottom. Yes: Dennis changed the amount on
+  03/18 with a note "Price adjustment." He did this himself without telling
+  me. That's fine, it's his business, but I need to know about these changes.
+  Made a note to mention this to Dennis when I do his monthly call.
+
+08:55 AM - 09:10 AM  [15 min] CALLS — SUNSET HARDWARE AR FOLLOW-UP
+  Called Dennis. Briefly mentioned the Harmon invoice adjustment and the three
+  outstanding items. He said Harmon Construction has been slow to pay but he
+  expects a check this week. The school district invoice ($1,842.00) is the
+  big one — apparently there's a purchase order approval backlog at the district
+  office. Dennis will call them today. I told him I'd mark both Harmon invoices
+  as "collections pending" in my notes.
+
+  Dennis also mentioned he entered about a dozen expense receipts directly into
+  QBO last week. He's been doing this himself since QBO has the receipt-capture
+  feature on mobile. Good initiative. But I've learned to double-check his
+  entries because he sometimes uses the wrong expense account.
+
+09:10 AM - 10:45 AM  [95 min] QB ONLINE — SUNSET HARDWARE (SESSION 2)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [09:10 AM – 10:45 AM, 95 min]
+
+  Started reviewing the transactions Dennis entered himself (Transactions >
+  Banking, then filtering by "In QuickBooks" — meaning already categorized).
+  Twelve items he entered via the mobile receipt snap:
+
+    03/07   Home Depot (supplies for store fixtures)   $234.88
+            — Dennis coded to "Office Supplies." Should be "Repairs & Maint."
+              Fixed.
+
+    03/09   BP Gas Station                             $67.44
+            — Dennis coded to "Auto Expense." Correct. Left it.
+
+    03/11   Ace Distributor (resale merchandise)       $3,841.20
+            — Dennis coded to "Supplies." Should be "Cost of Goods Sold."
+              This is a common mistake of his. Fixed.
+
+    03/11   Ace Distributor (store supplies, non-resale) $112.40
+            — Dennis coded to "Cost of Goods Sold." Should be "Supplies."
+              He swapped these two. Fixed.
+
+    03/14   Clearwater Business Insurance (monthly)    $387.00
+            — Coded to "Insurance." Correct.
+
+    03/15   Clearwater Electric                        $441.22
+            — Coded to "Utilities." Correct.
+
+    03/18   Keystone Plumbing (repair, employee restroom) $285.00
+            — Coded to "Repairs & Maintenance." Correct.
+
+    03/19   BP Gas Station                             $71.80
+            — Coded to "Auto Expense." Correct.
+
+    03/21   Advance Auto Parts (work truck parts)      $163.45
+            — Coded to "Supplies." Should be "Vehicle Expense." Fixed.
+
+    03/22   Staples (office printer cartridges)        $44.97
+            — Coded to "Office Supplies." Correct.
+
+    03/25   Wells Fargo — monthly service charge       $15.00
+            — Dennis coded to "Bank Fees." Correct.
+
+    03/28   Ace Distributor (resale merchandise)       $2,204.75
+            — Coded to "Supplies." Again — should be COGS. Fixed.
+
+  Five of twelve entries had wrong account codes. Good thing I check. If I
+  let those slide, the P&L would show inflated supplies expense and understated
+  COGS, which would mess up his gross margin analysis. Dennis's gross margin on
+  hardware resale is supposed to run about 38-42%. If COGS is understated, the
+  margin looks too high and he'll think the business is doing better than it is.
+
+  After correcting the miscategorizations, I entered the remaining March
+  transactions from Dennis's paper receipts that he hadn't entered in the app:
+    - 03/02  Yellow Pages (monthly ad)                  $95.00
+    - 03/04  Ace Distributor (resale)                 $1,677.55
+    - 03/12  Clearwater Water Dept.                      $88.33
+    - 03/17  AT&T Business                               $124.00
+    - 03/26  Ace Distributor (resale)                  $933.20
+    - 03/29  Wells Fargo wire transfer fee               $25.00
+
+  Also entered sales deposits from Dennis's deposit book:
+    - 03/01   $4,211.43
+    - 03/08   $3,874.22
+    - 03/15   $4,002.15
+    - 03/22   $3,618.90
+    - 03/29   $2,887.44
+  Total deposits: $18,594.14
+
+  Total transactions entered this session: 39 items.
+
+  At 10:30, while in the Expenses entry screen, I accidentally hit Tab too many
+  times and the cursor jumped to the "Billable" checkbox. I clicked what I
+  thought was Save but instead checked "Billable" and then saved — so the
+  $88.33 water bill was now flagged as billable to a customer. Of course Dennis
+  doesn't bill his utility expenses to customers. I had to find the transaction
+  again, edit it, uncheck Billable, and save again. Ten minutes lost. In
+  Desktop you couldn't accidentally make an expense billable unless you were
+  in a specific workflow. The QBO form has this option right out in the open.
+
+10:45 AM - 11:00 AM  [15 min] BREAK
+
+11:00 AM - 12:05 PM  [65 min] QB ONLINE — SUNSET HARDWARE (SESSION 3)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [11:00 AM – 12:05 PM, 65 min]
+
+  Moved on to the reconciliation. Accounting > Reconcile > Sunset Hardware
+  Checking. Statement ending balance $19,876.53, date 03/31.
+
+  Beginning balance showed $22,441.18 — matches my record. Good start.
+
+  Went through the cleared column against the Wells Fargo PDF statement.
+  Checking off deposits: all five weekly deposits cleared, total $18,594.14.
+  Checking off debits: working through the list... this took about forty
+  minutes. Dennis had 48 cleared debits on the statement. I matched them one
+  by one. Most matched. Two issues:
+
+  Issue 1: A $385.00 debit on 03/06 in the Wells Fargo statement. I searched
+  my entered transactions — nothing for $385. Dennis had a $387.00 insurance
+  payment. Is this it? The difference of $2.00... I called Dennis real quick
+  at 11:43. He said the insurance company gave him a $2.00 early-pay discount.
+  He didn't tell me. I needed to create a $2.00 credit memo or adjust the bill.
+  In QBO I went back to the bill and added a vendor credit for $2.00 (Accounts
+  Payable credit, applying to the insurance expense). This is a bit fussier to
+  do in QBO than in Desktop, but I figured it out.
+
+  Issue 2: A $340.00 debit on 03/23 that I couldn't match to anything. No
+  receipt in Dennis's file. Could be the Advance Auto Parts bill — but I
+  entered that as $163.45. Not matching. Called Dennis again at 11:52. He had
+  to pull up his own Wells Fargo account to see. After five minutes he found
+  it: he'd paid a quarterly pest control service, $340.00, and completely
+  forgot to give me the receipt. Classic Dennis. I entered the $340.00 under
+  "Repairs & Maintenance" (close enough for pest control) with a note. Will
+  ask him to send the actual receipt next time.
+
+  After those two fixes, reconciliation difference: $0.00. Another green
+  checkmark. Finished reconciliation at 12:04 PM.
+
+12:05 PM - 12:45 PM  [40 min] LUNCH
+
+12:45 PM - 01:25 PM  [40 min] QB ONLINE — SUNSET HARDWARE (SESSION 4)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 4  [12:45 PM – 01:25 PM, 40 min]
+
+  Reports time.
+
+  Ran Profit & Loss for March 2024, accrual basis (Dennis is accrual):
+    Revenue (Sales):           $18,594.14
+    COGS (merchandise):         $8,656.70
+    Gross Profit:               $9,937.44  (53.4% margin — high, will recheck)
+    Operating Expenses:
+      Repairs & Maintenance       $625.00  (Keystone + pest control)
+      Utilities                   $529.55
+      Auto Expense                $139.24
+      Vehicle Expense             $163.45
+      Insurance                   $385.00
+      Office Supplies              $44.97
+      Advertising                  $95.00
+      Telephone                   $124.00
+      Bank Fees & Charges          $40.00
+    Total Operating Exp:        $2,146.21
+    Net Income:                 $7,791.23
+
+  That gross margin of 53.4% looked too high to me. Dennis typically runs
+  38-42%. Then I realized: the three big COGS transactions from Ace Distributor
+  ($3,841.20 + $933.20 + $2,204.75 = $6,979.15) plus Dennis's own entry...
+  wait, let me recount. I also entered $1,677.55 in COGS on 03/04.
+
+  Total COGS entered: $6,979.15 + $1,677.55 = $8,656.70. Hmm. But revenue
+  is $18,594.14 in deposits — that includes tax? Or is it net of tax? I need
+  to check whether Dennis's POS system separates sales tax before deposit.
+  Made a note: VERIFY sales tax separation with Dennis before finalizing P&L.
+  This is a question about his POS system, not QBO.
+
+  Printed: P&L March (1 page), Balance Sheet 03/31 (1 page), AR Aging (1 page
+  — showing those three overdue invoices still open), AP Aging (1 page —
+  clean), Reconciliation Report (2 pages).
+
+  Total pages printed and filed: 6.
+
+01:25 PM - 02:15 PM  [50 min] CLIENT MEMO — SUNSET HARDWARE
+  Drafted Dennis's monthly memo. Key points:
+    - March net income $7,791.23 (verify sales tax treatment before final)
+    - Three outstanding AR items totaling $4,317.00 — need follow-up urgently
+    - Five expense categorization errors corrected in self-entered items
+    - Please send all receipts — the $340 pest control receipt is missing
+    - Gross margin needs verification re: sales tax
+    - Bank feed appears to be pulling correctly (Wells Fargo connection was OK)
+
+  Signed, stamped, put in outbox.
+
+02:15 PM - 03:00 PM  [45 min] ADMIN — MENU CHANGE DOCUMENTATION
+  The QBO menu change this morning bothered me enough that I sat down and
+  updated my navigation cheat sheet. I keep a laminated card next to my monitor
+  with the paths to the most common QBO functions. Today I had to update three
+  entries:
+
+  OLD: Banking > Bank Accounts          NEW: Transactions > Bank Accounts
+  OLD: Employees > Run Payroll          NEW: Payroll > Run Payroll
+  OLD: Banking > Banking Rules          NEW: Transactions > Rules
+
+  I also spent time reading QBO's "What's New" release notes online. There was
+  a short notice that the navigation was "streamlined for clarity." Cleared up
+  for whom, I wonder? Not for someone who memorized it the old way.
+
+  Also re-laminated my cheat sheet. I keep a small laminator in my desk drawer.
+  Worth every penny.
+
+03:00 PM - 04:00 PM  [60 min] PREP FOR WEDNESDAY — PARKER DENTAL
+  Parker Dental is my most complex client. Dr. Karen Parker runs a two-dentist
+  practice with five full-time and two part-time employees. She's on QBO Plus
+  with payroll. Her payroll period ends this Friday and I need to review it
+  Wednesday.
+
+  Pulled Parker Dental binder. Last payroll: 03/15 biweekly. Next: 03/31
+  (which was Friday — so it should have already been processed via QBO Payroll
+  auto-run, but I need to verify). Employee count: 7. Total payroll per period
+  is approximately $14,400–$15,000 gross depending on part-time hours.
+
+  Also need to review their accounts payable — dental supply vendors have long
+  payment terms. And Dr. Parker wants a Q1 summary for her CPA (tax season).
+  That means I need a January-through-March P&L and a balance sheet as of
+  03/31. Going to be a full day.
+
+  Set up Wednesday's work pile. Logged out of QBO.
+
+04:00 PM - 04:45 PM  [45 min] END-OF-DAY NOTES & REFLECTION
+  Wrote up my daily log. Total transactions today: 51. Time in QBO: 139 min.
+  Main frustrations: the overnight menu rename (15 min of confusion), the
+  accidental "billable" checkbox (10 min to fix), and Dennis's missing receipt
+  for $340 (called him twice, cost me 15 min). Resolutions: all corrected.
+
+END OF DAY — MARTHA'S REFLECTION
+───────────────────────────────────────────────────────────
+  Two clients in as many days, two clean reconciliations. I'll take that.
+
+  The menu change this morning was genuinely disorienting. I know it sounds
+  trivial — the word "Banking" changed to "Transactions" — but when you work
+  from habit and muscle memory, small changes throw you completely. I spent a
+  full minute wondering if I was in the wrong client file. Fifteen years in
+  Desktop, nothing ever moved without you doing it yourself.
+
+  What I keep running into with QBO is this: everything is there, but nothing
+  is where I expect it to be. The reconciliation screen is fine. The invoice
+  entry is fine. But the getting-there always takes twice as long as it should.
+  My old Desktop: File, Edit, Lists, Activities, Reports — every function had
+  a home on those menus and it never changed. Here, I feel like I have to
+  re-learn the layout after every update.
+
+  Dennis's miscategorizations are a recurring issue. I wonder if I should
+  put together a one-page "cheat sheet" for him on which expense type goes
+  where. He's enthusiastic about the mobile receipt capture, which is great,
+  but enthusiasm without accuracy isn't helpful. I'll draft something this
+  weekend.
+
+  Tomorrow: Parker Dental. Payroll review, AP, Q1 summary. Long day ahead.
+
+  TO-DO FOR TOMORROW:
+  □ Parker Dental — verify 03/31 payroll run completed (7 employees)
+  □ Parker Dental — check payroll tax deposits for Q1
+  □ Parker Dental — AP aging (dental suppliers: Patterson, Schein)
+  □ Parker Dental — Q1 P&L (Jan–Mar) and Balance Sheet for CPA
+  □ Parker Dental — bank reconciliation for March
+  □ Draft expense category cheat sheet for Dennis (Sunset Hardware)
+  □ Follow up with Dennis: did school district call back about Invoice #1047?

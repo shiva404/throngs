@@ -1,0 +1,318 @@
+═══════════════════════════════════════════════════════════
+  RODRIGUEZ & ASSOCIATES CPA — ACCOUNTANT DIARY
+  Carlos Rodriguez, CPA | Wednesday, Week 1
+  "Garbage in, garbage out. The software didn't invent that rule — it just makes it worse."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      10h 20min
+Clients handled:         5
+QB Online sessions:      9  (221 min total)
+Billable hours logged:   8.0h
+Billable revenue (est.): $1,400.00
+ML auto-categorization errors found and corrected: 34
+Time spent correcting QB's "smart" mistakes: 2h 15min
+Transactions audited across affected clients: 312
+
+08:00 AM - 08:40 AM  [40 min] MORNING REVIEW — INSTINCT CONFIRMED
+
+  Opened QB Accountant dashboard at 8:00. Coffee in hand. My usual morning scan: pulled
+  up the Transactions page for Ortega Medical Supply (quarterly client, Q1 review due
+  this week) to get a read on the bank feed before scheduling the full review.
+
+  First thing I noticed: a $1,450 charge from a medical equipment supplier —
+  "Cardinal Health" — was categorized by QB as "Meals & Entertainment."
+
+  Cardinal Health is a major medical supply distributor. They have never, in 14 years of
+  practice, been a restaurant. QB's ML engine apparently saw an unfamiliar vendor name
+  in a transaction and made an inference based on... something. The transaction description
+  was "CARDINAL HLTH INC ECOM 614-757-5000" — not exactly ambiguous. The phone number
+  is Cardinal Health's corporate line.
+
+  This is the kind of thing that keeps me up at night: if I weren't reviewing these
+  transactions carefully, a client's P&L would show a $1,450 meal. Their margins would
+  look wrong. Their COGS would be understated. Year-end, their tax return would be wrong.
+
+  I suspected this was not isolated. I had a feeling something changed in QB's
+  auto-categorization model recently — I've been seeing more misfires than usual.
+  Today, I'm going to find out how widespread this is.
+
+08:40 AM - 11:15 AM  [155 min] AUDIT: QB AUTO-CATEGORIZATION FAILURES ACROSS 5 CLIENTS
+
+  ⬛ QUICKBOOKS ONLINE SESSIONS 1–5 (CLIENTS: Ortega Medical, Nakamura, Henderson,
+     Bloom Legal, Chen's Bakery — audit pass)  [08:40 AM – 11:15 AM, 155 min]
+
+  I spent the next 2 hours and 35 minutes running a methodical audit of auto-categorized
+  transactions for five clients, focusing on January and February 2025 (the period after
+  what I suspect was a QB model update). Here is what I found:
+
+  --- CLIENT: Ortega Medical Supply ---
+  Reviewed 84 auto-categorized transactions (January–February).
+  Errors found: 11
+
+  1. Cardinal Health × 4 transactions: $1,450, $2,340, $890, $3,100 — all auto-categorized
+     as "Meals & Entertainment." Should be: Medical Supplies (COGS). Total misfire: $7,780.
+  2. McKesson Corporation × 3 transactions: $4,200, $1,670, $2,950 — categorized as
+     "Office Supplies." McKesson is also a medical distributor. Should be: Medical Supplies.
+  3. FEDEX GROUND ECOM payment: $312 — categorized as "Advertising." FedEx is a shipping
+     cost. Should be: Shipping & Delivery.
+  4. A $750 payment to "Compliance Training Associates" — categorized as "Meals &
+     Entertainment." This is CE (continuing education) for Ortega's licensed staff.
+     Should be: Professional Development.
+  5. Recurring monthly payment to a practice management software: $299/month × 2 =
+     $598 — categorized as "Professional Fees." Should be: Software Subscriptions.
+
+  Aggregate financial impact if uncorrected:
+  - COGS understated by ~$16,930
+  - Meals & Entertainment overstated by ~$9,880 (a red flag in any audit)
+  - Gross profit overstated by ~$16,930
+
+  This is not a rounding error. This is a materially wrong P&L.
+
+  I corrected all 11 errors. For Cardinal Health and McKesson, I also updated the
+  vendor records with the correct default category so QB should learn the correct
+  mapping going forward. I have done this before. I am not confident it will hold.
+
+  --- CLIENT: Nakamura Restaurant Group ---
+  Reviewed 127 transactions (January–February, combined both locations).
+  Errors found: 8
+
+  For a restaurant, the irony: QB correctly categorized most of Nakamura's actual food
+  vendors. But:
+  1. US Foods (a restaurant food distributor) × 3 transactions: $3,400, $2,200, $4,100 —
+     all correctly categorized as "Food & Beverage (COGS)." These were fine.
+  2. DoorDash and UberEats commission fees × 4 transactions: QB categorized these as
+     "Sales" (revenue). They are NOT revenue. They are contra-revenue commissions —
+     merchant fees paid to the delivery platform. Should be booked as "Merchant Fees"
+     (expense). This is a $1,847 error in the wrong direction — it overstates revenue
+     and understates expenses simultaneously, a double impact on net income.
+  3. One transaction: $240 to "National Restaurant Association" — categorized as
+     "Dues & Subscriptions." Correct! But the wrong sub-account — I have Nakamura
+     set up with "Industry Associations" as a sub-account. Minor but I fixed it.
+
+  The DoorDash/UberEats issue is particularly concerning because it repeats monthly.
+  I had set up the correct category for these vendors. If QB's ML model is overriding
+  my manual rules, that is a serious problem. I went into the vendor settings and
+  confirmed that my manual rules were still saved. QB is not overriding them for new
+  transactions — it apparently did a one-time re-categorization of historical transactions
+  I had already confirmed. I have never seen this behavior before. I will document it.
+
+  --- CLIENT: Henderson Plumbing ---
+  Reviewed 73 transactions (January–February).
+  Errors found: 9
+
+  Henderson is a plumbing contractor. Their supply purchases are COGS. QB's engine
+  seems confused about hardware/supply vendors — Ferguson Enterprises (a major plumbing
+  supply distributor), Home Depot (3 transactions), Winsupply — all categorized as
+  "Office Supplies" instead of "Job Materials (COGS)."
+
+  Also: the outstanding check I noted yesterday. Check #4412 to "Advanced Pipe Systems"
+  for $7,400. Still outstanding. I emailed owner Rich Henderson directly: "Rich — check
+  #4412 to Advanced Pipe Systems for $7,400, issued October 28, 2024, has not cleared.
+  Please confirm if this check was cashed, needs to be voided, or if there's a dispute
+  with this vendor." Will wait for his response.
+
+  --- CLIENT: Bloom Legal Services ---
+  Reviewed 28 transactions (lighter account).
+  Errors found: 4
+
+  Bloom Legal pays PACER (the federal court system's document retrieval system) and
+  Westlaw (legal research database) — categorized as "Meals & Entertainment." Again.
+  Westlaw costs $520/month. That is an expensive dinner. Should be: Professional
+  Research & Subscriptions. Fixed.
+
+  Also a $1,200 bar association fee categorized as "Advertising." Should be:
+  Dues & Professional Licenses.
+
+  --- CLIENT: Chen's Bakery ---
+  Already closed Monday. But I was curious. Ran a quick review on January transactions
+  I had approved at the time (Linda self-categorizes and I reviewed then).
+  Errors found: 2 — minor. A Golden State Bakery Supply payment re-categorized post-close
+  (same thing I saw with Nakamura — QB retroactively re-categorizing confirmed transactions).
+  I fixed both.
+
+  TOTAL ERRORS ACROSS 5 CLIENTS: 34
+  TOTAL TIME SPENT: 2 hours 15 minutes
+  ESTIMATED FINANCIAL IMPACT IF UNCORRECTED: >$25,000 in misallocated transactions
+
+  This is a significant problem. I now believe QB made a change to its ML categorization
+  model in the past 4–6 weeks and that change has reduced accuracy for several common
+  vendor types, particularly:
+  - Medical/healthcare distributors
+  - Legal and professional research subscriptions
+  - Delivery platform merchant fees
+  - Construction and trade supply vendors
+
+  I am keeping a detailed log of this. I will post on QB Community.
+
+11:15 AM - 11:30 AM  [15 min] BREAK — WALK OUTSIDE
+  Took a real break. Walked around the parking lot twice. It was cold. I didn't care.
+  I needed to not look at a loading spinner or an incorrectly categorized transaction
+  for 15 minutes.
+
+11:30 AM - 12:00 PM  [30 min] QB COMMUNITY — DETAILED BUG REPORT
+
+  Logged back in and drafted a detailed post to QB Community. This took me 30 minutes
+  because I wanted to be precise and useful to other practitioners, not just venting.
+
+  Title: "Auto-categorization retroactively re-categorizing confirmed transactions —
+  possible model update side effect (January/February 2025)"
+
+  Body: Described the exact behavior, including the DoorDash/UberEats retroactive
+  re-categorization, the vendor types most affected, the specific examples (anonymized).
+  Included a sample of the incorrect categorizations with the correct categories noted.
+  Asked QB Community if others had seen the same pattern in the past 4–6 weeks.
+
+  Tagged it: #bug #auto-categorization #bank-feeds #accounting-accuracy
+
+  Noted my QB version and browser. Noted that vendor default categories are still saved
+  correctly in vendor settings — the re-categorization is happening despite saved rules.
+
+  This is the kind of detailed bug report that sometimes actually gets a response from
+  the QB product team. We'll see.
+
+12:00 PM - 01:00 PM  [60 min] LUNCH AND CATCH-UP WORK
+  Ate lunch. Returned calls — one from Marcus Ramirez who had a question about his
+  estimated tax payment (confirmed the amount and process — 10 minute call). One from
+  a prospective new client (I'll call back tomorrow; I can take on one or two more
+  annual clients but I'm near capacity for monthly work).
+
+  Reviewed the S-Corp election checklist I sent to Ken Nakamura. Confirmed his articles
+  of organization and EIN are both in order for the Form 2553 filing. Good.
+
+01:00 PM - 03:20 PM  [140 min] WESTBROOK FITNESS — DEEP DIVE LOCATION 2 (MILLBROOK)
+
+  ⬛ QUICKBOOKS ONLINE SESSIONS 6–7 (CLIENT: Westbrook Fitness)  [01:05 PM – 03:15 PM, 130 min]
+
+  Sarah's Location 2 — Millbrook — has thin margins. P&L shows it's profitable but only
+  barely. Gross margin: 58% vs. 67% at Location 1 and 71% at Location 3. I wanted to
+  understand why.
+
+  Pulled general ledger detail for Millbrook for all of 2024. This is where QB's
+  transaction-level drill-down earns its keep — I can see every single entry, in
+  chronological order, with memo fields, amounts, and categories. When the data is
+  clean, this view is excellent.
+
+  What I found after 90 minutes of detailed review:
+
+  1. Instructor compensation at Millbrook is higher as a % of revenue than the other
+     two locations — 29% vs. 22% at Location 1, 19% at Location 3. This is likely a
+     combination of class size (Millbrook's classes are smaller — it's a smaller space)
+     and the instructor mix (Millbrook has more senior, higher-paid instructors).
+     This is a management decision, not an accounting error, but it explains the margin.
+
+  2. Rent at Millbrook: $4,800/month vs. $3,200 at Location 1, $3,600 at Location 3.
+     Millbrook is in a higher-rent district. This is baked in until the lease renews
+     (September 2026). Sarah will need to decide whether to renegotiate aggressively
+     or consider whether Millbrook's revenue can support expansion within the space
+     (more classes per day). Revenue opportunity, not an accounting issue.
+
+  3. One genuine accounting issue: cleaning service at Millbrook ($480/month) has been
+     categorized inconsistently — sometimes "Janitorial Services," sometimes "Outside
+     Services," sometimes "General & Administrative." I standardized to "Facilities &
+     Maintenance" across all 12 months and across all three locations for comparability.
+     This affects expense categorization but not total expenses or net income.
+
+  4. Equipment maintenance at Millbrook: $8,400 in 2024, vs. $3,100 at Location 1 and
+     $1,800 at Location 3. This is high. Pulled the transaction detail — 14 separate
+     service calls to "ProFit Equipment Repair." I cross-referenced the QB asset register:
+     Millbrook's treadmills and ellipticals are 6–7 years old. They're failing. Sarah
+     needs to make a capital expenditure decision — repair costs are approaching the
+     threshold where replacement makes more financial sense.
+
+  Prepared a one-page memo for Sarah with this analysis. Key finding: Millbrook's margin
+  compression is primarily structural (rent, instructor mix, aging equipment), not an
+  operational inefficiency. Recommendation: model the economics of replacing the
+  cardio equipment (Section 179 depreciation possible) and negotiate the lease. Will
+  send tomorrow.
+
+03:20 PM - 04:45 PM  [85 min] HENDERSON PLUMBING — QUARTERLY REVIEW PREP + CORRECTIONS
+
+  ⬛ QUICKBOOKS ONLINE SESSION 8 (CLIENT: Henderson Plumbing)  [03:25 PM – 04:40 PM, 75 min]
+
+  Continuing from the morning audit. Corrected all 9 categorization errors. Reclassified
+  Ferguson, Home Depot, and Winsupply transactions to Job Materials. Standardized vendor
+  default categories across all supply vendors in Henderson's file.
+
+  Rich Henderson replied to my email about the $7,400 outstanding check: the vendor went
+  out of business in November 2024. The check was never cashed and presumably never will
+  be. This is unclaimed property / escheatment territory — in California, uncashed checks
+  become reportable after 3 years (so this one has time). But I will void the check and
+  record it as a credit to accounts payable, then zero out the AP balance for Advanced
+  Pipe Systems (they're out of business, the liability is gone). Journal entry made.
+
+  Also found: Henderson has three outstanding change orders from Q4 2024 jobs totaling
+  $18,400 that haven't been invoiced yet. They're on his whiteboard, apparently.
+  Emailed him: "Rich — I show three uninvoiced change orders in your job notes totaling
+  approximately $18,400. These need to be invoiced before March 31 or we have a Q1
+  revenue recognition problem and an accounts receivable gap. Please send me the details."
+
+  He replied within 10 minutes. "On it." Good man. Slow on invoicing, fast on replies.
+
+04:45 PM - 05:30 PM  [45 min] DOCUMENTATION, QB COMMUNITY CHECK, EOD
+
+  ⬛ QUICKBOOKS ONLINE SESSION 9 (MISC)  [04:50 PM – 05:25 PM, 35 min]
+
+  QB Community response to my auto-categorization bug report: 12 upvotes in 4 hours.
+  Four other practitioners confirming the same pattern — one in Texas, one in New York,
+  one in the UK (their version of QB), one in Colorado. The Colorado accountant described
+  an identical situation to my Nakamura DoorDash finding: merchant fee transactions
+  that were correctly categorized being retroactively re-categorized as revenue.
+  This is now clearly a widespread issue, not a one-off.
+
+  QB Moderator replied: "Thank you for the detailed report. Our team is aware of reports
+  regarding auto-categorization behavior and is actively investigating. We will provide
+  updates as they become available."
+
+  "Actively investigating" is better than "forwarded to product team." Marginal progress.
+
+  I added a follow-up comment noting the retroactive re-categorization behavior (already
+  confirmed transactions being changed) is particularly dangerous because practitioners
+  who don't regularly audit confirmed transactions won't catch it. This could lead to
+  filed tax returns based on incorrect categorizations. QB needs to either fix the model
+  or — at minimum — never retroactively change transactions that have been manually
+  confirmed by the user. Confirmed = locked. This should be a design principle.
+
+  Updated my time log. Eight billable hours today, which is high for a non-close day —
+  the auto-categorization audit was unplanned and I can bill some of it, but not all.
+  The time I spent correcting QB's errors is time I shouldn't have needed to spend.
+
+  I'm exhausted but also: I found something real today. The categorization issue is
+  documented, reported, and other practitioners are corroborating it. That matters.
+  My clients' books are now cleaner than they would have been if I hadn't audited.
+  That's the job.
+
+END OF DAY — CARLOS'S REFLECTION
+───────────────────────────────────────────────────────────
+  The most frustrating kind of problem is the invisible one. If a client's P&L is
+  obviously wrong — revenue is negative, expenses are 500% of the prior year — someone
+  will notice. But $7,780 of medical supply purchases showing up as "Meals & Entertainment"
+  across four transactions over two months? That's the kind of error that passes a casual
+  review. It only shows up if you drill down into the transaction-level detail and ask:
+  does this category make sense for this vendor?
+
+  I audit every confirmed transaction for monthly clients. For quarterly clients, I do a
+  spot audit. For annual clients... I review what I review. If QB's ML model is
+  retroactively re-categorizing confirmed transactions on annual-review clients, I may
+  not catch it until December. That is a problem.
+
+  I am going to add a step to my monthly and quarterly close checklist: run a
+  "transactions changed after confirmation" audit. If QB won't tell me which confirmed
+  transactions were retroactively re-categorized (it doesn't; there's no audit log for
+  this), I'll need to either trust my prior exports and diff against current state, or
+  add it to the standard review scope. More work created by a "smart" feature.
+
+  The positive: QB's general ledger drill-down saved me hours of manual work on
+  Westbrook's Millbrook analysis. I could not have done that analysis as efficiently
+  in any other way at this price point. QB has real strengths. Today was not one of them.
+
+  TO-DO FOR TOMORROW:
+  □ Quarterly reviews — Ortega Medical Supply and Henderson Plumbing (full reviews)
+  □ Quarterly review prep — Nakamura Restaurant Group (post-corrections) and Bloom Legal
+  □ Henderson: follow up on $18,400 uninvoiced change orders
+  □ Send Westbrook Fitness Millbrook analysis memo
+  □ Bank reconciliation marathon — Henderson and Ortega have Q1 bank recs due
+  □ Update close checklist to include post-confirmation categorization audit step
+  □ Check QB Community for auto-categorization bug update
+  □ Call prospective new client (annual, small LLC — low complexity)

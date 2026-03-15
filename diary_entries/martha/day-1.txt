@@ -1,0 +1,335 @@
+═══════════════════════════════════════════════════════════
+  CLEARWATER ACCOUNTING SERVICES — BOOKKEEPER DIARY
+  Martha Henderson | Monday, Week 1
+  "A place for everything, and everything in its place —
+   if only QuickBooks Online agreed."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      8h 45min
+Clients worked on:       1  (Bella's Florist)
+QB Online sessions:      3  (112 min total)
+Transactions entered:    34
+Bank feed attempts:      4  (0 successful auto-connects)
+Support articles read:   3
+Printed reports filed:   5
+
+08:00 AM - 08:25 AM  [25 min] MORNING SETUP & COFFEE
+  Arrived at the office fifteen minutes early as usual. Made a pot of Folgers —
+  strong — and set out my printed client folders in the order I planned to work
+  today. Bella's Florist is first because Patrice (the owner) has been calling
+  about her month-end numbers. March statement just dropped over the weekend.
+
+  Opened my physical binder for Bella's: last month's reconciliation report
+  (printed, signed, dated), the prior-month P&L I gave Patrice in February, and
+  the running transaction log I keep by hand. Also pulled up the Chase bank
+  statement PDF Patrice emailed Friday — $14,208.37 ending balance on the
+  checking account.
+
+  Reminded myself: QuickBooks Online. Not Desktop. Deep breath.
+
+08:25 AM - 09:12 AM  [47 min] QB ONLINE — BELLA'S FLORIST (SESSION 1)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:25 AM – 09:12 AM, 47 min]
+
+  Logged in to QBO at app.qbo.intuit.com. Clearwater has four company files
+  active under our accountant login. Found Bella's Florist in the client list
+  and clicked through.
+
+  First thing I wanted to do: get to the Chart of Accounts. In Desktop I'd
+  click Lists, then Chart of Accounts, and there it was — a clean flat list,
+  sortable, editable. Here I had to remember: gear icon. Top right. I clicked
+  it and got a dropdown with columns — "Your Company," "Lists," "Tools,"
+  "Profile." I looked under Lists. I see "All Lists," "Products and Services,"
+  "Recurring Transactions"... no Chart of Accounts. Clicked "All Lists." Still
+  not immediately obvious. Finally found it — it's labeled "Chart of Accounts"
+  under the Your Company column, not Lists. Wrote that down on my notepad in
+  red: GEAR > YOUR COMPANY > CHART OF ACCOUNTS.
+
+  Reviewed the COA for Bella's. Everything looked in order from last session.
+  Checking 10100, Savings 10200, Accounts Receivable 11000, Inventory Asset
+  13000, and so on. She runs about 40 accounts total, which is manageable.
+
+  Now for the reconciliation. In Desktop, I'd go to Banking > Reconcile and
+  a wizard would pop up asking for the ending balance and statement date. Clean.
+  Logical. In QBO I clicked "Accounting" in the left navigation bar (which, to
+  be fair, I've mostly memorized by now), then "Reconcile." Good — the
+  Reconcile screen is actually not too bad. Entered statement date 03/31 and
+  ending balance $14,208.37.
+
+  That's where the trouble started. The screen showed a beginning balance of
+  $11,942.14. My hand-written log says it should be $11,954.82. Twelve-dollar
+  discrepancy. Before I panic, I need to check whether someone entered a
+  transaction after the fact against February.
+
+  Spent twenty minutes digging. Found it: a $12.68 bill payment to Sunshine
+  Wholesale (vendor) had been entered by — well, by me — against 02/28 instead
+  of 03/01. Easy fix in Desktop: open the check, change the date. In QBO I
+  right-clicked... nothing. I had to find the transaction in the register. Went
+  to Accounting > Chart of Accounts > 10100 Checking > View Register. Scrolled
+  down. Found it. Clicked the little pencil/edit. Changed the date from 02/28
+  to 03/01. Saved. QBO asked if I was sure because it would affect a prior
+  period. I said yes, I'm sure. The beginning balance corrected to $11,954.82.
+  Phew.
+
+  Now I needed to connect the bank feed to pull in March transactions. In
+  Desktop, I used to import a .QBO file by hand and it was perfectly reliable.
+  QBO is supposed to auto-connect to Chase. The Banking tab showed Bella's
+  Chase account as "connected" with a green dot, but when I hit "Update" to
+  pull the March transactions, I got a spinning wheel for two full minutes and
+  then: "Bank feed connection error. Please reconnect your account."
+
+  I clicked "Reconnect." It took me to a screen asking me to log in to Chase
+  directly. I don't have Patrice's Chase online banking credentials. I have to
+  call her.
+
+09:12 AM - 09:35 AM  [23 min] PHONE — BELLA'S FLORIST (PATRICE RICCI)
+  Called Patrice. She was in the middle of arranging a funeral order and called
+  me back at 9:22. Explained I needed her to either log in herself or give me
+  her Chase credentials temporarily to reconnect the bank feed. She was nervous
+  about giving her password. I don't blame her one bit. We agreed: she'll log
+  in at lunch from her shop's back office and reconnect it herself, then call
+  me. Explained it's under the Banking menu in QBO, click the pencil icon next
+  to the account, "Reconnect." She wrote it down.
+
+  While waiting, I organized Bella's paper invoices from March that Patrice
+  dropped off last Thursday. Forty-one vendor bills and receipt slips, sorted
+  by date. I'll enter these manually whether the bank feed works or not.
+
+09:35 AM - 10:02 AM  [27 min] MANUAL TRANSACTION ENTRY — BELLA'S FLORIST
+  Started entering March vendor bills from the paper stack. No bank feed, so
+  I'm doing this the old-fashioned way, which honestly I don't mind.
+
+  Entered bills:
+    - Sunshine Wholesale Flowers    03/02   $843.20    (Accounts Payable)
+    - City of Clearwater — Water    03/05   $91.44     (Utilities)
+    - FedEx Shipping                03/07   $47.18     (Shipping & Postage)
+    - Floral Supply Co.             03/09   $1,204.55  (Cost of Goods Sold)
+    - Sunshine Wholesale Flowers    03/14   $712.30    (Accounts Payable)
+    - AT&T Business Line            03/15   $89.00     (Telephone)
+    - Floral Supply Co.             03/22   $988.40    (Cost of Goods Sold)
+    - Clearwater Electric           03/28   $214.77    (Utilities)
+
+  Total bills entered this session: 8 items, $4,190.84
+
+  Noticed that one of Patrice's handwritten receipts — Sunshine Wholesale
+  03/14 — had a smudged total. Looked like $712.30 or maybe $112.30. Called
+  Patrice's cell; straight to voicemail. Left a message. Entered $712.30 for
+  now with a sticky note to verify. Will flag in reconciliation notes.
+
+10:02 AM - 10:15 AM  [13 min] BREAK
+
+10:15 AM - 11:48 AM  [93 min] QB ONLINE — BELLA'S FLORIST (SESSION 2)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [10:15 AM – 11:48 AM, 93 min]
+
+  Patrice hadn't called back yet, so the bank feed was still disconnected. Kept
+  entering transactions manually using the paper stack.
+
+  Entered customer payments received in March (from Patrice's receipt book):
+    - Bloom Subscription Plan — March batch   03/01  $2,400.00  (Undeposited)
+    - Corporate account: Clearwater Title     03/04  $375.00    (Undeposited)
+    - Walk-in cash sales — week 1             03/05  $648.22    (Undeposited)
+    - Walk-in cash sales — week 2             03/12  $591.84    (Undeposited)
+    - Wedding: Kowalski/Brennan               03/14  $1,850.00  (Undeposited)
+    - Walk-in cash sales — week 3             03/19  $703.41    (Undeposited)
+    - Corporate: Harrington Law               03/21  $260.00    (Undeposited)
+    - Walk-in cash sales — week 4             03/26  $442.60    (Undeposited)
+    - Wedding: Olmstead (final payment)       03/28  $600.00    (Undeposited)
+
+  Total payments: $7,870.07 — matches Patrice's tally in her paper ledger.
+  Good sign.
+
+  Then I needed to enter the deposit to the bank account. In Desktop, I'd click
+  Banking > Make Deposits, select all the Undeposited Funds items, and boom —
+  one deposit. In QBO... I searched the "+ New" button menu. Under "Other" I
+  found "Bank Deposit." Clicked it. The screen listed all nine payments I'd
+  just entered. I checked all nine, confirmed $7,870.07, and set the deposit
+  date to 03/29 per Patrice's actual deposit slip. Saved.
+
+  At 11:15 AM I tried the bank feed update again. Same error. I clicked the
+  small "?" help icon next to the error message. It opened an article about
+  "OAuth token refresh" and "API connection status." I don't know what OAuth
+  is. I don't want to know what OAuth is. I just want the transactions to come
+  in. Closed the article.
+
+  Decided to try importing a .CSV file instead — Chase lets you download
+  transactions as a CSV. I don't have Patrice's Chase login to do this myself.
+  Put another note in my call queue. In the meantime, I'll reconcile with what
+  I have manually entered and flag any gaps.
+
+  Back to reconciliation. Accounting > Reconcile > Bella's Florist Checking.
+  Statement balance $14,208.37, statement date 03/31. QBO showed my entered
+  transactions. I went through the cleared column, checking off items that
+  matched the Chase PDF line by line.
+
+  Cleared transactions:
+    All eight vendor bills (payments made): matched Chase debits ✓
+    The $7,870.07 deposit on 03/29: matched Chase credit ✓
+    One item I didn't have: Chase bank service charge 03/31 $14.00 — forgot
+      to enter this. Created a new transaction: Bank Charges expense, $14.00,
+      03/31. Went back to reconcile screen.
+
+  Difference now showing: -$0.00. Wait, no — $218.42 off. Something's wrong.
+
+  Stared at the screen for ten minutes. Compared every line. Finally spotted
+  it: I had entered the Clearwater Electric bill as $214.77 but the Chase
+  statement shows $241.77. I transposed the digits. In Desktop I would just
+  open the check and fix the amount. In QBO... I went to the reconcile screen,
+  found the transaction, clicked it — it opened the original bill. I can edit
+  the amount on an unreconciled bill. Changed $214.77 to $241.77. Went back
+  to reconcile. The difference dropped to... -$26.27. Still off.
+
+  Oh. The Sunshine Wholesale $712.30 — the smudged receipt. Patrice called
+  back at 11:39 while I was still on this. She said it was $112.30, not $712.30.
+  A $600.00 difference. I voided the original bill entry and re-entered it as
+  $112.30. Voiding in QBO is slightly nerve-wracking — a pop-up warns you in
+  big letters, which I appreciate, but it still gives me palpitations. The old
+  Desktop software just let you delete quietly.
+
+  Back to reconcile. Difference: $573.73 off in the other direction now.
+  The $600 swap introduced a $573.73... wait, I'm confusing myself. Let me
+  think. Original: $712.30. Correct: $112.30. Difference: $600.00 I over-
+  entered. After voiding and re-entering: the reconciled total should go up by
+  $600.00. But the statement balance hasn't changed. So the reconciled book
+  balance should now be $600.00 closer to $14,208.37...
+
+  At 11:48 I had to stop and eat lunch. Left the reconciliation tab open. The
+  difference was $26.27 and I cannot figure out why. Printed a screen capture
+  of the reconcile screen on my desk printer (yes, I print screen captures).
+  Will revisit after lunch with fresh eyes.
+
+11:48 AM - 12:30 PM  [42 min] LUNCH BREAK
+  Ate my turkey sandwich at my desk while re-reading the Chase PDF line by
+  line with a ruler like I've done for fifteen years. Found it: a $26.27 debit
+  on 03/10 labeled "INTUIT QB ONLINE SUBSCRIPTION." That's Patrice paying her
+  own QBO subscription fee from her business checking. I never entered it.
+  Added it as a Bank Charges (or really, Software & Subscriptions) expense.
+
+12:30 PM - 02:18 PM  [108 min] QB ONLINE — BELLA'S FLORIST (SESSION 3)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [12:30 PM – 02:18 PM, 108 min]
+
+  Back to reconcile. Entered the $26.27 QBO subscription charge. Refreshed
+  reconcile screen. Difference: $0.00.
+
+  QBO displayed: "Reconciliation Successful." A little green checkmark. A
+  small thing but I do like seeing that. Clicked "Finish Now." QBO asked
+  whether to save a reconciliation report. Yes, always. It generated a PDF
+  summary: March 2024 Reconciliation, Bella's Florist Checking, Ending Balance
+  $14,208.37, All items cleared, 0.00 difference. I printed it — two pages.
+  Filed it in the Bella's Florist binder under March.
+
+  Next: ran the Profit & Loss report for March. Reports > Profit & Loss.
+  Set date range to 03/01–03/31. Cash basis (Patrice is cash-basis). The
+  numbers looked reasonable:
+    Revenue:        $7,870.07
+    COGS:           $2,192.95  (flowers and supplies)
+    Gross Profit:   $5,677.12
+    Operating Exp:  $1,656.16  (utilities, phone, shipping, QBO sub, bank fee)
+    Net Income:     $4,020.96
+
+  Patrice had asked last month whether she was "making money on the weddings."
+  At a glance, yes — two wedding payments alone ($1,850 + $600 = $2,450) with
+  minimal dedicated supply cost since those were bundled with the general
+  supply purchases. I made a note to discuss with her.
+
+  Printed the P&L. Also ran and printed: Balance Sheet as of 03/31, Accounts
+  Payable Aging Summary, and Accounts Receivable Aging Summary. AR showed
+  one invoice still open: Harrington Law, $135.00 from February. I'll mention
+  that to Patrice. AP was clean — all bills paid.
+
+  Then I tried to export the P&L to Excel. In Desktop it was File > Export.
+  Here: Reports > Profit & Loss > Export icon (a little arrow at top right).
+  I clicked it and got options: Export to Excel or Export to PDF. I chose Excel
+  out of curiosity. It downloaded a .xlsx file to my Downloads folder. I opened
+  it — it looked fine actually, well-formatted. Maybe I'll start using this
+  feature for Patrice's quarterly summaries.
+
+  Spent last 30 minutes of the session writing notes for Patrice's monthly
+  summary memo (I write these by hand on company letterhead and mail them — she
+  likes the personal touch).
+
+02:18 PM - 02:30 PM  [12 min] PRINTING & FILING — BELLA'S FLORIST
+  Printed the full packet for Bella's Florist March file:
+    1. Reconciliation Report (2 pages)
+    2. Profit & Loss — March 2024 (1 page)
+    3. Balance Sheet as of 03/31 (1 page)
+    4. AP Aging Summary (1 page)
+    5. AR Aging Summary (1 page)
+  All hole-punched and filed in the Bella's Florist 2024 binder, March tab.
+  Feels right when the binder is full.
+
+02:30 PM - 03:15 PM  [45 min] CLIENT MEMO & CORRESPONDENCE
+  Drafted Patrice's monthly memo. Key points: March net income $4,020.96,
+  reconciliation complete, one open AR item from Harrington Law ($135.00 —
+  worth following up), the smudged receipt issue (should keep receipts dry),
+  and a note that her QBO bank feed will need reconnecting — I cannot do that
+  part without her Chase login.
+
+  Typed and printed the memo. Signed it. Stamped the Clearwater Accounting
+  Services envelope. It'll go in the outbox for tomorrow's mail pickup.
+
+  Also sent Patrice a brief email recap with the same key points, since she
+  reads email faster than she checks her mailbox.
+
+03:15 PM - 04:00 PM  [45 min] ADMINISTRATIVE & PREP FOR TOMORROW
+  Reviewed my schedule for the rest of the week:
+    - Tuesday: Sunset Hardware (invoices overdue, need to review AR)
+    - Wednesday: Parker Dental (payroll period ends this week)
+    - Thursday: Riverview Café onboarding (paper records, going to be slow)
+    - Friday: Weekly wrap-up and report printing
+
+  Pulled Sunset Hardware's folder. Last reconciliation was February 28.
+  Printed their prior P&L from QBO (the March one isn't done yet) and put it
+  in tomorrow's work pile. Their AR aging from February showed three invoices
+  overdue past 60 days — total $4,317.00. That's the main thing to tackle
+  tomorrow.
+
+  Tidied my desk. Backed up my notes to the shared drive. Logged out of QBO.
+
+04:00 PM - 04:45 PM  [45 min] END-OF-DAY REVIEW & NOTES
+  Wrote up today's reconciliation notes in my physical ledger (yes, I keep a
+  hand-written master log — fifteen years of habit). Total transactions entered
+  for Bella's today: 34. Time in QBO: approximately 112 minutes across three
+  sessions. Frustrations: bank feed failure (4 attempts), the transposition
+  error on Clearwater Electric, the smudged receipt misread. Resolutions: all
+  corrected, reconciliation balanced to zero.
+
+  The bank feed issue worries me. Patrice hasn't called back about reconnecting
+  it. I'll follow up tomorrow. If it doesn't reconnect I'll ask her to export
+  the April transactions as a CSV and email it to me — that seems more reliable
+  than waiting on automatic connections to fix themselves.
+
+END OF DAY — MARTHA'S REFLECTION
+───────────────────────────────────────────────────────────
+  Well. It took longer than it should have, but Bella's Florist is done for
+  March and the books balance to the penny. That always feels good, no matter
+  what software you're using.
+
+  The bank feed is my biggest headache with QBO. In Desktop, I imported a .QBO
+  file from the bank and it just worked — no logins, no "OAuth errors," none
+  of that. I had full control. Here I'm dependent on a connection that can
+  apparently just... stop working. And I can't fix it without the client's bank
+  credentials. That's a real problem for a bookkeeper. The client shouldn't
+  have to reconnect their own bank feed. This feels like a design flaw to me,
+  but maybe I'm missing something.
+
+  The transposition error ($214.77 vs. $241.77) was my own fault and I'm
+  annoyed with myself. I used to do triple-check entry in Desktop. I need to
+  do that here too. Old habit worth keeping.
+
+  One thing QBO did well today: the reconciliation screen is actually cleaner
+  than I expected. Once I found the "Reconcile" option (under Accounting — not
+  Banking, which is where I instinctively look), the interface for checking
+  off cleared items is easy to read. The running difference counter at the top
+  is helpful. I'll give it that.
+
+  TO-DO FOR TOMORROW:
+  □ Follow up with Patrice re: Chase bank feed reconnection
+  □ Start Sunset Hardware — focus on overdue AR (3 invoices, $4,317.00)
+  □ Enter Sunset Hardware March transactions (expect ~50–60 items)
+  □ Run Sunset Hardware reconciliation for March
+  □ Call Patrice if no response about the $112.30 receipt by 10 AM
+  □ Confirm Harrington Law AR situation with Patrice ($135.00 open)

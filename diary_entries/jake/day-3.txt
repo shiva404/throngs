@@ -1,0 +1,293 @@
+═══════════════════════════════════════════════════════════
+  NEXUS ANALYTICS — FOUNDER DIARY
+  Jake Okafor | Wednesday, Week 1
+  "Every problem in accounting is eventually Carol's problem."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      11h 0min
+Meetings:                4
+QB Online sessions:      3  (49 min total)
+Accounting disasters discovered:  1 (the big one)
+Times I said "wait, what" in QB:  6
+Carol emergency calls:   1
+Ibuprofen:               2
+
+07:20 AM - 08:00 AM  [40 min] MORNING + EMAIL
+  Woke up to a Slack notification from Marcus sent at 11:58 PM last night:
+  "Hey, quick heads up — I think the February AWS charge that got moved
+  to 'Marketing' might be wrong? Carol might have miscategorized something
+  in QB. Looked weird in the expense dashboard."
+
+  Marcus should not be looking at our QB expense dashboard. Also I don't
+  know how Marcus was looking at our QB expense dashboard. I'll deal with
+  this later. The more pressing question is: is there actually a wrong
+  category on something?
+
+  Coffee made. Opened laptop. Opened QB.
+
+08:05 AM - 09:00 AM  [55 min] QUICKBOOKS ONLINE — SESSION 1
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:05 AM – 08:52 AM, 47 min]
+
+  Opened the Expenses section. Sorted by amount, descending. Looking for
+  anything suspicious.
+
+  There it is. Line item: $8,100.00 — "Meta Ads / Social Advertising"
+  — February 14th.
+
+  We don't run Meta ads. We have never run Meta ads. I'm a B2B SaaS
+  company. My customers are not browsing Instagram.
+
+  This is the AWS bill. I'm sure of it. Same dollar amount. Same date.
+  It's been sitting under "Marketing — Advertising" instead of
+  "Infrastructure / Software & Subscriptions" for six weeks.
+
+  Why does this matter? Because my Q1 P&L shows $0 in infrastructure
+  for February, and an unexplained $8,100 spike in marketing. And if
+  the board looks at the expense breakdown — which Harrington definitely
+  will — that is going to look extremely weird. "You spent $8,100 on
+  Meta ads in February and then $0 the next month?"
+
+  How did this happen? I have a theory: when the AWS charge came in,
+  whoever (Carol? The QB auto-categorization AI?) matched it to
+  "Meta" because AWS's billing descriptor on the bank statement says
+  "AMZN" and the auto-categorize function was... drunk?
+
+  Actually, I think I know exactly what happened. Last fall I was
+  experimenting with a tiny $50 Facebook campaign for awareness. It's
+  the only "advertising" charge we've ever had. QB's auto-categorize
+  learned that pattern and then six months later saw a large charge
+  and went, "advertising! I know advertising!"
+
+  I have built a product that prevents exactly this kind of data
+  misclassification for our customers. The irony is fully lost on nobody.
+
+  Tried to fix it myself. Clicked on the transaction. Saw the category
+  dropdown. Changed it from "Marketing — Advertising" to... wait, there
+  are 47 sub-categories in here. Where does AWS go? "Software &
+  Subscriptions"? "IT & Software"? "Computer & Internet"? These are all
+  different options and I genuinely do not know which is correct.
+
+  Googled: "quickbooks online how to categorize aws charges"
+  Found a forum thread. People are debating whether cloud infrastructure
+  is "Cost of Goods Sold" or an operating expense. There's a long
+  argument in the comments. Someone said "it depends on whether it's
+  directly attributable to revenue generation." I closed the tab.
+
+  Called Carol.
+
+  Carol (phone, 8:42 AM): "Jake what happened."
+
+  Me: "There's an $8,100 charge under Marketing that I'm pretty sure
+  is the February AWS bill. I want to fix it but I don't know which
+  category it goes in."
+
+  Carol: (pause) "Do NOT touch it. I'll fix it remotely this morning.
+  And Jake — did you change anything else in that transaction?"
+
+  Me: "I opened the dropdown but I didn't save anything."
+
+  Carol: "You're sure?"
+
+  Me: "...I'm like 95% sure."
+
+  Carol: "I'll check the audit log."
+
+  (There's an audit log. Of course there's an audit log. Carol has been
+  watching everything I've ever done in QB and I'm only learning this now.)
+
+  Carol said she'd have it fixed within the hour and she'd also check
+  if there were any other auto-categorization errors from Q1 while she
+  was in there. I said thank you and also I'm sorry and she said "it's
+  fine, this is literally my job."
+
+  Carol is worth every dollar I pay her and also I should pay her more.
+
+  While waiting for Carol to fix things, I kept myself busy by looking
+  at the QB dashboard cash flow widget. Cash in vs cash out for the
+  trailing 30 days looked healthy. I am capable of reading this widget
+  correctly and it brings me peace.
+
+  Then I accidentally hovered over a line in the P&L report and a tooltip
+  appeared that said "Adjust this using a journal entry." I did not
+  click it. I have learned.
+
+09:00 AM - 10:15 AM  [75 min] CUSTOMER SUCCESS CHECK-INS
+  Three quick Zoom calls with existing customers. Standard stuff —
+  how's onboarding going, are you getting value, any blockers. All good.
+  One customer (Fulcrum Analytics, the one with the overdue invoice)
+  mentioned they've been slow to pay because their AP person is on leave.
+  I sympathized and also mentioned gently that the invoice was 22 days
+  past due. They said they'd expedite it. I'll believe it when I see it.
+
+10:20 AM - 10:40 AM  [20 min] QUICKBOOKS ONLINE — SESSION 2
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [10:20 AM – 10:38 AM, 18 min]
+
+  Checked in to see if Carol had fixed the AWS miscategorization.
+  She had. The $8,100 is now sitting under "Cost of Revenue — Cloud
+  Infrastructure" which is apparently the correct category for a SaaS
+  company (it's a direct cost to deliver the service). My expense
+  breakdown now looks way more sensible.
+
+  Q1 expenses revised:
+    Payroll: $135,000
+    Cloud Infrastructure (COGS): $24,300 (3x AWS)
+    Rent: $12,600 (3x $4,200)
+    Software & Subscriptions: $9,800
+    Marketing: $3,200 (the actual marketing)
+    Misc / Other: $1,400
+    Total OpEx: $186,300
+
+  Wait, that's a bigger loss than I thought. Revenue $57,300, expenses
+  $186,300... that's a net loss of $129,000?
+
+  No wait. That can't be right. Payroll alone is $135K but we're spending
+  $1.8M in Series A money, that's different from the P&L I think?
+
+  Texted Carol: "Hey the expense total is now $186K which gives us a
+  loss of $129K for Q1 — is that right? That seems like a lot."
+
+  Carol (three minutes later): "Yes that's roughly right. Series A funds
+  don't appear on the P&L — they're on the balance sheet as equity.
+  The P&L shows operating performance. You're burning through about
+  $43K/month in operating loss. That's your burn rate."
+
+  Me: "So the burn rate is $43K, not $54K like I said in the deck?"
+
+  Carol: "Depends how you define it. $43K is net burn (loss). $57K is
+  gross cash out. Both are valid to report. Just be clear which one
+  you're using and be consistent."
+
+  I updated the board deck. Added a footnote. Felt like a real CFO
+  for approximately four minutes.
+
+10:45 AM - 12:00 PM  [75 min] BOARD DECK — FINAL REVISIONS
+  Incorporated the updated numbers. Slide 8 now has a clean footnote:
+  "Burn rate defined as net operating loss. Gross cash out ~$57K/month."
+
+  Dev reviewed the final draft. Two more minor comments, both reasonable.
+  Fixed them. Deck is done. Sent to Ashley at Harrington Capital with
+  a cover note: "Draft Q1 board materials attached — looking forward
+  to Thursday. Let me know if you need anything ahead of time."
+
+  Ashley responded in 12 minutes: "Looks great, Jake! Quick note —
+  Marcus from Harrington will want to dig into gross margin on the call.
+  Make sure you have that number handy."
+
+  Gross margin. Right. I know what that is. (I will Google it
+  before Thursday. This is fine.)
+
+12:00 PM - 01:00 PM  [60 min] LUNCH + WALK
+  Walked to get food. Real walking, outside, moving my legs. Ten minutes.
+  This is the most exercise I've done since Monday.
+
+01:00 PM - 02:30 PM  [90 min] PRODUCT — DASHBOARD FEATURE REVIEW
+  Marcus demoed the new dashboard feature. It's... actually really good.
+  Clean UI, fast rendering, the comparison mode works exactly how we
+  specced it. I approved it for staging. We'll do a soft launch to beta
+  customers Friday.
+
+  Made a note to ask Marcus (separately, later) how he got access to
+  QB's expense data. The answer is probably "I connected it to our
+  internal data pipeline six months ago and forgot to tell you." This
+  is definitely the answer.
+
+02:35 PM - 04:00 PM  [85 min] VENDOR NEGOTIATIONS + CONTRACTS
+  Renewal call with our CRM vendor (HubSpot). We're on a startup discount
+  that expires in July. They want to bump us to $1,400/month (from $600).
+  I pushed back. We settled on $900/month for a 12-month commit. I'm
+  calling this a win. The difference is $6,000/year.
+
+  Also reviewed a contract from a new third-party data provider we're
+  considering integrating. Sent to our lawyer for a quick review.
+  $800/month for their API. If it unlocks the features three customers
+  are asking for, it's worth it.
+
+04:05 PM - 05:00 PM  [55 min] QUICKBOOKS ONLINE — SESSION 3
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [04:05 PM – 04:22 PM, 17 min]
+
+  One more check before end of day. I wanted to verify the Q1 numbers
+  one final time now that Carol had cleaned everything up.
+
+  Reports > Profit & Loss > Q1 (Accrual basis):
+    Revenue: $57,300
+    Total Expenses: $186,300
+    Net Operating Loss: -$129,000
+
+  Reports > Cash Flow Statement > Q1:
+    Cash in from operations: $54,800
+    Cash out from operations: $186,100
+    Net operating cash flow: -$131,300
+
+  Wait, $131K cash out vs $129K net loss. Close but different.
+  Googled: "why is net loss different from cash flow statement"
+  This article mentioned depreciation and non-cash items. I am not going
+  to understand this tonight. Carol can explain it on Thursday if
+  someone asks.
+
+  Navigated away and landed on the "Banking" tab. QB is showing our
+  main checking account with a balance of $127,440. The Series A money
+  is in a separate account — QB shows that one too: $1,843,200. Total
+  cash across accounts: ~$1.97M. That's the actual reality.
+
+  I feel better. We are okay.
+
+  Tried to find the "Overview" page I vaguely remember seeing once.
+  Clicked Dashboard. Different from what I was looking for. Clicked
+  Business Overview. THERE it is — the simplified summary view. Revenue
+  bar chart. Expense bar chart. Cash flow line. This is the view I want
+  every time. I bookmarked it. I've probably bookmarked it before.
+  It never sticks.
+
+05:05 PM - 06:30 PM  [85 min] HIRING + HR ADMIN
+  Spent the afternoon reviewing resumes for a contract engineer.
+  Posted the role last week. 23 applicants so far. Four look promising
+  — scheduled phone screens for next week.
+
+  Also spent 20 minutes on Rippling making sure the quarterly compliance
+  stuff was handled. I don't really understand what I'm clicking but
+  there's a checklist and I check the boxes and nothing bad has happened
+  yet.
+
+06:30 PM - 08:00 PM  [90 min] EMAIL + ASYNC + STRATEGIC THINKING
+  Responded to a thoughtful email from Dev with some pre-board questions
+  about our NDR (Net Dollar Retention). Pulled the Stripe data. NDR for
+  Q1: 107%. Expansions offset churn. This is a good number.
+
+  "We are not profitable and that is a choice, not a crisis." I'm still
+  keeping this. NDR 107% backs it up.
+
+───────────────────────────────────────────────────────────
+END OF DAY — JAKE'S REFLECTION
+───────────────────────────────────────────────────────────
+  The miscategorized AWS charge could have been a real problem if it
+  showed up on the board deck under "marketing." I'm glad Marcus —
+  weirdly — noticed it. I need to have a conversation with him about
+  the QB data pipeline access thing, but honestly if it means more
+  eyeballs catching errors I might just leave it.
+
+  The net loss number is bigger than I mentally carry it. $129K in Q1.
+  That's real money. But the Series A is for exactly this — buying
+  runway while we scale revenue. $57K MRR growing, NDR over 100%, product
+  improving. The story is good. The loss is a growth investment.
+
+  Still need to look up gross margin before Thursday. I keep saying
+  "gross margin" in conversations like I know what it means. I know
+  it's something about revenue minus cost of something. I'll figure it
+  out tomorrow.
+
+  Also need to figure out how Marcus has a live feed of QB expenses.
+  That's either a genius move or a compliance issue. Possibly both.
+
+  TO-DO FOR TOMORROW:
+  □ LOOK UP GROSS MARGIN (do this first, before anything else)
+  □ Payroll runs Thursday — make sure everything is set in Gusto
+  □ Confirm Carol is available for the board call (not on the call,
+    just on standby via text in case accounting questions come up)
+  □ Final board deck run-through — solo practice
+  □ Ask Marcus about the QB data pipeline access (friendly, curious)
+  □ Follow up: Fulcrum Analytics invoice still outstanding

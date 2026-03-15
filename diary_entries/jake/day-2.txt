@@ -1,0 +1,267 @@
+═══════════════════════════════════════════════════════════
+  NEXUS ANALYTICS — FOUNDER DIARY
+  Jake Okafor | Tuesday, Week 1
+  "Always be invoicing."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      10h 45min
+Meetings:                2
+QB Online sessions:      2  (54 min total)
+Invoices sent:           4  ($8,500 total)
+Google searches (accounting):  5
+Texts to Carol:          3
+Mild panic moments:      1 (the journal entry thing again)
+
+07:30 AM - 08:00 AM  [30 min] MORNING COFFEE + OVERNIGHT CATCHUP
+  Slept better. Eight hours. Read Carol's texts from last night in the
+  daylight and they make more sense now. The payroll lag thing is annoying
+  but apparently normal. I've decided to just trust Carol on this and
+  present the "Carol-approved" numbers to the board. That's what she's
+  there for.
+
+  Checked Stripe overnight activity: no new signups, but Kellerton's
+  second seat expansion invoice went active — that's an extra $600/month
+  starting April. Nice. Not in this quarter's numbers but I'll mention
+  it in the board call as forward momentum.
+
+08:00 AM - 08:45 AM  [45 min] TEAM STANDUP + PRIORITIES
+  Standup. Marcus: the dashboard feature is "genuinely 90% done, Jake,
+  different percentage from yesterday." I believe him about 70%. Priya
+  sent the Stripe cohort report last night — she's ahead of schedule and
+  I'm going to give her a raise review in Q2. Dev team is on the new
+  webhook reliability fix. Support queue is manageable.
+
+  I told the team: invoices going out today to three new accounts. This
+  matters because cash collection cycle is real and we want Q1 payments
+  to land before the quarter closes where possible.
+
+08:50 AM - 10:05 AM  [75 min] QUICKBOOKS ONLINE — SESSION 1
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:50 AM – 09:44 AM, 54 min total
+     for both sessions today — but this one was the main one, ~38 min]
+
+  Opened QB with a specific goal: create and send the four pending invoices
+  to new enterprise clients. I've been good about doing this in QB instead
+  of just sending PDF emails because Carol says it's important for "the
+  books." I don't fully know what "the books" are but I do what Carol says.
+
+  Navigated to Sales > Invoices > New Invoice. Fast.
+
+  Invoice 1 — Meridian Data Corp
+    Services: Nexus Analytics Platform — Enterprise Tier
+    Setup fee (one-time): $1,500
+    Monthly subscription (first month): $1,800
+    Total: $3,300
+    Payment terms: Net 30
+    Added a note: "Thank you for choosing Nexus Analytics."
+    Sent. Done.
+
+  Invoice 2 — Prism Financial Services
+    Monthly subscription: $2,100
+    Total: $2,100
+    Net 30.
+    Sent.
+
+  Invoice 3 — Kellerton Group (expansion seats — new invoice, not the
+    Stripe subscription, this is for the professional services component
+    we agreed to last week)
+    Consulting / onboarding services: $1,800
+    Total: $1,800
+    Net 15 (they're a fast payer historically).
+    Sent.
+
+  Invoice 4 — Thornwood Capital (pilot POC — they accepted! Got the email
+    at 8:47 AM while I was in standup, I missed it. THEY SAID YES.)
+    Paid POC — 90 days: $1,300
+    Total: $1,300
+    Net 15.
+    Sent.
+
+  Total invoiced today: $8,500
+
+  I'm unreasonably happy about this. Four invoices. $8,500. Not all of
+  it will land before Q1 closes but some of it might.
+
+  After sending the invoices I did something I shouldn't have. I was
+  poking around the Sales section and I saw a tab that said "Unbilled
+  Activity." I clicked it. There were 7 items in there from various
+  dates. I have no idea what these are. They look like expenses or
+  time entries that should have been billed to clients but weren't?
+
+  Texted Carol: "What is Unbilled Activity and should I be worried
+  about it?"
+
+  Carol (response came in 6 minutes, she's online today): "Not urgent.
+  Those are estimates I created for two prospects last month. They
+  convert to invoices if you win the deal. Leave them alone."
+
+  Me: "Ok. But should I delete the old ones?"
+
+  Carol: "Jake. Leave. Them. Alone."
+
+  Me: "Understood."
+
+  I also noticed that the Invoice I sent to Meridian is showing as
+  "Awaiting Payment" which is correct, but the status icon is yellow
+  and I briefly thought it meant something was wrong before realizing
+  yellow = pending, not error. This is a me-problem.
+
+  While in QB I also quickly checked the A/R aging report. I know this
+  one — Accounts Receivable, who owes me money. Navigated to Reports >
+  Accounts Receivable Aging Summary.
+
+    Current (not yet due): $12,400
+    1-30 days overdue: $3,200 (two invoices — Fulcrum Analytics from
+      Feb and a small one from a company called NovaBridge I barely
+      remember closing)
+    31-60 days overdue: $800 (NovaBridge — different invoice, older)
+    61-90 days: $0
+    90+: $0
+
+  The NovaBridge stuff is annoying. That's like $1,400 total outstanding
+  that I've been meaning to chase. Added to my to-do list.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [09:44 AM – 10:05 AM, 21 min]
+
+  Came back after a quick bathroom break and opened the P&L report again
+  to see if Carol's payroll fix had landed yet. It had not. But while
+  looking at the report I noticed the "accounting method" toggle in the
+  top right corner. It says "Accrual." There's a button to switch to "Cash."
+
+  I switched it to Cash.
+
+  Revenue jumped from $57,300 to $61,900. THERE IT IS. That's my number.
+  That's what matches Stripe (roughly). Cash basis shows money when it
+  actually lands in the bank. Accrual shows... something else. Something
+  theoretical.
+
+  Googled: "should i use cash or accrual basis quickbooks"
+  Read the article. The short answer is: it depends, and for companies
+  with investors, accrual is generally expected because it better matches
+  revenue to when it was earned. For board reporting, use accrual.
+
+  So the $57,300 is the "right" number for the board. I hate this.
+  The $61,900 feels more real to me but apparently I shouldn't use it
+  for the board deck. Sent Carol a voice note: "Hey, for the board deck
+  am I supposed to use accrual or cash basis for the P&L? I switched it
+  and the number is different and I need to know which one to put in
+  the slide."
+
+  Carol called back immediately (she never calls back immediately, this
+  must be a big deal): "Use accrual for the P&L, but you can show cash
+  basis for cash flow. They're different statements. I'll send you a
+  clean export today, just tell me what dates you need."
+
+  Me: "Q1. January 1 to March 31."
+
+  Carol: "I'll send it by 3pm. Also Jake the payroll is fixed now, the
+  Q1 P&L should look better when you refresh."
+
+  Refreshed. Payroll now showing $135,000 for the quarter (3 months x
+  $45K). That's more like it. Net income is now... negative $3,800.
+
+  This is fine. We have Series A cash. We're investing in growth.
+  We are not profitable and that is a choice, not a crisis.
+
+  (I'm going to say this exact sentence at the board meeting.)
+
+10:10 AM - 11:30 AM  [80 min] BOARD DECK — FINANCIAL SLIDES
+  With the refreshed QB data and Carol's call, I finally had enough to
+  build the financial section of the board deck. Slide 8 became:
+
+    Q1 Financial Snapshot (Accrual Basis):
+    - Revenue: $57,300
+    - Operating Expenses: $161,100 (payroll, infra, rent, software)
+    - Net Operating Loss: -$3,800
+    - Cash Position (operating): ~$127K
+    - Series A Reserve: $1.8M
+    - Burn Rate: ~$54K/month
+    - Runway: 35+ months (Series A funds only)
+
+  35 months runway sounds great until you realize we need to hit Series B
+  milestones in the next 18 months. Focus.
+
+  I'm going to present this as "disciplined investment in growth phase"
+  because that's what it is. Also Harrington will ask about the path to
+  profitability and I have a slide for that (Slide 11).
+
+11:35 AM - 12:15 PM  [40 min] SALES PIPELINE REVIEW
+  Went through HubSpot with Priya. Pipeline is healthy. 6 active deals,
+  total potential ACV of $187K. Three are in late-stage. If two of the
+  three close in Q2 that's another ~$8K MRR and we're at ~$70K — which
+  is the number I want by the time we talk to Series B folks.
+
+12:15 PM - 01:00 PM  [45 min] LUNCH
+  Actually left the apartment. Got a sandwich from the place on the
+  corner. Listened to a podcast. Came back feeling like a human.
+
+01:00 PM - 02:30 PM  [90 min] 1:1s — ENGINEERING
+  Deep dive with Marcus on the infrastructure cost question. AWS is
+  running $8,100/month right now. We have an opportunity to reserve
+  instances for 1 year and cut it to roughly $5,400/month — saving
+  $2,700/month or $32,400/year. The catch is we pay the first 6 months
+  upfront (~$16,200). ROI in 6 months, saves us ~$16K in year one net.
+
+  Decision: do it. I'll have Marcus kick off the reservation process
+  this week. This will also make my burn rate slide look better for the
+  board — I can show "infrastructure optimization" as a concrete Q2 action.
+
+  Side note: this will mess with the QB accounting temporarily because
+  it's a prepaid expense. Carol will handle this. I will not attempt
+  to handle this.
+
+02:35 PM - 04:00 PM  [85 min] PRODUCT — FEATURE SPEC REVIEW
+  Reviewed the specs for the Salesforce integration (top customer request).
+  Marcus and I walked through the API architecture. It's doable in 6 weeks
+  but we need one more engineer or we de-prioritize something else.
+  I'm thinking we hire a contract engineer in April.
+
+04:05 PM - 05:00 PM  [55 min] FOLLOW-UPS + EMAIL
+  Replied to Meridian Data Corp — they already responded to the invoice
+  and said they'd process it this week (Net 30 but they pay fast, good
+  sign). Replied to two cold inbound inquiries from the website. One is
+  promising (mid-market logistics company). One is a student asking if
+  we have an internship program. We do not. We might in Q3.
+
+05:05 PM - 06:30 PM  [85 min] BOARD DECK — FINAL POLISH
+  Slides 1-12 are now in pretty good shape. Sent a draft to my co-founder
+  (well, I'm the only founder, but I have an advisor who acts like a
+  co-founder, Dev) for a gut check. Dev replied in 9 minutes with 14
+  comments. I love Dev and also mildly fear Dev.
+
+  Fixed the things Dev flagged. Slide 11 (path to profitability) now
+  has an actual model instead of a hand-wavy arrow going up.
+
+06:30 PM - 07:00 PM  [30 min] WIND DOWN
+  Carol sent the clean Q1 P&L export as promised. It's a clean PDF.
+  Numbers match what I put in the deck. I owe Carol a gift card.
+
+───────────────────────────────────────────────────────────
+END OF DAY — JAKE'S REFLECTION
+───────────────────────────────────────────────────────────
+  Today was productive. The invoice batch felt good — $8,500 out the
+  door means $8,500 (eventually) coming back. Cash basis vs accrual
+  is still my nemesis but I at least now understand which one to use
+  for which conversation, even if I couldn't explain why to save my life.
+
+  The cash/accrual toggle thing genuinely surprised me. It's wild that
+  the same software shows you two different revenue numbers depending
+  on a setting that's tucked in the corner of a report. Who designed
+  this? I make software for a living. This is a UX crime.
+
+  Board deck is 90% done. Need Carol's blessing on the financial section
+  and then I'm good for Thursday. The $127K operating cash is what it is
+  — but with $1.8M in the reserve and 35 months of runway, we're fine.
+
+  "We are not profitable and that is a choice, not a crisis." I'm
+  keeping this. Might put it on a poster.
+
+  TO-DO FOR TOMORROW:
+  □ Carol to confirm final Q1 P&L — get sign-off before board call
+  □ Investigate and chase NovaBridge outstanding invoices ($1,400)
+  □ AWS reserved instance — confirm process with Marcus
+  □ Send board deck to Harrington Capital contact (Ashley) by EOD
+  □ Check if Prism Financial Services invoice has been acknowledged
+  □ Finish reviewing Dev's 14 comments on the deck (did 9 of 14 today)

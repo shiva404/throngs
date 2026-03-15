@@ -1,0 +1,322 @@
+═══════════════════════════════════════════════════════════
+  RODRIGUEZ & ASSOCIATES CPA — ACCOUNTANT DIARY
+  Carlos Rodriguez, CPA | Monday, Week 1
+  "The books don't lie. The software just makes it harder to hear them."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      9h 45min
+Clients handled:         6
+QB Online sessions:      8  (187 min total)
+Billable hours logged:   7.25h
+Billable revenue (est.): $1,268.75
+Coffee consumed:         3 cups (1 before QB, 2 after QB)
+Monthly closes completed: 3 of 3 scheduled
+
+08:00 AM - 08:25 AM  [25 min] MORNING REVIEW & INBOX TRIAGE
+  Arrived at 8:00 sharp. Made coffee, pulled up my master client tracker spreadsheet.
+  This week is a monthly close week for Ramirez Landscaping, Chen's Bakery, and Pioneer
+  Auto Parts. All three need to be done by Wednesday EOD — Chen's in particular because
+  owner Linda Chen has a bank meeting Thursday morning and wants clean financials to show.
+
+  Three emails in the queue already:
+  - Marcus Ramirez asking why his P&L looks "off" (it always looks off to him; it's fine)
+  - Linda Chen asking if her loan payment is categorized correctly (it is not)
+  - Pioneer Auto Parts bookkeeper Diane asking about a $4,200 vendor credit
+
+  Flagged all three, will address during each client's session. Opened QB Accountant
+  dashboard in Chrome. Logged in. Dashboard loaded clean — actually faster than last
+  week. Made a note: Monday mornings seem to be lower traffic on QB's servers.
+
+08:25 AM - 08:30 AM  [5 min] QB ACCOUNTANT DASHBOARD SETUP
+  Pinned my top 8 monthly clients to the dashboard. Opened three tabs in advance:
+  Tab 1 → Ramirez Landscaping
+  Tab 2 → Chen's Bakery
+  Tab 3 → Pioneer Auto Parts
+  Keyboard shortcut Ctrl+Shift+Tab cycling between them. This is how I move fast.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1 (CLIENT: Ramirez Landscaping)  [08:30 AM – 10:15 AM, 105 min]
+
+  Opened Ramirez Landscaping. February close. Marcus runs a seasonal business — January
+  through March are slow months and he always panics when revenue is down 40% vs
+  summer. Explained this to him in October. And November. And December.
+
+  First task: review bank feed. 67 uncategorized transactions from February. This is
+  where QB's bank feed auto-categorization is supposed to earn its keep. Scanned through:
+  - 42 transactions auto-matched correctly. Good. Fuel at three familiar gas stations,
+    equipment rental at United Rentals (recurring vendor), payroll tax deposits.
+  - 11 transactions flagged for review — QB unsure of category. Most of these I can
+    batch-assign: 6 are from Fastenal (always Materials & Supplies), 3 are from
+    Home Depot (split: 2 are Materials, 1 is a small equipment purchase I'll capitalize).
+  - 14 transactions mismatched. Three of them QB called "Meals & Entertainment" because
+    Marcus bought gas station sandwiches twice and coffee once. Those are Cost of Goods.
+    He's out on job sites. That's not entertainment.
+
+  Corrected and confirmed all 67. Used the batch categorization tool — selected the 6
+  Fastenal transactions, assigned Materials & Supplies, done in 40 seconds. This is one
+  of QB's genuinely useful features. I've said it before: when the bank feed works, it
+  probably saves me 2 hours per client per month. When it misfires, I spend those 2 hours
+  cleaning up its mistakes.
+
+  Bank reconciliation: pulled February bank statement. Opening balance matched. Ran
+  through 89 cleared items. Two outstanding checks from January still outstanding —
+  check #1847 to Lopez Irrigation Supply for $312.00, check #1851 to Gomez Tree Service
+  for $875.00. Called those out in my notes. Reconciliation cleared. Difference: $0.00.
+  I love that number.
+
+  P&L for February: Revenue $28,400 vs $47,200 in February last year. Down 39.8%.
+  Exactly seasonal. Marcus emailed about this — replied to him directly from the notes
+  section: "Marcus — February revenue is down vs last year as expected for your seasonal
+  cycle. Compare to February 2024: $29,100. You are tracking almost identically. No
+  concern. I'll send the full report Friday."
+
+  Journal entries: recorded depreciation for the F-350 ($6,250/year, $520.83/month),
+  one prepaid insurance amortization ($180/month), and accrued two unpaid invoices that
+  are in accounts receivable but won't clear until March. Accrual basis. This is why
+  accrual matters — his cash in the bank right now is $41,000 but his actual February
+  net was $3,820 after all accruals. Cash basis would show $8,400. Two very different
+  pictures.
+
+  Ran the final P&L and Balance Sheet. Exported to PDF. Saved to client folder.
+
+  ONE ISSUE: When I tried to run the Profit & Loss by Class report (Marcus has two
+  classes: Residential and Commercial), QB showed a loading spinner for 2 minutes and
+  47 seconds. I timed it. I switched tabs, came back — still spinning. Refreshed.
+  It rebuilt the report in 19 seconds on the second load. Lost nearly 3 minutes for
+  no reason. At my billing rate, that's $8.75 of Ramirez's money sitting on a
+  loading screen. I am billing him $175/hour. I am not billing him for QB's
+  infrastructure problems, which means I absorb it. This happens multiple times a week.
+
+  Monthly close for Ramirez Landscaping: COMPLETE.
+
+10:15 AM - 10:20 AM  [5 min] BREAK / EMAIL CHECK
+  Quick stretch. One new email — Diane at Pioneer Auto Parts confirming the $4,200 vendor
+  credit is from a returned parts shipment from Michigan Auto Distributors. Good. That
+  clarifies how to book it.
+
+10:20 AM - 11:50 AM  [90 min] CHEN'S BAKERY — MONTHLY CLOSE
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2 (CLIENT: Chen's Bakery)  [10:20 AM – 11:50 AM, 90 min]
+
+  Linda Chen has owned the bakery for 11 years. Her books are meticulous compared to most
+  of my clients. She categorizes her own transactions throughout the month and I review
+  and adjust. This makes my job significantly easier.
+
+  Reviewed her self-categorized transactions first. 102 transactions in February.
+  Found 6 issues:
+  1. Loan payment of $2,340 booked entirely to "Loan Payment" as an expense. This is
+     the most common client error I see. Split it properly: $1,847 to principal (balance
+     sheet reduction of liability), $493 to interest expense (P&L). Corrected.
+  2. New commercial mixer purchased for $3,800 — she booked it as "Kitchen Supplies."
+     This is a capital asset. Created a new fixed asset in QB, recorded the purchase,
+     set up straight-line depreciation over 7 years ($542.86/year, $45.24/month). The
+     depreciation journal entry won't show until I run it end of period.
+  3. Small one: $47 from Amazon she called "Advertising." It was printer paper and ink.
+     Office Supplies.
+  4. Three transactions from her flour/sugar supplier (Golden State Bakery Supply)
+     she categorized as Cost of Goods Sold — correct, but she used the wrong sub-account.
+     She used "Food & Beverage" when I have her set up with "Raw Ingredients." Minor,
+     but I keep her accounts consistent for year-end.
+  5. Refund from PG&E for $214. She left it uncategorized. Credited it back to Utilities.
+  6. The loan payment issue I already mentioned was the big one.
+
+  Reconciliation: Linda's bank account — First Republic business checking. 118 items.
+  Cleared clean. Difference $0.00. Her savings account also reconciled. Clean.
+
+  Then: the QB upgrade prompt appeared while I was trying to run her Advanced Reporting
+  "Profit & Loss by Product/Service" view. A banner slid across the top of the screen:
+  "Unlock deeper insights with QuickBooks Online Advanced — upgrade today!"
+
+  I am on QuickBooks Online Accountant. This is the accountant-tier product. I have
+  access to Advanced Reporting on behalf of clients who subscribe to the right tier.
+  Linda is on QuickBooks Plus. This report IS available to her. The banner was incorrect.
+  I dismissed it, navigated to Reports, found it manually. It ran fine. But the misdirect
+  cost me 4 minutes of confusion and irritation.
+
+  I cannot stress enough: I know this software better than most of the people who built it.
+  When it shows me an incorrect upgrade prompt for a feature I'm already paying for, that
+  is not a monetization strategy. That is a bug. I'll log it later.
+
+  P&L for Chen's Bakery — February:
+  Revenue: $41,200 (up 6.2% YoY, solid for a slow month)
+  COGS: $16,480 (40% of revenue — slightly high, we talked about this last month)
+  Gross Profit: $24,720
+  Operating Expenses: $18,340
+  Net Income: $6,380
+
+  Linda's margin is holding. The new commercial mixer should pay for itself in reduced
+  labor time within 18 months if she's right about throughput. I added a note to track
+  this quarterly.
+
+  Sent Linda a summary email with the attached PDF financials. Included a note that her
+  loan payment classification has been corrected and explained why (principal vs. interest)
+  so she understands it going forward. I've explained this to her three times over three
+  years. Someday it will stick.
+
+  Monthly close for Chen's Bakery: COMPLETE.
+
+11:50 AM - 12:35 PM  [45 min] LUNCH & ADMINISTRATIVE
+  Ate at my desk. Reviewed the week's schedule. Updated my time tracking spreadsheet
+  (separate from QB — I use a custom Excel sheet I built years ago because QB Time's
+  interface is, frankly, terrible for solo practice management).
+
+  Reviewed pending items:
+  - Quarterly estimate payments due March 15 for 4 clients — need to calculate
+  - One 1099 amendment from a client who gave me incorrect contractor info — filed
+    correction last week, waiting on IRS acceptance
+  - Chase Bank asking for updated financial statements for Pioneer Auto Parts' line
+    of credit renewal — need those by March 20
+
+12:35 PM - 02:55 PM  [140 min] PIONEER AUTO PARTS — MONTHLY CLOSE
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3 (CLIENT: Pioneer Auto Parts)  [12:35 PM – 02:55 PM, 140 min]
+
+  Pioneer is my most complex monthly client. Owner Dave Kowalski has three locations,
+  tracks inventory, has 6 employees on payroll, and a $180,000 line of credit. His
+  books require the most attention.
+
+  First: the $4,200 vendor credit from Michigan Auto Distributors that Diane emailed
+  about. This was a returned shipment — 14 pallets of a discontinued brake pad line
+  that Michigan recalled. I created a vendor credit in QB, applied it against the
+  outstanding AP balance. Michigan's account now shows a net payable of $8,740 (down
+  from $12,940). The credit will offset their next invoice.
+
+  Bank feed review — Pioneer has three bank accounts (one per location) plus a credit
+  card. 247 transactions across all accounts in February. This takes time. QB's
+  Accountant view lets me switch between accounts within one client without re-navigating,
+  which I appreciate. I moved through accounts methodically:
+
+  Main checking (Location 1 — Eastside): 91 transactions. 78 auto-matched correctly.
+  13 needed attention. Two payroll tax deposits QB matched to the wrong payroll period —
+  January deposits that cleared in early February, needs manual date correction. Three
+  supplier payments that QB couldn't match because the vendor name on the bank feed
+  ("MICH AUTO DIST" truncated) didn't match the QB vendor name ("Michigan Auto
+  Distributors"). I've been trying to add a bank feed alias for this vendor for
+  three months. QB's bank feed alias feature keeps resetting. I submitted a support
+  ticket in January. Still open.
+
+  Location 2 — Westside: 83 transactions. Cleaner. Dave's manager at Westside actually
+  codes receipts as he goes using the QB mobile app, which reduces my work considerably.
+  I reviewed and confirmed. Found one gas purchase ($67) he called "Vehicle Expense" —
+  it's for a customer loaner car. Correct category, but wrong vehicle in the sub-account.
+  Fixed.
+
+  Location 3 — Southside: 73 transactions. This location is newer (18 months old) and
+  still has more miscategorizations than the others. Found 9 issues, all minor. The
+  manager here is still learning. I've recommended Dave enroll her in QB's free training
+  modules. I've recommended this three times.
+
+  Credit card: 41 transactions. Mostly Dave's purchasing card. One $840 charge at a
+  hotel that needs clarification — Dave usually doesn't travel for business. Sent him
+  a quick text. He replied: legitimate, vendor conference in Chicago, he'll send the
+  receipt. Will hold that transaction pending.
+
+  Inventory adjustments: Pioneer tracks parts inventory in QB (this is one of QB Plus's
+  legitimately strong features for a business like this). February had one adjustment —
+  a physical count at Eastside found 23 units of a specific oil filter (WIX 57311) that
+  aren't in the system. Someone received a shipment and didn't log it. I created an
+  inventory adjustment entry, debiting inventory $126.50 (23 units × $5.50 cost basis),
+  crediting inventory adjustment (temporary account I'll close at month end).
+
+  Reconciliation: all three accounts and the credit card. Took 40 minutes but all
+  cleared. Differences: $0.00 across the board. This is what a good reconciliation
+  looks like. Everything ties.
+
+  P&L (consolidated, accrual basis):
+  Total Revenue: $214,600
+  COGS (parts + labor): $128,760 (60% — inline with industry average for auto parts)
+  Gross Profit: $85,840
+  Operating Expenses: $61,200
+  EBITDA: $24,640
+  Less Depreciation: $3,100
+  Net Income: $21,540
+
+  Strong February for auto parts. Winter maintenance driving traffic, which makes sense.
+
+  For the Chase line of credit renewal: pulled and exported the last 12 months of P&L
+  and a current Balance Sheet. Total assets: $387,200. Total liabilities: $194,300.
+  Debt-to-equity: 1.01. Chase should be comfortable. Packaged the PDFs, sent to Dave
+  with a cover note explaining the figures. He can deliver to the bank.
+
+  One QB note: while running the consolidated P&L across three class locations, QB crashed
+  the report tab once. The browser tab just... stopped. "Aw, Snap" Chrome error. Reloaded.
+  Data was fine — QB saves state well, I'll give it that. But I lost the formatting I'd
+  applied to the report. Had to redo the column selections. 6 minutes wasted.
+
+  Monthly close for Pioneer Auto Parts: COMPLETE.
+
+02:55 PM - 03:05 PM  [10 min] BREAK
+  Coffee. Walked to the window. Stared at the parking lot. This is what passes for
+  nature when you're in the middle of a monthly close week.
+
+03:05 PM - 04:15 PM  [70 min] QUARTERLY ESTIMATED TAX CALCULATIONS
+  March 15 deadline. Four clients who make quarterly estimates:
+  - Priya Sharma (consulting LLC): Q1 estimate based on prior year safe harbor. Federal
+    $4,200, California $1,050. Straightforward.
+  - Westbrook Fitness (S-Corp, owner draws): Calculated based on YTD income through
+    February, projected through Q1. Federal $6,800, California $1,700. Sent payment
+    vouchers via secure client portal.
+  - Nakamura Restaurant Group: More complex — two locations, different profit margins.
+    Federal $9,400, California $2,350. Called owner Ken Nakamura to review before filing.
+    He approved.
+  - Thomas & Sons HVAC: Seasonal business, Q1 is low income. Safe harbor method again.
+    Federal $2,100, California $525.
+
+  Sent all four estimate reminders with payment instructions and deadlines. Logged time
+  separately — this is billable time at the advisory rate.
+
+04:15 PM - 05:30 PM  [75 min] GENERAL LEDGER REVIEW & CATCH-UP ADMIN
+
+  ⬛ QUICKBOOKS ONLINE SESSIONS 4–5 (MISC CLIENTS)  [04:15 PM – 05:30 PM, 75 min]
+
+  Quick reviews for two other monthly clients — Bloom Legal Services and Eastside
+  Veterinary Clinic. Both are lighter accounts. Reviewed bank feeds, confirmed
+  categorizations from their internal bookkeepers, flagged two items each for
+  follow-up. Nothing major.
+
+  Logged all billable time for the day. Updated invoices for Ramirez, Chen, and Pioneer.
+  Total billable today: approximately 7.25 hours across 6 clients.
+
+05:30 PM - 05:45 PM  [15 min] EOD WRAP-UP
+  Reviewed tomorrow's calendar: tax planning sessions with Nakamura Restaurant Group
+  (9 AM) and Westbrook Fitness (2 PM). Both need detailed QB reports pulled in advance.
+  Set up tomorrow's QB sessions so the reports I need are queued to run overnight —
+  QB's scheduled reports feature is unreliable but occasionally works.
+
+  Logged out of QB. Closed 9 browser tabs. Saved all my time tracking entries.
+
+END OF DAY — CARLOS'S REFLECTION
+───────────────────────────────────────────────────────────
+  Solid Monday. Three monthly closes completed, all clean. Ramirez, Chen, and Pioneer
+  are done and the clients have their reports. That's the job.
+
+  The QB issues today: two loading failures (Ramirez class report, Pioneer tab crash),
+  one incorrect upgrade prompt on Chen's account, and the ongoing bank feed alias bug
+  on Pioneer that I've been reporting for three months with no resolution. If I add up
+  the time I lost today to QB performance issues, it's probably 15 minutes. Doesn't
+  sound like much. Over a month, across 30 clients, at $175/hour, that's meaningful
+  money I'm either absorbing or not billing. Usually I absorb it because it's not my
+  client's fault their software underperforms.
+
+  The bank feed auto-categorization on Ramirez was genuinely good today — 42 of 67
+  correct on the first pass is above average. I should note that. I'm hard on QB
+  when it fails, so I should be equally clear when it performs.
+
+  Pioneer's books are the cleanest they've ever been. Dave hired Diane as a part-time
+  bookkeeper last year and it shows. The Southside location is still catching up but
+  it's improving.
+
+  One concern I'm carrying into tomorrow: Ken Nakamura mentioned during our call that
+  his second restaurant location is profitable but he's "not sure where the money goes."
+  That's a cash flow management problem, not a P&L problem. I'll address it tomorrow.
+
+  TO-DO FOR TOMORROW:
+  □ Tax planning session — Nakamura Restaurant Group (9:00 AM) — pull 3-year comparison
+    P&L, cash flow statement, owner draw summary
+  □ Tax planning session — Westbrook Fitness (2:00 PM) — pull YTD P&L, S-Corp
+    reasonable compensation analysis, estimated vs actual tax comparison
+  □ Follow up on QB support ticket (bank feed alias, Pioneer Auto Parts) — ticket #QB-448821
+  □ Log incorrect upgrade prompt bug on Chen's account — QB Community forum
+  □ Confirm Dave Kowalski's hotel receipt for $840 credit card charge
+  □ Check if QB scheduled reports actually ran overnight (I'll be impressed if they did)

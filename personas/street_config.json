@@ -1,0 +1,48 @@
+{
+  "company_places": {
+    "Marcus_Plumbing_LLC": "plumbing_shop",
+    "Stellar_Events_LLC": "event_studio",
+    "Greenfield_Tax_Advisory": "cpa_office"
+  },
+  "persona_display": {
+    "Marcus_Mobile_Plumber":  { "place": "plumbing_shop", "role": "owner",     "emoji": "🔧" },
+    "Diane_Office_Manager":   { "place": "plumbing_shop", "role": "staff",      "emoji": "📋" },
+    "Sofia_Event_Organizer":  { "place": "event_studio",  "role": "owner",      "emoji": "🎉" },
+    "Rachel_Event_Assistant": { "place": "event_studio",  "role": "staff",      "emoji": "📨" },
+    "Carlos_CPA":             { "place": "cpa_office",    "role": "accountant", "emoji": "📊" },
+    "Martha_Tax_Assistant":   { "place": "cpa_office",    "role": "staff",      "emoji": "📒" }
+  },
+  "places": {
+    "shops": [
+      {
+        "id": "plumbing_shop",
+        "name": "Marcus Plumbing",
+        "emoji": "🔧",
+        "color": 15561230,
+        "hex": "#ed6c0e",
+        "floor": 16773592,
+        "pos": [-6, 0, -6]
+      },
+      {
+        "id": "event_studio",
+        "name": "Stellar Events",
+        "emoji": "🎉",
+        "color": 9699539,
+        "hex": "#940b93",
+        "floor": 16641279,
+        "pos": [6, 0, -6]
+      }
+    ],
+    "rooms": [
+      {
+        "id": "cpa_office",
+        "name": "Greenfield CPA",
+        "emoji": "📊",
+        "color": 4185314,
+        "hex": "#3f88e2",
+        "floor": 15266047,
+        "pos": [0, 0, 6]
+      }
+    ]
+  }
+}

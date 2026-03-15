@@ -1,0 +1,220 @@
+═══════════════════════════════════════════════════════════
+  NEXUS ANALYTICS — FOUNDER DIARY
+  Jake Okafor | Monday, Week 1
+  "Move fast and break things. Except don't break your cap table."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      11h 20min
+Meetings:                3
+QB Online sessions:      2  (67 min total)
+Google searches (accounting):  8
+Slack messages sent:     94
+Coffees:                 3
+Times I said "Carol will know":  4
+
+07:15 AM - 07:50 AM  [35 min] MORNING ROUTINE + EMAIL TRIAGE
+  Woke up already thinking about the board meeting Thursday. Scanned email.
+  Three cold sales outreach emails (deleted), one from AWS about upcoming
+  reserved instance pricing changes (flagged), one from Carol with a subject
+  line that just says "Q1 close items - need your approval on a few things."
+  Replied "on it" even though I have no idea what she means. Made coffee.
+
+08:00 AM - 09:15 AM  [75 min] PRODUCT STANDUP + ROADMAP SYNC
+  Monday standup. Eight people on a Zoom call, two of them eating breakfast
+  visibly. Dev team confirmed the new dashboard feature is 80% done — same
+  thing they said last Monday. Marcus (lead eng) says "it's a different 80%
+  this week." I let it go. We're three weeks from our Series A investor update
+  and I need something I can show Harrington Capital that looks shiny.
+
+  Reminded everyone that Q1 closes this week and I need to have financial
+  numbers ready for Thursday's board call. Blank stares from the engineers.
+  Priya (growth) asked if she should pull anything from Stripe. I said yes,
+  love you Priya.
+
+09:20 AM - 09:35 AM  [15 min] STRIPE DASHBOARD REVIEW
+  Pulled up Stripe. MRR showing $61,240 — we crept past $60K last month,
+  which felt amazing. New logo from Kellerton Group added $1,200/mo.
+  ARR annualized is $734,880. I screenshot this and put it in the board
+  deck immediately before I do anything else because this number is good
+  and I want it locked in before reality complicates it.
+
+  Note to self: Stripe MRR does not equal QuickBooks revenue apparently.
+  Carol said this once. I should figure out why. (I won't figure out why.)
+
+09:40 AM - 10:47 AM  [67 min] QUICKBOOKS ONLINE — SESSIONS 1 & 2
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [09:40 AM – 10:18 AM, 38 min]
+
+  Opened QB. Straight to the dashboard like a normal person. Dashboard
+  showing "Profit and Loss" for the current period and I'm immediately
+  confused because the revenue number says $57,300 and I just saw $61,240
+  in Stripe two minutes ago. Difference of ~$3,900. What happened to my
+  money?
+
+  Clicked on the revenue number to drill in. QB opens a transaction list.
+  Some invoices say "Open" and some say "Paid." Aha — so QB is showing
+  invoices that haven't been paid yet as revenue? Or... not including them?
+  I genuinely cannot tell which direction this is wrong.
+
+  Googled: "why is quickbooks revenue different from stripe"
+  Result: something about cash basis vs accrual basis accounting.
+  Googled: "what is accrual basis accounting simple explanation"
+  Read three sentences, understood two of them, closed the tab.
+
+  The short version I told myself: QB might be counting money when it's
+  earned (accrual) vs when it's received (cash). Or the opposite. One of
+  those. I need to ask Carol.
+
+  Navigated to Reports > Profit & Loss. Changed date range to Q1 (Jan 1 -
+  Mar 31). Report loaded. Revenue: $57,300. Total expenses: $49,100.
+  Net income: $8,200.
+
+  Wait. Net income $8,200 on $60K MRR? That math doesn't track. We spend
+  roughly $45K on payroll, $8K on AWS, $4.2K on rent — that's $57K in
+  known monthly costs alone. Something is wrong.
+
+  Googled: "quickbooks profit and loss shows wrong expenses"
+  Actually this just opened a support article about reconciling bank
+  accounts. I don't want to reconcile anything. I want to see my numbers.
+
+  Clicked around. Found the expense breakdown. Payroll showing as $42,800
+  for the quarter — that's one month, not three. Either two months of
+  payroll didn't get recorded or... Carol batches these? Texted Carol:
+  "Hey quick Q — the P&L only shows one month of payroll, is that normal?"
+  Carol is part-time on Mondays. She may not respond until tonight.
+
+  Also noticed a line item called "Uncategorized Expense - $3,240" which
+  is concerning. Made a note.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [10:20 AM – 10:47 AM, 29 min]
+
+  Came back after a glass of water and a moment of reflection.
+
+  Navigated to the Cash Flow Statement. This took four clicks and one wrong
+  turn through something called "Account and Settings" which is NOT where
+  cash flow lives. Eventually found it: Reports > Cash Flow Statement.
+
+  This I understand better. Operating cash: $54,800 in, $46,300 out.
+  Net operating cash flow: +$8,500. That feels more real. We're not dying.
+
+  Accidentally clicked "New" while trying to close a report tab. QB opened
+  a "Create Journal Entry" screen. I froze. There were debit/credit columns.
+  I closed it immediately. Did I create anything? I don't think I created
+  anything. Refreshed the page just in case.
+
+  Found the "Money In / Money Out" view under the Dashboard. THIS is what
+  I want every time. Why is this buried? Money In: $54,800. Money Out:
+  $46,300. Running balance looks like ~$127,000 in operating account.
+  That's roughly 2.7 months runway at current burn — actually that's fine
+  for Series A. We closed $2M in January.
+
+  Screenshots taken for the board deck: 3
+  Things I actually understood: maybe 60%
+  Things I'm going to ask Carol about: 6 (added to a running doc)
+
+10:50 AM - 12:30 PM  [100 min] BOARD DECK PREPARATION
+  Spent this time in Notion building the Q1 board deck. The financial
+  section currently says:
+
+    "Revenue: ~$61K MRR (Stripe) / Q1 Revenue per QB: $57.3K — reconciling
+     discrepancy with bookkeeper. Cash position: ~$127K operating + $1.8M
+     Series A reserve. Burn rate: approximately $46-57K/month depending on
+     how you count payroll timing."
+
+  This is embarrassing. I'm building a company that helps other companies
+  make data-driven decisions and I can't cleanly report my own quarterly
+  financials. The irony is not lost on me. I will bury this irony and
+  present confidently on Thursday.
+
+12:30 PM - 01:15 PM  [45 min] LUNCH
+  Ate at my desk. Slack messages continued. Marcus asked if he could push
+  the dashboard feature to next sprint. I said no but nicely.
+
+01:15 PM - 03:00 PM  [105 min] CUSTOMER CALL — KELLERTON GROUP + TWO PROSPECTS
+  Call with Kellerton Group to check in on their onboarding (they went live
+  2 weeks ago). They love the product. VP of Data mentioned they might want
+  to add two more seats and connect a second data warehouse. That's
+  potentially another $800-1200/month. I kept my excitement internal.
+
+  Two back-to-back prospect calls after. One is a Series B fintech company,
+  could be a $3,500/month contract. The other is a PE-backed logistics firm
+  that wants a "pilot" (a.k.a. free trial disguised as enterprise). Pushed
+  back on the pilot framing. Sent a proposal for a 90-day paid POC at
+  $2,000. Ball is in their court.
+
+03:05 PM - 04:20 PM  [75 min] PRODUCT FEEDBACK REVIEW + FEATURE PRIORITIZATION
+  Went through the last two weeks of support tickets and Intercom
+  conversations. Three customers asking for better CSV export. Two asking
+  about Salesforce integration. One customer (bless them) said the product
+  "basically replaced their entire BI stack." That quote is going in the
+  deck.
+
+04:25 PM - 05:30 PM  [65 min] INVESTOR UPDATE EMAIL DRAFT
+  Started drafting the monthly investor update. Stared at the finance
+  section for 15 minutes. Carol still hasn't responded about the payroll
+  discrepancy. Wrote "[NUMBERS TBD — ask Carol]" in the revenue section
+  and moved on to the product update, which I am much better at.
+
+05:35 PM - 06:00 PM  [25 min] TEAM 1:1s (quick check-ins)
+  Pinged Marcus and Priya separately. Marcus: dashboard feature will
+  actually be done Wednesday, genuinely. Priya: she pulled the Stripe data
+  I asked for this morning, will send a report. I love Priya.
+
+06:00 PM - 07:00 PM  [60 min] BREAK / GYM
+  Did not go to the gym. Answered emails instead. This is a pattern.
+
+07:00 PM - 09:00 PM  [120 min] BOARD DECK — CONTINUED
+  Made real progress. Slides 1-7 are solid. Slide 8 (financials) is a
+  placeholder with my best guesses. I will fix this tomorrow when Carol
+  is available.
+
+09:00 PM - 09:20 PM  [20 min] WIND DOWN / READING
+  Read a Substack post about founder burnout. Found it relatable but
+  also slightly annoying. Closed it.
+
+11:08 PM  [ASYNC] — QB CONFUSION FOLLOW-UP
+  Carol texted back: "The payroll discrepancy is because Gusto exports
+  to QB with a one-month lag sometimes. I'll fix it Tuesday. Also you
+  have an uncategorized expense of $3,240 — do you remember a purchase
+  from 'Vercel Pro Teams' in January?"
+
+  Me: "YES. That's our frontend hosting. Can you put it under
+  infrastructure?"
+
+  Carol: "I'll put it under Software & Subscriptions, Infrastructure
+  sub-category. Also Jake please don't click around in the Journal
+  Entries section."
+
+  Me: "How did you know?"
+
+  Carol: "You always do."
+
+───────────────────────────────────────────────────────────
+END OF DAY — JAKE'S REFLECTION
+───────────────────────────────────────────────────────────
+  Monday done. Longer than expected. The QB session was frustrating — I
+  know the numbers are in there, I just can't trust that what I'm reading
+  is the actual number. Like, is $57.3K revenue or is $61.2K revenue?
+  What does Carol mean by "accrual basis"? Is that better or worse than
+  whatever the other thing is?
+
+  I should probably take a QuickBooks course. I've been saying this since
+  we were pre-revenue. I will not take a QuickBooks course.
+
+  The board deck is coming together though. Product story is strong.
+  Growth is real. I just need the financial slide to not look like
+  a hostage note.
+
+  Also — we're at $61K MRR. That's genuinely good. I need to remember
+  to feel good about that.
+
+  TO-DO FOR TOMORROW:
+  □ Follow up with Carol about payroll entries and get clean Q1 P&L
+  □ Send invoices to the three new enterprise clients (been sitting in
+    drafts for a week — do this FIRST THING)
+  □ Get Priya's Stripe report and compare to QB numbers
+  □ Finish board deck slides 8-12 (financial + metrics)
+  □ Review AWS Reserved Instance renewal options
+  □ Response to logistics PE firm re: paid POC proposal

@@ -1,0 +1,267 @@
+═══════════════════════════════════════════════════════════
+  SWEET SPOT BAKERY — OWNER DIARY
+  Linda Torres | Friday, Week 1
+  "Robert, I sent you the wrong report. I know. I sent you the right one now. I think."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      13h 0min
+Customers served:        ~58 (catering + regular foot traffic)
+QB Online sessions:      3  (2h 12min total)
+Reports sent to Robert:  3 (first two were wrong)
+Reconciliation:          FINISHED (difference resolved: it was a bank fee)
+Catering order:          Delivered successfully
+Q1 status:               Books are as good as they're going to get
+
+04:30 AM - 05:00 AM  [30 min] EARLY OPEN — CATERING PREP
+  Up at 4:30 for the catering order. Two dozen assorted pastries for the Friday morning office
+  pickup: 8 croissants, 8 lemon poppy muffins, 4 almond croissants, 4 brownies. All boxed
+  with the Sweet Spot sticker on the lid. They look good. I feel a small swell of pride every
+  time I see my name on a box going somewhere.
+
+  The order total was $96.00. Catering is basically regular price — I underbid myself a little
+  but I was nervous about the first order and I didn't want to scare them off.
+
+05:00 AM - 07:30 AM  [150 min] MORNING BAKE + CATERING HANDOFF
+  Dani came in at 6. The catering customer (a young woman named Bex, apparently short for
+  Rebecca) picked up at 6:45, took one look at the boxes, said "oh these are beautiful" and
+  I could've floated away. Paid cash + Venmo tip. Total with tip: $106.00. I need to figure
+  out if I record Venmo tips as income. I think yes? I'll ask Robert.
+
+  Regular morning rush after that. Strong Friday energy. Sold out of almond croissants again
+  by 8. Good problem to have.
+
+  Register by 7:30: ~$285 (includes catering).
+
+07:30 AM - 09:00 AM  [90 min] RECONCILIATION — FINISH IT
+  Dani had the floor. I went to the back. This was the first thing I wanted to clear before
+  Robert called.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [07:35 AM – 08:22 AM, 47 min]
+
+  Opened the laptop — the reconcile screen was still there. My careful closing had worked.
+  The difference still showed $47.20.
+
+  I looked at the bank statement again, methodically this time, for anything I'd missed.
+  Found it on page 2: "Monthly Service Fee — $12.00" (bank fee, Feb 14) and "Wire Transfer
+  Fee — $0.00" (ignore that, it was zero) and... there it was: a line I'd skimmed past:
+  "Merchant Processing Fee Credit Adjustment — $35.20."
+
+  I didn't know what that second one was. Googled it quickly: apparently Square sometimes
+  issues small credits or adjustments to your account. I'd received a $35.20 credit I never
+  knew about.
+
+  So: $12.00 bank fee (not entered in QB) + $35.20 unrecorded credit = $47.20 difference.
+
+  I added the bank fee as an expense: $12.00 → "Bank Charges."
+  I added the Square credit as income: $35.20 → "Bakery Sales" (not sure if that's right
+  but it was money coming in, so).
+
+  Went back to the reconcile screen. Checked those two off.
+
+  Difference: $0.00.
+
+  I stared at it for a moment. Then I hit "Finish Now."
+
+  It said: "Congratulations! Your account is reconciled."
+
+  I don't know why that made my eyes sting a little. It's just software. But I've been
+  scared of that word — reconcile — for two years. And I did it.
+
+  Maria texted back at 8:30: "Did you finish? How did it go?" I sent back: "$0 difference
+  DONE" with three exclamation points. She sent me a little clapping hands.
+
+09:00 AM - 11:00 AM  [120 min] MIDDAY RUSH + ROBERT'S CALL
+  Good Friday crowd. Sold a lot. Dani was fantastic.
+
+  Robert called at 10:17.
+
+  "Linda! End of Q1. How are the books looking?"
+
+  I told him I'd been working on them all week. He sounded pleasantly surprised.
+
+  He asked me to email him three things:
+    1. Profit & Loss report for Q1 (January through March)
+    2. Expense report / Transaction list
+    3. Any invoices or receipts he might need for unusual items
+
+  I said okay. I said I'd do it within the hour. He said no rush, end of day is fine. I
+  said within the hour because I wanted it done.
+
+  We also talked about Dani. I asked him about the 1099 thing.
+
+  He was quiet for a moment. "How long has she been working for you?"
+  "Fourteen months."
+  Another pause. "And you've been paying her cash?"
+  "Yes."
+  "Okay. We'll sort it out. She's probably been an employee this whole time, which means
+  technically... but we'll deal with it. Don't panic. I've seen worse."
+
+  Robert has a way of saying "don't panic" that is simultaneously calming and alarming.
+
+  He said to bring it up when we do the tax meeting. Add it to the list.
+
+11:00 AM - 11:45 AM  [45 min] RUNNING QB REPORTS — FIRST ATTEMPT
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [11:04 AM – 11:41 AM, 37 min]
+
+  Okay. Running reports. I know QB has reports. I found them. Reports menu, top navigation.
+
+  Clicked "Profit and Loss." A report came up. Date range said... "This fiscal year." I
+  needed Q1, January through March. I looked for the date picker. Found it. Changed the
+  start date to 01/01 and end date to... I typed 03/31 but I accidentally typed 03/13.
+  Didn't notice. Hit "Run Report."
+
+  Report ran. I looked at it quickly. The numbers seemed reasonable. Total Income: $28,450
+  (ish — I'm estimating because I was in a hurry). Total Expenses: $17,200 (ish). Net income
+  around $11,000. I thought: okay that looks like a bakery.
+
+  I clicked "Email" and sent it to Robert with a note: "Hi Robert, here is the Q1 P&L.
+  Let me know if you need anything else. Also the expense list is coming. — Linda"
+
+  Then I looked for the expense report. I went to Reports, searched "Expenses." Found
+  something called "Transaction List by Category." Ran it. Looked overwhelming — every single
+  transaction listed out. I assumed this was right. Emailed it to Robert.
+
+  Felt done. Went back to the floor.
+
+11:45 AM - 01:30 PM  [105 min] SALES FLOOR + LUNCH
+  Good midday. The lemon cake I put out at noon sold four slices in 20 minutes. Made a
+  mental note. People want lemon in the spring.
+
+  Dani left at 1. Ate a piece of focaccia standing at the counter. Checked my phone.
+  Robert had replied at 12:08.
+
+  "Linda — the P&L you sent only goes through March 13th. Can you resend with the full
+  quarter (through March 31)? Also, I think the expense report you sent may be filtered to
+  just this month — it's showing only March transactions. I need January through March.
+  Thank you."
+
+  Oh.
+
+01:30 PM - 02:30 PM  [60 min] QB SESSION — CORRECT REPORTS
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [01:38 PM – 02:26 PM, 48 min]
+
+  Back to Reports.
+
+  P&L: Changed end date to 03/31. (Not 03/13. 03/31. I said it out loud.) Ran the report.
+
+  This time I read it more carefully before sending:
+
+    SWEET SPOT BAKERY — PROFIT & LOSS (Jan 1 – Mar 31, this year)
+
+    INCOME
+      Bakery Sales:              $31,847.40
+      (this was higher than I expected — then I remembered I'd entered all the daily
+       sales totals going back to February that I'd forgotten, plus the bank sync pulled
+       in some income entries. The number surprised me in a good way.)
+
+    COST OF GOODS SOLD
+      Cost of Goods Sold:        $8,914.20
+      (flour, butter, eggs, all the ingredients — now properly categorized since Maria
+       helped fix the Office Supplies mess. This felt real and right.)
+
+    GROSS PROFIT:                $22,933.20
+
+    EXPENSES
+      Payroll Expenses:          $1,725.00 (Dani — my estimated wages, 3 months)
+      Rent:                      $4,350.00 (3 x $1,450)
+      Utilities:                 $1,264.60 (PG&E, water, Comcast x3)
+      Insurance:                 $1,572.00 (liability + health x3 months)
+      Repairs & Maintenance:     $595.00 (sink x2, oven motor)
+      Supplies:                  $449.81 (Amazon, packaging, tools)
+      Telephone:                 $201.00 (3 months cell)
+      Bank Charges:              $151.30 (Square fees + bank fee)
+      Meals & Entertainment:     $3.80 (that one coffee receipt, making it count)
+      Janitorial:                $168.00 (trash x3 + cleaning supplies)
+
+    TOTAL EXPENSES:              $10,480.51
+
+    NET INCOME:                  $12,452.69
+
+  I stared at that number for a while. $12,452.69 profit for Q1. That's after paying for
+  everything. That's real money. Mine.
+
+  I know the Dani payroll is estimated and some categories might be slightly off and Robert
+  will adjust things. But it's there. It's a real picture of the first quarter.
+
+  I ran the Transaction List by Category again. This time I changed the dates to Jan 1 –
+  Mar 31 before running it. Checked the dates on the report header. They were right.
+
+  Emailed both to Robert with the note: "Robert, I'm so sorry — here are the corrected reports.
+  The P&L now goes through March 31 and the expenses are all three months. Let me know what
+  else you need. I also have questions about a few categories and the Dani situation. —Linda"
+
+  He replied 20 minutes later: "These look much better. I'll review and we'll talk at our
+  tax meeting. You did good work this week."
+
+  You did good work this week.
+
+  I saved that email.
+
+02:30 PM - 05:00 PM  [150 min] AFTERNOON + SALES + CLOSE
+  The afternoon felt lighter. Something released. I baked a fresh batch of snickerdoodles
+  almost on autopilot - hands moving, head quiet. Sold most of them. Good Friday afternoon.
+
+  Drawer count at close: $623.00. Best single day of the week.
+
+  Dani had already left but she'd texted me: "Great week Linda!! See you Monday."
+
+  Sent her back a heart.
+
+05:00 PM - 05:30 PM  [30 min] FINAL QB — ENTER THIS WEEK'S SALES
+  Last thing. Went into QB and entered the daily sales for this week:
+    - Monday, Mar 10:    $531.00
+    - Tuesday, Mar 11:   $387.00 (the oven day)
+    - Wednesday, Mar 12: $561.00
+    - Thursday, Mar 13:  $487.00
+    - Friday, Mar 14:    $623.00
+    Total this week:   $2,589.00
+
+  Logged out. Closed the laptop. Put the empty shoebox in the recycling.
+
+END OF DAY — LINDA'S REFLECTION
+───────────────────────────────────────────────────────────
+  The week started with a shoebox full of six weeks of receipts I'd been avoiding and a
+  password I couldn't remember. It ended with a reconciled bank account and two correct reports
+  in Robert's inbox.
+
+  I know I still have things wrong. The Dani situation is a whole thing that Robert and I need
+  to sort out. Some of my categories are guesses — the bench scrapers under "Supplies" instead
+  of "Equipment," the health insurance that I'm not totally sure is a business expense, the
+  Venmo tip I still don't know how to categorize. Robert will fix what needs fixing.
+
+  But I did the work. Me. All of it. Maria helped on Wednesday and I'll owe her something
+  special — maybe a long weekend of croissants delivered to her apartment. And I watched a
+  YouTube tutorial about reconciliation and I actually did the reconciliation and it came out
+  to zero.
+
+  The net income number — $12,452 — I keep turning it over. Three months of waking up at
+  4:45. Three months of flour and butter and Dani's cheerful good mornings and Mr. Ferreira's
+  plain croissant and the broken oven and the catering boxes with my name on the sticker.
+  Twelve thousand dollars. It's real. It happened.
+
+  Things I want to do better next quarter:
+  - Enter receipts WEEKLY. Not every six weeks.
+  - Keep a log of Dani's actual hours — not estimates.
+  - Record daily sales in QB every Friday night, not in one panicked session.
+  - Write the QB password inside the shoebox lid at the START of the quarter.
+  - Maybe ask Robert if there's a simpler way to see just "money in, money out" in QB.
+    Just one page. Just the thing I need.
+
+  I turned the sign to CLOSED. Walked home. Called my mom.
+
+  "How was your week, mija?"
+  "I survived it," I said.
+  "That's what you always say."
+  "I always mean it," I said.
+
+  TO-DO FOR NEXT WEEK:
+  □ Monday: enter weekend sales immediately
+  □ Call baby shower inquiry lady (Post-it is still on the register)
+  □ Email Robert to confirm tax meeting date
+  □ Start a new (smaller) shoebox for Q2 receipts
+  □ Look into whether QB has a "simple view" or mobile app — Maria mentioned it might
+  □ Calculate proper catering pricing — $96 was probably too low

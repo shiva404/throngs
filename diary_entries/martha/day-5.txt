@@ -1,0 +1,442 @@
+═══════════════════════════════════════════════════════════
+  CLEARWATER ACCOUNTING SERVICES — BOOKKEEPER DIARY
+  Martha Henderson | Friday, Week 1
+  "At the end of the week, the numbers either balance
+   or they don't. Mine balance."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      8h 15min
+Clients worked on:       4  (all clients — wrap-up)
+QB Online sessions:      5  (87 min total)
+Reports printed today:   22
+Binder pages filed:      22
+Client emails sent:       3
+Cheat sheet drafts:       1  (Dennis's expense guide)
+Outstanding items:        4  (all tracked and scheduled)
+
+08:00 AM - 08:30 AM  [30 min] MORNING SETUP — FRIDAY RITUAL
+  Friday is my favorite workday, oddly enough. Not because it's the end of the
+  week but because Friday is when everything gets filed, printed, and put in
+  order. My week doesn't feel finished until the binders are full and the
+  reports are stacked and clipped and neat. Some people think paper records
+  are old-fashioned. I think they're insurance.
+
+  Made coffee. Set up all four client binders on my side desk in a row:
+  Bella's Florist (blue), Sunset Hardware (green), Parker Dental (red),
+  Riverview Café (yellow, new). Today I'll do a brief QBO check-in on each,
+  verify nothing needs correcting, run and print the final reports for the
+  week, and then file everything.
+
+  Also on today's to-do: the expense category cheat sheet for Dennis that I
+  keep promising myself to write. It has to happen today.
+
+08:30 AM - 09:15 AM  [45 min] QB ONLINE — ALL CLIENTS — STATUS CHECK
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:30 AM – 09:15 AM, 45 min]
+
+  Did a quick review sweep of all four client files. Logging into each in turn.
+
+  BELLA'S FLORIST:
+    - Checked whether bank feed was reconnected. Still shows "Connection Error."
+    - Patrice had apparently tried to reconnect on Wednesday (she left me a
+      voicemail I missed yesterday) but got confused by the Chase login screen
+      and gave up. I'll call her this morning. The April feed will matter for
+      next month's reconciliation.
+    - March books are complete. No new transactions to check.
+    - Noted: Harrington Law invoice ($135.00 from February) still shows open.
+
+  SUNSET HARDWARE:
+    - Bank feed is active and pulling. Checked the Transactions menu (still
+      mentally flinch at the new name) — 4 new transactions came in this week
+      and auto-categorized.
+    - Spot-checked the auto-categories: three looked correct, one was wrong.
+      A $421.00 debit from "ACE DIST 04/01" had been auto-categorized as
+      "Supplies." Should be COGS. Changed it. This is exactly the thing I was
+      going to put in the cheat sheet for Dennis. Wrote in my notes: QBO banking
+      rules for Ace Distributor need to be set up so it auto-codes to COGS.
+      That's a "Banking Rules" feature (under Transactions > Rules — new name).
+    - Invoices: called Dennis this morning at 8:47. School district hasn't paid
+      yet — apparently still in the purchase order approval queue. Harmon
+      Construction paid Invoice #1052 ($1,200.00) by check earlier this week.
+      Dennis deposited it Wednesday. Good. I'll see it in the May bank statement.
+      Invoice #1058 ($1,275.00) is still open. Noted.
+
+  PARKER DENTAL:
+    - Checked payroll status. Payroll > Payroll History. The 03/31 payroll run
+      shows "Completed" now — Dr. Parker released it Wednesday as we discussed.
+      Seven employees, gross $14,407.20. Direct deposits processed Thursday.
+      That's confirmed.
+    - No new QB support response on case QB-20240403-88241. Expected — they
+      said 3–5 business days.
+    - Checked AR aging. Self-pay AR still $8,243.00. No change since Wednesday —
+      that's handled by Dr. Parker's billing service, not me.
+
+  RIVERVIEW CAFÉ:
+    - Reviewed the Oct–Nov entries from yesterday. Everything looked right.
+      The $89 balance sheet variance is still there — will resolve in
+      reconciliation next week.
+    - Sent Sylvia a text asking her to bring the Suncoast bank statements and
+      December receipts on Monday.
+    - Noted: need to discuss payroll setup for two part-time employees with
+      Sylvia and Marco. They are currently issuing informal payments — this
+      needs to be formalized before tax season. Added to my call agenda.
+
+09:15 AM - 09:35 AM  [20 min] CALL — PATRICE RICCI (BELLA'S FLORIST)
+  Called Patrice about the bank feed reconnection. Walked her through it step
+  by step. She was on her laptop in the back office.
+
+  The process:
+    1. Log into QBO as Bella's Florist
+    2. Go to Transactions (wait — for Bella's, is it still "Banking"? It was
+       named "Transactions" on Sunset Hardware. Let me check — yes, it's
+       "Transactions" across all companies now after the update Tuesday.)
+    3. Click the account name "Chase Checking (...4821)"
+    4. Click the small pencil/edit icon
+    5. Click "Reconnect"
+    6. Log into Chase Business Online with her own credentials
+
+  She got through steps 1–5 fine. Step 6: she typed her Chase login and hit
+  Continue. Chase's website showed a "Multi-factor Authentication" step —
+  it wanted to text a code to her phone. She got the code, entered it, and
+  the connection was established. Green dot, status: Connected.
+
+  Then she clicked "Update" and 27 new March-April transactions came down. I
+  could see them on my screen since we share accountant access. I told her:
+  "Don't categorize any of these yourself — I'll do it next Monday when I
+  review April." She agreed.
+
+  Total call time: 20 minutes. Should have done this Monday but the
+  authentication step required her to be at a device with her phone, which
+  she couldn't manage until today. Now it's done.
+
+  One more reason I prefer the old manual import: no MFA, no OAuth, no
+  "verify your identity" steps. You just downloaded a file from your bank
+  and imported it. But I understand why online banking connections use this
+  security. I still find it complicated.
+
+09:35 AM - 10:15 AM  [40 min] QB ONLINE — BANKING RULES — SUNSET HARDWARE
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [09:35 AM – 10:15 AM, 40 min]
+
+  Decided to set up banking rules for Sunset Hardware while I was thinking
+  about it. Banking rules tell QBO: "When a transaction matches these criteria,
+  automatically assign this category." In Desktop, I handled all categorization
+  manually and I was fine with that. But if Dennis is going to keep entering
+  things himself via the mobile app and the bank feed is pulling transactions
+  daily, rules can prevent miscategorizations from piling up.
+
+  Found the Rules feature: Transactions > Rules > New Rule.
+
+  Created five rules:
+
+  Rule 1: ACE DISTRIBUTOR (when description contains "ACE DIST")
+    → Default account: 50000 Cost of Goods Sold
+    → Payee: Ace Distributor
+    → Condition: Amount > $100 (to exclude small returns/credits)
+
+  Rule 2: HOME DEPOT ("HOME DEPOT" in description)
+    → Default account: 60800 Repairs & Maintenance (they use this for
+      store fixture supplies; not to be confused with his inventory)
+    → Actually — this one is tricky. Sometimes it's supplies, sometimes
+      repairs, sometimes COGS-adjacent. I decided NOT to create this rule
+      because it's too inconsistent. Better I review these manually.
+
+  Rule 3: BP GAS ("BP #" in description)
+    → Default account: Auto Expense
+    → Payee: BP Gas
+
+  Rule 4: WELLS FARGO FEE ("WF MONTHLY SERVICE" in description)
+    → Default account: Bank Fees & Charges
+    → Payee: Wells Fargo
+
+  Rule 5: AT&T ("ATT BUSINESS" in description)
+    → Default account: Telephone
+    → Payee: AT&T Business
+
+  The Rules interface in QBO is cleaner than I expected — better than the
+  clunky "Memorized Transactions" feature in Desktop, which honestly was
+  never very intuitive. I'll give QBO credit here: the rules setup is logical.
+  "If/Then" style. I understood it without reading the help article.
+
+  This took 40 minutes including testing (I re-processed one of the auto-pulled
+  April transactions through the rule to make sure it assigned correctly).
+
+10:15 AM - 10:30 AM  [15 min] BREAK
+
+10:30 AM - 11:00 AM  [30 min] PRINTING — BELLA'S FLORIST (WEEK REPORTS)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [10:30 AM – 11:00 AM, 30 min]
+
+  Logged into Bella's Florist. Ran and printed final report set for the week:
+
+  Printed reports — Bella's Florist:
+    1. P&L March 2024 (final)                        1 page
+    2. Balance Sheet 03/31/2024                      1 page
+    3. Reconciliation Report — March 2024            2 pages
+    4. AR Aging Summary (Harrington Law $135 flagged) 1 page
+    5. AP Aging Summary (clean)                      1 page
+  Total: 6 pages — filed in Bella's Florist blue binder, March 2024 tab.
+
+  Also noted the 27 new April transactions now pulling from Chase. Made a note
+  in my calendar: review and categorize Bella's April transactions during my
+  next session (scheduled for two weeks from now).
+
+  While in QBO, I explored the "27 uncategorized transactions" briefly. Most
+  looked like routine items — Sysco-equivalent, Square deposits, utilities.
+  Left them all uncategorized for now per my usual process. Did spot one
+  unusual item: a $4,200.00 credit on 04/02 from "CHASE PAYROLL REFUND."
+  That's unusual. Patrice doesn't use QBO Payroll — she processes payroll
+  through a third-party. This credit needs explanation. Left a note in the
+  transaction memo: "Unusual credit — confirm source with Patrice." Added to
+  my notes to ask her.
+
+11:00 AM - 11:40 AM  [40 min] PRINTING — SUNSET HARDWARE & PARKER DENTAL
+
+  ⬛ QUICKBOOKS ONLINE SESSION 4  [11:00 AM – 11:40 AM, 40 min]
+
+  Sunset Hardware — final print run:
+    1. P&L March 2024                                1 page
+       (Note: still shows gross margin question re: sales tax. I added a
+       handwritten note on the printed P&L: "PENDING — verify POS sales tax
+       treatment with Dennis before treating as final." Filed in green binder.)
+    2. Balance Sheet 03/31/2024                      1 page
+    3. Reconciliation Report — March 2024            2 pages
+    4. AR Aging (Inv. #1047 $1,842 + #1058 $1,275 still open) 1 page
+    5. AP Aging (clean)                              1 page
+  Total: 6 pages — filed in Sunset Hardware green binder, March 2024 tab.
+
+  Parker Dental — final print run:
+    1. Q1 P&L (January–March 2024)                  1 page
+    2. March 2024 P&L (standalone)                  1 page
+    3. Balance Sheet 03/31/2024                      1 page
+    4. Reconciliation Report — March 2024            2 pages
+    5. Q1 Payroll Summary                            1 page
+    6. AP Aging                                      1 page
+    7. AR Aging (self-pay $8,243 note)               1 page
+    8. FUTA issue memo (cover note for CPA)          1 page
+  Total: 9 pages — filed in Parker Dental red binder, Q1 2024 tab.
+
+  While I was in Parker Dental, I checked the payroll records one more time
+  to confirm the 03/31 run. Shows $14,407.20 paid, seven employees, direct
+  deposit confirmed as of 04/04. Dr. Parker had texted me a quick "employees
+  were paid, thank you Martha" this morning, which was kind of her.
+
+11:40 AM - 12:00 PM  [20 min] PRINTING — RIVERVIEW CAFÉ
+
+  ⬛ QUICKBOOKS ONLINE SESSION 5  [11:40 AM – 12:00 PM, 20 min]
+
+  Ran and printed the October and November preliminary P&Ls I'd generated
+  yesterday. Also printed the balance sheet as of 11/30/2023 and the opening
+  balance journal entry summary. Marked all as "PRELIMINARY — Pending Bank
+  Reconciliation."
+    1. Opening Balance Journal Entry — 10/01/2023    1 page
+    2. P&L October 2023 (preliminary)               1 page
+    3. P&L November 2023 (preliminary)              1 page
+  Total: 3 pages — filed in Riverview Café yellow binder.
+
+12:00 PM - 12:45 PM  [45 min] LUNCH
+  First time this week I ate somewhere other than my desk. Walked two blocks
+  to the deli on Main Street. Grilled cheese and tomato soup. Sat in a booth
+  and read the newspaper like a normal person. Very restorative.
+
+12:45 PM - 01:30 PM  [45 min] DENNIS'S EXPENSE CATEGORY CHEAT SHEET
+  I have promised this to myself all week and today it happens. Drafted a
+  one-page reference guide for Dennis Park (Sunset Hardware) on how to
+  categorize his most common expense types in QBO. Typed it up, printed it on
+  Clearwater Accounting letterhead, put it in an envelope addressed to him.
+
+  Contents of the guide:
+
+  SUNSET HARDWARE — QUICK EXPENSE CODING GUIDE
+  Prepared by Martha Henderson, Clearwater Accounting Services
+
+  MERCHANDISE FOR RESALE (Ace Distributor, other wholesale)
+  → Use: Cost of Goods Sold
+  → This is product you sell to customers. NOT "Supplies."
+
+  STORE SUPPLIES (paper bags, tape, packing material, cleaning products)
+  → Use: Supplies
+  → This is stuff you use in the store, not product you sell.
+
+  VEHICLE GAS (BP, etc.)
+  → Use: Auto Expense
+
+  VEHICLE PARTS / REPAIRS (Advance Auto Parts)
+  → Use: Vehicle Expense
+
+  STORE REPAIRS (Keystone Plumbing, electricians, pest control)
+  → Use: Repairs & Maintenance
+
+  PHONE & INTERNET (AT&T Business)
+  → Use: Telephone
+
+  UTILITIES (Clearwater Electric, Water Dept.)
+  → Use: Utilities
+
+  INSURANCE PREMIUMS
+  → Use: Insurance
+
+  BANK FEES
+  → Use: Bank Fees & Charges
+
+  IF YOU'RE NOT SURE — don't guess. Leave the category blank and I'll assign
+  it. A blank is easier for me to fix than a wrong category.
+
+  Will mail this Monday and follow up with a brief phone explanation.
+
+01:30 PM - 02:15 PM  [45 min] WEEKLY BILLING & HOUR LOG
+  Updated my billable hours log for the week. Clearwater Accounting bills
+  clients at $75/hour for bookkeeping services (Martha's rate).
+
+  Estimated billable hours this week:
+    Bella's Florist:     3.5 hours  (reconciliation, reports, 4 client calls)
+    Sunset Hardware:     4.0 hours  (transaction review, reconciliation, rules)
+    Parker Dental:       5.5 hours  (payroll audit, support call, Q1 reports)
+    Riverview Café:      6.0 hours  (onboarding, Oct/Nov entry — ongoing)
+    Admin/Unbillable:    3.5 hours  (cheat sheet, filing, menu relearn, hold)
+  Total billable: 19.0 hours × $75 = $1,425.00
+
+  Note: the 41 minutes on QB Support hold is unbillable. The time I spent
+  confused by QBO's menu rename is unbillable. The time I spent reprinting
+  and refiling because of the voided Sunshine Wholesale receipt entry —
+  technically I could bill it but I don't. Mistakes are part of the job.
+
+  Submitted the week's billing summary to our office manager, Carol, via the
+  shared drive. She invoices the clients monthly, so this feeds into April's
+  invoice.
+
+02:15 PM - 03:00 PM  [45 min] MASTER STATUS UPDATE
+  Updated my wall grid for all four clients:
+
+  CLIENT          LAST RECONCILED   NEXT DUE        OUTSTANDING ISSUES
+  Bella's Florist  Mar 2024 ✓        Apr 2024        Bank feed reconnected ✓;
+                                                      April txns need review;
+                                                      Harrington Law $135 open
+  Sunset Hardware  Mar 2024 ✓        Apr 2024        Sales tax treatment verify;
+                                                      Inv. #1047 $1,842 unpaid;
+                                                      Inv. #1058 $1,275 unpaid
+  Parker Dental    Mar 2024 ✓        Apr 2024        FUTA issue w/ CPA;
+  (Q1 done)                                           QB case QB-20240403-88241
+  Riverview Café   Not yet           Oct–Nov pending  Dec-Mar entry needed;
+                   (bank stmts due)  (Suncoast stmts) Payroll setup discussion
+
+03:00 PM - 03:30 PM  [30 min] UPCOMING WEEK PLANNING
+  Next week:
+    - Monday: Riverview Café (Sylvia bringing Dec receipts + bank stmts)
+              Also: April 1 transactions starting for active clients
+    - Tuesday: TBD (probably Bella's April if Chase feed is up to date)
+    - Wednesday: Follow up with Parker Dental CPA re: FUTA
+    - Thursday: Sunset Hardware check-in (Dennis's pending payments)
+    - Friday: Wrap-up, print, file
+
+  Also need to schedule a sit-down with Sylvia and Marco to discuss:
+    1. Formalized payroll for part-time employees (W-2 vs. 1099 question)
+    2. Quarterly estimated taxes (they may owe something given November profit)
+    3. Whether they want to continue with QBO or explore other options
+       (I'd recommend QBO — it's what I know and the bank feed is useful
+        once it's working)
+
+03:30 PM - 04:00 PM  [30 min] QBO SELF-STUDY — LEARNING SESSION
+  I've started setting aside 30 minutes on Fridays to teach myself one new
+  QBO feature. This is my own idea — nobody asked me to do this. But I figure
+  if I'm going to use this software for all my clients, I should keep learning
+  it properly rather than just muddling through.
+
+  Today's topic: QBO's "Memorized Reports" (now called "Custom Reports" in
+  QBO — of course they renamed it). In Desktop, I had about eight memorized
+  reports I ran every month: P&L, Balance Sheet, AR Aging, AP Aging, etc.
+  I want to replicate that in QBO so each client's monthly report set is
+  one-click.
+
+  Found it: Reports > Custom Reports. In Desktop it was Reports > Memorized
+  Reports. Different name, same concept. I set up a custom report group for
+  Bella's Florist: P&L (current month), Balance Sheet (current month end),
+  AR Aging, AP Aging. Saved as "Bella's Monthly Standard."
+
+  Next Friday I'll do the same for the other three clients.
+
+  One note: QBO's custom reports don't include the reconciliation report (you
+  always run that from the Accounting > Reconcile screen separately). That's
+  a gap compared to Desktop, where everything could be memorized. Minor, but
+  worth noting.
+
+04:00 PM - 04:15 PM  [15 min] DESK CLEANUP & LOG OUT
+  Straightened my desk. All four binders shelved in order — Bella's, Sunset,
+  Parker, Riverview. Printed my week summary and filed it in my own master
+  binder (yes, I keep a binder for myself too, dated weekly summaries going
+  back to 2009).
+
+  Logged out of QBO. Turned off the printer (always turn it off on Fridays,
+  Gary leaves it running all weekend and I disagree with that). Rinsed my
+  mug. Grabbed my bag.
+
+  End of week.
+
+END OF DAY — MARTHA'S REFLECTION
+───────────────────────────────────────────────────────────
+  Here is what I know after this week: I can do this. QBO is not my friend
+  yet, but it is becoming less of a stranger.
+
+  Let me count what went right:
+    - Three reconciliations completed, all to zero difference
+    - Q1 summary for Parker Dental delivered to the CPA on time
+    - FUTA problem caught and documented before it became a bigger issue
+    - Riverview Café onboarding underway — October and November complete
+    - Banking rules set up for Sunset Hardware (should save me time next month)
+    - Bella's bank feed is finally reconnected
+    - Dennis's expense guide written and ready to mail
+    - All reports printed, all binders filed
+
+  What still bothers me about QBO:
+
+  The menu changes with no warning. On Tuesday I felt like I'd come into the
+  office and someone had moved my filing cabinet. "Banking" is now
+  "Transactions." Fine. But tell me first.
+
+  The permission structure for payroll. I know why it exists. I still don't
+  like it. A bookkeeper with fifteen years of experience should have more
+  access, not less.
+
+  The bank feed authentication. Every time a connection breaks, fixing it
+  requires the client — not me. In a busy small business, the owner doesn't
+  always have time to log into a third-party app and go through
+  multi-factor authentication steps. This creates a gap in the workflow.
+
+  What I'll say is genuinely better in QBO than Desktop:
+    - Access anywhere. I can check a client's account from home if needed.
+      I haven't done this yet, but I could. In Desktop, the company file
+      was on one machine.
+    - The bank feed itself, when working, is faster than importing .QBO files.
+    - Banking rules are more elegant than Desktop's memorized transactions.
+    - The audit trail on every transaction (who changed what and when) is
+      actually excellent. I caught Dennis's price adjustment because of it.
+    - The custom report groups are going to save me time once I build them all.
+
+  If I'm being honest: QBO is a capable piece of software. My frustrations
+  this week were mostly about the unfamiliarity, the few genuine design gaps,
+  and one QBO-caused payroll error. That's not a bad week. I've had worse in
+  Desktop.
+
+  I'm fifty-eight years old and I've been doing this for thirty-one years.
+  I've survived the move from paper ledgers to DOS-based software, from DOS
+  to Windows, from floppy disks to network drives, from paper bank statements
+  to electronic ones. I survived QuickBooks Desktop's thirty-seven updates
+  over fifteen years. I will survive QuickBooks Online.
+
+  The numbers balance. That's what matters.
+
+  TO-DO FOR NEXT WEEK:
+  □ Monday: Riverview Café — receive Dec receipts + Suncoast bank statements
+  □ Monday: Set up Suncoast bank feed for Riverview Café (with Sylvia present)
+  □ Monday: Begin Dec 2023 retroactive entry (Riverview Café)
+  □ Tuesday: Bella's Florist — review 27 April transactions from Chase feed
+  □ Tuesday: Investigate $4,200 Chase Payroll Refund credit (Bella's — unusual)
+  □ Wednesday: Call Parker Dental CPA — FUTA situation briefing
+  □ Wednesday: Follow up QB case QB-20240403-88241 (5 days will have passed)
+  □ Thursday: Sunset Hardware — call Dennis re: Inv. #1047 (school district)
+  □ Thursday: Set up custom report groups for all four clients in QBO
+  □ Friday: Week wrap-up and print (as always)
+  □ Set up payroll discussion meeting with Benedettis (Riverview Café)
+  □ Mail Dennis's expense category cheat sheet (Monday morning, first thing)

@@ -1,0 +1,308 @@
+═══════════════════════════════════════════════════════════
+  PAGE TURNER BOOKS — OWNER DIARY
+  Sarah Mitchell | Wednesday, Week 1
+  "Wednesdays are the pivot. Too tired from the weekend's hangover,
+   too far from Friday's relief. You just have to push through."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      9h 40min
+Customer interactions:   12
+Sales transactions:      9  ($298.40)
+QuickBooks sessions:     2  (31 min total)
+Accountant call:         35 min (quarterly check-in)
+Local business meeting:  90 min (BID breakfast, 8 AM)
+Bank visit:              in person, 30 min
+
+  NOTE: Slower sales day — Wednesday often is. But the accountant
+  call and BID meeting made it worthwhile in different ways.
+
+───────────────────────────────────────────────────────────
+EARLY MORNING — Business Improvement District Meeting
+───────────────────────────────────────────────────────────
+
+6:30 AM - 7:00 AM  [30 min] PERSONAL
+  Earlier start — BID breakfast meeting at the Eastfield Hotel at 8 AM.
+  Quick breakfast at home (can't be the person eating a full hotel
+  buffet in front of people I need to ask things of). Coffee, notes
+  review, out by 7:10.
+
+7:00 AM - 7:35 AM  [35 min] TRAVEL + PREP
+  Drove to the hotel. Arrived early. Reviewed my two agenda items:
+  1. Push for better evening parking enforcement (7-9 PM, always
+     chaos for our evening events)
+  2. Ask about the summer street market — want a bookstall position
+     again this year
+
+7:35 AM - 7:50 AM  [15 min] PRE-MEETING NETWORKING
+  Arrived hotel meeting room. 12 other business owners there:
+  café, florist, pharmacy, two restaurants, a letting agency.
+  Had a useful 10-minute conversation with Claire from the florist
+  (Bloom & Petal, around the corner). She's struggling with the same
+  parking issue. We agreed to present the parking item as a joint
+  request — more weight in numbers.
+
+8:00 AM - 9:30 AM  [90 min] BID BREAKFAST MEETING
+  Agenda items covered:
+  ├─ 8:00–8:20: Council update on high street footfall data
+  │    Numbers: 12% decline in Q1 vs same period last year.
+  │    Sobering. Not just us — the whole street.
+  ├─ 8:20–8:50: Parking enforcement discussion
+  │    Claire and I presented joint request for evening enforcement.
+  │    Good reception — BID chair said he'd escalate to council.
+  │    No promises but progress. Added to action log.
+  ├─ 8:50–9:10: Summer Street Market planning
+  │    I secured a bookstall spot: Saturday 14 July, 10 AM–4 PM.
+  │    Cost: £35 BID member rate. Worth it — last year made $480
+  │    in one day and picked up 14 newsletter sign-ups.
+  │    Paid £35 on the spot (card). Expense: "Market/Events."
+  └─ 9:10–9:30: AOB — one restaurant owner pitched a joint loyalty
+     card scheme across all BID members. Interesting. Cautiously
+     interested but need to understand the tech side before committing.
+     Took their brochure.
+  Left with: parking request submitted, summer market confirmed,
+  a loyalty card brochure, and Claire's mobile number.
+
+───────────────────────────────────────────────────────────
+MORNING — Shop day begins (late start)
+───────────────────────────────────────────────────────────
+
+9:30 AM - 9:50 AM  [20 min] LATE OPEN — Part-timer covers first 2 hrs
+  Thank goodness for Jamie (part-time, Tue/Wed mornings, business
+  student at the local uni). He opened at 7:30 and handled the early
+  transactions. Arriving to find the shop already running is a small
+  luxury on BID meeting days.
+  Jamie's handover note:
+  - 2 transactions: $38.00 total
+  - One customer enquiry about a specific anthology — Jamie took name
+    and number (good initiative)
+  - Printer needs more paper
+
+9:50 AM - 10:00 AM  [10 min] QUICK MORNING RESET
+  Checked in with Jamie. He seems to be getting better at customer
+  recommendations — heard him suggest "The Thursday Murder Club" to
+  a browsing woman. She bought it. That's training working.
+  Let him take his break while I handled the floor.
+
+10:00 AM - 10:35 AM  [35 min] ACCOUNTANT CALL — Quarterly check-in
+  Scheduled call with Diane, our accountant (external, quarterly retainer).
+  Covered:
+  ├─ Q1 review overview:
+  │    Revenue:    $24,180 (up 6% vs Q1 last year — positive)
+  │    COGS:       $11,606 (48% — she flagged, says target is 43–45%)
+  │    Gross:      $12,574
+  │    Overheads:  $8,940 (rent $5,200, wages $2,400, misc $1,340)
+  │    Net Q1:     $3,634
+  │    "Profitable but tight on margin," Diane said.
+  ├─ COGS deep-dive:
+  │    Problem: too many special orders at low volume = less discount
+  │    from wholesalers. Need to consolidate ordering or push minimum
+  │    orders to qualify for better tiers.
+  │    Action: Review order patterns — batch orders weekly, not daily.
+  ├─ Tax planning:
+  │    Estimated Q2 corporation tax provision: $920
+  │    Need to set aside monthly — she suggested $310/month into a
+  │    separate "tax pot" savings account. Sensible. Will action today.
+  ├─ QB health check:
+  │    Diane asked about QB usage. Flagged that my gift certificate
+  │    tracking is inconsistent (she's right — it's still a spreadsheet).
+  │    She recommended QB's "Sales Receipts" with a gift card liability
+  │    account. Said she'd send a setup guide.
+  └─ Next call: scheduled for July.
+  Good call. She's direct and doesn't talk down to me. Worth every
+  penny of her retainer.
+
+───────────────────────────────────────────────────────────
+  ⬛ QUICKBOOKS SESSION 1  [10:35 AM – 10:58 AM, 23 min]
+───────────────────────────────────────────────────────────
+
+10:35 AM - 10:58 AM  [23 min] QB — Post-accountant actions
+  Acting immediately on Diane's advice (before I forget):
+  ├─ Created new savings goal memo: "Tax Pot — $310/month"
+  │    Set up standing order reminder in QB for the 1st of each month
+  ├─ Started setting up Gift Card liability account:
+  │    Created new liability account "Gift Vouchers Issued"
+  │    (Diane's guide not arrived yet — will complete setup when it does)
+  ├─ Reviewed accounts receivable:
+  │    #1078 Corporate client — STILL unpaid. Day 47. Unacceptable.
+  │    #1095 Startup office library — Net 30, 1 day old. Fine.
+  ├─ Entered BID market fee: $35 expense (Events/Marketing)
+  └─ Note to self in QB journal: "Review weekly ordering schedule.
+     Goal: one Ingram order per week, minimum 10 units per title to
+     hit volume discount tier."
+
+───────────────────────────────────────────────────────────
+LATE MORNING — Floor time
+───────────────────────────────────────────────────────────
+
+10:58 AM - 12:00 PM  [62 min] CUSTOMER TIME + FLOOR
+  Jamie left at 11. Back to solo.
+  4 transactions in this period:
+  1. "Birnam Wood" — man who'd read the review in yesterday's Gazette.
+     He mentioned the newspaper mention of our Reading Circle too —
+     Dan came through! $22.99.
+  2. Two new paperbacks for a holiday — total $31.98.
+  3. A woman who'd been given a gift certificate in January finally
+     using it ($50 value). She spent $56.50, paid $6.50 cash difference.
+     First time I properly logged this in QB as a liability redemption.
+     Felt satisfying to do it correctly.
+  4. A teenager who asked if we had any "manga." We have a small
+     section — sold 2 volumes at $12.99 each.
+  Total: $155.95
+
+12:00 PM - 12:20 PM  [20 min] CORPORATE INVOICE — PHONE CALL
+  Invoice #1078. $155.00. 47 days overdue. No reply to two emails.
+  Called their accounts payable department directly.
+  Hold for 4 minutes.
+  Spoke to accounts payable coordinator named Heather. She was
+  apologetic — invoice had apparently been "lost in a system migration."
+  Classic.
+  She confirmed payment will process within 5 working days (so by next
+  Tuesday at the latest). Got her direct email. Sent her a PDF of the
+  invoice immediately from QB while on the call.
+  Logged call note in QB against Invoice #1078: "Spoke to Heather
+  AP, payment committed within 5 WD from today."
+  Frustrating but resolved. That's $155 returning.
+
+───────────────────────────────────────────────────────────
+LUNCH
+───────────────────────────────────────────────────────────
+
+12:20 PM - 1:00 PM  [40 min] LUNCH
+  Walked to the café two doors down. Needed to get out of the shop.
+  Chicken soup ($11.50 — expense: lunch). Sat by the window watching
+  the street. A man stood outside our window for 5 minutes reading
+  the display before walking away without coming in. Maddening.
+  The window display really does need refreshing.
+
+  Mentally drafted the new window display concept:
+  "Summer Reading — Before You Go Anywhere, You Need These Books."
+  Mix of beach reads, literary fiction, local interest. Will execute
+  Thursday or Friday.
+
+───────────────────────────────────────────────────────────
+AFTERNOON — Bank + Afternoon trade
+───────────────────────────────────────────────────────────
+
+1:00 PM - 1:30 PM  [30 min] BANK — In-person visit
+  Reason for in-person today: two things I can't do online.
+  1. Deposit a cheque (yes, someone paid by cheque — a corporate
+     client's accounts department, old-school):
+     Cheque: £180.00 from a school that did a bulk order in March.
+     Finally cleared. Deposited.
+  2. Discuss credit facility renewal (mentioned Monday by our
+     business manager, Janet).
+     Janet was in. Brief meeting — 12 minutes.
+     Key points:
+     - Credit facility currently £5,000. She's recommending renewing
+       as-is (no increase). Fair given current profit levels.
+     - Renewal paperwork arrives next week. Need to return within 14 days.
+     - Suggested I also open a dedicated business savings account for
+       the tax pot (exactly what Diane recommended). Good alignment.
+     - Will open savings account online this evening.
+
+1:30 PM - 2:15 PM  [45 min] CUSTOMER AFTERNOON
+  3 transactions:
+  1. Phone collection — "Yellowface" x2 (the Tuesday phone order).
+     Customer very happy. Paid $42.00 on collection.
+  2. Browsing walk-in: bought 1 fiction title $14.99
+  3. Woman returning last week — the one who asked about national
+     shipping on Instagram. She came in person, from 20 miles away,
+     specifically because of our posts. Bought $52.50 worth of books.
+     That's the power of Instagram actually demonstrated. I took a
+     mental note to invest more time in it.
+  Total: $109.49 (+ cheque deposited at bank)
+
+2:15 PM - 3:00 PM  [45 min] OPERATIONS + SOCIAL MEDIA
+  ├─ Posted Reading Circle recap on Instagram:
+  │    Group photo (with permission of 7 of 9 attendees), brief
+  │    summary of the discussion. Tagged "Lessons in Chemistry" page.
+  │    Author's account shared it within 20 minutes. 340 impressions
+  │    in the first hour. Unexpected boost.
+  ├─ Responded to loyalty card scheme brochure (BID meeting):
+  │    Read it properly. It's an app-based scheme. Would cost us £15/
+  │    month plus a card reader. Not convinced the footfall uplift would
+  │    cover it yet. Filed for consideration next quarter.
+  ├─ Set up next Ingram order (batched):
+  │    Consolidated 6 separate need-to-orders into one weekly PO.
+  │    Total: 22 units across 8 titles. Est. cost: $198.00.
+  │    This is the "batch ordering" Diane recommended. Done.
+  └─ Entered Gardners school order into QB as a prepaid receivable
+     (payment on delivery terms)
+
+3:00 PM - 4:30 PM  [90 min] QUIET AFTERNOON — Desk work
+  Wednesday afternoons are often slow. Used it:
+  ├─ Sent Thursday newsletter (ahead of schedule — why not):
+  │    Featured: Priya's poetry collection, summer reading preview,
+  │    Reading Circle recap, July street market announcement
+  ├─ Called Priya (local author): told her first copy sold on Tuesday.
+  │    She was genuinely delighted. Small moment that felt nice.
+  │    Confirmed payment schedule: monthly, with sales report.
+  ├─ Updated consignment tracker spreadsheet (1 copy sold, $14.99,
+  │    her share = $8.99, to be paid at month end)
+  └─ Started drafting the window display plan for Thursday
+
+───────────────────────────────────────────────────────────
+  ⬛ QUICKBOOKS SESSION 2  [4:30 PM – 4:38 PM, 8 min]
+───────────────────────────────────────────────────────────
+
+4:30 PM - 4:38 PM  [8 min] QB — End of day quick close
+  ├─ Entered all today's transactions (9 total, $298.40 - $35 BID = net sales $263.40)
+  ├─ Marked bank cheque deposit ($180.00 school) in QB
+  ├─ Updated Invoice #1078 note with Heather's commitment
+  └─ Day's cash position: improving. Weekly picture looking healthier.
+
+───────────────────────────────────────────────────────────
+CLOSING
+───────────────────────────────────────────────────────────
+
+4:38 PM - 5:15 PM  [37 min] CLOSE + WINDOW CONCEPT DRAFT
+  Gathered physical materials for window display redesign:
+  - Selected 12 book candidates, pulled them from shelves
+  - Sketched the layout on a notepad (hand-drawn, old school)
+  - Will execute Thursday morning when traffic is quieter
+  End-of-day cash count: $134.00. Matches expected.
+  Locked up 5:15. Felt earlier than usual — some days that's OK.
+
+───────────────────────────────────────────────────────────
+EVENING
+───────────────────────────────────────────────────────────
+
+7:30 PM - 8:00 PM  [30 min] HOME ADMIN
+  ├─ Opened business savings account online (for tax pot, per Diane
+  │    + Janet's advice). Set up monthly transfer of $310 on 1st.
+  ├─ Emailed Heather (corporate AP) with PDF invoice re-attached
+  └─ Replied to 2 Instagram DMs (one about events, one book rec request)
+
+───────────────────────────────────────────────────────────
+END OF DAY — SARAH'S REFLECTION
+───────────────────────────────────────────────────────────
+
+  Sales were lower than Monday and Tuesday but the day was productive
+  in less visible ways. The accountant call, the BID meeting, the bank
+  visit — none of these ring the till but all of them keep the business
+  functioning. The things that feel like not-work are often the most
+  important work.
+
+  The author share of Instagram is the best thing that happened today.
+  When someone with 12,000 followers shares your content, that's worth
+  more than any ad spend.
+
+  I'm behind on the window display but I'll do it tomorrow and it'll
+  be worth it. The mid-week window is when office workers stop and look
+  on their lunch breaks.
+
+  Financial state of mind: cautious but stable. The corporate invoice
+  situation stressed me more than it should have. Cashflow anxiety
+  is the silent tax on small business ownership.
+
+  TO-DO FOR TOMORROW:
+  □ Window display — morning, before 10 AM
+  □ Ingram order confirmation
+  □ Chase Gardners school delivery ETA
+  □ Credit facility renewal paperwork (watch for it arriving)
+  □ QB gift card setup — Diane's guide should arrive
+  □ Print updated Reading Circle flyers for "God of Small Things"
+
+═══════════════════════════════════════════════════════════

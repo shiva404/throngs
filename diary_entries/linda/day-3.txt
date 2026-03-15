@@ -1,0 +1,204 @@
+═══════════════════════════════════════════════════════════
+  SWEET SPOT BAKERY — OWNER DIARY
+  Linda Torres | Wednesday, Week 1
+  "Maria looked at my screen and said 'oh Mom' in that tone. I knew."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      12h 30min
+Customers served:        ~52
+QB Online sessions:      2  (1h 58min total — with Maria's help)
+Receipts entered today:  22
+Categorization errors discovered: 1 big one (3 months of flour in "Office Supplies")
+Duplicate transactions deleted: 2
+Oven status:             FIXED (thank God)
+
+04:45 AM - 05:15 AM  [30 min] OPEN BAKERY
+  The oven repair guy called at 8pm last night to say he could come at 7am today. I told him
+  I'd be there. Barely slept. Up at 4:45. Started what I could in the countertop oven - scones
+  and cookies, things that don't need the convection. The big oven sat there cold and silent.
+
+05:15 AM - 07:00 AM  [105 min] OVEN REPAIR + MORNING RUSH
+  The technician (young guy, name tag said "Travis") showed up at 7:05. He was in and out of
+  the kitchen while I handled the counter. Dani came in at 6 and bless her, just took over
+  the register without being asked. By 7:30 Travis said it was the drive motor on the convection
+  fan - $285 for the part and labor. I said okay because what else do I say. He had me sign
+  an invoice. I set it on the desk to enter into QB later.
+
+  With the oven back by 8:15 I scrambled to get croissants in. Only got one batch done for
+  the morning. Sold all 12 by 9.
+
+  Register by 9am: ~$175.
+
+07:00 AM - 12:00 PM  [300 min] BAKING CATCH-UP + SALES FLOOR
+  Good energy today. Dani and I had a rhythm. Made two more croissant batches, lemon poppy
+  muffins, a new batch of snickerdoodles, and the almond cake I do on Wednesdays. Mrs. Okafor
+  came back for her croissant like she promised - gave her a small one for free anyway, she's
+  been coming in for two years.
+
+  I started pulling more receipts out of the shoebox during the slow stretch around 10:30 and
+  organizing them into loose piles: food supplies, utilities, repairs, miscellaneous. The
+  miscellaneous pile was the biggest. That's probably not good.
+
+  Running total by noon: ~$440.
+
+12:00 PM - 01:00 PM  [60 min] LUNCH + RECEIPT SORTING
+  Ate an actual meal today - sandwich, sat down, read nothing. Just sat. Then I went back to the
+  shoebox and kept sorting. Found a receipt from January 8th that I had completely forgotten
+  about: a repair bill for the display case lighting, $95. Also found an old receipt from
+  December in last year's box that somehow got mixed in. Left that one out — Robert handles
+  last year's stuff.
+
+  Laid out the sorted piles. I counted: about 47 receipts still need to go into QB. Today I
+  want to get through at least half of them before Maria arrives.
+
+01:00 PM - 02:30 PM  [90 min] SOLO QB SESSION
+  Dani had the floor. I sat in the back office.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [01:08 PM – 02:12 PM, 64 min]
+
+  I logged in (used the password I wrote inside the shoebox lid yesterday — it worked!).
+
+  First thing I did was look for that duplicate Restaurant Depot entry from Tuesday night.
+  Found it: two transactions, both $61.40, same date. Deleted one. I think I deleted the right
+  one. The other one is still there.
+
+  Entered receipts from my "food supplies" pile. I decided to just keep using "Cost of Goods
+  Sold" for now and let Maria tell me if that's wrong:
+
+    - Gordon's Food Service, Jan 8: $78.90 (eggs, cream, vanilla)
+      → Cost of Goods Sold
+    - Gordon's Food Service, Jan 29: $134.50 (bread flour 50lb x2, sugar 25lb)
+      → Cost of Goods Sold (I made myself put it here even though I've been using Office Supplies)
+    - Gordon's Food Service, Feb 3: $112.30 (already entered? I checked — yes, entered Monday.
+      Skipped it.)
+    - Sysco delivery, Feb 11: $58.00 (chocolate chips, cocoa powder, almond extract)
+      → Cost of Goods Sold
+    - Sysco delivery, Feb 24: $71.40 (same categories)
+      → Cost of Goods Sold
+    - Restaurant Depot, Feb 28: $88.15 (butter 10lb, heavy cream, cream cheese)
+      → Cost of Goods Sold
+    - Gordon's Food Service, Mar 4: $119.80 (bread flour, pastry flour, sugar, salt)
+      → Cost of Goods Sold
+    - Sysco, Mar 7: $66.30 (eggs x6 dozen, vanilla, lemon extract)
+      → Cost of Goods Sold
+
+  Then utilities pile:
+    - PG&E March: $194.40 → Utilities
+    - Republic Services March: $42.00 → I looked for a better category. Found "Janitorial."
+      Put it there. That feels right actually.
+    - Water bill, Feb: $38.50 → Utilities
+    - Water bill, Mar: $41.20 → Utilities
+
+  Then the repair invoices:
+    - Display case lighting repair, Jan 8: $95.00 → Repairs and Maintenance
+    - Oven motor repair, today: $285.00 → Repairs and Maintenance
+    - Drain clog Feb → already entered Tuesday. Skipped.
+
+  Dani knocked to ask about a custom order question. Lost my place. Came back. Entered a few more:
+    - Dani wages, Feb (approx - I don't have a perfect record, I estimated):
+      Dani works Mon/Wed/Fri, ~5 hrs each = 15hrs/week x 4 weeks = 60 hrs x $11.50 = $690
+      → Payroll Expenses
+      NOTE TO SELF: I really need to keep better records of her hours. I'm guessing here.
+    - Dani wages, March (same estimate, just 2 weeks so far): ~$345
+      → Payroll Expenses
+
+  I got 22 receipts done total. That's real progress.
+
+02:12 PM - 05:30 PM  [198 min] AFTERNOON SALES + CLOSE PREP
+  Pulled the almond cake around 2pm - it was perfect. Sold most of it by 4. Dani left at 3.
+  I handled the last hour solo. Good afternoon. Counted the drawer: $561.00. Best day this week.
+
+  I was feeling genuinely good about things until I went back and looked at the QB transaction
+  list and saw that I have entries from "Office Supplies" going back to January that I know
+  are actually flour and food supplies. There must be 15-20 wrong ones in there. I know it
+  because they're from Gordon's and Sysco and the amounts match. I didn't touch them. I'll
+  show Maria tonight.
+
+05:30 PM - 06:15 PM  [45 min] DINNER + PREP FOR MARIA
+  Made a list on a notepad of everything I wanted to ask Maria:
+    1. The flour/food stuff in "Office Supplies" — how bad is this, how do I fix it
+    2. The bank thing not syncing since Feb 18 — what happened there
+    3. How do I record Dani's wages properly (she doesn't get a W2, she's part-time, is she
+       even set up right in QB?)
+    4. That "reconcile" thing it keeps showing me — what is it
+    5. Why does my QB dashboard show a profit number that doesn't match my bank account
+
+06:15 PM - 08:25 PM  [130 min] QB SESSION WITH MARIA
+  Maria arrived at 6:15 with a coffee for herself and a very patient expression.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [06:18 PM – 08:25 PM, 127 min]
+
+  Maria took one look at the Chart of Accounts and made a small sound. Not a bad sound. Just
+  an "I understand what I'm looking at" sound.
+
+  THE OFFICE SUPPLIES PROBLEM:
+  She found 18 transactions under "Office Supplies" that should've been under "Cost of Goods
+  Sold." Flour, sugar, butter from Gordon's and Sysco going back to January — and she clicked
+  "Last 90 days" and found some from December too, which means I've been doing this since
+  before the new year. Three months of food supplies categorized as office supplies.
+
+  "Mom, this is actually fixable," she said. She showed me how to open each transaction and
+  change the category. We did them one by one. It took 35 minutes. I felt embarrassed but she
+  kept saying "this is really common" and I think she meant it.
+
+  THE BANK SYNC:
+  She found the bank connection settings. Apparently the sync had disconnected - she said it
+  happens sometimes, she just needed to re-enter my bank login credentials through Intuit's
+  connector. She did that. The sync ran and pulled in about 6 weeks of transactions. Suddenly
+  there were a LOT of new items showing "For Review." Some of them I'd already entered manually,
+  so there WERE duplicates. We spent 20 minutes going through them and excluding the ones I'd
+  already entered.
+
+  THE DANI QUESTION:
+  Maria looked at how I'd entered Dani's wages. She said if Dani is a regular part-time
+  employee (same days every week, long-term), I should probably have her set up as an employee
+  in QB's payroll section or at minimum be issuing her a 1099 at year-end. I... didn't know
+  that. I've been paying her cash for 14 months. Maria said to ask Robert about it. I wrote
+  it down: ASK ROBERT ABOUT DANI.
+
+  THE DASHBOARD CONFUSION:
+  Maria explained why the profit number doesn't match the bank account. She said something
+  about "cash basis" vs. something else, and also about how QB is tracking all the transactions
+  including ones that haven't hit the bank yet, or... honestly she explained it clearly and I
+  nodded and I think I understood for about 90 seconds and then it blurred. The short version
+  she gave me: "The dashboard profit is what you've earned on paper. Your bank is what's
+  actually sitting there. They're different because of timing." Okay. I can live with that.
+
+  By 8:25 we had:
+  - 18 recategorized transactions
+  - Bank sync reconnected
+  - Most duplicates resolved
+  - 6 more receipts entered (Maria helped me do them fast)
+
+  She said: "Mom you actually don't have that many more receipts to do. You're close."
+  I nearly hugged her for that. I did hug her for that.
+
+END OF DAY — LINDA'S REFLECTION
+───────────────────────────────────────────────────────────
+  $561 today. Oven fixed. Maria came. I could cry.
+
+  Honestly the biggest thing today was finding out I've had flour and sugar listed as "Office
+  Supplies" for three months. Three months. I think about what my Profit & Loss must have
+  looked like to Robert last year and I get a little queasy. My "Cost of Goods" was probably
+  way too low because I was hiding my own ingredient costs in the wrong bucket. I don't fully
+  understand what that does to the numbers but it can't be right.
+
+  Maria is so patient. I don't deserve that kid.
+
+  The bank sync coming back online was huge. Now I actually have real data in there. Tomorrow
+  she said I should try the reconciliation - she explained it and it made sense while she was
+  explaining. Something about matching the QB transactions to the bank statement line by line.
+  She said: "Just check everything against your February bank statement." I pulled the bank
+  statement out of the shoebox. It's still in the envelope unopened. That's fine. That's
+  tomorrow's problem.
+
+  TO-DO FOR TOMORROW:
+  □ Try the bank reconciliation (February statement)
+  □ Call Robert about Dani - is she an employee, does she need a 1099?
+  □ Finish the last ~25 receipts from the shoebox
+  □ Enter daily sales for this week (haven't done that at ALL yet - all cash register totals
+    are in my notebook, need to go into QB as income)
+  □ The oven repair invoice - make sure it's under Repairs and Maintenance, not Office Supplies
+    (I will NOT make that mistake again)

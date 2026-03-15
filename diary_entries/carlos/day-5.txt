@@ -1,0 +1,443 @@
+═══════════════════════════════════════════════════════════
+  RODRIGUEZ & ASSOCIATES CPA — ACCOUNTANT DIARY
+  Carlos Rodriguez, CPA | Friday, Week 1
+  "Software should be invisible. When you notice it, something is wrong."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      8h 10min
+Clients handled:         6 (via email/phone)
+QB Online sessions:      7  (148 min total)
+Billable hours logged:   5.25h
+Billable revenue (est.): $918.75
+QB Community posts: 2 (one new bug report — bank matching algorithm)
+QB loading failures documented this week (total): 7
+Retroactive auto-categorization errors found this week: 34
+Client emails responded to: 6
+Xero: still in back pocket
+
+08:00 AM - 08:45 AM  [45 min] MORNING REVIEW & INBOX
+  Friday. The week has been long. Three monthly closes, two major advisory sessions,
+  a 34-transaction audit of ML categorization failures, and a $14,700 buried wire
+  credit at Bloom Legal. I need a clean Friday.
+
+  Inbox has 11 emails. Three that require substantive QB work. Others are quick.
+
+  Email 1 — Marcus Ramirez (Ramirez Landscaping):
+  Subject: "my profit and loss looks off"
+  "Carlos — you said February was normal but when I look at my P&L in QB right now it
+  shows net income as negative $2,100. I thought you said everything was fine??"
+
+  Opened Ramirez's QB file immediately.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1 (CLIENT: Ramirez Landscaping)  [08:05 AM – 08:30 AM, 25 min]
+
+  The P&L Marcus is looking at: he ran it cash basis. His bookmarked report defaults to
+  cash basis because he set it up himself once two years ago and saved the link. Our
+  monthly close uses accrual basis. On cash basis, February is negative $2,100 because
+  several large invoices I accrued at month-end haven't been paid in cash yet. On
+  accrual basis, the P&L I sent him shows net income of $3,820.
+
+  This is the fourth time we have had this conversation in three years. I am not
+  frustrated at Marcus — this is genuinely confusing and the difference between accrual
+  and cash basis is not intuitive. What I am frustrated at is that QB allows a user
+  to save and bookmark a report with a specific basis setting, and does not warn you
+  when you run that saved report that it was saved with settings that may differ from
+  what your accountant uses. A small, contextual note — "Your accountant last reviewed
+  your books using accrual basis; this report is set to cash basis" — would prevent
+  this confusion entirely.
+
+  Replied to Marcus with a detailed email:
+
+  "Marcus — no problem, here's what's happening. Your bookmarked P&L is set to
+  'Cash Basis,' which shows income when cash is actually received. I use 'Accrual Basis,'
+  which shows income when you earn it (i.e., when you invoice a client, even before
+  they pay). In February, you had $18,400 in invoices I accrued as earned revenue that
+  hadn't been paid yet by month-end. On cash basis those don't show up, so the P&L
+  looks like a loss. On accrual basis (the real picture of your business performance),
+  your February net income is $3,820 — a normal slow-month result. I've updated your
+  bookmarked report to accrual basis. If you'd like, I can add a 30-minute call to next
+  month's close to walk through this difference in detail. Let me know."
+
+  Two minutes later: "Thanks Carlos, that makes sense. You're the best." Good man.
+
+  Email 2 — Linda Chen (Chen's Bakery):
+  Subject: "Question about the loan payment you changed"
+  "Hi Carlos, I saw you reclassified my February loan payment — it went from one line to
+  two lines. Can you explain why? Did something go wrong?"
+
+  Replied:
+
+  "Hi Linda — nothing went wrong; I improved the accuracy of how it's recorded! When
+  you make your monthly loan payment of $2,340, part of it pays down the loan principal
+  (which reduces your debt on the balance sheet) and part of it is interest (which is an
+  expense on your P&L). You had the entire payment recorded as an expense, which was
+  overstating your expenses and not reducing your loan balance correctly. The correct
+  split for February: $1,847 principal, $493 interest. The principal portion doesn't
+  show on your P&L — it shows as a decrease in your loan liability on the balance sheet.
+  The interest portion ($493) is a legitimate expense and does show on the P&L. This
+  matters for your tax return (only interest is deductible, not principal repayment) and
+  for an accurate picture of your debt balance. Your loan balance is now correctly
+  reflected in QB. This is the same thing we discussed in April 2023 and November 2023
+  — I'll include a one-pager in your next monthly report so you have a reference copy."
+
+  She replied: "Oh I see now! Thank you for explaining it that way. I'll try to remember."
+  I'm going to write that one-pager and put it in her permanent file. It will be here
+  when she asks again.
+
+  Email 3 — Dave Kowalski (Pioneer Auto Parts):
+  Subject: "Bank feed — Michigan Auto Distributors still not matching"
+  "Carlos, I noticed again that transactions from Michigan Auto Distributors keep showing
+  up as unmatched. Diane says she fixes it each time but it keeps coming back. Is there
+  a way to fix this permanently?"
+
+  This is support ticket QB-448821. The bank feed alias bug. The one I've been trying
+  to fix since November.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2 (CLIENT: Pioneer Auto Parts)  [08:35 AM – 09:10 AM, 35 min]
+
+  Went into Pioneer's QB file. Attempted again to set the bank feed alias for "MICH AUTO
+  DIST" → "Michigan Auto Distributors" through Settings > Banking > Manage Rules. The
+  rule exists and is saved correctly. But when I ran a test — manually uploaded a
+  transaction with the description "MICH AUTO DIST" — QB did not apply the rule.
+
+  Tried deleting the rule and recreating it. Same result. Rule saves, rule doesn't fire.
+
+  Then I found something new. While digging into the matching rules, I noticed that QB's
+  bank matching algorithm was applying a rule for a different client — a rule I set up
+  for a vendor at Bloom Legal Services — to Pioneer's transactions. Not in terms of
+  categorization (the categories were right) but in terms of suggested match confidence.
+  QB was showing "High Confidence" matches on Pioneer transactions that weren't confident
+  at all — and when I looked at the rule IDs in the QB API (I accessed this via the QB
+  developer sandbox I maintain for testing), the confidence scores were being pulled from
+  the wrong client's rule set.
+
+  This is a cross-client data contamination in the matching algorithm's confidence scoring.
+  QB Accountant manages multiple client files, and the matching engine appears to be, in
+  some cases, applying one client's learned rules to a different client's bank feed — not
+  the categorizations themselves (which are isolated per client), but the confidence
+  metadata. This would explain why I've been seeing unusually high "confidence" matches
+  on transactions that shouldn't be confident, across multiple clients this week.
+
+  This is a real bug. This is a significant bug. I need to document it carefully and
+  report it properly.
+
+  Replied to Dave: "Dave — I've identified the root cause of the Michigan Auto Distributors
+  matching issue and have found what appears to be a broader bug in QB's matching algorithm.
+  I'm reporting it to QB today. In the meantime, Diane's manual matching process is the
+  correct workaround. I'll let you know when it's resolved. I'm sorry this has taken so
+  long — I've been on this since November and only now found the actual mechanism."
+
+09:10 AM - 10:05 AM  [55 min] QB BUG INVESTIGATION — BANK MATCHING ALGORITHM
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3 (DIAGNOSTIC)  [09:15 AM – 10:00 AM, 45 min]
+
+  Before posting to QB Community, I wanted to be sure of what I was seeing. I tested
+  across three client files — Pioneer Auto Parts, Ortega Medical Supply, and Nakamura
+  Restaurant Group — by uploading identical test transactions and observing the matching
+  behavior and confidence scores.
+
+  Findings:
+  1. For a test transaction with description "CARDINAL HEALTH INC" in Ortega's account:
+     QB showed "High Confidence: Medical Supplies." Correct — I trained this rule
+     Wednesday. Expected behavior.
+
+  2. For the same test transaction in Nakamura's account (where Cardinal Health has
+     no history and no rule): QB showed "High Confidence: Medical Supplies."
+     INCORRECT. Nakamura should not have any knowledge of Cardinal Health. High
+     confidence on an untrained vendor in a restaurant's account is wrong.
+
+  3. For a test transaction "GUSTO NET PAY 1234" in Nakamura's account: QB showed
+     "Medium Confidence: Payroll Expenses." Correct — Nakamura uses Gusto.
+
+  4. For the same test transaction in Pioneer's account (Pioneer uses ADP, not Gusto):
+     QB showed "Medium Confidence: Payroll Expenses." The confidence is right but the
+     source should be Pioneer's own history, not a bleed from Nakamura's Gusto rules.
+
+  The pattern is consistent: QB Accountant's matching confidence engine is sharing rule
+  metadata across client accounts. The actual category assignments are client-isolated
+  (I tested this — it's not categorizing Pioneer as a restaurant), but the confidence
+  scores and rule-match signals are bleeding across the multi-client accountant view.
+
+  This means:
+  - Transactions in new client accounts may be shown as "High Confidence" even when QB
+    has no basis for that confidence in that specific client's history.
+  - Practitioners who rely on confidence scores to batch-approve bank feed transactions
+    may approve incorrect matches because QB falsely signals confidence.
+  - The Pioneer bank feed alias bug may be a symptom of this same issue: my alias rule
+    is saving correctly but firing incorrectly against the wrong matching logic.
+
+10:05 AM - 11:00 AM  [55 min] QB COMMUNITY — BANK MATCHING BUG REPORT
+
+  This took time to write well. I don't post sloppy bug reports. If I'm going to take
+  30 minutes of my Friday to report a software bug, the report is going to be precise,
+  reproducible, and professionally documented.
+
+  Title: "QB Accountant multi-client bank matching: confidence score bleed across
+  client accounts — reproducible with test transactions (March 2025)"
+
+  I structured the report in four sections:
+  1. Summary of observed behavior
+  2. Reproduction steps (exact steps with specific test transaction descriptions)
+  3. Evidence (test results across three client files, anonymized)
+  4. Hypothesis (cross-client confidence metadata in the Accountant multi-client
+     matching engine)
+  5. Impact assessment (who is affected, what is the risk)
+  6. Requested action (isolate matching confidence per client file, audit the
+     algorithm's data isolation model)
+
+  I noted: "I am a CPA with 14 years of practice, and I hold QB ProAdvisor certification.
+  I have the technical background to distinguish between user error and platform behavior.
+  This is platform behavior. The reproduction steps are reliable and I have tested them
+  across three client files. I am happy to work with your engineering team directly if
+  that would help."
+
+  Posted. Tagged: #bug #bank-feeds #QB-Accountant #matching-algorithm #data-isolation
+
+  Within 20 minutes: 8 upvotes. Three comments from other QB Accountant users saying
+  they've noticed "weird" confidence scores but couldn't explain it. One comment from
+  a user in Australia confirming a similar pattern. QB Moderator response within
+  35 minutes: "Thank you for this detailed and reproducible report. I'm escalating this
+  to our engineering team for priority review. This is not expected behavior and we
+  take data isolation between client accounts seriously. I'll follow up with status
+  updates in this thread."
+
+  "Priority review." Not "forwarded to product team." Not "we are investigating."
+  Priority review. My detailed, reproducible bug report with clear steps got a real
+  response. This is why I take the time to write good bug reports.
+
+  I genuinely want QB to be better. I use it for 30 clients. Every bug I help them
+  fix is a problem I don't have to work around. This is self-interest as much as civic
+  duty.
+
+11:00 AM - 12:30 PM  [90 min] CLIENT EMAIL RESPONSES — THREE REMAINING
+
+  ⬛ QUICKBOOKS ONLINE SESSIONS 4–5 (MISC CLIENTS — lookup support)  [11:05 AM – 12:25 AM, 80 min]
+
+  Three more client emails needed substantive responses:
+
+  Email 4 — Priya Sharma (Sharma Consulting LLC):
+  "Carlos — one of my contractors says I need to give them a 1099 but QB is showing them
+  as an employee. Can you help?"
+
+  Pulled up Priya's QB file. Her contractor, James Wheeler, was indeed set up as an
+  "Employee" type in QB (instead of "Vendor" type). This happened because QB's "Add
+  Person" workflow has a confusing default that sometimes captures new payees as
+  employees. Wheeler was added via the banking "New Payee" feature and QB defaulted him
+  to employee. He is categorized correctly for actual payroll purposes (his payments
+  didn't run through payroll), but his record type is wrong and QB won't include him
+  in the 1099 workflow because 1099s are generated only for Vendor records.
+
+  Fix: changed Wheeler's record type from Employee to Vendor. Added his EIN (Priya had
+  it on file). Confirmed QB is now including him in the 1099-NEC workflow. Total payments
+  to Wheeler in 2024: $14,200. Form 1099-NEC for $14,200 — needed to be filed and already
+  past the January 31 deadline. Called Priya. She didn't know. We need to file a late
+  1099-NEC immediately. I'll handle it. The late penalty for one form is minimal ($50–$110
+  depending on timing), but it needs to be done. Added to my urgent list.
+
+  Email 5 — Ken Nakamura (Nakamura Restaurant Group):
+  "Carlos — I looked at the S-Corp checklist you sent. One question: my wife is part
+  owner. Does that change anything?"
+
+  Yes, it complicates the S-Corp election slightly. S-Corps can have only one class of
+  stock and there are shareholder restrictions. Husband-and-wife as co-owners is common
+  and treated as a single shareholder in most cases under the community property rules
+  (California is a community property state). Not a blocking issue, just needs to be
+  structured correctly in the articles.
+
+  Replied with a detailed explanation and asked him to send me a copy of his current
+  operating agreement. I need to review it before filing the 2553.
+
+  Email 6 — Thomas (Thomas & Sons HVAC):
+  "Hey Carlos can you tell me why my QuickBooks says I have more money than my bank account?"
+
+  The classic. I've heard this question from at least a dozen clients over the years.
+  It almost always means either (a) uncleared outstanding checks, (b) an unrecorded bank
+  fee, or (c) a transaction that's in QB but not the bank (data entry error).
+
+  Pulled up Thomas's file. The difference: $2,847. Found it in 4 minutes.
+  - Outstanding checks: $1,400 (two checks issued December that haven't cleared, one to
+    a supplier, one to a sub)
+  - One bank service fee of $25 that's in the bank but not recorded in QB
+  - One data entry error: a $1,422 payment was entered twice in QB (duplicate transaction).
+    The bank shows one debit. QB shows two. The $1,422 duplicate is the culprit.
+
+  Voided the duplicate in QB. Recorded the $25 bank fee. QB balance now matches. Sent
+  Thomas a brief explanation and a note about the duplicate entry — asked him to remind
+  his office manager to check the QB transaction list before entering payments that might
+  already be auto-imported from the bank feed.
+
+12:30 PM - 01:15 PM  [45 min] LUNCH — ACTUAL LUNCH AWAY FROM MY DESK
+  I went to the taqueria two blocks away. I sat outside. It was a clear day. I ate a
+  carnitas burrito and did not look at my phone for 25 minutes.
+
+  This is important. My work requires precision and patience and sustained concentration.
+  I cannot maintain that at 4:45 PM on a Friday if I don't give myself 25 minutes at
+  noon. This is not laziness. It is management.
+
+01:15 PM - 03:00 PM  [105 min] WESTBROOK FITNESS — SEP vs. SOLO 401(k) ANALYSIS
+
+  ⬛ QUICKBOOKS ONLINE SESSION 6 (CLIENT: Westbrook Fitness — verification pass)  [01:20 PM – 02:10 PM, 50 min]
+
+  Before completing the retirement analysis, I pulled Sarah's 2024 numbers from QB one
+  more time to confirm: W-2 wages = $82,000, S-Corp pass-through net income = $93,400.
+  Total compensation effectively $175,400. These figures feed directly into the retirement
+  contribution limit calculations.
+
+  Built the comparison in Excel:
+
+  OPTION 1 — SEP-IRA (current structure):
+  2024 contribution limit: lesser of $66,000 or 25% of compensation.
+  Sarah's S-Corp W-2: $82,000. 25% = $20,500. Employer contribution only.
+  Maximum SEP-IRA contribution for 2024: $20,500.
+  (Note: SEP contributions are made by the employer on the employee's behalf; as sole
+  employee-owner of her S-Corp, she can contribute up to 25% of W-2 wages.)
+
+  OPTION 2 — Solo 401(k):
+  Employee deferral (from W-2): up to $23,000 (2024 limit), or $30,500 if age 50+.
+  Sarah is 38 — $23,000 limit.
+  Employer contribution: up to 25% of W-2 = $20,500.
+  Total potential Solo 401(k) contribution: $43,500.
+
+  Comparison:
+  SEP-IRA maximum: $20,500
+  Solo 401(k) maximum: $43,500
+  Additional tax-deferred savings with Solo 401(k): $23,000
+  Approximate additional federal tax savings (assume 24% bracket): ~$5,520
+  Annual cost to administer Solo 401(k) vs. SEP-IRA: ~$300–$500 additional fees.
+
+  Net annual advantage of Solo 401(k): approximately $5,100–$5,200 after admin costs.
+
+  Recommendation: switch to Solo 401(k) for 2025. The $23,000 additional annual
+  contribution is the employee deferral component that SEP-IRA doesn't offer. At 38,
+  with a growing business, maximizing retirement contributions now is tax-efficient
+  and financially sound. There are no downsides at her income level.
+
+  Sent to Sarah as a two-page memo with the comparison table and a clear recommendation.
+  Also sent a list of custodians that handle Solo 401(k) plans with no annual fee for
+  accounts under $250,000 (Fidelity, Vanguard, Schwab — all offer this). She can open
+  the account herself; I'll help her document the plan adoption agreement.
+
+03:00 PM - 04:30 PM  [90 min] PRIYA SHARMA — LATE 1099 FILING + WEEK CLOSE-OUT
+
+  ⬛ QUICKBOOKS ONLINE SESSION 7 (CLIENT: Sharma Consulting)  [03:05 PM – 03:45 PM, 40 min]
+
+  Pulled up the 1099 filing workflow in QB. QB does have a built-in 1099 e-file feature,
+  which is genuinely useful — it populates the form from QB data, files electronically,
+  and sends a copy to the contractor. I've used it many times.
+
+  However.
+
+  When I navigated to the 1099 workflow for Priya's account, I received: "Upgrade to
+  QuickBooks Online Payroll to access 1099 e-filing."
+
+  Priya is on QuickBooks Online Plus. QB's 1099 e-filing feature was free in the Plus
+  plan until last year. They moved it behind a Payroll subscription gate. This is a
+  change I know about — it happened in Q3 2024 — but it still irritates me every time
+  I encounter it in a client's account.
+
+  The alternative: file through the IRS FIRE system directly, or use a third-party
+  1099 service. I use Track1099 for exactly this situation. It costs $2.99 per form.
+  I will absorb that cost. I will not pay Intuit $50+/month to unlock a 1099 filing
+  feature that used to be included.
+
+  Filed the late 1099-NEC for James Wheeler ($14,200) through Track1099. Confirmed
+  electronic acceptance. Sent a copy to Priya for her records. Sent a copy to Wheeler.
+  Done.
+
+  I will note, for the record: Intuit's decision to gate 1099 e-filing behind a Payroll
+  subscription is not a feature expansion. It is a feature removal repackaged as an
+  upsell. The clients who need 1099 filing are often clients who do NOT need payroll
+  (because they use contractors, not employees). Bundling them forces unneeded spend.
+  This is not a product decision that serves users. It is a revenue decision. I
+  understand the business logic. I also find it genuinely anti-client.
+
+  I am not switching my clients off QB over this. The switching costs are real and the
+  alternatives have their own issues. But I want to document my thinking clearly.
+
+04:30 PM - 05:10 PM  [40 min] WEEK REVIEW — DOCUMENTATION AND METRICS
+
+  Compiled my weekly log:
+
+  WEEK 1 SUMMARY — RODRIGUEZ & ASSOCIATES:
+
+  Total hours worked: 48h 15min
+  Total billable hours: 35.75h
+  Estimated revenue: $6,256.25
+  Monthly closes completed: 3 (Ramirez, Chen, Pioneer)
+  Quarterly reviews completed: 4 (Ortega, Henderson, Nakamura, Bloom)
+  Tax planning sessions: 2 (Nakamura, Westbrook)
+  Advisory memos sent: 2 (Westbrook Millbrook analysis, Solo 401(k) comparison)
+  1099 filings: 1 (late, Wheeler for Sharma)
+  S-Corp election initiated: 1 (Nakamura)
+  Estimated tax payment reminders sent: 4 clients
+  New QB bugs documented and reported: 2 (upgrade prompt, bank matching algorithm)
+  Existing QB bugs followed up: 1 (Pioneer bank feed alias — ticket QB-448821)
+  Auto-categorization errors found and corrected: 34
+
+  QB PERFORMANCE LOG — WEEK 1:
+  Loading failures documented: 7
+  Estimated time lost to loading failures: 18 minutes
+  Retroactive re-categorization events found: evidence across 5 clients
+  Incorrect upgrade prompts encountered: 1 (Chen's Bakery)
+  Feature removed behind paywall encountered: 1 (1099 e-filing, Sharma)
+  Bank matching algorithm bug: confirmed and reported (escalated to QB engineering)
+  QB Community responses: 2 posts, combined ~35 upvotes, 1 priority escalation
+
+  Clean end of week. No open reconciliation issues. All monthly closes sent. All
+  quarterly clients reported to. Financial finding of the week: the Bloom Legal
+  $14,700 unreported settlement — caught and corrected.
+
+END OF DAY — CARLOS'S REFLECTION
+───────────────────────────────────────────────────────────
+  I want to think clearly about QB at the end of this week, because my feelings about it
+  are complicated and I want to be honest with myself.
+
+  The bank matching algorithm bug I found today is the most technically significant issue
+  I've documented in 14 years of practice. Cross-client confidence score contamination in
+  a multi-client accountant product is not a cosmetic flaw. If practitioners rely on those
+  confidence signals to batch-approve transactions — and many do, because they have dozens
+  of clients and limited time — incorrect high-confidence signals lead to incorrect approvals
+  lead to incorrect books. The downstream impact on financial statements, tax returns, and
+  business decisions could be substantial. I'm glad I found it. I'm glad I documented it
+  precisely enough that QB escalated it. I'll be watching this thread.
+
+  The auto-categorization retroactive re-categorization issue (Wednesday) remains unresolved.
+  I've seen two comments on my QB Community thread that suggest the behavior may have been
+  tied to a specific model update pushed in mid-February. If that's confirmed, QB should
+  roll it back or push a correction. "Smart" automation that silently changes data that a
+  user has already confirmed is not smart. It's dangerous.
+
+  At the same time: this week, QB's bank reconciliation workflow saved me hours. The
+  general ledger drill-down on Westbrook saved me hours. The batch categorization tool
+  on Ramirez saved me significant time. Ken Nakamura has a clear picture of his business
+  because QB's class-based reporting let me show it to him clearly. These are real benefits.
+
+  The software is powerful. The software is also, in specific and documented ways, broken.
+  These two things are simultaneously true. I am going to keep using it because the
+  switching cost is real and because I believe the broken parts can be fixed. But I am
+  watching, and I am documenting, and I am reporting.
+
+  Patricia Bloom is still on my Xero watchlist. 60-day clock is ticking.
+
+  Next week: tax season acceleration. Four clients with returns due in March. Estimated
+  tax season volume will increase. I need to be precise and fast. I cannot afford a
+  platform that costs me confidence in the data.
+
+  But tonight: it's Friday. Dinner with my wife. The books can wait.
+
+  TO-DO FOR NEXT WEEK:
+  □ Nakamura: review operating agreement for S-Corp election — file Form 2553 by March 15
+  □ Henderson: confirm W-9 received from Pacific Drainage Solutions
+  □ Sharma: confirm late 1099 penalties (if any) — advise Priya
+  □ Track QB Community threads: bank matching bug (priority escalation) +
+    auto-categorization bug (18 upvotes now)
+  □ Prepare tax returns: Ortega Medical (Schedule C), Henderson Plumbing (Schedule C),
+    Chen's Bakery (Schedule C), Sharma Consulting (Schedule C + S-Corp evaluation)
+  □ Prospective new client call (kept getting bumped — must happen Monday)
+  □ Follow up with QB account rep about ticket QB-448821 (bank feed alias, Pioneer)
+  □ Add post-confirmation categorization audit step to all close checklists (all 30 clients)
+  □ Westbrook: Solo 401(k) plan document — send provider comparison and adoption agreement
+  □ Ramirez: update his bookmarked reports to accrual basis permanently (done, confirm)
+  □ Chen's: write the loan-payment-split one-pager for her file

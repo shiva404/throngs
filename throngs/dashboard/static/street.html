@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Throngs — Street Simulation</title>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+    }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent: #4a8fe2; --green: #27ae60; --red: #e74c3c;
+      --yellow: #f5a623; --panel: rgba(255,255,255,0.94);
+      --border: rgba(74,143,226,0.22); --text: #2c3e50; --muted: #7f8c8d;
+    }
+    html, body { height: 100%; overflow: hidden;
+      font-family: "Segoe UI", system-ui, sans-serif; background: #e8f0f7; }
+    body { display: flex; flex-direction: column; }
+
+    #hdr {
+      display: flex; align-items: center; gap: .7rem;
+      padding: .38rem 1rem; background: var(--panel);
+      border-bottom: 1px solid var(--border); z-index: 10;
+      flex-shrink: 0; backdrop-filter: blur(10px);
+    }
+    #hdr h1 { font-size: .88rem; font-weight: 700; color: var(--accent); letter-spacing: .04em; }
+    #hdr nav a {
+      font-size: .72rem; color: var(--muted); text-decoration: none;
+      padding: .18rem .5rem; border-radius: 5px; transition: background .15s;
+    }
+    #hdr nav a:hover, #hdr nav a.on { background: var(--accent); color: #fff; }
+    .sdot { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: blink 2s infinite; flex-shrink: 0; }
+    .sdot.live { background: var(--green); }
+    .sdot.demo { background: var(--yellow); }
+    .sdot.off  { background: var(--red); animation: none; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.35} }
+    #stxt { font-size: .72rem; color: var(--muted); }
+    #ecnt { font-size: .68rem; color: var(--muted); }
+    #simclock { font-size: .76rem; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+    #btn-startday {
+      padding: .22rem .6rem; border: none; border-radius: 6px;
+      font-size: .68rem; font-weight: 700; cursor: pointer;
+      background: var(--green); color: #fff; transition: background .15s;
+    }
+    #btn-startday:hover { background: #219a52; }
+    #btn-startday.paused { background: var(--yellow); }
+    #btn-refresh-config {
+      padding: .22rem .5rem; border: 1px solid var(--border); border-radius: 6px;
+      font-size: .68rem; font-weight: 600; cursor: pointer;
+      background: transparent; color: var(--text); transition: background .15s, border-color .15s;
+    }
+    #btn-refresh-config:hover { background: rgba(74,143,226,.12); border-color: var(--accent); }
+    #btn-refresh-config:disabled { opacity: .6; cursor: not-allowed; }
+    .hdr-right { margin-left: auto; display: flex; align-items: center; gap: .5rem; }
+
+    #main { flex: 1; display: flex; overflow: hidden; position: relative; }
+    #cvw  { flex: 1; position: relative; overflow: hidden; }
+    canvas { display: block; width: 100% !important; height: 100% !important; }
+
+    #sb {
+      width: 282px; background: rgba(232,240,247,.97);
+      border-left: 1px solid var(--border); overflow-y: auto;
+      display: flex; flex-direction: column; flex-shrink: 0;
+    }
+    .sbh { padding: .5rem .75rem .18rem; font-size: .6rem; text-transform: uppercase;
+      letter-spacing: .09em; color: var(--muted); border-bottom: 1px solid var(--border); }
+    .sbh.clickable { cursor: pointer; user-select: none; }
+    .sbh.clickable:hover { color: var(--accent); }
+    .sbi { padding: .45rem .55rem; display: flex; flex-direction: column; gap: .35rem; }
+
+    .pc {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 9px;
+      padding: .48rem .6rem; cursor: pointer; transition: border-color .15s, transform .1s;
+    }
+    .pc:hover { border-color: var(--accent); transform: translateX(2px); }
+    .pc.on { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(74,143,226,.18); }
+    .pch  { display: flex; align-items: center; gap: .4rem; margin-bottom: .2rem; }
+    .pcdot{ width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .pcn  { font-size: .76rem; font-weight: 700; }
+    .pcdesc { font-size: .62rem; color: var(--muted); line-height: 1.35; margin-bottom: .22rem;
+              display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .pcth { font-size: .67rem; color: #466; font-style: italic;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: .22rem; }
+    .fbr { height: 5px; background: rgba(0,0,0,.08); border-radius: 3px; overflow: hidden; }
+    .fbf { height: 100%; border-radius: 3px; transition: width .4s, background .4s; background: var(--green); }
+    .pcmeta { display: flex; gap: .45rem; margin-top: .25rem; font-size: .6rem; color: var(--muted); flex-wrap: wrap; align-items: center; }
+    .tag { padding: .08rem .3rem; border-radius: 4px; font-size: .58rem; font-weight: 600; }
+    .t-own { background: rgba(74,143,226,.12); color: var(--accent); }
+    .t-acc { background: rgba(39,174,96,.12);  color: var(--green); }
+    .t-sta { background: rgba(245,166,35,.12); color: #c47d00; }
+    .t-stf { background: rgba(155,89,182,.12); color: #9b59b6; }
+    .t-qb  { background: rgba(39,174,96,.28);  color: #1a7a3f; }
+
+    .shc {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 9px; padding: .48rem .6rem;
+    }
+    .shch { display: flex; align-items: center; gap: .38rem; margin-bottom: .28rem; }
+    .shci { width: 24px; height: 24px; border-radius: 5px; display: flex;
+            align-items: center; justify-content: center; font-size: .8rem; flex-shrink: 0; }
+    .shcn { font-size: .72rem; font-weight: 700; }
+    .mets { display: flex; gap: .3rem; flex-wrap: wrap; }
+    .m { min-width: 48px; }
+    .mv { font-size: .82rem; font-weight: 700; }
+    .ml { font-size: .55rem; text-transform: uppercase; color: var(--muted); }
+
+    #tk {
+      height: 26px; background: #131c2a; color: #9eb8d4;
+      font-size: .69rem; display: flex; align-items: center; flex-shrink: 0; overflow: hidden;
+    }
+    #tkl { padding: 0 .6rem; font-weight: 700; font-size: .6rem; letter-spacing: .08em;
+      color: var(--accent); text-transform: uppercase; background: #0d1520;
+      height: 100%; display: flex; align-items: center; white-space: nowrap; flex-shrink: 0; }
+    #tks { flex: 1; overflow: hidden; white-space: nowrap; }
+    #tki { display: inline-flex; gap: 2rem; animation: scroll 50s linear infinite; }
+    @keyframes scroll { 0%{transform:translateX(110%)} 100%{transform:translateX(-100%)} }
+    .ti { display: inline-flex; align-items: center; gap: .3rem; }
+    .ts { color: #2ecc71; } .te { color: #e74c3c; } .tv { color: #f5a623; }
+
+    #pop {
+      position: absolute; background: var(--panel); border: 1px solid var(--border);
+      border-radius: 12px; padding: .8rem .95rem; min-width: 210px; max-width: 285px;
+      box-shadow: 0 8px 26px rgba(0,0,0,.12); pointer-events: none;
+      z-index: 30; transition: opacity .18s; font-size: .76rem; line-height: 1.55;
+    }
+    #pop.h { opacity: 0; }
+    #pop h3 { font-size: .86rem; color: var(--accent); margin-bottom: .3rem; }
+
+    #hint { position: absolute; bottom: .55rem; left: .55rem;
+      font-size: .6rem; color: rgba(44,62,80,.32); pointer-events: none; }
+
+    #sb::-webkit-scrollbar { width: 3px; }
+    #sb::-webkit-scrollbar-thumb { background: rgba(74,143,226,.18); border-radius: 2px; }
+
+    .launch-panel {
+      background: linear-gradient(135deg, rgba(74,143,226,.06), rgba(39,174,96,.06));
+      border-bottom: 1px solid var(--border);
+      padding: .55rem .6rem .6rem;
+    }
+    .launch-panel .sbh { border-bottom: none; padding: 0 0 .3rem 0; }
+    .lp-row { display: flex; flex-direction: column; gap: .12rem; margin-bottom: .35rem; }
+    .lp-row label { font-size: .58rem; text-transform: uppercase; letter-spacing: .06em;
+      color: var(--muted); font-weight: 600; }
+    .lp-row select, .lp-row input[type="text"], .lp-row input[type="number"], .lp-row textarea {
+      font-size: .72rem; padding: .3rem .4rem; border: 1px solid var(--border);
+      border-radius: 6px; background: #fff; color: var(--text);
+      font-family: inherit; outline: none; transition: border-color .15s;
+    }
+    .lp-row select:focus, .lp-row input:focus, .lp-row textarea:focus { border-color: var(--accent); }
+    .lp-row textarea { resize: vertical; min-height: 2rem; max-height: 4rem; }
+    .lp-row-hz { display: flex; gap: .35rem; }
+    .lp-row-hz .lp-row { flex: 1; margin-bottom: 0; }
+    .lp-check { display: flex; align-items: center; gap: .35rem; margin-bottom: .35rem; }
+    .lp-check input[type="checkbox"] { width: 14px; height: 14px; accent-color: var(--accent); }
+    .lp-check label { font-size: .64rem; color: var(--muted); font-weight: 600; }
+    #btn-launch {
+      width: 100%; padding: .42rem; border: none; border-radius: 7px;
+      font-size: .74rem; font-weight: 700; cursor: pointer;
+      background: var(--accent); color: #fff; letter-spacing: .03em;
+      transition: background .15s, transform .1s;
+    }
+    #btn-launch:hover { background: #3a7cd0; transform: translateY(-1px); }
+    #btn-launch:disabled { opacity: .55; cursor: not-allowed; }
+    #btn-swarm {
+      width: 100%; padding: .42rem; border: none; border-radius: 7px;
+      font-size: .74rem; font-weight: 700; cursor: pointer;
+      background: var(--green); color: #fff; letter-spacing: .03em;
+      transition: background .15s, transform .1s; margin-top: .3rem;
+    }
+    #btn-swarm:hover { background: #219a52; transform: translateY(-1px); }
+    #btn-swarm:disabled { opacity: .55; cursor: not-allowed; }
+    .lp-btns { display: flex; gap: .35rem; }
+    .lp-btns button { flex: 1; }
+    .runs-list { display: flex; flex-direction: column; gap: .3rem; margin-top: .35rem; }
+    .run-status { padding: .35rem .45rem; background: var(--panel); border: 1px solid var(--border);
+      border-radius: 7px; font-size: .65rem; display: flex; align-items: center; gap: .4rem; }
+    .run-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green);
+      animation: blink 1.4s infinite; flex-shrink: 0; }
+    .run-dot.done { background: var(--muted); animation: none; }
+    .run-info { flex: 1; }
+    .run-elapsed { color: var(--muted); }
+
+    /* Activity log */
+    /* Activity Log — dedicated section (visible below main, above ticker) */
+    #activity-section {
+      flex-shrink: 0;
+      background: var(--panel);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    #activity-section .activity-header {
+      padding: .4rem .75rem;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent);
+      background: rgba(74,143,226,.08);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+    }
+    #activity-section .activity-header:hover { background: rgba(74,143,226,.12); }
+    #activity-log {
+      height: 200px;
+      max-height: 200px;
+      overflow-y: auto;
+      padding: .5rem .75rem;
+      transition: max-height .25s ease, padding .25s ease;
+    }
+    #activity-log.collapsed { max-height: 0 !important; padding: .35rem .75rem !important; overflow: hidden !important; min-height: 0 !important; }
+    .log-entry { font-size: .62rem; line-height: 1.5; padding: .2rem 0; border-bottom: 1px solid rgba(0,0,0,.05); }
+    .log-time { color: var(--muted); font-variant-numeric: tabular-nums; margin-right: .35rem; }
+    .log-who { font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<div id="hdr">
+  <h1>Throngs</h1>
+  <nav>
+    <a href="/">Dashboard</a>
+    <a href="/street" class="on">Street Sim</a>
+  </nav>
+  <span id="simclock">Day 1 — 8:00 AM</span>
+  <button id="btn-startday">▶ Start Day</button>
+  <button id="btn-refresh-config" title="Refetch street config and rebuild places (credentials, street_config)">↻ Refresh config</button>
+  <div class="hdr-right">
+    <div class="sdot" id="sdot"></div>
+    <span id="stxt">Connecting…</span>
+    <span id="ecnt">0 events</span>
+  </div>
+</div>
+
+<div id="main">
+  <div id="cvw">
+    <canvas id="cv"></canvas>
+    <div id="hint">Drag to orbit · Scroll to zoom · Click shops & toggles</div>
+    <div id="pop" class="h">
+      <h3 id="popt">—</h3>
+      <div id="popb">—</div>
+    </div>
+  </div>
+  <div id="sb">
+    <div class="launch-panel">
+      <div class="sbh">Launch Simulation</div>
+      <div class="lp-row">
+        <label>Persona <span style="font-weight:400;text-transform:none">(for single run)</span></label>
+        <select id="lp-persona"><option value="">Loading…</option></select>
+      </div>
+      <div class="lp-row">
+        <label>Target URL</label>
+        <input type="text" id="lp-url" value="https://qbo.intuit.com" />
+      </div>
+      <div class="lp-row-hz">
+        <div class="lp-row">
+          <label>Company</label>
+          <select id="lp-company"><option value="">Default</option></select>
+        </div>
+        <div class="lp-row">
+          <label>Max Steps</label>
+          <input type="number" id="lp-steps" value="50" min="5" max="200" style="width:100%" />
+        </div>
+      </div>
+      <div class="lp-row-hz">
+        <div class="lp-row">
+          <label>Max Concurrent</label>
+          <input type="number" id="lp-concurrent" value="2" min="1" max="10" style="width:100%" />
+        </div>
+        <div class="lp-row" style="justify-content:flex-end">
+          <div class="lp-check" style="margin-bottom:0;margin-top:.35rem">
+            <input type="checkbox" id="lp-verbose" />
+            <label for="lp-verbose">Verbose</label>
+          </div>
+        </div>
+      </div>
+      <div class="lp-row">
+        <label>Goal <span style="font-weight:400;text-transform:none">(leave blank for auto)</span></label>
+        <textarea id="lp-goal" placeholder="Auto-synthesized from persona's inner voice"></textarea>
+      </div>
+      <div class="lp-row">
+        <label>Relations file <span style="font-weight:400;text-transform:none">(optional)</span></label>
+        <input type="text" id="lp-relations" placeholder="Path to throng graph JSON/YAML" />
+      </div>
+      <div class="lp-btns">
+        <button id="btn-launch">Start Single</button>
+        <button id="btn-swarm">Launch All</button>
+      </div>
+      <div class="runs-list" id="runs-list"></div>
+    </div>
+    <div class="sbh">Businesses</div>
+    <div class="sbi" id="pclist-biz"></div>
+    <div class="sbh" style="margin-top:.2rem">Offices</div>
+    <div class="sbi" id="pclist-office"></div>
+    <div class="sbh" style="margin-top:.2rem">Financials</div>
+    <div class="sbi" id="shlist"></div>
+  </div>
+</div>
+
+<section id="activity-section" aria-label="Activity Log">
+  <div class="activity-header" id="log-toggle" title="Click to expand or collapse">📋 Activity Log ▾</div>
+  <div id="activity-log"></div>
+</section>
+
+<div id="tk">
+  <div id="tkl">Live Feed</div>
+  <div id="tks"><div id="tki"><span class="ti">Waiting for Start Day…</span></div></div>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// ─── Data config (set from GET /street-config; fallback if fetch fails) ───────
+
+let PERSONA_CFG = {};
+let SHOPS = [];
+let ROOMS = [];
+let ALL_PLACES = [];
+let PCOLORS = [0x4a8fe2,0xe2b04a,0xe24a4a,0xe24aad,0x4ab08a,0x9b59b6];
+let PHEX    = ['#4a8fe2','#e2b04a','#e24a4a','#e24aad','#4ab08a','#9b59b6'];
+
+function applyStreetConfigFallback() {
+  // Only used when /street-config fetch fails; real config comes from persona folder via server.
+  PERSONA_CFG = {};
+  SHOPS = [
+    { id:'shop',   name:'Shop',   emoji:'🏪', color:0xf39c12, hex:'#f39c12', floor:0xfff8ee, pos:[-6,0,-6] },
+    { id:'office', name:'Office', emoji:'🏢', color:0x3f88e2, hex:'#3f88e2', floor:0xe8eeff, pos:[ 6,0,-6] },
+  ];
+  ROOMS = [];
+  ALL_PLACES = [...SHOPS, ...ROOMS];
+  PCOLORS = [0x4a8fe2,0xe2b04a,0xe24a4a,0xe24aad,0x4ab08a,0x9b59b6];
+  PHEX    = ['#4a8fe2','#e2b04a','#e24a4a','#e24aad','#4ab08a','#9b59b6'];
+}
+
+// ─── Global state ─────────────────────────────────────────────────────────────
+
+const personas   = new Map();
+const shopMeshes = new Map();
+const roomMeshes = new Map();
+const placeFin   = new Map();
+const placeActive = new Map();
+const placeBankBalance = new Map(); // place_id -> balance (from SQLite)
+const particles  = [];
+const customerNPCs = [];
+const relationArcs = [];
+
+let colorCursor  = 0;
+let eventCount   = 0;
+let receivedAgentEvent = false;
+let loadedPersonas = [];
+let credentialsMap = {};
+let relationsData = null;
+
+// Phone / email interrupt indicators per place (timestamp when interrupt happened)
+const placeIndicators = {};  // placeId -> { phone?: number, email?: number }
+const placeIndicatorMeshes = new Map();  // placeId -> { phone, email } (THREE meshes)
+
+// Timer state
+let simRunning = false;
+let simDayNum = 1;
+let simMinuteOfDay = 480; // 8:00 AM
+const SIM_START_MINUTE = 480;
+const SIM_END_MINUTE = 1080;
+// sim minutes per real second; set from sim_time_scale_factor (real sec per sim min) when config loads
+let SIM_SPEED = 2;
+let lastAnimTime = 0;
+let nextCustomerSpawn = 60 * 2;   // first customer after ~2 min, then regular interval
+
+function initPlaceMaps() {
+  ALL_PLACES.forEach(s => {
+    placeFin.set(s.id, { sales:0, expenses:0, inventory:0, txCount:0 });
+    placeActive.set(s.id, false);
+  });
+}
+
+/** Remove all shop/room groups from the scene and clear place mesh maps (for full place rebuild). */
+function removePlaceMeshes() {
+  for (const [, data] of shopMeshes) {
+    if (data.group && data.group.parent) data.group.parent.remove(data.group);
+  }
+  for (const [, data] of roomMeshes) {
+    if (data.group && data.group.parent) data.group.parent.remove(data.group);
+  }
+  shopMeshes.clear();
+  roomMeshes.clear();
+}
+
+function getPlaceMeshes(id) { return shopMeshes.get(id) || roomMeshes.get(id); }
+
+const INDICATOR_DURATION_MS = 12000;
+
+function ensurePlaceIndicatorMeshes(placeId) {
+  if (placeIndicatorMeshes.has(placeId)) return placeIndicatorMeshes.get(placeId);
+  const sm = getPlaceMeshes(placeId);
+  if (!sm || !sm.group) return null;
+  const phoneTex = signTex('📞', '#1a8a4a', '#fff', 80, 80, 36);
+  const emailTex = signTex('📧', '#3498db', '#fff', 80, 80, 36);
+  const phoneMat = new THREE.MeshBasicMaterial({ map: phoneTex, transparent: true, depthTest: false });
+  const emailMat = new THREE.MeshBasicMaterial({ map: emailTex, transparent: true, depthTest: false });
+  const phone = new THREE.Mesh(new THREE.PlaneGeometry(1.2, 1.2), phoneMat);
+  const email = new THREE.Mesh(new THREE.PlaneGeometry(1.2, 1.2), emailMat);
+  phone.position.set(-0.7, 5.8, 0);
+  email.position.set(0.7, 5.8, 0);
+  phone.visible = false;
+  email.visible = false;
+  sm.group.add(phone);
+  sm.group.add(email);
+  const entry = { phone, email };
+  placeIndicatorMeshes.set(placeId, entry);
+  return entry;
+}
+
+function tickPlaceIndicators(t) {
+  const now = Date.now();
+  for (const placeId of Object.keys(placeIndicators)) {
+    const ind = placeIndicators[placeId];
+    const meshes = placeIndicatorMeshes.get(placeId);
+    if (!meshes) continue;
+    if (ind.phone != null) {
+      const age = now - ind.phone;
+      meshes.phone.visible = age < INDICATOR_DURATION_MS;
+      if (meshes.phone.visible) {
+        const ring = 1 + 0.12 * Math.sin(t * 18);
+        meshes.phone.scale.setScalar(ring);
+        meshes.phone.rotation.z = Math.sin(t * 12) * 0.08;
+      }
+    }
+    if (ind.email != null) {
+      const age = now - ind.email;
+      meshes.email.visible = age < INDICATOR_DURATION_MS;
+      if (meshes.email.visible) {
+        const pulse = 1 + 0.06 * Math.sin(t * 8);
+        meshes.email.scale.setScalar(pulse);
+      }
+    }
+  }
+}
+function findPlace(id) { return ALL_PLACES.find(p => p.id === id); }
+
+function formatSimTime() {
+  let h = Math.floor(simMinuteOfDay / 60);
+  const m = Math.floor(simMinuteOfDay % 60);
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  if (h > 12) h -= 12;
+  if (h === 0) h = 12;
+  return `Day ${simDayNum} — ${h}:${String(m).padStart(2,'0')} ${ampm}`;
+}
+
+function getPlaceCompany(placeId) {
+  for (const [company, personaNames] of Object.entries(credentialsMap)) {
+    for (const pName of personaNames) {
+      if (PERSONA_CFG[pName]?.place === placeId) return company;
+    }
+  }
+  return '';
+}
+
+// ─── Renderer / scene ─────────────────────────────────────────────────────────
+
+const cv   = document.getElementById('cv');
+const wrap = document.getElementById('cvw');
+
+const renderer = new THREE.WebGLRenderer({ canvas: cv, antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.12;
+
+const scene  = new THREE.Scene();
+scene.background = new THREE.Color(0xd8eaf5);
+scene.fog = new THREE.FogExp2(0xd8eaf5, 0.016);
+
+const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 300);
+camera.position.set(0, 36, 20);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 2, 0);
+controls.enableDamping = true;
+controls.dampingFactor = 0.07;
+controls.maxPolarAngle = Math.PI / 2.08;
+controls.minDistance = 6;
+controls.maxDistance = 80;
+controls.update();
+
+scene.add(new THREE.AmbientLight(0xffffff, 0.68));
+const sun = new THREE.DirectionalLight(0xfff8e8, 1.35);
+sun.position.set(12, 40, 16);
+sun.castShadow = true;
+sun.shadow.mapSize.width = 2048; sun.shadow.mapSize.height = 2048;
+sun.shadow.camera.left = -32; sun.shadow.camera.right = 32;
+sun.shadow.camera.top = 32; sun.shadow.camera.bottom = -32;
+sun.shadow.camera.far = 120; sun.shadow.bias = -0.0008;
+scene.add(sun);
+const fill = new THREE.DirectionalLight(0xbdddff, 0.36);
+fill.position.set(-15, 12, -15);
+scene.add(fill);
+
+// ─── Canvas texture helpers ───────────────────────────────────────────────────
+
+function rr(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x+r, y); ctx.lineTo(x+w-r, y);
+  ctx.arcTo(x+w,y, x+w,y+r, r); ctx.lineTo(x+w,y+h-r);
+  ctx.arcTo(x+w,y+h, x+w-r,y+h, r); ctx.lineTo(x+r,y+h);
+  ctx.arcTo(x,y+h, x,y+h-r, r); ctx.lineTo(x,y+r);
+  ctx.arcTo(x,y, x+r,y, r); ctx.closePath();
+}
+
+function makeTex(fn, w, h) {
+  const c = document.createElement('canvas');
+  c.width = w; c.height = h;
+  fn(c.getContext('2d'), w, h);
+  return new THREE.CanvasTexture(c);
+}
+
+function signTex(text, bg, fg='#fff', w=512, h=80, fs=22) {
+  return makeTex((ctx, W, H) => {
+    // Background with darkened overlay for contrast
+    ctx.fillStyle = bg; rr(ctx,2,2,W-4,H-4,14); ctx.fill();
+    ctx.fillStyle = 'rgba(0,0,0,0.3)'; rr(ctx,2,2,W-4,H-4,14); ctx.fill();
+    // Text with shadow for legibility
+    ctx.shadowColor = 'rgba(0,0,0,0.6)'; ctx.shadowBlur = 6;
+    ctx.shadowOffsetX = 1; ctx.shadowOffsetY = 1;
+    ctx.fillStyle = fg; ctx.font = `bold ${fs}px Arial`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(text, W/2, H/2);
+  }, w, h);
+}
+
+function speechTex(text='') {
+  return makeTex((ctx, W, H) => {
+    ctx.shadowColor = 'rgba(0,0,0,0.15)'; ctx.shadowBlur = 7;
+    ctx.fillStyle = '#fff'; rr(ctx,4,4,W-8,H-22,12); ctx.fill();
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = '#fff';
+    ctx.beginPath(); ctx.moveTo(W/2-9,H-22); ctx.lineTo(W/2,H-4); ctx.lineTo(W/2+9,H-22); ctx.closePath(); ctx.fill();
+    ctx.strokeStyle = 'rgba(74,143,226,0.3)'; ctx.lineWidth=1.5;
+    rr(ctx,4,4,W-8,H-22,12); ctx.stroke();
+    ctx.fillStyle = '#2c3e50'; ctx.font = '13px Arial'; ctx.textAlign = 'center';
+    const words = text.split(' ');
+    let line='', y=22, lines=[];
+    for (const w of words) {
+      const t = line ? line+' '+w : w;
+      if (ctx.measureText(t).width > W-22 && line) { lines.push(line); line=w; }
+      else line = t;
+    }
+    if (line) lines.push(line);
+    lines.slice(0,3).forEach((l,i) => ctx.fillText(l, W/2, y+i*17));
+  }, 300, 88);
+}
+
+// ─── Street environment ───────────────────────────────────────────────────────
+
+function buildStreet() {
+  const gnd = new THREE.Mesh(
+    new THREE.PlaneGeometry(60, 44),
+    new THREE.MeshLambertMaterial({ color: 0xcddfe8 })
+  );
+  gnd.rotation.x = -Math.PI / 2; gnd.receiveShadow = true; scene.add(gnd);
+
+  const grid = new THREE.GridHelper(60, 60, 0xb2cdde, 0xb2cdde);
+  grid.position.y = 0.01; scene.add(grid);
+
+  const bverts = new Float32Array([
+    -28,0.04,-22, 28,0.04,-22, 28,0.04,-22, 28,0.04,22,
+     28,0.04,22, -28,0.04,22, -28,0.04,22, -28,0.04,-22,
+  ]);
+  const bGeo = new THREE.BufferGeometry();
+  bGeo.setAttribute('position', new THREE.BufferAttribute(bverts, 3));
+  scene.add(new THREE.LineSegments(bGeo, new THREE.LineBasicMaterial({ color: 0x4a8fe2 })));
+
+  const road = new THREE.Mesh(
+    new THREE.PlaneGeometry(34, 4.4),
+    new THREE.MeshLambertMaterial({ color: 0x8898a8 })
+  );
+  road.rotation.x = -Math.PI / 2; road.position.set(0, .018, 0); road.receiveShadow = true; scene.add(road);
+
+  const dashMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+  for (let x = -15; x <= 15; x += 2.6) {
+    const d = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 0.16), dashMat);
+    d.rotation.x = -Math.PI / 2; d.position.set(x, .03, 0); scene.add(d);
+  }
+
+  const swMat = new THREE.MeshLambertMaterial({ color: 0xbacfdd });
+  [-2.5, 2.5].forEach(z => {
+    const sw = new THREE.Mesh(new THREE.PlaneGeometry(34, 2.1), swMat);
+    sw.rotation.x = -Math.PI / 2; sw.position.set(0, .019, z); sw.receiveShadow = true; scene.add(sw);
+  });
+
+  [-10, 0, 10].forEach(x => { buildLamp(x, -1.65); buildLamp(x, 1.65); });
+  [[-13,-4.5],[13,-4.5],[-13,4.5],[13,4.5],[-6.5,-4.5],[6.5,-4.5],[-6.5,4.5],[6.5,4.5]].forEach(([x,z]) => buildTree(x, z));
+}
+
+function buildLamp(x, z) {
+  const g = new THREE.Group();
+  const mat = new THREE.MeshLambertMaterial({ color: 0x9bbccc });
+  const pole = new THREE.Mesh(new THREE.CylinderGeometry(.055,.07,4,8), mat);
+  pole.position.y = 2; pole.castShadow = true; g.add(pole);
+  const arm = new THREE.Mesh(new THREE.CylinderGeometry(.04,.04,.85,6), mat);
+  arm.rotation.z = Math.PI/2; arm.position.set(z < 0 ? .43 : -.43, 4, 0); g.add(arm);
+  const bulb = new THREE.Mesh(new THREE.SphereGeometry(.16,8,8), new THREE.MeshBasicMaterial({ color:0xfffde7 }));
+  bulb.position.set(z < 0 ? .86 : -.86, 4.05, 0); g.add(bulb);
+  const pl = new THREE.PointLight(0xfff5cc, .5, 7);
+  pl.position.copy(bulb.position); g.add(pl);
+  g.position.set(x, 0, z); scene.add(g);
+}
+
+function buildTree(x, z) {
+  const g = new THREE.Group();
+  const trunk = new THREE.Mesh(new THREE.CylinderGeometry(.11,.15,1.2,7),
+    new THREE.MeshLambertMaterial({ color:0x8B6914 }));
+  trunk.position.y = .6; trunk.castShadow = true; g.add(trunk);
+  const crown = new THREE.Mesh(new THREE.SphereGeometry(.82,9,9),
+    new THREE.MeshLambertMaterial({ color:0x66bb6a }));
+  crown.scale.y = 1.25; crown.position.y = 2; crown.castShadow = true; g.add(crown);
+  g.position.set(x, 0, z); scene.add(g);
+}
+
+// ─── Shop builder ─────────────────────────────────────────────────────────────
+
+function buildShop(cfg) {
+  const { id, name, emoji, color, hex, floor: floorColor, pos } = cfg;
+  const south = pos[2] > 0;
+  const fwd   = south ? -1 : 1;
+  const W=6, H=4.2, D=5;
+  const g = new THREE.Group();
+  const wallMat   = new THREE.MeshLambertMaterial({ color:0xfafcff });
+  const accentMat = new THREE.MeshLambertMaterial({ color });
+
+  const flr = new THREE.Mesh(new THREE.PlaneGeometry(W-.14, D-.14),
+    new THREE.MeshLambertMaterial({ color:floorColor }));
+  flr.rotation.x = -Math.PI/2; flr.position.y = .021; flr.receiveShadow = true;
+  flr.userData = { type:'place', id }; g.add(flr);
+
+  [[W,H,.18,0,H/2,-(D/2-.09)*fwd],[.18,H,D,-W/2+.09,H/2,0],[.18,H,D,W/2-.09,H/2,0],
+   [1.1,H,.18,-(W/2-.55),H/2,(D/2-.09)*fwd],[1.1,H,.18,(W/2-.55),H/2,(D/2-.09)*fwd],
+   [W-2.5,.3,.18,0,.55,(D/2-.09)*fwd]].forEach(([w,h,d,px,py,pz]) => {
+    const wl = new THREE.Mesh(new THREE.BoxGeometry(w,h,d), wallMat);
+    wl.position.set(px,py,pz); wl.castShadow=true; wl.receiveShadow=true; g.add(wl);
+  });
+
+  const bar = new THREE.Mesh(new THREE.BoxGeometry(W+.28,.32,D+.28), accentMat);
+  bar.position.y = H+.16; g.add(bar);
+
+  // Sign (larger, higher contrast)
+  const sgnMesh = new THREE.Mesh(new THREE.PlaneGeometry(5.0,1.0),
+    new THREE.MeshBasicMaterial({ map: signTex(`${emoji}  ${name}`, hex), transparent:true }));
+  sgnMesh.position.set(0, H-.2, (D/2+.02)*fwd);
+  if (south) sgnMesh.rotation.y = Math.PI;
+  g.add(sgnMesh);
+
+  const glass = new THREE.Mesh(new THREE.PlaneGeometry(2.7,2.5),
+    new THREE.MeshPhysicalMaterial({ color:0xc8e8ff, transparent:true, opacity:.42, roughness:.05 }));
+  glass.position.set(0, 2.0, (D/2+.01)*fwd);
+  if (south) glass.rotation.y = Math.PI;
+  g.add(glass);
+
+  // Interior
+  const deskMat = new THREE.MeshLambertMaterial({ color:0xbcaaa4 });
+  const deskZ = (D/2 - 1.4) * fwd;
+  const desk = new THREE.Mesh(new THREE.BoxGeometry(2.4,.12,1), deskMat);
+  desk.position.set(-.4, 1.06, deskZ); desk.castShadow=true; g.add(desk);
+  const stand = new THREE.Mesh(new THREE.BoxGeometry(.16,.55,.16), new THREE.MeshLambertMaterial({ color:0x546e7a }));
+  stand.position.set(-.4, 1.38, deskZ - .06*fwd); g.add(stand);
+  const screenMat = new THREE.MeshBasicMaterial({ color:0x2ecc71 });
+  const screen = new THREE.Mesh(new THREE.BoxGeometry(1.25,.85,.06), screenMat);
+  screen.position.set(-.4, 2.0, deskZ - .15*fwd); screen.userData = { type:'place', id }; g.add(screen);
+  const qbTex = signTex('QuickBooks','#1a8a4a','#fff',170,56,14);
+  const qbMesh = new THREE.Mesh(new THREE.PlaneGeometry(1.05,.65),
+    new THREE.MeshBasicMaterial({ map:qbTex, transparent:true }));
+  qbMesh.position.set(-.4, 2.0, deskZ - .19*fwd);
+  if (south) qbMesh.rotation.y = Math.PI; g.add(qbMesh);
+  const kb = new THREE.Mesh(new THREE.BoxGeometry(1.1,.05,.45), new THREE.MeshLambertMaterial({ color:0x90a4ae }));
+  kb.position.set(-.4, 1.12, deskZ + .28*fwd); g.add(kb);
+  const glow = new THREE.PointLight(0x2ecc71, 0, 5);
+  glow.position.set(-.4, 2.0, deskZ - .22*fwd); g.add(glow);
+
+  // Shelves
+  const shelfMat = new THREE.MeshLambertMaterial({ color:0xd7ccc8 });
+  for (let i = 0; i < 3; i++) {
+    const shelf = new THREE.Mesh(new THREE.BoxGeometry(1.8,.07,.38), shelfMat);
+    shelf.position.set(1.75, 1.1+i*.95, -(D/2-.38)*fwd); g.add(shelf);
+    for (let j = 0; j < 3; j++) {
+      const item = new THREE.Mesh(new THREE.BoxGeometry(.28,.28+Math.random()*.18,.28),
+        new THREE.MeshLambertMaterial({ color }));
+      item.position.set(1.32+j*.25, 1.31+i*.95, -(D/2-.38)*fwd); g.add(item);
+    }
+  }
+
+  // Toggle button (start signal)
+  const toggleMat = new THREE.MeshBasicMaterial({ color:0xe74c3c }); // red = closed
+  const toggleBtn = new THREE.Mesh(new THREE.SphereGeometry(0.28, 12, 12), toggleMat);
+  toggleBtn.position.set(0, H + 2.4, 0);
+  toggleBtn.userData = { type:'toggle', id };
+  g.add(toggleBtn);
+
+  // Badge
+  const badgeTex = signTex(`${emoji} QB`, hex, '#fff', 110, 38, 14);
+  const badge = new THREE.Mesh(new THREE.PlaneGeometry(1.5,.52),
+    new THREE.MeshBasicMaterial({ map:badgeTex, transparent:true, depthTest:false }));
+  badge.position.set(0, H+1.55, 0); g.add(badge);
+
+  g.position.set(pos[0], 0, pos[2]);
+  scene.add(g);
+  shopMeshes.set(id, { group:g, screen, screenMat, glow, deskZ, fwd, south, sgnMesh, toggleBtn, toggleMat });
+}
+
+// ─── Room builder ─────────────────────────────────────────────────────────────
+
+function buildRoom(cfg) {
+  const { id, name, emoji, color, hex, floor: floorColor, pos } = cfg;
+  const south = pos[2] > 0;
+  const fwd   = south ? -1 : 1;
+  const W=6, H=4.2, D=5;
+  const g = new THREE.Group();
+  const wallMat   = new THREE.MeshLambertMaterial({ color:0xf0ece8 });
+  const accentMat = new THREE.MeshLambertMaterial({ color });
+
+  const flr = new THREE.Mesh(new THREE.PlaneGeometry(W-.14, D-.14),
+    new THREE.MeshLambertMaterial({ color:floorColor }));
+  flr.rotation.x = -Math.PI/2; flr.position.y = .021; flr.receiveShadow = true;
+  flr.userData = { type:'place', id }; g.add(flr);
+
+  [[W,H,.18,0,H/2,-(D/2-.09)*fwd],[.18,H,D,-W/2+.09,H/2,0],[.18,H,D,W/2-.09,H/2,0],
+   [2.0,H,.18,-(W/2-.95),H/2,(D/2-.09)*fwd],[2.0,H,.18,(W/2-.95),H/2,(D/2-.09)*fwd]
+  ].forEach(([w,h,d,px,py,pz]) => {
+    const wl = new THREE.Mesh(new THREE.BoxGeometry(w,h,d), wallMat);
+    wl.position.set(px,py,pz); wl.castShadow=true; wl.receiveShadow=true; g.add(wl);
+  });
+
+  const doorFrame = new THREE.Mesh(new THREE.BoxGeometry(1.8, H, .08),
+    new THREE.MeshLambertMaterial({ color, transparent:true, opacity:0.3 }));
+  doorFrame.position.set(0, H/2, (D/2-.05)*fwd); g.add(doorFrame);
+
+  const bar = new THREE.Mesh(new THREE.BoxGeometry(W+.28,.32,D+.28), accentMat);
+  bar.position.y = H+.16; g.add(bar);
+
+  const sgnMesh = new THREE.Mesh(new THREE.PlaneGeometry(5.0,1.0),
+    new THREE.MeshBasicMaterial({ map: signTex(`${emoji}  ${name}`, hex), transparent:true }));
+  sgnMesh.position.set(0, H-.2, (D/2+.02)*fwd);
+  if (south) sgnMesh.rotation.y = Math.PI;
+  g.add(sgnMesh);
+
+  // Interior
+  const deskMat = new THREE.MeshLambertMaterial({ color:0xbcaaa4 });
+  const deskZ = (D/2 - 1.4) * fwd;
+  const desk = new THREE.Mesh(new THREE.BoxGeometry(2.4,.12,1), deskMat);
+  desk.position.set(-.4, 1.06, deskZ); desk.castShadow=true; g.add(desk);
+  const stand = new THREE.Mesh(new THREE.BoxGeometry(.16,.55,.16), new THREE.MeshLambertMaterial({ color:0x546e7a }));
+  stand.position.set(-.4, 1.38, deskZ - .06*fwd); g.add(stand);
+  const screenMat = new THREE.MeshBasicMaterial({ color:0x2ecc71 });
+  const screen = new THREE.Mesh(new THREE.BoxGeometry(1.25,.85,.06), screenMat);
+  screen.position.set(-.4, 2.0, deskZ - .15*fwd); screen.userData = { type:'place', id }; g.add(screen);
+  const qbTex = signTex('QuickBooks','#1a8a4a','#fff',170,56,14);
+  const qbMesh = new THREE.Mesh(new THREE.PlaneGeometry(1.05,.65),
+    new THREE.MeshBasicMaterial({ map:qbTex, transparent:true }));
+  qbMesh.position.set(-.4, 2.0, deskZ - .19*fwd);
+  if (south) qbMesh.rotation.y = Math.PI; g.add(qbMesh);
+  const kb = new THREE.Mesh(new THREE.BoxGeometry(1.1,.05,.45), new THREE.MeshLambertMaterial({ color:0x90a4ae }));
+  kb.position.set(-.4, 1.12, deskZ + .28*fwd); g.add(kb);
+  const glow = new THREE.PointLight(0x2ecc71, 0, 5);
+  glow.position.set(-.4, 2.0, deskZ - .22*fwd); g.add(glow);
+
+  // File cabinets
+  const cabinetMat = new THREE.MeshLambertMaterial({ color:0xa0a0a0 });
+  for (let i = 0; i < 2; i++) {
+    const cab = new THREE.Mesh(new THREE.BoxGeometry(.8, 1.8, .6), cabinetMat);
+    cab.position.set(1.6+i*1.0, .9, -(D/2-.5)*fwd); cab.castShadow=true; g.add(cab);
+    for (let j = 0; j < 3; j++) {
+      const handle = new THREE.Mesh(new THREE.BoxGeometry(.3,.04,.08),
+        new THREE.MeshLambertMaterial({ color:0x707070 }));
+      handle.position.set(1.6+i*1.0, .35+j*.55, -(D/2-.18)*fwd); g.add(handle);
+    }
+  }
+
+  // Board
+  const boardColor = id === 'startup' ? 0xf5f5f5 : 0xd2b48c;
+  const board = new THREE.Mesh(new THREE.BoxGeometry(2.2, 1.4, .06),
+    new THREE.MeshLambertMaterial({ color: boardColor }));
+  board.position.set(-1.8, 2.5, -(D/2-.12)*fwd); g.add(board);
+
+  // Toggle button
+  const toggleMat = new THREE.MeshBasicMaterial({ color:0xe74c3c });
+  const toggleBtn = new THREE.Mesh(new THREE.SphereGeometry(0.28, 12, 12), toggleMat);
+  toggleBtn.position.set(0, H + 2.4, 0);
+  toggleBtn.userData = { type:'toggle', id };
+  g.add(toggleBtn);
+
+  // Badge
+  const badgeTex = signTex(`${emoji} QB`, hex, '#fff', 110, 38, 14);
+  const badge = new THREE.Mesh(new THREE.PlaneGeometry(1.5,.52),
+    new THREE.MeshBasicMaterial({ map:badgeTex, transparent:true, depthTest:false }));
+  badge.position.set(0, H+1.55, 0); g.add(badge);
+
+  g.position.set(pos[0], 0, pos[2]);
+  scene.add(g);
+  roomMeshes.set(id, { group:g, screen, screenMat, glow, deskZ, fwd, south, sgnMesh, toggleBtn, toggleMat });
+}
+
+// ─── Character blob ───────────────────────────────────────────────────────────
+
+function buildChar(name, col, hexStr) {
+  const g = new THREE.Group();
+  const mat = new THREE.MeshLambertMaterial({ color: col });
+  const body = new THREE.Mesh(new THREE.SphereGeometry(.42,16,16), mat);
+  body.scale.set(1, 1.08, 1); body.position.y = .48; body.castShadow = true; g.add(body);
+  const head = new THREE.Mesh(new THREE.SphereGeometry(.36,16,16), mat);
+  head.position.y = 1.12; head.castShadow = true; g.add(head);
+  const ewm = new THREE.MeshBasicMaterial({ color:0xffffff });
+  const epm = new THREE.MeshBasicMaterial({ color:0x1a1a2e });
+  [-.13, .13].forEach(sx => {
+    const ew = new THREE.Mesh(new THREE.SphereGeometry(.09,8,8), ewm);
+    ew.position.set(sx, 1.16, .29); g.add(ew);
+    const ep = new THREE.Mesh(new THREE.SphereGeometry(.05,6,6), epm);
+    ep.position.set(sx, 1.16, .34); g.add(ep);
+  });
+  const tagTex = makeTex((ctx, W, H) => {
+    ctx.fillStyle = hexStr; rr(ctx,0,0,W,H,9); ctx.fill();
+    ctx.fillStyle = '#fff'; ctx.font = 'bold 14px Arial';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(name.replace(/_/g,' '), W/2, H/2);
+  }, 210, 42);
+  const tag = new THREE.Mesh(new THREE.PlaneGeometry(1.5,.3),
+    new THREE.MeshBasicMaterial({ map:tagTex, transparent:true, depthTest:false }));
+  tag.position.y = 1.76; g.add(tag);
+  const ringMat = new THREE.MeshBasicMaterial({ color:0x2ecc71, transparent:true, opacity:.85 });
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(.42,.04,8,22), ringMat);
+  ring.rotation.x = Math.PI/2; ring.position.y = 1.52; g.add(ring);
+  const bubMat = new THREE.MeshBasicMaterial({ map: speechTex(''), transparent:true, opacity:0, depthTest:false, depthWrite:false, side:THREE.DoubleSide });
+  const bubble = new THREE.Mesh(new THREE.PlaneGeometry(2.35,.7), bubMat);
+  bubble.position.y = 2.42;
+  bubble.renderOrder = 100;
+  g.add(bubble);
+  g.userData = { type:'persona', name };
+  body.userData = { type:'persona', name };
+  head.userData = { type:'persona', name };
+  return { group:g, body, ring, ringMat, bubble, bubMat, phase:Math.random()*Math.PI*2,
+           state:'idle', targetX:0, targetZ:0, walkTimer:0, _bubTimer:null };
+}
+
+// ─── Customer NPCs ────────────────────────────────────────────────────────────
+
+function buildCustomer() {
+  const g = new THREE.Group();
+  const grey = new THREE.MeshLambertMaterial({ color: 0x9e9e9e });
+  const body = new THREE.Mesh(new THREE.SphereGeometry(.3,10,10), grey);
+  body.scale.set(1, 1.05, 1); body.position.y = .35; body.castShadow = true; g.add(body);
+  const head = new THREE.Mesh(new THREE.SphereGeometry(.22,10,10), grey);
+  head.position.y = .78; head.castShadow = true; g.add(head);
+  g.userData = { type:'customer' };
+  return g;
+}
+
+function spawnCustomer() {
+  const activeShops = SHOPS.filter(s => placeActive.get(s.id));
+  if (activeShops.length === 0) return;
+  const shop = activeShops[Math.floor(Math.random() * activeShops.length)];
+  const mesh = buildCustomer();
+  const fromLeft = Math.random() > 0.5;
+  const startX = fromLeft ? -22 : 22;
+  mesh.position.set(startX, 0, (Math.random() - 0.5) * 2);
+  scene.add(mesh);
+  const [sx,,sz] = shop.pos;
+  const entryZ = sz + (sz > 0 ? -2.2 : 2.2);
+  customerNPCs.push({
+    mesh, shopId: shop.id, state: 'walking_to',
+    targetX: sx + (Math.random() - 0.5), targetZ: entryZ,
+    exitX: fromLeft ? 22 : -22,
+    timer: 0, phase: Math.random() * Math.PI * 2,
+  });
+}
+
+/** Fulfill one customer waiting at placeId (called when agent completes a sale for that place). */
+function fulfillOneCustomerAt(placeId) {
+  const c = customerNPCs.find(c => c.shopId === placeId && c.state === 'visiting');
+  if (!c) return;
+  const saleAmt = Math.floor(Math.random() * 480 + 60);
+  const fin = placeFin.get(placeId);
+  if (fin) { fin.sales += saleAmt; fin.txCount++; refreshPlaceCard(placeId); }
+  spawnTxVisual(placeId, 'sale');
+  const shop = findPlace(placeId);
+  addTick(placeId, 'sale', 'Customer');
+  addLogEntry('👤', 'Customer', `Order fulfilled → ${shop?.name} ($${saleAmt})`, '#9e9e9e');
+  // Reflect sale to persisted bank (SQLite); balance increases for this account
+  fetch('/street/record-sale', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      place_id: placeId,
+      amount: saleAmt,
+      account_name: shop?.name || placeId,
+    }),
+  }).then(r => r.json()).then(data => {
+    if (data.balance != null) {
+      placeBankBalance.set(placeId, data.balance);
+      refreshPlaceCard(placeId);
+    }
+  }).catch(() => {});
+  c.state = 'walking_away';
+  c.targetX = c.exitX;
+  c.targetZ = (Math.random() - 0.5) * 2;
+}
+
+function tickCustomers(dt) {
+  if (!simRunning) return;
+  // Only spawn customers when throngs are actually running (no artificial activity)
+  if (activeRuns.size > 0) {
+    const waitingOrVisiting = customerNPCs.filter(c => c.state === 'walking_to' || c.state === 'visiting').length;
+    nextCustomerSpawn -= dt;
+    if (nextCustomerSpawn <= 0 && waitingOrVisiting < 2) {
+      spawnCustomer();
+      nextCustomerSpawn = 60 * (2 + Math.random() * 3);   // 2–5 min to next spawn (regular flow, max 2 at once)
+    }
+  }
+  for (let i = customerNPCs.length - 1; i >= 0; i--) {
+    const c = customerNPCs[i];
+    const speed = 0.06;
+    if (c.state === 'walking_to') {
+      const dx = c.targetX - c.mesh.position.x;
+      const dz = c.targetZ - c.mesh.position.z;
+      const dist = Math.sqrt(dx*dx + dz*dz);
+      if (dist < 0.4) {
+        c.state = 'visiting'; // wait until fulfillOneCustomerAt(placeId) is called by a real sale event
+        refreshPlaceCard(c.shopId); // update "Waiting" count so throng knows to serve first
+      } else {
+        c.mesh.position.x += (dx/dist) * speed;
+        c.mesh.position.z += (dz/dist) * speed;
+        c.mesh.rotation.y = Math.atan2(dx, dz);
+      }
+    } else if (c.state === 'visiting') {
+      // Customer waits until agent completes a sale for this shop (see applySSE → fulfillOneCustomerAt)
+    } else if (c.state === 'walking_away') {
+      const dx = c.targetX - c.mesh.position.x;
+      const dz = c.targetZ - c.mesh.position.z;
+      c.mesh.position.x += (dx > 0 ? 1 : -1) * speed;
+      c.mesh.position.z += (dz / (Math.abs(dx) + 1)) * speed * 0.3;
+      if (Math.abs(c.mesh.position.x) > 24) {
+        scene.remove(c.mesh);
+        c.mesh.traverse(o => { if (o.geometry) o.geometry.dispose(); if (o.material) o.material.dispose(); });
+        customerNPCs.splice(i, 1);
+      }
+    }
+    // Bob animation
+    if (c.mesh.parent) c.mesh.position.y = Math.sin(Date.now() * 0.004 + c.phase) * 0.03;
+  }
+}
+
+// ─── Particles (visual only — no financial update) ────────────────────────────
+
+function spawnTxVisual(placeId, type) {
+  const sm = getPlaceMeshes(placeId); if (!sm) return;
+  const sp = sm.group.position;
+  const color = { sale:0xf5a623, expense:0xe74c3c, inventory:0x66bb6a }[type] || 0xf5a623;
+  for (let i = 0; i < 6; i++) {
+    const geo = type === 'inventory' ? new THREE.BoxGeometry(.2,.2,.2) : new THREE.CylinderGeometry(.19,.19,.05,10);
+    const mat = new THREE.MeshBasicMaterial({ color, transparent:true, opacity:.9 });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.position.set(sp.x+(Math.random()-.5)*3, 4.6+Math.random()*.4, sp.z+(Math.random()-.5)*1.6);
+    const up = type==='expense' ? -(0.038+Math.random()*.025) : (0.055+Math.random()*.035);
+    particles.push({ mesh, vx:(Math.random()-.5)*.045, vy:up, vz:(Math.random()-.5)*.04,
+      life:1, decay:.008+Math.random()*.006, spin:(Math.random()-.5)*.12 });
+    scene.add(mesh);
+  }
+  sm.screenMat.color.setHex(color);
+  sm.glow.color.setHex(color); sm.glow.intensity = 1.4;
+  setTimeout(() => { sm.screenMat.color.setHex(0x2ecc71); sm.glow.intensity = 0; }, 650);
+}
+
+function spawnSteam(pos) {
+  for (let i = 0; i < 3; i++) {
+    const geo = new THREE.SphereGeometry(.1,6,6);
+    const mat = new THREE.MeshBasicMaterial({ color:0xff7043, transparent:true, opacity:.7 });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.position.set(pos.x+(Math.random()-.5)*.38, pos.y+1.5, pos.z+(Math.random()-.5)*.38);
+    particles.push({ mesh, vx:(Math.random()-.5)*.02, vy:.05+Math.random()*.03,
+      vz:(Math.random()-.5)*.02, life:.65, decay:.02, spin:0 });
+    scene.add(mesh);
+  }
+}
+
+function tickParticles() {
+  for (let i = particles.length-1; i >= 0; i--) {
+    const p = particles[i];
+    p.mesh.position.x += p.vx; p.mesh.position.y += p.vy; p.mesh.position.z += p.vz;
+    p.mesh.rotation.y += p.spin; p.mesh.rotation.x += p.spin*.5;
+    p.vy *= .97;
+    p.life -= p.decay; p.mesh.material.opacity = Math.max(0, p.life);
+    if (p.life <= 0) {
+      scene.remove(p.mesh); p.mesh.geometry.dispose(); p.mesh.material.dispose();
+      particles.splice(i, 1);
+    }
+  }
+}
+
+// ─── Persona management ───────────────────────────────────────────────────────
+
+function getOrCreatePersona(name) {
+  if (personas.has(name)) return personas.get(name);
+  const ci = colorCursor++ % PCOLORS.length;
+  const cfg = PERSONA_CFG[name];
+  const placeId = cfg ? cfg.place : SHOPS[0].id;
+  const placeCfg = findPlace(placeId) || SHOPS[0];
+  const role = cfg?.role || 'owner';
+  const char = buildChar(name, PCOLORS[ci], PHEX[ci]);
+  const [sx,,sz] = placeCfg.pos;
+  const entryZ = sz + (sz > 0 ? -1.8 : 1.8);
+  char.group.position.set(sx+(Math.random()-.5)*2, 0, entryZ+(Math.random()-.5)*.6);
+  char.group.rotation.y = sz > 0 ? 0 : Math.PI;
+  char.targetX = char.group.position.x;
+  char.targetZ = char.group.position.z;
+  scene.add(char.group);
+  const sm = getPlaceMeshes(placeId);
+  const deskWorldZ = sm ? sz + sm.deskZ : sz + (sz>0?-1.4:1.4);
+  char.deskX = sx - .4;
+  char.deskZ = deskWorldZ;
+  const entry = { ...char, ci, hex:PHEX[ci], placeId, role, data:{} };
+  personas.set(name, entry);
+  const pData = loadedPersonas.find(p => p.name === name);
+  buildPersonaCard(name, entry, pData);
+  return entry;
+}
+
+function applySSE(data) {
+  // Sync global sim time from runner so street clock matches the simulation process
+  if (typeof data.sim_minute_of_day === 'number' && typeof data.sim_day_num === 'number') {
+    simMinuteOfDay = Math.max(0, Math.min(1439, Math.floor(data.sim_minute_of_day)));
+    simDayNum = Math.max(1, Math.floor(data.sim_day_num));
+    document.getElementById('simclock').textContent = formatSimTime();
+  }
+  const name = data.persona_name || 'Agent';
+  const p = getOrCreatePersona(name);
+  p.data = data;
+
+  // Show phone / email animation when this agent was just interrupted by one
+  const variant = data.distraction_variant || '';
+  if (variant === 'PHONE_CALL' || variant === 'EMAIL_INQUIRY') {
+    const placeId = p.placeId;
+    if (placeId) {
+      if (!placeIndicators[placeId]) placeIndicators[placeId] = {};
+      placeIndicators[placeId][variant === 'PHONE_CALL' ? 'phone' : 'email'] = Date.now();
+      ensurePlaceIndicatorMeshes(placeId);
+    }
+  }
+
+  const ratio = Math.min(1, (data.frustration||0) / (data.patience_budget||50));
+  p.ringMat.color.setRGB(ratio*.9+.08, (1-ratio)*.75+.06, .05);
+  const onQB = ['click','type','scroll','hover'].includes(data.action_type||'');
+  if (onQB && p.state !== 'typing') {
+    p.state = 'typing'; p.targetX = p.deskX; p.targetZ = p.deskZ;
+    const sm = getPlaceMeshes(p.placeId);
+    if (sm) { sm.glow.intensity = .85; sm.glow.color.setHex(0x2ecc71); }
+    const placePos = findPlace(p.placeId)?.pos || [0,0,0];
+    p.group.rotation.y = placePos[2] > 0 ? 0 : Math.PI;
+  } else if (!onQB && p.state === 'typing') {
+    p.state = 'idle';
+    const sm = getPlaceMeshes(p.placeId);
+    if (sm) sm.glow.intensity = 0;
+  }
+  const thought = (data.thought || '').trim();
+  if (thought) {
+    if (p.bubMat.map) p.bubMat.map.dispose();
+    p.bubMat.map = speechTex(thought.slice(0, 88));
+    p.bubMat.map.needsUpdate = true;
+    p.bubMat.opacity = 1;
+    clearTimeout(p._bubTimer);
+    p._bubTimer = setTimeout(() => { p.bubMat.opacity = 0; }, 5500);
+  }
+  // Log entry (always show thought when present so activity log reflects it)
+  const emoji = PERSONA_CFG[name]?.emoji || '👤';
+  addLogEntry(emoji, name.replace(/_/g,' '), (thought||data.action_type||'').slice(0,60), p.hex);
+
+  const action = data.action_type || '';
+  const goal = (data.goal || '').toLowerCase();
+  let tx = null;
+  if (action === 'click' || action === 'type') {
+    if (goal.includes('sale')||goal.includes('invoice')||goal.includes('revenue')) tx='sale';
+    else if (goal.includes('expense')||goal.includes('bill')||goal.includes('pay')) tx='expense';
+    else if (goal.includes('inventor')||goal.includes('stock')||goal.includes('product')) tx='inventory';
+    else tx = 'sale';
+  }
+  if (tx) {
+    spawnTxVisual(p.placeId, tx);
+    addTick(p.placeId, tx, name);
+    if (tx === 'sale') fulfillOneCustomerAt(p.placeId); // customer leaves when agent completes sale
+  }
+  if (ratio > 0.88) spawnSteam(p.group.position);
+  refreshPersonaCard(name, p, data);
+}
+
+// ─── Sidebar ─────────────────────────────────────────────────────────────────
+
+function roleTag(role) {
+  const map = { owner:'t-own', accountant:'t-acc', startup:'t-sta', staff:'t-stf' };
+  return `<span class="tag ${map[role]||'t-own'}">${role}</span>`;
+}
+
+function placeNameTag(placeId) {
+  const place = findPlace(placeId);
+  const name = place ? place.name : (placeId || '—');
+  return `<span class="tag t-own">${name}</span>`;
+}
+
+/** Number of customers currently waiting (visiting) at a place — throng should serve them first. */
+function getWaitingCustomerCount(placeId) {
+  return customerNPCs.filter(c => c.shopId === placeId && c.state === 'visiting').length;
+}
+
+function buildPersonaCard(name, entry, personaData) {
+  const el = document.createElement('div');
+  el.className = 'pc'; el.id = `pc-${name}`;
+  const desc = personaData?.description || '';
+  el.innerHTML = `
+    <div class="pch">
+      <div class="pcdot" style="background:${entry.hex}"></div>
+      <span class="pcn">${name.replace(/_/g,' ')}</span>
+      <span style="margin-left:auto;font-size:.8rem">${PERSONA_CFG[name]?.emoji||'👤'}</span>
+    </div>
+    ${desc ? `<div class="pcdesc">${desc}</div>` : ''}
+    <div class="pcth" id="pct-${name}">Waiting…</div>
+    <div class="fbr"><div class="fbf" id="pcf-${name}" style="width:0%"></div></div>
+    <div class="pcmeta" id="pcm-${name}">${placeNameTag(entry.placeId)}</div>`;
+  el.addEventListener('click', (e) => {
+    document.querySelectorAll('.pc').forEach(e => e.classList.remove('on'));
+    el.classList.add('on');
+    if (e.shiftKey) {
+      document.getElementById('lp-persona').value = name;
+      document.getElementById('sb').scrollTop = 0;
+    } else {
+      const pos = entry.group.position;
+      camera.position.set(pos.x + 8, 14, pos.z + 10);
+      controls.target.set(pos.x, 1, pos.z);
+    }
+  });
+  const isBiz = (entry.role === 'owner' || entry.role === 'staff');
+  document.getElementById(isBiz ? 'pclist-biz' : 'pclist-office').appendChild(el);
+}
+
+function refreshPersonaCard(name, p, data) {
+  const th = document.getElementById(`pct-${name}`);
+  const fill = document.getElementById(`pcf-${name}`);
+  const meta = document.getElementById(`pcm-${name}`);
+  if (th) th.textContent = (data.thought||'').slice(0,55) || 'Working…';
+  const ratio = Math.min(1,(data.frustration||0)/(data.patience_budget||50));
+  if (fill) {
+    fill.style.width = (ratio*100)+'%';
+    fill.style.background = ratio < .4 ? 'var(--green)' : ratio < .75 ? 'var(--yellow)' : 'var(--red)';
+  }
+  if (meta) {
+    const onQB = ['click','type','scroll'].includes(data.action_type||'');
+    const waiting = getWaitingCustomerCount(p.placeId);
+    const customerAtDoor = waiting > 0 ? '<span class="tag" style="background:rgba(245,166,35,.2);color:#c47d00">👤 Customer at door – serve first</span>' : '';
+    meta.innerHTML = `${placeNameTag(p.placeId)}${customerAtDoor}<span>Step ${data.step||0}</span><span>${data.emotional_state||''}</span>${onQB?'<span class="tag t-qb">On QB</span>':''}`;
+  }
+}
+
+function buildPlaceCards() {
+  const c = document.getElementById('shlist');
+  if (!c) return;
+  c.innerHTML = '';
+  ALL_PLACES.forEach(s => {
+    const el = document.createElement('div'); el.className='shc'; el.id=`sc-${s.id}`;
+    const isRoom = ROOMS.some(r => r.id === s.id);
+    el.innerHTML = `
+      <div class="shch">
+        <div class="shci" style="background:${s.hex}1a;color:${s.hex}">${s.emoji}</div>
+        <span class="shcn">${s.name}</span>
+        ${isRoom ? '<span class="tag t-acc" style="margin-left:auto;font-size:.5rem">Office</span>' : ''}
+      </div>
+      <div class="mets">
+        <div class="m"><div class="mv" id="fs-${s.id}" style="color:var(--green)">$0</div><div class="ml">Sales</div></div>
+        <div class="m"><div class="mv" id="fe-${s.id}" style="color:var(--red)">$0</div><div class="ml">Expenses</div></div>
+        <div class="m"><div class="mv" id="fi-${s.id}" style="color:var(--yellow)">0</div><div class="ml">Inv.</div></div>
+        <div class="m"><div class="mv" id="ft-${s.id}" style="color:var(--muted)">0</div><div class="ml">Tx</div></div>
+        <div class="m"><div class="mv" id="fwait-${s.id}" style="color:var(--yellow);font-size:.7rem">—</div><div class="ml">Waiting</div></div>
+        <div class="m"><div class="mv" id="fb-${s.id}" style="color:var(--accent)">—</div><div class="ml">Bank</div></div>
+      </div>`;
+    c.appendChild(el);
+  });
+}
+
+function refreshPlaceCard(id) {
+  const f = placeFin.get(id); if (!f) return;
+  const q = id2 => document.getElementById(id2);
+  const s = q(`fs-${id}`), e = q(`fe-${id}`), i = q(`fi-${id}`), t = q(`ft-${id}`), w = q(`fwait-${id}`), b = q(`fb-${id}`);
+  if (s) s.textContent = '$'+f.sales.toLocaleString();
+  if (e) e.textContent = '$'+f.expenses.toLocaleString();
+  if (i) i.textContent = f.inventory;
+  if (t) t.textContent = f.txCount;
+  const waiting = getWaitingCustomerCount(id);
+  if (w) w.textContent = waiting > 0 ? `👤 ${waiting}` : '—';
+  const bal = placeBankBalance.get(id);
+  if (b) b.textContent = bal != null ? '$'+Number(bal).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '—';
+}
+
+async function loadBankBalances() {
+  try {
+    const res = await fetch('/street/bank-balances');
+    const data = await res.json();
+    (data.accounts || []).forEach(a => {
+      placeBankBalance.set(a.place_id, a.balance);
+    });
+    ALL_PLACES.forEach(p => refreshPlaceCard(p.id));
+  } catch (_) {}
+}
+
+// ─── Activity log ─────────────────────────────────────────────────────────────
+
+const logEntries = [];
+function addLogEntry(emoji, who, text, color) {
+  const container = document.getElementById('activity-log');
+  if (!container) return;
+  const time = formatSimTime().split('—')[1]?.trim() || '';
+  const el = document.createElement('div');
+  el.className = 'log-entry';
+  el.innerHTML = `<span class="log-time">${time}</span> · <span class="log-who" style="color:${color||'var(--text)'}">${emoji} ${who}</span>: ${text}`;
+  container.appendChild(el);
+  logEntries.push(el);
+  if (logEntries.length > 200) {
+    const old = logEntries.shift();
+    old.remove();
+  }
+  container.scrollTop = container.scrollHeight;
+}
+
+function initLogToggle() {
+  const toggle = document.getElementById('log-toggle');
+  const log = document.getElementById('activity-log');
+  if (!toggle || !log) return;
+  toggle.addEventListener('click', () => {
+    log.classList.toggle('collapsed');
+    toggle.textContent = log.classList.contains('collapsed') ? '📋 Activity Log ▸' : '📋 Activity Log ▾';
+  });
+}
+
+// ─── Ticker ───────────────────────────────────────────────────────────────────
+
+const ticks = [];
+function addTick(placeId, type, who='') {
+  const s = findPlace(placeId);
+  const cls = { sale:'ts', expense:'te', inventory:'tv' }[type] || 'ts';
+  const lbl = { sale:'💰 Sale', expense:'📤 Expense', inventory:'📦 Inventory' }[type] || type;
+  const w = who ? ` · ${who.replace(/_/g,' ')}` : '';
+  ticks.push(`<span class="ti ${cls}">${s?.emoji} ${s?.name}: ${lbl}${w}</span>`);
+  if (ticks.length > 40) ticks.shift();
+  document.getElementById('tki').innerHTML = ticks.join('');
+}
+
+// ─── Popup ────────────────────────────────────────────────────────────────────
+
+const ray  = new THREE.Raycaster();
+const mxy  = new THREE.Vector2();
+const popEl = document.getElementById('pop');
+
+renderer.domElement.addEventListener('click', e => {
+  const rect = wrap.getBoundingClientRect();
+  mxy.x = ((e.clientX-rect.left)/rect.width)*2 - 1;
+  mxy.y = -((e.clientY-rect.top)/rect.height)*2 + 1;
+  ray.setFromCamera(mxy, camera);
+  const hits = ray.intersectObjects(scene.children, true);
+  let shown = false;
+  for (const h of hits) {
+    let cur = h.object;
+    while (cur) {
+      if (cur.userData?.type === 'toggle') {
+        handleToggleClick(cur.userData.id);
+        return;
+      }
+      if (cur.userData?.type) { showPop(cur.userData, e); shown=true; break; }
+      cur = cur.parent;
+    }
+    if (shown) break;
+  }
+  if (!shown) popEl.classList.add('h');
+});
+
+function handleToggleClick(placeId) {
+  const isActive = placeActive.get(placeId);
+  placeActive.set(placeId, !isActive);
+  const sm = getPlaceMeshes(placeId);
+  if (sm) sm.toggleMat.color.setHex(!isActive ? 0x27ae60 : 0xe74c3c);
+
+  if (!isActive) {
+    addLogEntry('🟢', findPlace(placeId)?.name || placeId, 'opened', 'var(--green)');
+    // Auto-start timer if not running
+    if (!simRunning) toggleSimRunning();
+  } else {
+    addLogEntry('🔴', findPlace(placeId)?.name || placeId, 'closed', 'var(--red)');
+  }
+}
+
+function showPop({ type, id, name }, e) {
+  const rect = wrap.getBoundingClientRect();
+  popEl.style.left = Math.min(e.clientX-rect.left+14, rect.width-300)+'px';
+  popEl.style.top  = Math.min(e.clientY-rect.top+14,  rect.height-220)+'px';
+  if (type === 'place') {
+    const s = findPlace(id); const f = placeFin.get(id)||{};
+    document.getElementById('popt').textContent = `${s?.emoji} ${s?.name}`;
+    const net = (f.sales||0)-(f.expenses||0);
+    const company = getPlaceCompany(id);
+    const bal = placeBankBalance.get(id);
+    const bankStr = bal != null ? '$'+Number(bal).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '—';
+    document.getElementById('popb').innerHTML = `
+      ${company ? `<b>Company:</b> ${company}<br>` : ''}
+      <b>Status:</b> ${placeActive.get(id) ? '<span style="color:var(--green)">Open</span>' : '<span style="color:var(--red)">Closed</span>'}<br>
+      <b>Sales:</b> $${(f.sales||0).toLocaleString()}<br>
+      <b>Expenses:</b> $${(f.expenses||0).toLocaleString()}<br>
+      <b>Net:</b> <span style="color:${net>=0?'var(--green)':'var(--red)'}">$${net.toLocaleString()}</span><br>
+      <b>Transactions:</b> ${f.txCount||0}<br>
+      <b>Bank balance:</b> <span style="color:var(--accent)">${bankStr}</span>`;
+  } else if (type === 'persona') {
+    const p = personas.get(name); const d = p?.data||{};
+    const ratio = Math.min(1,(d.frustration||0)/(d.patience_budget||50));
+    const pd = loadedPersonas.find(x => x.name===name);
+    document.getElementById('popt').textContent = name.replace(/_/g,' ');
+    const thought = (d.thought||'').trim().slice(0,120);
+    document.getElementById('popb').innerHTML = `
+      <b>Role:</b> ${p?.role||'—'} at ${findPlace(p?.placeId)?.name||'—'}<br>
+      <b>Goal:</b> ${(d.goal||'—').slice(0,72)}<br>
+      ${thought ? `<b>Thought:</b> ${thought}<br>` : ''}
+      <b>Mood:</b> ${d.emotional_state||'—'}<br>
+      <b>Frustration:</b> ${Math.round(ratio*100)}%<br>
+      <b>QB:</b> ${p?.state==='typing'?'<span style="color:var(--green)">Active ✓</span>':'Idle'}<br>
+      ${pd?`<b>Tech:</b> ${pd.tech_literacy}/10  <b>Domain:</b> ${pd.domain_literacy}/10`:''}`;
+  }
+  popEl.classList.remove('h');
+}
+
+// ─── Status ───────────────────────────────────────────────────────────────────
+
+function setStatus(cls, txt) {
+  document.getElementById('sdot').className = 'sdot ' + cls;
+  document.getElementById('stxt').textContent = txt;
+}
+
+// ─── Data loaders ─────────────────────────────────────────────────────────────
+
+function loadPersonas() {
+  fetch('/personas').then(r => r.ok ? r.json() : []).then(data => {
+    loadedPersonas = data || [];
+    const sel = document.getElementById('lp-persona');
+    sel.innerHTML = '<option value="">— select persona —</option>';
+    loadedPersonas.forEach(p => {
+      const opt = document.createElement('option');
+      opt.value = p.name; opt.textContent = p.name.replace(/_/g,' ');
+      sel.appendChild(opt);
+    });
+  }).catch(() => {});
+}
+
+function loadCompanies() {
+  fetch('/companies').then(r => r.ok ? r.json() : []).then(companies => {
+    const sel = document.getElementById('lp-company');
+    sel.innerHTML = '<option value="">Default</option>';
+    (companies||[]).forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c; opt.textContent = c;
+      sel.appendChild(opt);
+    });
+  }).catch(() => {});
+}
+
+async function loadCredentialsMap() {
+  try {
+    const res = await fetch('/credentials-map');
+    credentialsMap = await res.json();
+    updateSigns();
+  } catch {}
+}
+
+function updateSigns() {
+  ALL_PLACES.forEach(p => {
+    const sm = getPlaceMeshes(p.id);
+    if (!sm?.sgnMesh) return;
+    const company = getPlaceCompany(p.id);
+    const label = company ? `${p.emoji}  ${p.name} — ${company}` : `${p.emoji}  ${p.name}`;
+    sm.sgnMesh.material.map = signTex(label, p.hex);
+    sm.sgnMesh.material.map.needsUpdate = true;
+    sm.sgnMesh.material.needsUpdate = true;
+  });
+}
+
+async function loadRelations() {
+  try {
+    const res = await fetch('/relations');
+    relationsData = await res.json();
+    if (relationsData?.relationships) drawRelations();
+  } catch {}
+}
+
+function drawRelations() {
+  if (!relationsData) return;
+  // Map throng IDs to places
+  const throngToPlace = {};
+  for (const t of (relationsData.throngs || [])) {
+    if (t.persona_id && PERSONA_CFG[t.persona_id]) {
+      throngToPlace[t.id] = PERSONA_CFG[t.persona_id].place;
+    }
+  }
+  const roleColors = {
+    accountant: 0x3f88e2, supplier: 0x27ae60, delivery: 0xf5a623,
+    vehicle_owner: 0x9b59b6, parking_vendor: 0x607d8b,
+  };
+  const roleHex = {
+    accountant: '#3f88e2', supplier: '#27ae60', delivery: '#f5a623',
+    vehicle_owner: '#9b59b6', parking_vendor: '#607d8b',
+  };
+
+  for (const rel of (relationsData.relationships || [])) {
+    const placeA = throngToPlace[rel.owner_id];
+    const placeB = throngToPlace[rel.provider_id];
+    if (!placeA || !placeB || placeA === placeB) continue;
+    const cfgA = findPlace(placeA);
+    const cfgB = findPlace(placeB);
+    if (!cfgA || !cfgB) continue;
+
+    const startPos = new THREE.Vector3(cfgA.pos[0], 5.5, cfgA.pos[2]);
+    const endPos = new THREE.Vector3(cfgB.pos[0], 5.5, cfgB.pos[2]);
+    const midPos = new THREE.Vector3(
+      (startPos.x + endPos.x) / 2,
+      8 + Math.random() * 1.5,
+      (startPos.z + endPos.z) / 2
+    );
+
+    const curve = new THREE.QuadraticBezierCurve3(startPos, midPos, endPos);
+    const points = curve.getPoints(30);
+    const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
+    const color = roleColors[rel.role] || 0x9e9e9e;
+    const lineMat = new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.6, linewidth: 2 });
+    const line = new THREE.Line(lineGeo, lineMat);
+    scene.add(line);
+
+    // Role label at midpoint
+    const hex = roleHex[rel.role] || '#9e9e9e';
+    const labelTex = signTex(rel.role, hex, '#fff', 200, 40, 14);
+    const labelMesh = new THREE.Mesh(
+      new THREE.PlaneGeometry(1.4, 0.3),
+      new THREE.MeshBasicMaterial({ map: labelTex, transparent: true, depthTest: false })
+    );
+    labelMesh.position.copy(midPos);
+    scene.add(labelMesh);
+
+    relationArcs.push({ line, label: labelMesh });
+  }
+}
+
+// ─── Launch panel ─────────────────────────────────────────────────────────────
+
+const activeRuns = new Map();
+let runPollTimer = null;
+
+function getLaunchParams() {
+  return {
+    url: document.getElementById('lp-url').value.trim(),
+    company: document.getElementById('lp-company').value,
+    goal: document.getElementById('lp-goal').value.trim(),
+    max_steps: parseInt(document.getElementById('lp-steps').value, 10) || 50,
+    max_concurrent: parseInt(document.getElementById('lp-concurrent').value, 10) || 2,
+    verbose: document.getElementById('lp-verbose').checked,
+    relations: document.getElementById('lp-relations').value.trim() || undefined,
+  };
+}
+
+function initLaunchPanel() {
+  document.getElementById('btn-launch').addEventListener('click', async () => {
+    const persona = document.getElementById('lp-persona').value;
+    const params = getLaunchParams();
+    if (!persona) { alert('Select a persona.'); return; }
+    if (!params.url) { alert('Enter a URL.'); return; }
+    const btn = document.getElementById('btn-launch');
+    btn.disabled = true; btn.textContent = 'Launching…';
+    try {
+      const res = await fetch('/run', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ persona, ...params }) });
+      const data = await res.json();
+      if (data.status === 'started') {
+        const personasList = getPersonasForRun({ mode: 'single', persona });
+        activeRuns.set(data.run_id, { mode: 'single', persona, personas: personasList });
+        for (const name of personasList) getOrCreatePersona(name);
+        addRunStatusCard(data.run_id, persona, 'single');
+        startRunPolling();
+        setStatus('live', 'Live');
+      } else alert('Failed: ' + (data.message || 'error'));
+    } catch (err) { alert('Launch error: ' + err.message); }
+    btn.disabled = false; btn.textContent = 'Start Single';
+  });
+
+  document.getElementById('btn-swarm').addEventListener('click', async () => {
+    const params = getLaunchParams();
+    if (!params.url) { alert('Enter a URL.'); return; }
+    const btn = document.getElementById('btn-swarm');
+    btn.disabled = true; btn.textContent = 'Launching…';
+    try {
+      const res = await fetch('/run/swarm', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(params) });
+      const data = await res.json();
+      if (data.status === 'started') {
+        const personasList = getPersonasForRun({ mode: 'swarm', persona: 'all' });
+        activeRuns.set(data.run_id, { mode: 'swarm', persona: 'all', personas: personasList });
+        for (const name of personasList) getOrCreatePersona(name);
+        addRunStatusCard(data.run_id, 'All Personas (Swarm)', 'swarm');
+        startRunPolling();
+        setStatus('live', 'Live — swarm running');
+      } else alert('Failed: ' + (data.message || 'error'));
+    } catch (err) { alert('Launch error: ' + err.message); }
+    btn.disabled = false; btn.textContent = 'Launch All';
+  });
+}
+
+function addRunStatusCard(runId, label, mode) {
+  const container = document.getElementById('runs-list');
+  const el = document.createElement('div');
+  el.className = 'run-status'; el.id = `rs-${runId}`;
+  el.innerHTML = `<div class="run-dot" id="rd-${runId}"></div>
+    <div class="run-info"><span>${label.replace(/_/g,' ')}</span><span class="run-elapsed" id="re-${runId}"></span></div>
+    <button class="stop-btn" style="padding:.18rem .4rem;border:1px solid var(--red);border-radius:5px;background:transparent;color:var(--red);font-size:.6rem;font-weight:600;cursor:pointer">Stop</button>`;
+  el.querySelector('.stop-btn').addEventListener('click', async () => {
+    try { await fetch('/run/stop', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ run_id: runId }) }); } catch {}
+    markRunDone(runId);
+  });
+  container.appendChild(el);
+}
+
+function markRunDone(runId, runFromServer) {
+  const runInfo = activeRuns.get(runId);
+  const personsInThisRun = runFromServer
+    ? getPersonasForRun(runFromServer)
+    : (runInfo?.personas || []);
+  const dot = document.getElementById(`rd-${runId}`);
+  if (dot) dot.classList.add('done');
+  activeRuns.delete(runId);
+  for (const name of personsInThisRun) {
+    let inOtherRun = false;
+    for (const [, info] of activeRuns) {
+      if (info.personas && info.personas.includes(name)) { inOtherRun = true; break; }
+    }
+    if (!inOtherRun) removeAvatar(name);
+  }
+  const el = document.getElementById(`rs-${runId}`);
+  if (el) setTimeout(() => el.remove(), 3000);
+  if (activeRuns.size === 0) stopRunPolling();
+}
+
+function startRunPolling() {
+  stopRunPolling();
+  runPollTimer = setInterval(async () => {
+    try {
+      const res = await fetch('/runs');
+      const runs = await res.json();
+      for (const [runId] of activeRuns) {
+        const active = runs.find(r => r.run_id === runId);
+        if (active) {
+          const el = document.getElementById(`re-${runId}`);
+          if (el) el.textContent = ` · ${Math.round(active.elapsed)}s`;
+          if (!active.running) markRunDone(runId, active);
+        }
+      }
+    } catch {}
+  }, 2000);
+}
+
+function stopRunPolling() {
+  if (runPollTimer) { clearInterval(runPollTimer); runPollTimer = null; }
+}
+
+// ─── Start Day / Timer ────────────────────────────────────────────────────────
+
+function toggleSimRunning() {
+  simRunning = !simRunning;
+  const btn = document.getElementById('btn-startday');
+  if (simRunning) {
+    btn.textContent = '⏸ Pause Day';
+    btn.classList.add('paused');
+    // Activate all places
+    ALL_PLACES.forEach(p => {
+      placeActive.set(p.id, true);
+      const sm = getPlaceMeshes(p.id);
+      if (sm) sm.toggleMat.color.setHex(0x27ae60);
+    });
+    addLogEntry('▶', 'System', 'Day started', 'var(--accent)');
+  } else {
+    btn.textContent = '▶ Resume';
+    btn.classList.remove('paused');
+    addLogEntry('⏸', 'System', 'Day paused', 'var(--yellow)');
+  }
+}
+
+function initStartDay() {
+  document.getElementById('btn-startday').addEventListener('click', toggleSimRunning);
+}
+
+function tickTimer(dt) {
+  simMinuteOfDay += SIM_SPEED * dt;
+  if (simMinuteOfDay >= SIM_END_MINUTE) {
+    simDayNum++;
+    simMinuteOfDay = SIM_START_MINUTE;
+    addLogEntry('🌙', 'System', `Day ${simDayNum-1} ended. New day begins.`, 'var(--muted)');
+  }
+  document.getElementById('simclock').textContent = formatSimTime();
+}
+
+// ─── SSE ──────────────────────────────────────────────────────────────────────
+
+function connectSSE() {
+  const es = new EventSource('/stream');
+  es.onopen = () => setStatus('live', 'Live — start agents to see activity');
+  es.onerror = () => setStatus('off', 'No server');
+  es.onmessage = ev => {
+    try {
+      const d = JSON.parse(ev.data);
+      if (d.event !== 'agent_state') return;
+      if (!receivedAgentEvent) {
+        receivedAgentEvent = true;
+        setStatus('live', 'Live');
+      }
+      eventCount++;
+      document.getElementById('ecnt').textContent = `${eventCount} events`;
+      applySSE(d);
+    } catch (_) {}
+  };
+}
+
+// ─── Character animation ──────────────────────────────────────────────────────
+
+function animateChars(t) {
+  for (const [, p] of personas) {
+    p.group.position.x += (p.targetX - p.group.position.x) * .022;
+    p.group.position.z += (p.targetZ - p.group.position.z) * .022;
+    if (p.state === 'typing') {
+      p.group.position.y = Math.sin(t*6 + p.phase) * .028;
+      p.body.scale.z = 1 + Math.sin(t*6 + p.phase) * .04;
+      const sm = getPlaceMeshes(p.placeId);
+      if (sm) sm.glow.intensity = .65 + Math.sin(t*5) * .28;
+    } else {
+      p.group.position.y = Math.sin(t*1.6 + p.phase) * .055;
+      p.body.scale.z = 1;
+      p.walkTimer -= .016;
+      if (p.walkTimer <= 0) {
+        const place = findPlace(p.placeId);
+        if (place) {
+          const [sx,,sz] = place.pos;
+          p.targetX = sx + (Math.random()-.5)*4;
+          p.targetZ = sz + (sz>0?-1.7:1.7) + (Math.random()-.5)*1.2;
+        }
+        p.walkTimer = 3.5 + Math.random()*5;
+      }
+      const dx = p.targetX - p.group.position.x;
+      const dz = p.targetZ - p.group.position.z;
+      if (Math.abs(dx)>.06 || Math.abs(dz)>.06) p.group.rotation.y = Math.atan2(dx, dz);
+    }
+    p.bubble.lookAt(camera.position);
+    p.ring.rotation.z = t * 1.8;
+  }
+}
+
+// ─── Resize + render ──────────────────────────────────────────────────────────
+
+function resize() {
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+  renderer.setSize(W, H, false);
+  camera.aspect = W/H;
+  camera.updateProjectionMatrix();
+}
+window.addEventListener('resize', resize);
+resize();
+
+function animate(ts) {
+  requestAnimationFrame(animate);
+  const t = ts * .001;
+  const dt = lastAnimTime ? (t - lastAnimTime) : 0.016;
+  lastAnimTime = t;
+
+  controls.update();
+  animateChars(t);
+  tickPlaceIndicators(t);
+  if (simRunning) tickTimer(dt);
+  tickCustomers(dt);
+  tickParticles();
+  // Relation labels face camera
+  relationArcs.forEach(a => { if (a.label) a.label.lookAt(camera.position); });
+  sun.position.x = Math.cos(t*.04)*22 + 5;
+  sun.position.z = Math.sin(t*.04)*14 + 5;
+  renderer.render(scene, camera);
+}
+
+// ─── Run → persona list (for syncing avatars with running throngs) ─────────────
+
+function getPersonasForRun(run) {
+  if (run.mode === 'single' && run.persona) return [run.persona];
+  if (run.persona === 'all' && Array.isArray(loadedPersonas)) return loadedPersonas.map(p => p.name);
+  return run.persona ? [run.persona] : [];
+}
+
+function syncAvatarsFromRuns(runs) {
+  if (!Array.isArray(runs)) return;
+  for (const run of runs) {
+    if (!run.running) continue;
+    const names = getPersonasForRun(run);
+    for (const name of names) if (name) getOrCreatePersona(name);
+  }
+}
+
+function removeAvatar(name) {
+  const entry = personas.get(name);
+  if (!entry) return;
+  scene.remove(entry.group);
+  personas.delete(name);
+  const card = document.getElementById(`pc-${name}`);
+  if (card) card.remove();
+}
+
+// ─── Refresh config + full place rebuild ─────────────────────────────────────
+
+async function refreshStreetConfig() {
+  const btn = document.getElementById('btn-refresh-config');
+  if (btn) { btn.disabled = true; btn.textContent = '…'; }
+  try {
+    try {
+      const cfgRes = await fetch('/street-config');
+      if (cfgRes.ok) {
+        const cfg = await cfgRes.json();
+        PERSONA_CFG = cfg.persona_config || {};
+        SHOPS = cfg.places?.shops || [];
+        ROOMS = cfg.places?.rooms || [];
+        ALL_PLACES = [...SHOPS, ...ROOMS];
+        if (Array.isArray(cfg.colors) && cfg.colors.length) PCOLORS = cfg.colors;
+        PHEX = PCOLORS.map(c => '#' + Number(c).toString(16).padStart(6, '0'));
+        if (typeof cfg.sim_time_scale_factor === 'number' && cfg.sim_time_scale_factor > 0) {
+          SIM_SPEED = 1 / cfg.sim_time_scale_factor;
+        }
+      } else applyStreetConfigFallback();
+    } catch (_) {
+      applyStreetConfigFallback();
+    }
+
+    removePlaceMeshes();
+    initPlaceMaps();
+    SHOPS.forEach(buildShop);
+    ROOMS.forEach(buildRoom);
+
+    const c = document.getElementById('shlist');
+    if (c) { c.innerHTML = ''; buildPlaceCards(); }
+    await loadBankBalances();
+
+    await loadCredentialsMap();
+    updateSigns();
+
+    const personaRes = await fetch('/personas');
+    loadedPersonas = (personaRes.ok ? await personaRes.json() : []) || [];
+    const sel = document.getElementById('lp-persona');
+    if (sel) {
+      const currentVal = sel.value;
+      sel.innerHTML = '<option value="">— select persona —</option>';
+      loadedPersonas.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p.name; opt.textContent = p.name.replace(/_/g, ' ');
+        sel.appendChild(opt);
+      });
+      if (currentVal && loadedPersonas.some(p => p.name === currentVal)) sel.value = currentVal;
+    }
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '↻ Refresh config'; }
+  }
+}
+
+// ─── Init (async: street-config → places → running throngs → avatars) ─────────
+
+async function initStreet() {
+  try {
+    const cfgRes = await fetch('/street-config');
+    if (cfgRes.ok) {
+      const cfg = await cfgRes.json();
+      PERSONA_CFG = cfg.persona_config || {};
+      SHOPS = cfg.places?.shops || [];
+      ROOMS = cfg.places?.rooms || [];
+      ALL_PLACES = [...SHOPS, ...ROOMS];
+      if (Array.isArray(cfg.colors) && cfg.colors.length) PCOLORS = cfg.colors;
+      PHEX = PCOLORS.map(c => '#' + Number(c).toString(16).padStart(6, '0'));
+      if (typeof cfg.sim_time_scale_factor === 'number' && cfg.sim_time_scale_factor > 0) {
+        SIM_SPEED = 1 / cfg.sim_time_scale_factor; // real sec per sim min → sim min per real sec
+      }
+    } else throw new Error('street-config not ok');
+  } catch (_) {
+    applyStreetConfigFallback();
+  }
+
+  initPlaceMaps();
+  buildStreet();
+  SHOPS.forEach(buildShop);
+  ROOMS.forEach(buildRoom);
+  buildPlaceCards();
+  await loadBankBalances();
+
+  const personaRes = await fetch('/personas');
+  loadedPersonas = (personaRes.ok ? await personaRes.json() : []) || [];
+  const sel = document.getElementById('lp-persona');
+  if (sel) {
+    sel.innerHTML = '<option value="">— select persona —</option>';
+    loadedPersonas.forEach(p => {
+      const opt = document.createElement('option');
+      opt.value = p.name; opt.textContent = p.name.replace(/_/g, ' ');
+      sel.appendChild(opt);
+    });
+  }
+
+  loadCompanies();
+  await loadCredentialsMap();
+  await loadRelations();
+
+  const runsRes = await fetch('/runs');
+  const runs = runsRes.ok ? await runsRes.json() : [];
+  syncAvatarsFromRuns(runs);
+  for (const run of runs || []) {
+    if (run.running && run.run_id) {
+      const personasList = getPersonasForRun(run);
+      activeRuns.set(run.run_id, { mode: run.mode, persona: run.persona, personas: personasList });
+      const label = run.mode === 'swarm' ? 'All Personas (Swarm)' : (run.persona || '').replace(/_/g, ' ');
+      addRunStatusCard(run.run_id, label, run.mode || 'single');
+    }
+  }
+  if (activeRuns.size > 0) startRunPolling();
+
+  initLaunchPanel();
+  initStartDay();
+  initLogToggle();
+  const refreshBtn = document.getElementById('btn-refresh-config');
+  if (refreshBtn) refreshBtn.addEventListener('click', () => refreshStreetConfig());
+  connectSSE();
+  animate(0);
+}
+
+initStreet();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+#litellm --config config.yaml
+model_list:
+  - model_name: "local-gpt-oss"
+    litellm_params:
+      model: "ollama/gpt-oss" # Use "ollama/gpt-oss:120b" for the larger model
+      api_base: "http://localhost:11434"
+  - model_name: "local-llama-3.2-vision"
+    litellm_params:
+      model: "ollama/llama3.2-vision" # Use "ollama/llama-3.2-vision:120b" for the larger model
+      api_base: "http://localhost:11434"

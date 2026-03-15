@@ -1,0 +1,320 @@
+═══════════════════════════════════════════════════════════
+  SUMMIT DISTRIBUTION — AR CLERK DIARY
+  Priya Sharma | Monday, Week 1
+  "Twelve invoices. I can do twelve invoices. Probably."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      8h 45min
+Invoices processed:      11  (1 held — PO issue)
+QB Online sessions:      4  (97 min total)
+Payments recorded:       0
+Reminders sent:          3
+Escalations to Raj:      1
+Excel backup entries:    12
+
+08:05 AM - 08:28 AM  [23 min] MORNING SETUP / INBOX REVIEW
+  Got in a bit early because I knew the weekend batch would be waiting. Made
+  tea (the office kitchen finally has the oat milk back, small victory), opened
+  my laptop, and went straight to email. 12 new invoice requests from the sales
+  team, all sitting in the AR inbox from Friday afternoon and over the weekend.
+  I printed all 12 because I like having paper in front of me when I'm going to
+  enter things. Raj says I don't need to but it helps me catch mistakes before
+  I touch the keyboard.
+
+  Laid them out on my desk in order of customer name, the way I always do. Made
+  my handwritten checklist — one row per invoice, columns for: invoice #,
+  customer, amount, due date, entered in QB, double-checked, sent. Old habit
+  from my accounting coursework but it's saved me at least twice already.
+
+08:28 AM - 09:45 AM  [77 min] QB ONLINE — BATCH INVOICE ENTRY (BLOCK 1)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:28 AM – 09:45 AM, 77 min]
+
+  Logged in. Took my usual two seconds to remember I need to go to
+  Sales > Invoices > Create Invoice, not the big green New button at the top
+  left (the New button works too but the dropdown it opens always confuses me
+  and I'm scared I'll click something wrong). I go the long way.
+
+  Invoices entered this session:
+
+    INV-2847 | Meridian Kitchen Supply | $3,240.00 | Due Mar 24
+      Entered line items: 4 cases commercial-grade tongs ($180 ea), 6 units
+      prep table liners ($90 ea). I had to look at the item list twice because
+      there are two entries for "tongs" — "tongs-comm" and "tongs-std" — and
+      I always panic I'll pick the wrong SKU. Compared to the sales order.
+      Correct one is tongs-comm. Previewed the invoice. Amount matches.
+      Due date: auto-filled to 30 days from today which is correct (Net 30
+      terms for Meridian). Saved. Logged it in Excel.
+
+    INV-2848 | Blue Ridge Catering Co. | $1,875.50 | Due Mar 24
+      Straightforward — two line items. But I noticed I had typed "1,8755.0"
+      first (hit 5 twice). Caught it on my pre-save read-through. Fixed.
+      Previewed. Saved. Logged it in Excel.
+
+    INV-2849 | Hartwell Grocery Group | $6,102.00 | Due Apr 7
+      Hartwell is on Net 45 terms. I had to check my cheat sheet because I
+      ALWAYS default to typing 30 days and then have to fix it. Cheat sheet
+      says: "Hartwell = 45 days, check terms dropdown before saving."
+      Changed terms. Due date updated to Apr 7. Correct. Previewed. Saved.
+
+    INV-2850 | Shoreline Food Service | $940.00 | Due Mar 24
+      Easy one. Saved in under 4 minutes.
+
+    INV-2851 | Crestwood Institutional | $2,566.75 | Due Mar 24
+      Three line items. I noticed there was a discount field I accidentally
+      clicked on and a "0.00%" appeared. Panicked for a second — I didn't mean
+      to add a discount. Deleted it. Previewed the invoice to make sure the
+      total was still $2,566.75. It was. Saved. Logged.
+
+  Took a 5-minute break to stretch my back. Raj came by and asked how the
+  batch was going. I said "good, working through them." He nodded and moved on.
+  I didn't mention the tongs SKU panic because it feels embarrassing but also
+  it wasn't really a problem, I caught it.
+
+09:50 AM - 10:52 AM  [62 min] QB ONLINE — BATCH INVOICE ENTRY (BLOCK 2)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [09:50 AM – 10:52 AM, 62 min]
+
+  Continuing the batch.
+
+    INV-2852 | Parkview Restaurant Group | $4,450.00 | Due Mar 24
+      This one had four line items and the sales order listed a "promotional
+      pricing" note in the comments. I didn't know if that meant I was supposed
+      to apply a discount code in QB or if the price I was given already
+      reflected the promo. I stopped and messaged Raj:
+
+      Me: "Hey Raj, quick question — INV-2852 for Parkview says 'promotional
+          pricing' on the sales order. Is the $4,450 already the discounted
+          total or do I need to apply a code somewhere?"
+      Raj (5 min later): "That's the final price, just enter it as-is. Sales
+          handles the promo on their end."
+
+      OK. Entered $4,450.00. Previewed. Saved.
+
+    INV-2853 | Dunmore Wholesale Foods | $7,800.00 | Due Apr 7
+      Dunmore is also Net 45. Remembered this time without the cheat sheet
+      (progress!). But I double-checked the cheat sheet anyway to be sure.
+      Saved.
+
+    INV-2854 | Valley Fresh Distributors | $3,315.25 | Due Mar 24
+      Routine entry. One typo caught: wrote "Valely" in the memo field. Fixed.
+
+    INV-2855 | Cascade Hospitality LLC | $1,100.00 | Due Mar 24
+
+    INV-2856 | Thornbury Market | $588.00 | Due Mar 24
+      Small one. Easy.
+
+  At this point I'm at 10 invoices done. Two left on my pile.
+
+10:55 AM - 11:20 AM  [25 min] PROBLEM INVOICE — PO NUMBER MISMATCH
+
+  Picked up INV-2857 for Gorman & Associates ($5,290.00). The sales order
+  lists PO# G-4471-B. I started entering it and something made me look twice —
+  the last payment we received from Gorman referenced PO# G-4471-A. I went
+  into QB and looked at Gorman's transaction history (Sales > Customers >
+  Gorman). Their last invoice (INV-2801 from two weeks ago) was for PO# G-4470.
+  So -4471 would be a new PO, which is fine. But the "B" suffix looked odd.
+  Usually POs from Gorman don't have letter suffixes.
+
+  I didn't want to enter it wrong and have them reject the invoice. That already
+  happened to me in Week 2 with a different customer (Sandoval Foods, different
+  suffix issue) and Raj had to do something to fix it that I wasn't allowed to
+  do myself. I don't know exactly what he did because he said it involved
+  adjusting something I shouldn't touch. I don't want to go through that again.
+
+  I messaged Raj:
+    Me: "Hey Raj, PO# on INV-2857 for Gorman shows G-4471-B. Their previous
+        one was G-4470 with no suffix. Should I hold this one until I confirm
+        the PO# with the sales team?"
+    Raj: "Good catch. Yes, hold it. Email Derek on the sales side and CC me."
+
+  Emailed Derek (sales rep for Gorman account):
+    Subject: Invoice Hold — Gorman & Associates PO# Confirmation Needed
+    "Hi Derek, I'm processing this weekend's batch and I want to confirm the
+     PO number for Gorman & Associates before sending their invoice. The sales
+     order shows G-4471-B — can you confirm that's correct? Happy to process
+     as soon as I hear back. Thanks, Priya"
+
+  Moved INV-2857 to my "PENDING" folder (physical, on my desk). Did NOT enter
+  it in QB yet. Logged it in Excel as "HOLD - PO UNCONFIRMED."
+
+  Started INV-2858 | Redstone Food Co. | $2,144.00 | Due Mar 24
+  Straightforward. Entered. Saved. So the day's count is 11 processed, 1 held.
+
+11:20 AM - 12:00 PM  [40 min] INVOICE REVIEW + SEND
+
+  Went back through all 11 saved invoices in QB to review before sending.
+  I know this seems slow but I do NOT want to send wrong information to a
+  customer. I once heard someone say that AR mistakes "come back to haunt you"
+  and I have been careful ever since.
+
+  Previewed each one, checked:
+    - Customer name and address (correct on all)
+    - Amount (correct on all)
+    - Due date (correct — caught a potential Crestwood one where I almost
+      thought the 24th looked off, but it's right)
+    - Payment terms line (correct on all)
+    - Our company address in the footer (I check this every time because one
+      time QB pulled in an old address for a template — Raj said that was from
+      before my time, but now I always look)
+
+  Sent all 11 invoices from QB using the "Send" button on each one.
+  QB shows a green confirmation toast: "Invoice sent." I screenshot the
+  confirmation screen for each one and paste them into a folder labeled
+  "INV_SENT_[DATE]" on my desktop. Raj says I don't have to do this.
+  I do it anyway.
+
+12:00 PM - 12:45 PM  [45 min] LUNCH
+
+  Ate at my desk, half. Went outside for the rest. It was cold but I needed
+  the air. Kept thinking about that Gorman PO number. Derek still hasn't
+  replied.
+
+12:45 PM - 01:30 PM  [45 min] AR INBOX + REMINDER FOLLOW-UPS
+
+  Checked the AR inbox. Three overdue accounts per QB's Invoices > Overdue
+  filter:
+    - INV-2791 | Branford Catering | $1,850.00 | 7 days overdue
+    - INV-2803 | Mesa Pacific Goods | $3,400.00 | 4 days overdue
+    - INV-2812 | Cascade Hospitality LLC | $675.00 | 2 days overdue
+
+  I'm allowed to send payment reminders for anything up to 14 days overdue.
+  Anything beyond that goes to Raj to decide whether to escalate.
+
+  Sent reminders from QB (Sales > Invoices > select invoice > Send Reminder).
+  Each reminder uses our standard template but I customize the first line
+  slightly so it doesn't read like a robot:
+    - Branford: "Hi team, just a friendly follow-up on INV-2791..."
+    - Mesa Pacific: "Hi, reaching out about invoice #2803 from 3/6..."
+    - Cascade: "Hi, just a quick note that INV-2812 became due on 3/8..."
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [12:52 PM – 01:14 PM, 22 min]
+  (Reminder sends + overdue review only. No new entries.)
+
+01:30 PM - 02:15 PM  [45 min] EXCEL RECONCILIATION + FILING
+
+  (Note: I use "reconciliation" here in the everyday sense, not the QB
+  accounting sense. I just mean matching my Excel log to QB. The actual
+  bank reconciliation thing is something Raj does and I am not to touch it.
+  I know because I saw the word "Reconcile" in QB once, in the left nav panel,
+  and I asked Raj what it was. He said "That's mine, don't click that."
+  I have never clicked it.)
+
+  Cross-checked my handwritten checklist against QB and my Excel backup:
+    - All 11 sent invoices appear in QB as "Sent" status: confirmed.
+    - All 11 logged in Excel: confirmed.
+    - INV-2857 (Gorman): logged in Excel as HOLD. Not in QB.
+    - Reminder sends: 3 confirmed sent (QB shows "Reminder Sent" in
+      activity log for each invoice).
+
+  Filed the paper sales orders in the AR binder by invoice number. Labeled
+  the Gorman order with a sticky note: "HOLD — PO CONFIRM PENDING — emailed
+  Derek 3/10."
+
+02:15 PM - 02:20 PM  [5 min] DEREK REPLIES
+
+  Finally. Derek emails back:
+    "Hey Priya, yeah that PO is correct. Gorman split their order into two
+     releases so the B suffix just means second release against their blanket
+     PO. Should be fine. Let me know if you need anything else."
+
+  I'm relieved but I still have a question: do I need to note the "B" anywhere
+  special in QB, like in a memo field, so Gorman knows we know it's a split
+  release? Not sure. Messaged Raj:
+    Me: "Derek confirmed G-4471-B is correct — it's a split release against
+        their blanket PO. Should I add any note in the memo field when I
+        create the invoice, or just enter the PO# as-is?"
+    Raj: "Just enter it exactly as written on the PO: G-4471-B. Add a short
+         memo: 'Release 2 of blanket PO G-4471.' That's it."
+
+  Noted that on my cheat sheet under "PO Suffixes / Split Releases."
+
+02:20 PM - 02:45 PM  [25 min] QB ONLINE — GORMAN INVOICE ENTRY
+
+  ⬛ QUICKBOOKS ONLINE SESSION 4  [02:22 PM – 02:42 PM, 20 min]
+
+    INV-2857 | Gorman & Associates | $5,290.00 | Due Mar 24
+      Entered line items (8 line items — biggest one today).
+      PO field: G-4471-B
+      Memo: "Release 2 of blanket PO G-4471"
+      Terms: Net 30 (correct for Gorman per customer record)
+      Previewed. Read through every line twice.
+      Amount: $5,290.00 — correct.
+      Due date: Mar 24 — correct.
+      Saved. Screenshot sent confirmation. Logged in Excel.
+
+  Updated my Excel: INV-2857 changed from HOLD to SENT. Day count: 12 invoices
+  processed and sent.
+
+02:45 PM - 03:10 PM  [25 min] END-OF-DAY CHECKS
+
+  Ran the Open Invoices report in QB (Reports > Sales > Open Invoices) just
+  to see where things stand. 23 open invoices total across all customers.
+  Biggest outstanding: Dunmore Wholesale Foods at $7,800 (just sent today)
+  and Hartwell Grocery Group at $6,102 (just sent today). Three overdue ones
+  I sent reminders for earlier still showing as open, which is expected.
+
+  Printed the open invoices report and put it in my "daily reports" folder.
+  (Raj hasn't asked me to do this. I do it for myself so I know what tomorrow
+  looks like before I leave today.)
+
+03:10 PM - 04:30 PM  [80 min] GENERAL ADMIN + EMAIL + SLOW AFTERNOON
+
+  Inbox had a few replies from customers acknowledging the invoices. No issues.
+  Filed emails. Updated notes. Spent some time reading the QB help article on
+  "how to apply payments to invoices" because I'm worried that's going to come
+  up soon and I want to be ready before I have to do it under pressure.
+
+  Also organized my cheat sheet binder. I now have pages for:
+    - Creating an invoice (step-by-step)
+    - Editing a saved (unsent) invoice
+    - Sending a payment reminder
+    - Checking customer payment terms
+    - Running the Open Invoices report
+    - Notes on specific customers (Hartwell = Net 45, Dunmore = Net 45, etc.)
+    - "DO NOT CLICK" list (Reconcile, Journal Entry, anything that says
+      "Adjusting")
+
+04:30 PM - 04:50 PM  [20 min] WRAP-UP
+
+  Saved and closed all QB sessions. Saved and closed Excel. Did a final pass
+  through email. Packed up paper files.
+
+  Total for today: 12 invoices (11 processed in morning batch + 1 Gorman after
+  PO confirmation). Everything logged. Nothing missing. PO issue resolved.
+  3 reminders sent. No mistakes I know of.
+
+  That's actually a pretty good day.
+
+══════════════════════════════════════════════════════════════
+END OF DAY — PRIYA'S REFLECTION
+───────────────────────────────────────────────────────────
+  Okay. Monday done. 12 invoices is a lot for one person in one morning and
+  I actually got through all of them. The Gorman PO thing stressed me out more
+  than it probably should have — like, I spent way more mental energy on it
+  than the actual time it took to resolve. But I'm glad I held it instead of
+  just guessing. Raj said "good catch." That felt good to hear.
+
+  The thing I keep noticing is that I'm slow compared to what I imagine someone
+  experienced would be. I preview everything twice, I screenshot confirmations,
+  I log everything in Excel AND in QB. A "real" AR clerk probably does this in
+  half the time. But I'd rather be slow and accurate than fast and wrong.
+  At least for now. Maybe once I've done this for a year I'll trust myself more.
+
+  I'm a little nervous about this week. I feel like there are harder things
+  coming. Raj mentioned last Friday that month-end is coming up and there would
+  be some reporting. I don't know what that means exactly but it sounds like
+  something I might need help with.
+
+  Also I need to remember: do not click "Reconcile." Do not click "Journal
+  Entry." Do not click "Adjusting Entry." These words are on my DO NOT CLICK
+  list for a reason.
+
+  TO-DO FOR TOMORROW:
+  □ Check if any of the 3 reminder customers have responded or paid
+  □ Follow up on INV-2857 filing (confirm it's fully logged)
+  □ Ask Raj about any upcoming reporting deadlines — he mentioned month-end
+  □ Read the QB help page on applying payments (finish what I started today)
+  □ Print and file today's open invoices report in the monthly binder

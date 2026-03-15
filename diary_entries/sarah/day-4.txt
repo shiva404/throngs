@@ -1,0 +1,294 @@
+═══════════════════════════════════════════════════════════
+  PAGE TURNER BOOKS — OWNER DIARY
+  Sarah Mitchell | Thursday, Week 1
+  "Thursday is when the week starts to feel like it might
+   actually work out."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      10h 05min
+Customer interactions:   22  (busiest day this week)
+Sales transactions:      19  ($634.90)
+QuickBooks sessions:     3  (42 min total)
+Window display refresh:  completed (2 hrs — worth every minute)
+Unexpected:              a complaint, a journalist, a small crisis
+
+───────────────────────────────────────────────────────────
+MORNING — Display day
+───────────────────────────────────────────────────────────
+
+7:00 AM - 7:15 AM  [15 min] PERSONAL
+  Good sleep for the first time this week. Coffee. Newsletter stats
+  checked over breakfast: 44% open rate on the Wednesday send
+  (best this year). 22 new Instagram followers since the author's
+  share of our Reading Circle post. That's meaningful.
+
+7:15 AM - 7:35 AM  [20 min] EARLY OPENING + PREP
+  Jamie not in today (Tue/Wed only). Solo from open.
+  Alarm, lights, sign at 7:30. Set up the back room with the window
+  display materials I pulled yesterday. Today's main morning task:
+  redesign the front window before the lunchtime foot-traffic peak.
+
+7:35 AM - 9:40 AM  [125 min] WINDOW DISPLAY REDESIGN
+  This is the thing people tell me I shouldn't spend time on because
+  "it doesn't scale." Those people have never run a bookshop.
+
+  Theme: "Before You Go Anywhere — Summer Reading"
+  Layout (front-to-back):
+  ├─ Front row: 3 bright-spine paperbacks face-out, slight height
+  │    variation using book risers. Titles: "A Man Called Ove,"
+  │    "The Kite Runner," "The Alchemist."
+  ├─ Middle: stacked "Staff Picks for the Beach" sign (handmade,
+  │    chalk on slate board — I am slightly too proud of this)
+  ├─ Back row: 5 titles fanned out, mix of literary and commercial
+  ├─ Accent: small sand bucket with sunglasses perched on it
+  │    (bought at the pound shop on the way in: $1.50 — expense)
+  └─ Hand-written price stickers on each book in consistent style
+
+  Final result: genuinely excellent. Three people stopped and read
+  the display while I was finishing it. One came inside. One took
+  a photo. Confirmation that this is worth the time.
+
+  CUSTOMER DURING SETUP: woman tapped on the glass asking if we
+  were open. Let her in (8:20 AM — 10 min before my mental "ready"
+  time). She bought the "Man Called Ove" from the display before
+  I'd even priced it (used the shelf price). Felt like a sign.
+  Transaction: $14.99.
+
+9:40 AM - 10:00 AM  [20 min] OPERATIONS — Emails and orders
+  ├─ Confirmed Ingram order from yesterday submitted successfully
+  │    (order #IN-5502, 22 units, est. $198.00, 3–4 days delivery)
+  ├─ Chased Gardners re: Meadowbrook school order delivery date
+  │    → Automated reply: "processing within 24-48 hrs." Not helpful.
+  │    Flagged to call Monday if not confirmed.
+  └─ Diane's QB gift card setup guide arrived in inbox. Flagged for
+     QB session later today.
+
+───────────────────────────────────────────────────────────
+  ⬛ QUICKBOOKS SESSION 1  [10:00 AM – 10:18 AM, 18 min]
+───────────────────────────────────────────────────────────
+
+10:00 AM - 10:18 AM  [18 min] QB — Morning review + gift card setup
+  ├─ Followed Diane's gift card setup guide:
+  │    Created liability account: "Gift Vouchers Issued"
+  │    Test transaction: issued $50 gift voucher → debit Cash,
+  │    credit Gift Vouchers Issued. Correct.
+  │    Redemption test: $50 voucher redeemed against $56.50 sale →
+  │    debit Gift Vouchers $50, debit Cash $6.50, credit Revenue $56.50.
+  │    Diane was right — this is much cleaner. Should have done this months ago.
+  ├─ Retroactively corrected the gift certificate transaction from
+  │    Wednesday (the woman who finally used her January voucher)
+  ├─ Checked: Ingram payment for IS-7742 confirmed cleared in bank feed
+  ├─ Tax pot reminder: first transfer will go out on 1st of next month.
+  │    Need to make sure balance supports it.
+  └─ Week-to-date P&L preview:
+       Revenue (Mon–Wed):  $1,241.71
+       Expenses logged:    $198.29
+       Running gross:      $1,043.42 (84% — high because expenses lag)
+
+───────────────────────────────────────────────────────────
+MID-MORNING — Busy
+───────────────────────────────────────────────────────────
+
+10:18 AM - 11:30 AM  [72 min] CUSTOMER PEAK — 7 transactions
+  Thursday mid-morning is consistently good. Office workers on early
+  lunches, retirees who avoid weekend crowds, the regular Thursday group
+  who've been coming in since before I took over the shop.
+  1. Man saw the window display, came in, spent 8 minutes, bought
+     3 titles from the display + 1 extra. $68.47. New customer.
+  2. "Booktok" girl (I don't mean that dismissively — she showed me
+     her video later): she films 60-second book recommendations on
+     TikTok. She bought 4 of the "aesthetic" titles we stock.
+     Spent $72.00. Asked if she could come back and film in the shop.
+     I said yes immediately. That's free content.
+     Exchanged details — she'll come Saturday.
+  3. Regular Thursday reader: 1 Booker longlist title. $18.99.
+  4. Children's section: mum and two kids. $48.00 in picture books.
+  5. "Do you have a book about grief?" — quiet, older woman.
+     This is one of the most important questions we get asked.
+     Took her to the section, spent 12 minutes. Recommended
+     "The Year of Magical Thinking" and "Crying in H Mart."
+     She bought both and thanked me in a way that meant something.
+     $34.98. Not every sale is just a sale.
+  6. Gift certificate purchase (now entered correctly in QB): $40.00
+  7. Quick dash-in purchase: 1 paperback classic. $9.99.
+  Total: $292.43
+
+11:30 AM - 12:00 PM  [30 min] SUPPLIER CALL — New relationship
+  Cold call in, which I normally deflect. But this one was a rep
+  from a new independent UK publisher (Candle & Ink Press) specialising
+  in diverse literary fiction. I gave them 10 minutes.
+  Outcome:
+  - Good backlist, including a title that I think would sell well here
+  - They offer 35% trade discount (standard) + free delivery over £80
+  - Rep is sending 3 sample copies (free) for review
+  - If I like them: trial order of 6 units each of 3 titles
+  Added their rep (Tom Walsh) to my supplier contacts. Set reminder
+  to review samples when they arrive next week.
+  This is how the inventory gets interesting — finding small presses
+  before they become mainstream.
+
+───────────────────────────────────────────────────────────
+LUNCH + COMPLAINT
+───────────────────────────────────────────────────────────
+
+12:00 PM - 12:30 PM  [30 min] LUNCH
+  Eating in the shop again. Quieter slot before lunch crowd.
+  Halfway through my sandwich: a man comes in looking unhappy.
+
+12:15 PM - 12:45 PM  [30 min] CUSTOMER COMPLAINT — Damaged book
+  Customer (Mr. Reeves, regular, 3rd purchase this month) bought a
+  hardcover on Monday. He's opened it at home to find the spine has
+  a printing defect — the pages aren't trimmed evenly, bottom 30 pages
+  slightly misaligned. Publisher issue, not our handling.
+
+  He was annoyed but polite. I:
+  1. Apologised sincerely and immediately (his perception of the
+     situation matters more than the technical cause)
+  2. Checked our stock: one remaining copy — same batch, same defect.
+     This is a publisher printing run issue.
+  3. Offered: full replacement when new stock arrives (Ingram order
+     due tomorrow/Monday) or full refund now.
+  4. He chose refund. Processed: $38.99 refund to his card.
+  5. Entered QB credit/refund transaction against original sale.
+  6. Filed a returns claim with Ingram for 2 defective units
+     (the returned one + the one still on shelf). Emailed photos
+     of the defect to Ingram customer service.
+
+  He left satisfied. Said he'd be back. I believe him.
+  *** ACTION ITEM: Flag defective batch in QB notes. Check if
+  there's a pattern — 2 defects in same batch might mean more. ***
+
+───────────────────────────────────────────────────────────
+AFTERNOON
+───────────────────────────────────────────────────────────
+
+12:45 PM - 2:15 PM  [90 min] AFTERNOON RUSH — 8 transactions
+  Busiest sustained stretch of the week:
+  1. "Yellowface" x3 (book club order, collected) — $63.00
+  2. Summer reading display titles — various — $78.50
+  3. Local author poetry (Priya — another copy sold!) — $14.99
+  4. Children's books, birthday present — $32.00
+  5. "Holly" (Stephen King, from new Ingram order isn't in yet —
+     had 1 old copy in reserves) — $28.00
+  6. Office stationery section: notebooks, pens — $24.00
+  7. A man who spent 40 minutes reading in the nook, bought nothing
+     but donated $5 to our "Keep Indie Bookshops Alive" charity tin.
+     I count this as a win on the cosmic ledger.
+  8. Regular gift certificate redemption (correctly processed in QB).
+     She spent $62.00 on a $50 cert + $12.00 cash.
+  Total: $302.49 (exc. charity tin)
+
+2:15 PM - 2:40 PM  [25 min] JOURNALIST VISIT — Unexpected
+  A woman came in with a notebook and introduced herself as from the
+  local online news site "EastfieldNow.com" — she's doing a feature
+  on "independent businesses that are surviving (and why)."
+  She'd found us from the BID meeting notes (apparently Dan from the
+  Gazette mentioned me as someone worth talking to).
+  I gave her 20 minutes. Showed her around.
+  Key things I said that I meant:
+  - "We survive because we're specific. We know our customers by name."
+  - "QuickBooks keeps me out of the chaos. I know my numbers."
+    (She noted that down. Small business owner quoting accounting
+    software. Unglamorous but true.)
+  - "The Reading Circle isn't a marketing event. It's a community thing
+    that happens to be good marketing."
+  She'll run the piece next week. I didn't ask to see it before
+  publication — the right call, I think. Shows confidence.
+  She bought a book on the way out: $19.99.
+
+───────────────────────────────────────────────────────────
+  ⬛ QUICKBOOKS SESSION 2  [2:40 PM – 2:55 PM, 15 min]
+───────────────────────────────────────────────────────────
+
+2:40 PM - 2:55 PM  [15 min] QB — Afternoon reconciliation
+  ├─ Entered all morning and afternoon transactions (18 done, 1 pending)
+  ├─ Processed Mr. Reeves refund: $38.99 debit to revenue
+  ├─ Ingram defect claim filed — awaiting credit note. Logged memo.
+  ├─ Day total so far: $634.90 revenue, $38.99 refund, net $595.91
+  ├─ Reviewed weekly picture:
+  │    Mon–Thu sales: ~$1,876.61
+  │    On track for best week this month
+  └─ Flagged: Startup office library invoice (#1095) sent Tuesday —
+     checking in 2 weeks (net 30 terms, not due yet)
+
+───────────────────────────────────────────────────────────
+LATE AFTERNOON
+───────────────────────────────────────────────────────────
+
+2:55 PM - 4:00 PM  [65 min] OPERATIONS + SOCIAL
+  ├─ Instagram: posted window display photo. Caption:
+  │    "Summer reading season is open 📚☀️ — see you in here."
+  │    (The sand bucket prop photographed beautifully.)
+  │    Within 1 hour: 180 likes, 14 saves, 6 "can I order online?"
+  │    comments. Answered each one.
+  ├─ TikTok content arrangement confirmed with the Booktok creator:
+  │    She'll come Saturday at 11 AM. I'll have a selection of
+  │    photogenic titles pulled from stock.
+  │    No money exchanged — just exposure and the opportunity to
+  │    be featured to her 8,400 followers.
+  ├─ Sent Reading Circle flyers for "The God of Small Things" to
+  │    the printer (local print shop, 50 flyers, $12.00, collect Fri)
+  ├─ Responded to 2 consignment enquiries (came in from the newsletter):
+  │    Both referred to the draft policy — told them it's being
+  │    finalised and I'll respond fully next week.
+  └─ Ordered printer ink cartridges (Amazon — $24.99, expense logged)
+
+4:00 PM - 5:30 PM  [90 min] EVENING FLOOR — 3 transactions + close
+  3 transactions: $59.50 total.
+  Quiet end to a busy day. Used the time to:
+  - Deep-tidy the fiction and biography sections
+  - Check in with Priya (text message): told her the 2nd copy sold.
+    She texts back: "You're brilliant, thank you." That never gets old.
+  - Wrote this week's "My 5" column for the newsletter
+    (5 books I'd take to a desert island this summer)
+
+5:30 PM - 5:50 PM  [20 min] CLOSING
+  Cash count: $248.00. Clean match.
+  End-of-day POS report saved. Lights off. Alarm set. Locked up.
+
+───────────────────────────────────────────────────────────
+  ⬛ QUICKBOOKS SESSION 3  [8:00 PM – 8:11 PM, 11 min]
+───────────────────────────────────────────────────────────
+
+8:00 PM - 8:11 PM  [11 min] QB — Evening close (home)
+  ├─ Final transaction entered (evening's 3 sales)
+  ├─ Day revenue confirmed: $634.90. Net after refund: $595.91.
+  ├─ Week so far (Mon–Thu): $2,208.51 — best 4-day total this month
+  └─ Tax pot math: if this week continues, $310 transfer will be very
+     manageable. Feeling confident about that decision.
+
+───────────────────────────────────────────────────────────
+END OF DAY — SARAH'S REFLECTION
+───────────────────────────────────────────────────────────
+
+  Best day of the week so far by revenue. And the non-revenue wins
+  were equally good: the journalist visit, the Booktok partnership
+  confirmed, the grief-book conversation with that quiet woman.
+
+  The complaint was handled well. The refund stings ($38.99) but
+  Mr. Reeves left satisfied and will be back. That matters more
+  than the margin on one book. Small shops live and die on trust.
+
+  The gift card setup in QB has been bothering me for months. Diane
+  was right that I should have done it properly earlier. The fact
+  that it's now done correctly feels disproportionately good.
+
+  The Ingram defect claim is a hassle but standard. I've had worse.
+
+  I'm genuinely excited about Saturday. The TikTok creator could
+  be a real moment for us. Not going to over-invest emotionally in
+  it — just going to make the shop look its best and let her do
+  her thing. That's all I can control.
+
+  TO-DO FOR TOMORROW (FRIDAY):
+  □ Collect printer flyers from print shop (before 10 AM)
+  □ Prepare "TikTok Shelf" — best-looking titles for Saturday
+  □ Reconcile full week in QB
+  □ Check: Ingram order arrival (should be today/tomorrow)
+  □ Pay Benny's invoice (due Fri or Mon)
+  □ Write consignment agreement template (must finish this week)
+  □ Post the "My 5" newsletter column
+
+═══════════════════════════════════════════════════════════

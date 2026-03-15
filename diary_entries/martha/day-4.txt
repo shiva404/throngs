@@ -1,0 +1,419 @@
+═══════════════════════════════════════════════════════════
+  CLEARWATER ACCOUNTING SERVICES — BOOKKEEPER DIARY
+  Martha Henderson | Thursday, Week 1
+  "Getting the first entry right is the whole game.
+   Everything after that is just arithmetic."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      9h 0min
+Clients worked on:       1  (Riverview Café — onboarding)
+QB Online sessions:      4  (148 min total)
+Transactions entered:    68  (Oct–Nov retroactive)
+Data entry errors caught: 3  (self-corrected before saving)
+Physical receipts sorted: 94  (Oct–Nov stack)
+Phone calls:             3
+Printed reports filed:   2  (opening balance confirmations)
+
+08:00 AM - 08:35 AM  [35 min] MORNING SETUP
+  Arrived to find the Riverview Café banker's box sitting on my chair where I
+  left it last night. Also on my chair: a mug with a sticky note from Gary
+  reading "You left this in the break room Tuesday. —G." The man is a saint.
+
+  Set up my workstation for a full day of data entry. This is the kind of work
+  I actually find satisfying in a meditative way — the steady rhythm of receipt
+  by receipt, account by account, everything building toward a complete set of
+  books from nothing. It's like building a house from the foundation up.
+
+  Riverview Café: owned by Sylvia and Marco Benedetti. They opened October 1,
+  2023. A breakfast-and-lunch café, seats about 30, open Tuesday through Sunday.
+  Sylvia does the front of house and ordering. Marco does the cooking. They
+  have two part-time employees. They kept records in:
+    (a) A green paper ledger Sylvia bought at Office Depot
+    (b) A shoebox of physical receipts
+    (c) Their Suncoast Credit Union bank statements (6 months)
+
+  I had called Sylvia last Thursday to go over what I'd need. She brought
+  everything in on Monday. I sorted it Tuesday morning (before work, on my own
+  time — about 45 min) into monthly stacks with categories tabbed.
+
+  Today I tackle October and November.
+
+  Opening balance figures confirmed with Sylvia by phone last week:
+    - Suncoast Checking (acct ending 4417): $8,200.00 on 10/01/2023
+    - Suncoast Savings (acct ending 4418):  $2,500.00 on 10/01/2023
+    - Startup Loan (Suncoast CU, 7-year):   $45,000.00 on 10/01/2023
+    - Equipment (café build-out + equipment, capitalized): $52,400.00
+    - Owner's equity: $18,100.00 (after debt and assets)
+
+  The loan is $45,000 at 7.25% interest over 7 years. Monthly payment: $673.17.
+  I've already calculated an amortization table and will use it each month
+  to split principal and interest on the payment entry.
+
+08:35 AM - 09:22 AM  [47 min] QB ONLINE — RIVERVIEW CAFÉ (SESSION 1)
+  Setup and opening balances.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:35 AM – 09:22 AM, 47 min]
+
+  Logged into QBO. Switched to Riverview Café. The company file I created
+  three weeks ago. Chart of Accounts is set up with:
+    - 10100: Checking — Suncoast 4417
+    - 10200: Savings — Suncoast 4418
+    - 12000: Accounts Receivable (probably minimal for a café, but standard)
+    - 13000: Food & Beverage Inventory (if they ever start tracking formally)
+    - 15000: Equipment & Fixtures
+    - 15100: Accumulated Depreciation
+    - 20000: Accounts Payable
+    - 21000: Loans Payable — Suncoast CU
+    - 30000: Owner's Equity (Marco & Sylvia Benedetti)
+    - 40000: Sales Revenue
+    - 50000: Cost of Goods Sold — Food
+    - 60100: Wages & Salaries
+    - 60200: Payroll Taxes (employer portion)
+    - 60300: Rent
+    - 60400: Utilities
+    - 60500: Insurance
+    - 60600: Telephone & Internet
+    - 60700: Supplies (non-food)
+    - 60800: Credit Card Processing Fees
+    - 60900: Miscellaneous
+
+  First task: enter opening balances. In QBO, the cleanest way to set opening
+  balances is through a journal entry on the first day of operations. I've
+  read three different QBO help articles on this over the past two weeks and
+  they all say slightly different things. In Desktop, opening balances were set
+  in the "Set Up Chart of Accounts" wizard — simple and guided. In QBO there's
+  no wizard. You either (a) use the Opening Balance field on each account when
+  you create it, or (b) enter a journal entry.
+
+  Since I already created the accounts without opening balances (I forgot to
+  enter them at the time — this was my own mistake), I needed to do option (b):
+  a journal entry.
+
+  New > Journal Entry. Date: 10/01/2023.
+
+  Journal entry for opening balances:
+    DEBIT   10100 Checking          $8,200.00
+    DEBIT   10200 Savings           $2,500.00
+    DEBIT   15000 Equipment         $52,400.00
+    CREDIT  21000 Loans Payable     $45,000.00
+    CREDIT  30000 Owner's Equity    $18,100.00
+    Total debits: $63,100.00. Total credits: $63,100.00. ✓
+
+  Saved the journal entry. QBO accepted it without complaint.
+
+  Then I tried to set the opening balance for the bank reconciliation. Each
+  account's first reconciliation starting point needs to reflect the 10/01
+  balance. In QBO, when you first reconcile an account, it asks for the opening
+  balance. Good. I'll handle that when I get to the October reconciliation.
+
+  Next: I needed to add the two Suncoast bank accounts as bank feeds. But — and
+  I learned from Monday's Bella's Florist experience — Riverview Café does not
+  have QBO bank feed set up. I'm not going to try today. I'll enter everything
+  manually from the bank statements and tackle the bank feed connection when
+  Sylvia can sit with me. Manual entry is more reliable for historical data
+  anyway.
+
+09:22 AM - 09:35 AM  [13 min] PHONE — SYLVIA BENEDETTI (OPENING BALANCES)
+  Called Sylvia to confirm three figures I wasn't 100% sure about:
+    1. The $52,400 equipment/build-out value — was this what they actually paid
+       or was some of it financed separately?
+    2. Were there any accounts payable on 10/01 (money owed to vendors already)?
+    3. Was the owner's equity injection in cash only, or did they also bring in
+       equipment they already owned?
+
+  Sylvia's answers:
+    1. The $52,400 included everything paid out of pocket for build-out plus the
+       equipment. Nothing financed separately (the $45K loan covered most of it;
+       $7,400 came from their personal savings, already reflected in the equity).
+    2. No AP on 10/01 — they hadn't placed any vendor orders yet.
+    3. Cash only. They did bring in one commercial-grade espresso machine they
+       already owned (Marco had it from a prior catering gig). Estimated fair
+       market value ~$3,200. I told Sylvia I'd add it to the equipment total and
+       adjust the opening equity accordingly.
+
+  Revised opening journal entry:
+    Equipment: $52,400 + $3,200 = $55,600
+    Owner's equity: $18,100 + $3,200 = $21,300
+
+  Went back into QBO and edited the opening journal entry. No drama.
+
+09:35 AM - 10:00 AM  [25 min] BREAK + ORGANIZING OCTOBER RECEIPTS
+  Coffee break. Spent 15 minutes laying out October receipts in date order on
+  a second desk. Rubber-banded each week separately. Counted: 39 receipts for
+  October, 44 for November. Total 83 original receipts, plus the weekly sales
+  summaries from Sylvia's paper ledger (which she tallied by day and summed
+  weekly — she's actually quite organized for someone keeping hand records).
+
+10:00 AM - 12:00 PM  [120 min] QB ONLINE — RIVERVIEW CAFÉ — OCTOBER ENTRY
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [10:00 AM – 12:00 PM, 120 min]
+
+  Started entering October transactions. I work chronologically, expense
+  receipts first, then at the end of the week I enter the sales total.
+
+  OCTOBER — VENDOR BILLS & EXPENSES:
+
+  10/01  Clearwater Property Mgmt — rent (Oct)  $2,800.00  [60300 Rent]
+  10/01  Suncoast CU — loan payment (Oct)         $673.17  [split: 21000 + 60900]
+         (Principal $400.44 / Interest $272.73 — per amortization table)
+  10/02  Sysco Food Services — opening order    $2,142.88  [50000 COGS-Food]
+  10/03  Clearwater Electric (setup + deposit)    $350.00  [60400 Utilities]
+  10/05  Sysco — weekly delivery #1               $887.44  [50000 COGS-Food]
+  10/06  Square processing fees — week 1           $34.17  [60800 CC Fees]
+  10/07  Clearwater Water Dept. (deposit+bill)    $180.00  [60400 Utilities]
+  10/07  AT&T Business Internet                   $124.99  [60600 Tel/Internet]
+  10/09  Restaurant Depot — supplies               $441.20  [60700 Supplies]
+  10/12  Sysco — weekly delivery #2               $774.33  [50000 COGS-Food]
+  10/13  Square fees — week 2                      $41.22  [60800 CC Fees]
+  10/14  Paper goods & cups (Costco)               $87.55  [60700 Supplies]
+  10/15  Clearwater Insurance — business policy   $412.00  [60500 Insurance]
+  10/15  Wages paid (Marco + 2 part-time)        $3,200.00  [60100 Wages]
+         Note: Sylvia takes no salary in Oct; Marco takes owner's draw.
+         Marco's $1,200 of this is actually owner's draw — not wages.
+         Corrected: Wages $2,000.00 (two part-time) + Owner's Draw $1,200.00
+  10/19  Sysco — weekly delivery #3               $691.88  [50000 COGS-Food]
+  10/20  Square fees — week 3                      $38.90  [60800 CC Fees]
+  10/22  Restaurant Depot — supplies               $312.44  [60700 Supplies]
+  10/24  Miscellaneous (cleaning supplies)          $44.33  [60700 Supplies]
+  10/26  Sysco — weekly delivery #4               $714.22  [50000 COGS-Food]
+  10/27  Square fees — week 4                      $36.45  [60800 CC Fees]
+  10/29  Wages paid (Marco draw + part-time)     $2,000.00
+         (Part-time wages only: $800.00 + owner's draw: $1,200.00 — same split)
+  10/31  Clearwater Electric — first month bill   $388.44  [60400 Utilities]
+
+  October revenue (from Sylvia's weekly sales ledger, Square reports):
+    Week 1 (10/01–10/06)   $2,241.88
+    Week 2 (10/07–10/13)   $2,877.44
+    Week 3 (10/14–10/20)   $3,102.11
+    Week 4 (10/21–10/31)   $3,444.20
+    Total October Revenue: $11,665.63
+
+  I entered each week as a single Sales Receipt deposited to checking. In a
+  real-time setup I'd split these by payment method (cash vs. Square/card),
+  but for retroactive entry, the weekly totals from Sylvia's ledger are
+  sufficient. The bank statement confirms the weekly Square deposits match
+  (within a few dollars, net of Square's processing fees that come out before
+  deposit). Close enough.
+
+  At 11:22 I made an entry error: typed $4,412.00 for Restaurant Depot instead
+  of $441.20. I caught it before saving — the two-decimal transposition. Always
+  read back before you click Save. Corrected.
+
+  At 11:48 I accidentally entered a duplicate of the Sysco week-2 delivery
+  ($774.33 twice). I caught it when my running total didn't match Sylvia's
+  ledger. In QBO: went to the expense register, found the duplicate, deleted
+  it (no drama with QBO's delete on non-reconciled items — you just click
+  the transaction and there's a "More" button at the bottom with a Delete
+  option). Good.
+
+  OCTOBER totals:
+    Revenue:      $11,665.63
+    COGS (food):   $5,210.75
+    Gross Profit:  $6,454.88  (55.3% — reasonable for a café)
+    Wages:         $4,800.00  (including draw)
+    Rent:          $2,800.00
+    Other Exp.:    $2,165.44
+    Net Income:   -$3,310.56  (first month in operation — expected loss)
+
+  October loss was expected. Opening month, building the customer base.
+
+12:00 PM - 12:40 PM  [40 min] LUNCH
+  Ate at the break room table today — needed to stand up and walk around.
+  Back hurts from hunching over receipts. Mentioned to Gary that I was doing
+  six months of retroactive café entry and he sympathized. He said "I hope
+  they kept their receipts." I said "Shoebox." He winced.
+
+12:40 PM - 01:05 PM  [25 min] CALL — SYLVIA BENEDETTI (CLARIFICATIONS)
+  I had flagged four items in November's receipts that I couldn't read or
+  understand clearly. Called Sylvia.
+
+    1. A $340.00 check stub made out to "CWR Music" — Sylvia said it's a
+       monthly fee for the in-café music streaming license (BMI/ASCAP). I
+       coded it under 60900 Miscellaneous (or could create a new "Music/
+       Entertainment Licensing" account — made a note to ask her CPA at
+       tax time whether this is separate or can roll into misc).
+
+    2. A $1,200.00 check to "Benedetti" in November — Sylvia said that was
+       Marco taking an owner's draw (same as October). I already have a
+       process for this.
+
+    3. A receipt for $212.44 from "CL Restaurant Supply" — Sylvia said this
+       was a new set of café cups and plates to replace broken ones. I coded
+       it to 60700 Supplies (below the capitalization threshold for equipment).
+
+    4. A $500.00 check with "Deposit - Dec" written on it — apparently they
+       prepaid December's catering event deposit from a local company
+       (Clearwater Title, surprisingly — same client as Bella's Florist!).
+       This $500 is deferred revenue: they haven't earned it yet. I need to
+       code it to a liability account (Deferred Revenue / Customer Deposits),
+       not as income. Good catch — this is exactly the kind of thing that
+       gets missed without an accountant.
+
+       Created a new account in QBO: 22000 — Customer Deposits (Current
+       Liability). Gear > Your Company > Chart of Accounts > New. Set type
+       to "Current Liability." Done.
+
+01:05 PM - 02:55 PM  [110 min] QB ONLINE — RIVERVIEW CAFÉ — NOVEMBER ENTRY
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [01:05 PM – 02:55 PM, 110 min]
+
+  November — 44 receipts. This was the café's second full month. Also their
+  first month with higher foot traffic (they got a mention in the Clearwater
+  Gazette's "New Bites" column on 11/09 — Sylvia mentioned this proudly).
+
+  Key November entries:
+
+  11/01  Clearwater Prop. Mgmt — rent (Nov)    $2,800.00  [60300]
+  11/01  Suncoast CU — loan payment (Nov)        $673.17  [21000 + int.]
+         (Principal $403.34 / Interest $269.83)
+  11/03  Sysco — delivery                        $922.44  [50000]
+  11/04  Square fees — week                       $43.11  [60800]
+  11/05  Restaurant Depot                         $388.22  [60700]
+  11/07  Clearwater Electric (Nov est. bill)      $412.33  [60400]
+  11/07  AT&T Business Internet                   $124.99  [60600]
+  11/09  Clearwater Gazette ad (one-time feature)  $75.00  [60900 Misc.]
+         Actually — this was a paid advertisement supplement. Coded to
+         Marketing & Advertising (need to create that account).
+         New account: 60950 — Marketing & Advertising. Done.
+  11/10  Sysco — delivery                        $988.11  [50000]
+  11/11  Square fees — week                       $51.44  [60800]
+  11/12  Restaurant Depot — extra paper goods     $244.77  [60700]
+  11/13  Wages (part-time, biweekly)            $1,600.00  [60100]
+  11/14  CWR Music — license (Nov)               $340.00  [60900]
+  11/15  Clearwater Insurance (Nov)              $412.00  [60500]
+  11/17  Sysco — delivery                        $874.22  [50000]
+  11/18  Square fees — week                       $55.88  [60800]
+  11/20  CL Restaurant Supply (cups/plates)      $212.44  [60700]
+  11/22  Costco — paper goods                      $92.11  [60700]
+  11/24  Sysco — Thanksgiving week order        $1,214.44  [50000]
+         (Higher because they did Thanksgiving catering orders)
+  11/24  Marco owner's draw                     $1,200.00  [Owner's Draw]
+  11/25  Square fees — pre-Thanksgiving week      $62.33  [60800]
+  11/27  Wages (biweekly)                       $1,600.00  [60100]
+  11/28  Clearwater Water Dept. (Nov)             $122.88  [60400]
+  11/29  Sysco — end of month delivery            $744.22  [50000]
+  11/30  Square fees — last week Nov               $58.77  [60800]
+  11/30  Customer deposit received — Clearwater   $500.00  [22000 Deferred Rev.]
+          Title (Dec catering event)
+
+  November revenue (from Square + Sylvia's ledger):
+    Week 1 (11/01–11/03)  $3,211.44
+    Week 2 (11/04–11/10)  $3,877.22  (Gazette article bump)
+    Week 3 (11/11–11/17)  $4,102.88
+    Week 4 (11/18–11/24)  $4,844.77  (Thanksgiving catering)
+    Week 5 (11/25–11/30)  $3,688.44
+    Total November Revenue: $19,724.75
+
+  November totals:
+    Revenue:      $19,724.75
+    COGS (food):   $4,743.43
+    Gross Profit: $14,981.32  (75.9% — high, but Thanksgiving bump raised revenue)
+    Wages:         $3,200.00
+    Rent:          $2,800.00
+    Other Exp.:    $2,193.27
+    Net Income:    $6,788.05  (first profitable month — good news for Benedettis)
+
+  I entered transactions fairly quickly, but QBO's expense entry form has a
+  persistent annoyance: when I tab through the fields and reach the "Account"
+  dropdown, I have to type the account name or number. It doesn't remember the
+  last account I used for the same vendor the way Desktop used to. Desktop
+  would auto-populate "last used account" for any vendor you'd entered before.
+  In QBO, if the vendor has a default account set up in the vendor profile,
+  it remembers. But for new vendors with no history (like all of these), I'm
+  typing the account name every single time.
+
+  I spent fifteen minutes halfway through November setting up default expense
+  accounts for each vendor in their QBO Vendor records. Expenses > Vendors >
+  click each vendor > Edit > "Default expense account." Once set, QBO does
+  auto-fill. Should have done this at the start of the day. Live and learn.
+
+02:55 PM - 03:10 PM  [15 min] BREAK
+
+03:10 PM - 03:25 PM  [15 min] QB ONLINE — RIVERVIEW CAFÉ — RUNNING BALANCES
+
+  ⬛ QUICKBOOKS ONLINE SESSION 4  [03:10 PM – 03:25 PM, 15 min]
+
+  Quick session to check that the running account balances made sense. Ran a
+  mini P&L for Oct–Nov combined and a balance sheet as of 11/30/2023.
+
+  Balance sheet 11/30:
+    Checking balance should be:
+      Opening 10/01: $8,200.00
+      + Nov revenues (deposited): $19,724.75
+      + Oct revenues (deposited): $11,665.63
+      - Oct expenses (paid): roughly $15,376.19
+      - Nov expenses (paid): roughly $12,936.70
+      = Estimated: $11,277.49
+
+  QBO's balance sheet showed Checking: $11,188.06. About $89 off. I made a
+  note — this will get resolved when I do the bank reconciliation for these
+  months. I may have missed a bank fee or small charge. I'm not doing Oct/Nov
+  reconciliation today — that's next week when I get the Suncoast statements
+  from Sylvia (she said she'd bring them Monday).
+
+  Printed two reports: October P&L and November P&L. Just for my own reference
+  file — these are preliminary, not to share with the Benedettis yet.
+
+03:25 PM - 04:00 PM  [35 min] RIVERVIEW CAFÉ — PAPER FILE SETUP
+  Set up a proper binder for Riverview Café. Labeled tabs: Opening Balances,
+  Oct 2023, Nov 2023, Dec 2023, Jan 2024, Feb 2024, Mar 2024, and a Pending tab.
+  Filed the two printed P&L reports in the Oct and Nov tabs.
+
+  Also started a separate "Master Client Notes" sheet for Riverview Café:
+  key contacts (Sylvia, Marco, CPA to be determined), account numbers,
+  loan details, Square merchant account info, payroll status (none yet — they
+  process payroll informally for the two part-time staff, which is a whole
+  other conversation about proper payroll setup I need to have with them).
+
+04:00 PM - 05:00 PM  [60 min] END-OF-DAY ADMIN & NOTES
+  Total transactions entered today: 68 (Oct: 30 items, Nov: 38 items, plus
+  the opening balance journal entry). Time in QBO: 148 minutes across four
+  sessions.
+
+  I'm running slightly behind my mental target for today. I had hoped to get
+  through December too. But the vendor profile setup in the afternoon (15 min)
+  and the Sylvia call cost time. December will have to be next session, which
+  I'll schedule for early next week after Friday's wrap-up.
+
+  Still have four months to go: December 2023, January, February, March 2024.
+  At today's pace (~70 transactions per 3 hours), the remaining four months
+  will take approximately two full days of entry. Need to schedule that next week.
+
+END OF DAY — MARTHA'S REFLECTION
+───────────────────────────────────────────────────────────
+  Tedious. There's no other word for six months of manual retroactive data
+  entry. But it's honest work and it has to be done right.
+
+  I keep thinking about how this would go in Desktop. Same amount of entry,
+  honestly. But Desktop felt more... controllable. Like I was building something
+  in a space I understood. QBO feels like I'm working inside someone else's
+  house and I have to ask permission to move the furniture.
+
+  The thing I appreciated today: QBO's ability to add new accounts mid-session
+  without interrupting my flow. I created two new accounts (Customer Deposits
+  and Marketing & Advertising) on the fly without closing what I was working
+  on. In older versions of Desktop you sometimes had to close a transaction
+  to go update the chart of accounts and then reopen. Small thing, but genuine
+  improvement.
+
+  The vendor default account setup — I should have done that first thing
+  this morning. Next time I onboard a new client in QBO, that's step two
+  right after the COA is set up. Lesson learned.
+
+  The Benedettis are going to be pleased when I can show them November's net
+  income of $6,788.05. That's their first profitable month. Six months in,
+  they're still finding their footing, but the trend from October to November
+  is clearly positive.
+
+  TO-DO FOR TOMORROW:
+  □ Week wrap-up — print all week's reports from all four clients
+  □ Update master binders for all four clients
+  □ Run Bella's Florist AR aging for Patrice (follow up Harrington Law $135)
+  □ Check if Sunset Hardware — Dennis got school district payment (Inv. #1047)
+  □ Confirm Parker Dental payroll direct deposits went through OK
+  □ Contact Sylvia re: December receipts + Suncoast bank statements (Oct-Nov)
+  □ Schedule next Riverview Café session (need Dec 2023 + Q1 2024 entry)
+  □ Expense category cheat sheet for Dennis — MUST do this today
+  □ Log hours for billing (this week has been heavy)

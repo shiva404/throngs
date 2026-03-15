@@ -1,0 +1,319 @@
+═══════════════════════════════════════════════════════════
+  SUMMIT DISTRIBUTION — AR CLERK DIARY
+  Priya Sharma | Wednesday, Week 1
+  "I stayed calm on the phone. Internally I was not calm at all."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      8h 30min
+Invoices processed:      4
+QB Online sessions:      4  (88 min total)
+Payments recorded:       1  ($3,400.00 — Mesa Pacific, confirmed received)
+Customer disputes:       1  (Shoreline Food Service — escalated to Raj)
+Raj consultations:       3
+Excel backup entries:    5 new + dispute notes
+
+08:00 AM - 08:30 AM  [30 min] MORNING SETUP + INBOX
+
+  Wednesday. The week feels like it has a rhythm now. Tea, laptop, email,
+  print queue.
+
+  Inbox highlights:
+    1. Accounts email shows a payment notification: Mesa Pacific Goods payment
+       of $3,400.00 received. Excellent. This is the first payment I'll get
+       to record on my own in QB. (Raj was out sick the one day a payment came
+       in during my first month, so someone else handled it. Since then I
+       haven't had one land while I was confident enough to try solo.)
+
+    2. A voicemail notification forwarded to email — Shoreline Food Service
+       called yesterday at 4:48 PM (after I left) and left a message about
+       "an issue with our invoice." The voicemail transcription isn't great
+       but the gist seems to be they're disputing an amount. My chest got tight
+       reading that. I've never handled a dispute.
+
+    3. New invoice requests: 4 from sales team. Printed.
+
+    4. No reply from Branford Catering. Nine days overdue now.
+
+  I decided to tackle the payment recording first (the positive task) before
+  calling Shoreline back (the scary task).
+
+08:30 AM - 09:10 AM  [40 min] QB ONLINE — RECORDING MESA PACIFIC PAYMENT
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:32 AM – 09:09 AM, 37 min]
+
+  I've been reading about this. My cheat sheet has the steps (from Raj's
+  verbal explanation two weeks ago, and from the QB help article I read Monday
+  evening). Let me do this carefully.
+
+  Steps I followed:
+    1. Sales > Customers > Mesa Pacific Goods > open customer record
+    2. Looked at their open invoices — INV-2803 ($3,400.00) showing as overdue
+    3. From the customer page I clicked "Receive Payment" (big green button
+       at top right — one of the "friendly" ones I know means I'm in the right
+       place)
+    4. "Receive Payment" form opened. Fields:
+         - Customer: Mesa Pacific Goods (auto-filled — correct)
+         - Payment date: today, 03/12/2026 — I changed this to yesterday,
+           03/11/2026, because the payment notification email said it was
+           received yesterday. Raj once told me "always use the date the
+           payment was actually received, not the date you're entering it."
+           I remembered that.
+         - Payment method: Check (payment notification said "check #4821")
+         - Reference/Check #: 4821
+         - Amount received: $3,400.00
+         - Below: a list of open invoices for this customer. INV-2803 was
+           the only one. It auto-populated the $3,400.00 against it.
+           Amount applied: $3,400.00. Difference: $0.00.
+
+  I stopped before saving and read through the entire form twice. The amount
+  was right. The invoice was right. The date was right. The check number was
+  filled in. The difference field showed $0.00 which I believe means the
+  payment exactly matches the invoice, so nothing is left over and nothing
+  is underpaid.
+
+  Hovered over Save & Close for a moment. Thought: "Is there anything I'm
+  forgetting?" Re-read Raj's instructions in my head. Looked at my cheat
+  sheet. Everything lined up.
+
+  Clicked Save & Close.
+
+  INV-2803 is now showing as "Paid" in QB. I clicked on the invoice to verify
+  and the big green "PAID" stamp is there. The payment is listed in the
+  activity log at the bottom: "Payment received $3,400.00 on 03/11/2026."
+
+  I logged the payment in Excel. I feel pretty good about that. It went
+  exactly the way the cheat sheet said it would.
+
+09:10 AM - 09:25 AM  [15 min] NEW INVOICE ENTRY (QUICK BATCH)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [09:12 AM – 09:24 AM, 12 min]
+
+  Entered 2 of the 4 new invoices while still in QB. Small ones:
+    INV-2862 | Blue Ridge Catering Co. | $640.00 | Due Mar 26
+    INV-2863 | Shoreline Food Service | $2,210.00 | Due Mar 26
+
+  Then I paused on INV-2863. Shoreline Food Service is the customer with the
+  dispute call. Should I enter this new invoice for them while there's a
+  dispute open on a different invoice? Or does that make things complicated?
+  I genuinely don't know the answer. I saved INV-2863 as a draft (not sent)
+  because I didn't want to send a new invoice to a customer who's currently
+  disputing something, in case it made them more upset or confused.
+
+  Note to self: ask Raj about this.
+
+09:25 AM - 09:50 AM  [25 min] PREP + CALL TO SHORELINE FOOD SERVICE
+
+  I sat with my notepad for a few minutes before calling. Wrote down:
+    - INV number being disputed: INV-2855 ($1,100.00, sent Monday)
+    - What I know: it was a routine entry, 2 line items
+    - What I don't know: what their complaint is
+    - What I'm allowed to do: listen, take notes, tell them I'll investigate
+    - What I'm NOT allowed to do: promise credits, promise changes, agree to
+      anything — escalate to Raj if it's an actual dispute
+
+  Called the Shoreline main line at 9:31 AM. Got through to their AP contact,
+  a woman named Karen. She was polite but clearly a little annoyed.
+
+  The dispute: Shoreline received INV-2855 for $1,100.00. They expected
+  it to be $980.00 based on a quote they have on file from our sales rep.
+  The $120 difference is because they say they were quoted a lower unit price
+  on one item. They're not refusing to pay — they just want clarification
+  before they pay the full $1,100.
+
+  I said: "I completely understand, Karen. I want to make sure this gets
+  resolved correctly for you. Let me review the details on our end and I'll
+  get back to you today if at all possible. Can I confirm the best number or
+  email to reach you?" She gave me her email.
+
+  After I hung up my hand was shaking a little. Not visibly — just that
+  internal thing where your body is more stressed than you're letting on.
+
+  I wrote everything down in my notepad immediately so I wouldn't forget.
+  Key facts: $1,100 invoiced, $980 expected by customer, $120 discrepancy,
+  their reference to a sales quote on file.
+
+  I do not have access to the sales quoting system — that's outside my area.
+  Even if I did, I wouldn't know whether the quote supersedes the sales order
+  I was given. This is 100% an escalation.
+
+09:50 AM - 10:05 AM  [15 min] ESCALATION TO RAJ — SHORELINE DISPUTE
+
+  Walked over to Raj's desk (he was in). Told him what Karen said.
+
+  Raj: "Okay. This is a pricing dispute — it goes to sales first. Forward me
+       the full invoice and the sales order you used to create it, and I'll
+       rope in Derek to check the quote. Don't do anything to the invoice in
+       QB right now — don't void it, don't change it, don't do anything.
+       We need to figure out if the pricing error is on our end or if the
+       customer has an old quote."
+
+  Me: "Understood. Should I hold the new invoice I was about to enter for
+      them — INV-2863?"
+
+  Raj: "Yes. Good thinking. Don't send that until the dispute is resolved."
+
+  Back at my desk I forwarded Raj both documents. Added a note to INV-2863
+  in QB (I went back in and found the draft): "HOLD — Dispute in progress on
+  INV-2855, pending resolution." Logged in Excel.
+
+  Also emailed Karen at Shoreline:
+    "Hi Karen, thank you for your patience. I've escalated this to our AR
+     manager and we're reviewing the pricing details with our sales team. We'll
+     be in touch by end of week with an update. Thank you, Priya"
+
+10:05 AM - 11:00 AM  [55 min] REMAINING INVOICE ENTRY + FILING
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [10:08 AM – 10:51 AM, 43 min]
+
+  Entered the 2 remaining new invoices:
+    INV-2864 | Hartwell Grocery Group | $4,775.00 | Due Apr 26
+      Net 45 (remembered). Cheat sheet confirmed. Previewed carefully. Saved
+      and sent.
+
+    INV-2865 | Dunmore Wholesale Foods | $3,220.00 | Due Apr 26
+      Net 45. Previewed. Saved and sent.
+
+  Logged in Excel. Total invoices today: 4 entered (2 sent, INV-2862 sent
+  earlier, INV-2863 still on hold).
+
+  Filed all paper sales orders for today's invoices. Added a big red "HOLD"
+  sticky to the Shoreline INV-2863 sales order.
+
+11:00 AM - 12:00 PM  [60 min] BRANFORD CATERING ESCALATION
+
+  I'd been putting this off because I wasn't sure if it was my call to make.
+  But Branford is now 9 days overdue on INV-2791 ($1,850.00). Yesterday I
+  asked Raj whether I should escalate and he said "let me check their account."
+  He hasn't followed up.
+
+  I looked at our reminder policy: I can send reminders up to 14 days overdue.
+  Day 9 is still within my zone. But I already sent one reminder on Monday.
+  I sent a second reminder from QB, keeping it professional:
+
+    "Hi Branford Catering team — this is a follow-up regarding Invoice #2791
+     for $1,850.00, which was due March 3rd. If there are any issues with the
+     invoice or questions about payment, please don't hesitate to reach out.
+     We'd love to resolve this quickly. Thank you, Priya Sharma, Summit Dist."
+
+  Logged the send. Two reminders sent on INV-2791 now (Monday and today).
+  If no response by Friday I'll flag to Raj to take over.
+
+  Also checked on INV-2693 (the old Branford $320 from December that showed
+  up in the aging report yesterday). Raj said he's handling it. No action
+  needed from me. But I'm curious about what he'll do with it. "Write-off"
+  is something I've heard of. I don't know what it involves in QB. I know it's
+  not my area.
+
+12:00 PM - 12:45 PM  [45 min] LUNCH
+
+  Ate at my desk today. Raj passed by and said "You handled the Shoreline
+  call well, by the way. Good instinct to flag it right away." That made
+  my afternoon better. I've been worrying all morning that I'd said something
+  wrong on the phone or that I should have caught the pricing issue myself
+  before sending the invoice. But I couldn't have caught a quoting discrepancy
+  — I don't have access to the quotes. Raj confirmed that. Still, I felt
+  better hearing him say it.
+
+12:45 PM - 02:00 PM  [75 min] PROCESS DOCUMENTATION + CHEAT SHEET UPDATES
+
+  Added to cheat sheet:
+    - How to receive/record a payment (full step-by-step with the fields
+      and what to check before hitting save)
+    - Customer dispute handling protocol:
+        1. Listen and take detailed notes
+        2. Do NOT agree to changes or credits
+        3. Do NOT touch the invoice in QB
+        4. Escalate to Raj with: invoice copy + original sales order + notes
+        5. Email customer confirming we're looking into it
+    - "If a customer has a current dispute: HOLD any new invoices for them
+       until resolved — ask Raj before sending"
+
+  Continued the process documentation Word doc. Now has sections for:
+    - Daily invoice workflow
+    - Payment recording workflow
+    - Overdue reminder workflow
+    - AR aging report workflow
+    - Dispute handling protocol (new today)
+
+02:00 PM - 02:45 PM  [45 min] QB ONLINE — AFTERNOON CHECK + OVERDUE REVIEW
+
+  ⬛ QUICKBOOKS ONLINE SESSION 4  [02:04 PM – 02:26 PM, 22 min]
+
+  Refreshed overdue invoices:
+    - INV-2791 | Branford Catering | $1,850.00 | 9 days — 2nd reminder sent
+    - INV-2812 | Cascade Hospitality | $675.00 | 4 days — no payment yet
+    - INV-2694 | Thornbury Market | $414.00 | 3 days — 1 reminder sent Tuesday
+    - INV-2855 | Shoreline Food Service | $1,100.00 | now flagged in my notes
+      as "DISPUTED — do not send further reminders until resolved"
+
+  Added a QB memo to INV-2855: "Under review — pricing dispute per customer
+  call 03/12. Escalated to Raj."
+
+  Cross-checked all my Excel logs against QB. Everything matches.
+
+02:45 PM - 04:30 PM  [105 min] QUIET WORK AFTERNOON + LEARNING
+
+  Raj sent a quick email: "Shoreline dispute — Derek confirmed our side quoted
+  $980. Sales order was entered wrong. I'll handle the correction. Just letting
+  you know so you're not left wondering. Don't touch the invoice."
+
+  So it WAS an error on our side. I feel a little bad that a wrong invoice
+  went out, but also relieved — I entered it based on the sales order I was
+  given. My job is to transcribe the sales order accurately, not to audit
+  whether the sales team priced it correctly. If the sales order is wrong, I
+  can only go by what I have. I couldn't have caught this.
+
+  Still added a note in my process documentation: "If line item prices seem
+  unusual (very round numbers or much higher/lower than recent orders for same
+  customer), flag to Raj before sending. Not a formal check but a gut check."
+
+  Spent the rest of the afternoon reading a QB help article on "How to void
+  an invoice." I don't know why — just a feeling that it might come up
+  eventually and I should at least have read it before I need it. It seems
+  scary. It says voiding an invoice zeros out the amount but keeps the record,
+  whereas deleting removes it entirely. We "never delete" — that was one of
+  Raj's first-week rules. But I've never voided either. I bookmarked the
+  article.
+
+04:30 PM - 04:45 PM  [15 min] WRAP-UP
+
+  Closed everything. Printed today's open invoices list. Filed.
+
+  The dispute thing was hard but I got through it. I think the key is: stay
+  calm on the surface, write everything down, and call Raj. In that order.
+
+══════════════════════════════════════════════════════════════
+END OF DAY — PRIYA'S REFLECTION
+───────────────────────────────────────────────────────────
+  The phone call was the big thing today. I was genuinely nervous before I
+  dialed. Karen wasn't rude or anything — she was just businesslike and I
+  could tell she'd had to make calls like this before and it wasn't a big deal
+  to her. That actually helped. It's a $120 discrepancy and she wasn't yelling
+  about it. I made it scarier in my head than it was.
+
+  What I keep thinking about is: I did everything right procedurally. I took
+  notes, I didn't promise anything, I escalated, I followed up with Karen.
+  Raj said the same. But I also feel this background anxiety that says "what
+  if the next call is harder? What if someone IS rude? What if I can't remember
+  the right thing to say?"
+
+  I think I need to just accept that this will happen again and again and
+  I'll get better at it. Every experience makes the next one a little less
+  scary. Today's call was easier than the imaginary nightmare version I ran
+  in my head before dialing. That's worth remembering.
+
+  Also: recording a payment and seeing the "PAID" stamp come up on the invoice
+  was genuinely satisfying. That was a small moment of joy in an otherwise
+  stressful morning.
+
+  TO-DO FOR TOMORROW:
+  □ Check Shoreline situation — Raj said he's handling it but I want to know
+    if I can release INV-2863 (the held new invoice) by end of week
+  □ Branford Catering — 10 days overdue tomorrow. Flag to Raj if still no
+    payment. Determine if third reminder is appropriate or escalate.
+  □ Check Mesa Pacific INV-2803 shows PAID correctly in QB (do a final verify
+    tomorrow morning)
+  □ Check if Cascade Hospitality or Thornbury Market have paid yet
+  □ Keep up with new invoice requests if any come in overnight

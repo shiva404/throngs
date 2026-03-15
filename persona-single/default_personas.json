@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Marcus_Mobile_Plumber",
+    "description": "38-year-old plumbing company owner. Runs Marcus Plumbing LLC solo — fixes burst pipes, installs water heaters, clears drains. Uses QuickBooks on his phone between jobs to send estimates and invoices. High stress, always in a hurry, fat fingers from physical work. Hates paperwork but knows he needs to get paid.",
+    "domain_literacy": 4,
+    "tech_literacy": 5,
+    "patience_budget": 25,
+    "usage_frequency": "weekly",
+    "trigger_words": ["reconcile", "general ledger", "accrual", "journal entry", "bank feed", "chart of accounts"],
+    "friendly_words": ["estimate", "invoice", "send invoice", "get paid", "money owed", "unpaid", "customer", "job"],
+    "motor_precision": 0.65,
+    "risk_tolerance": 4,
+    "typo_rate": 0.12,
+    "usage_device": "mobile",
+    "interruption_probability": 0.18
+  }
+]

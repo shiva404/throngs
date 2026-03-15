@@ -1,0 +1,473 @@
+═══════════════════════════════════════════════════════════
+  SUMMIT DISTRIBUTION — AR CLERK DIARY
+  Priya Sharma | Friday, Week 1
+  "I read the help article three times. Then I read it once more."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      8h 20min
+Invoices processed:      2
+QB Online sessions:      6  (127 min total)
+Payments recorded:       1  ($1,850.00 — Branford Catering, check arrived)
+Invoices voided:         1  (INV-2861 — my first void ever)
+Raj consultations:       3
+Excel backup entries:    4 new + void documentation
+
+08:00 AM - 08:30 AM  [30 min] MORNING SETUP + INBOX
+
+  Friday. I told myself last night I'd have a calm Friday. I came in with
+  that plan firmly in mind.
+
+  Email:
+    1. New invoice requests: only 2. (Quiet, like I hoped.)
+    2. No overnight payment notifications.
+    3. Raj email at 7:58 AM: "Priya — can you void INV-2861 (Lakeside Banquet)?
+       The sale was cancelled. I'll explain when you're settled."
+
+  My stomach did the thing. Void. I bookmarked the QB help article on voiding
+  earlier this week because I had a feeling it was coming. I'm glad I did.
+  But I haven't actually done it before. I opened the article immediately.
+
+  Quickly checked: Branford Catering check. I looked in the physical mail
+  inbox at the front desk. Raj was right — there's a Branford check. I picked
+  it up and brought it to my desk. Check #: 5583. Amount: $1,850.00. Exact
+  match to INV-2791. Check date: 03/13/2026 (yesterday). Relief.
+
+  So today I have:
+    1. Record Branford payment (confident — I've done exact-match payments)
+    2. Enter 2 new invoices (routine)
+    3. Void INV-2861 (NEVER DONE BEFORE — need to be very careful)
+
+  I will do them in that order. Known things first. Unknown thing last.
+  Or maybe talk to Raj first about the void before I do anything.
+
+08:30 AM - 08:42 AM  [12 min] WALK OVER TO RAJ — VOID CONVERSATION
+
+  Went to Raj's desk. He explained:
+
+    "Lakeside Banquet cancelled the order. They had a venue issue and the
+     event got called off. The invoice was for $775, already sent. They
+     haven't paid it. Since nothing was delivered and no money exchanged
+     hands, we just void the invoice. Voiding zeroes the amount but keeps
+     the record in QB — it'll show as Void, not deleted. That's important
+     for our records. DON'T delete it. Void it."
+
+  Me: "I've never voided one before. Can you walk me through it or should
+      I follow the help article and check with you before I confirm?"
+  Raj: "Follow the article. Come get me before you click the final
+       confirmation if you want. It's a simple void — nothing else is
+       attached to that invoice."
+
+  Me: "No payment was applied to it, right? Nothing I need to undo first?"
+  Raj: "Correct. It's clean. Just a sent-but-unpaid invoice."
+
+  I noted that. A clean void on an unpaid invoice with no payment history
+  is the simplest possible case. I can do this. Probably.
+
+  Also confirmed: should I notify Lakeside? Raj said they already spoke to
+  our sales team so they're aware. No need for me to email them.
+
+08:42 AM - 09:20 AM  [38 min] QB ONLINE — BRANFORD PAYMENT + NEW INVOICES
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [08:44 AM – 09:18 AM, 34 min]
+
+  BRANFORD PAYMENT — INV-2791:
+    Sales > Customers > Branford Catering > Receive Payment
+    Payment date: 03/13/2026 (check date, not today)
+    Method: Check
+    Reference/Check #: 5583
+    Amount received: $1,850.00
+    Applied to: INV-2791 ($1,850.00)
+    Difference: $0.00
+
+  Read through twice. Saved & Close. INV-2791: PAID. Activity log confirms.
+  Also checked INV-2693 (the old $320 Branford balance from December, the one
+  Raj said he was handling). Status: still Open. Still Raj's problem.
+  Logged the $1,850 payment in Excel.
+
+  Then entered the two new invoices quickly:
+    INV-2871 | Blue Ridge Catering Co. | $1,230.00 | Due Mar 28
+      Routine. Previewed. Saved and sent.
+    INV-2872 | Crestwood Institutional | $3,875.00 | Due Mar 28
+      Routine. Previewed. Saved and sent.
+
+  Logged both in Excel. Done with the easy stuff.
+
+09:20 AM - 10:00 AM  [40 min] VOID PREPARATION
+
+  I closed QB. I opened the QB help article: "Void or delete transactions in
+  QuickBooks Online." Read it once, slowly.
+
+  Key things from the article:
+    - To void an invoice: open the invoice, click "More" at the bottom,
+      select "Void."
+    - QB will warn you before voiding: "Are you sure you want to void this
+      transaction? This will zero out the amounts."
+    - The invoice will remain in QB as a record, stamped "VOID."
+    - You cannot un-void an invoice (you'd have to create a new one).
+    - Voiding affects any attached journal entries — but since this invoice
+      has no payments attached, Raj confirmed, there should be nothing else.
+
+  Read it a second time. Took notes in my notepad word for word.
+
+  Then I thought of a question: if I void an invoice that's already been
+  "Sent" — meaning the customer received it by email — does QB automatically
+  send the customer a void notification? That would be bad since Raj said
+  Lakeside already knows and doesn't need more emails.
+
+  Searched QB help: "does voiding an invoice notify the customer?" The help
+  page doesn't clearly answer this. I found a community forum post that says
+  QB does NOT automatically email the customer when you void — you'd have to
+  manually send something. Good.
+
+  Read the main article a third time.
+
+  Messaged Raj:
+    Me: "Quick check before I proceed — when I click Void on INV-2861, will
+        QB automatically send any notification to Lakeside Banquet?"
+    Raj: "No, voiding doesn't send anything to the customer. They won't
+         know unless you tell them."
+    Me: "Great. And just to confirm — I click More at the bottom of the
+        invoice, then Void, then confirm the prompt?"
+    Raj: "Yes. That's it."
+
+  I went back and read the article a fourth time. Then I felt ready.
+
+10:00 AM - 10:55 AM  [55 min] QB ONLINE — VOIDING INV-2861 (FIRST VOID EVER)
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2  [10:03 AM – 10:52 AM, 49 min]
+
+  Navigated to Sales > Invoices. Searched for INV-2861.
+
+  INV-2861 appeared in the list: Lakeside Banquet Facilities, $775.00, Sent,
+  Due Mar 26. I clicked on it to open it.
+
+  Reviewed the invoice fully before doing anything:
+    - Customer: Lakeside Banquet Facilities ✓
+    - Invoice number: INV-2861 ✓ (I triple-checked this. I am not going to
+      void the wrong invoice. That would be catastrophic.)
+    - Amount: $775.00 ✓
+    - Status: Sent ✓ (not paid, not partial — clean)
+    - No payment listed in the activity log at the bottom ✓
+
+  Sat there looking at it for about 2 minutes. I know that sounds excessive.
+  I was making sure I was on the right invoice and that there was nothing
+  unusual about it before I took an irreversible action.
+
+  Scrolled to the bottom of the invoice. Found the "More" button at the
+  bottom left. Clicked it. A small dropdown appeared with options:
+    - Copy
+    - Void
+    - Delete
+    - Transaction Journal
+
+  I did not click Delete. (I noted the location of Delete just to confirm
+  I was NOT hovering over it.) I moved my cursor to Void and paused.
+
+  Then I went and got Raj.
+
+  Me: "Hey Raj, I'm about to click Void on INV-2861. I have the invoice
+      open. Amount is $775, status is Sent, no payments attached. Just
+      want you to confirm I'm looking at the right one before I click."
+  Raj walked over to my desk, looked at my screen. "Yep. That's right.
+      Go ahead."
+
+  I clicked Void.
+
+  A modal appeared: "Are you sure you want to void Invoice #INV-2861 for
+  Lakeside Banquet Facilities? Amount will be set to zero. This cannot
+  be undone."
+
+  I read the modal out loud quietly to myself. Confirmed:
+    - Correct invoice number: INV-2861 ✓
+    - Correct customer: Lakeside Banquet Facilities ✓
+    - I understand this cannot be undone: ✓
+
+  Clicked "Yes."
+
+  The page refreshed. The invoice now shows:
+    - Amount: $0.00
+    - Status: VOID (shown in large red/grey text)
+    - A note in the activity log: "Voided on 03/14/2026"
+
+  I sat very still for a moment. Then I took a screenshot. Then I took
+  another screenshot. Then I went back into the invoice list and confirmed
+  INV-2861 shows as "Void" in the list.
+
+  Printed the voided invoice screen and put it in the binder with a note:
+  "Voided 03/14/2026 — Lakeside Banquet order cancelled. Authorized by Raj.
+  No payment had been received. See email from Raj dated 03/14."
+
+  Logged in Excel: "INV-2861 | Lakeside Banquet | $775.00 | VOIDED 03/14 |
+  Authorized by Raj | Order cancellation"
+
+  I exhaled.
+
+  Went back to Raj's desk: "Done. INV-2861 is voided and shows $0.00 with
+  Void status. I've printed a copy for the binder and logged it in Excel."
+  Raj: "Perfect. Thank you."
+
+  Two words. Perfect. Thank you. I felt genuinely proud of myself.
+
+10:55 AM - 11:20 AM  [25 min] CHEAT SHEET UPDATE — VOID PROCEDURE
+
+  Added a new page to my cheat sheet. This is one of the most detailed pages
+  because I want to capture every step and caution:
+
+  ═══════════════════════════════
+  HOW TO VOID AN INVOICE IN QB
+  (ONLY DO THIS WITH RAJ'S AUTHORIZATION)
+  ═══════════════════════════════
+  1. Get written (email/message) authorization from Raj first.
+  2. Sales > Invoices > find the invoice by INV number.
+  3. Before doing ANYTHING: verify you are looking at the correct invoice:
+     - Invoice number matches what Raj specified
+     - Customer name is correct
+     - Amount matches what Raj described
+     - Status: should be unpaid/sent (if a payment has been applied,
+       STOP and ask Raj — this is more complex)
+     - Activity log: confirm no payment recorded
+  4. If all clear: get Raj to visually confirm (walk over if possible).
+  5. Scroll to bottom of invoice > click "More" > click "Void"
+     (DO NOT click "Delete" — Delete is permanent and removes the record)
+  6. Read the confirmation modal carefully.
+  7. Click "Yes" to confirm.
+  8. Verify invoice now shows $0.00 and status "VOID."
+  9. Screenshot the voided invoice.
+  10. Print a copy for the AR binder.
+  11. Log in Excel: INV number, customer, amount, VOIDED date, authorized by.
+  12. Tell Raj it's done.
+
+  NOTE: Voiding does NOT notify the customer automatically.
+  NOTE: A void cannot be undone. Be 100% certain before clicking.
+
+  ═══════════════════════════════
+
+11:20 AM - 12:00 PM  [40 min] OVERDUE STATUS CHECK + WEEKLY WRAP
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3  [11:22 AM – 11:44 AM, 22 min]
+
+  Final overdue check for the week:
+    - INV-2791 | Branford Catering | $1,850.00 | PAID (recorded this morning)
+    - INV-2812 | Cascade Hospitality | $675.00 | PAID (recorded Thursday)
+    - INV-2803 | Mesa Pacific Goods | $3,400.00 | PAID (recorded Wednesday)
+    - INV-2694 | Thornbury Market | $414.00 | 5 days overdue — still unpaid.
+      Third reminder sent today (keeping it brief):
+      "Hi Thornbury team, following up one more time on INV-2694 ($414.00,
+       due 3/9). Please let us know if there are any questions.
+       Thank you, Priya"
+      If no response by Monday I will flag to Raj. That's 3 reminders.
+    - INV-2855 | Shoreline Food Service | $1,100.00 | Under dispute/credit
+      memo pending. Do not send reminders.
+    - INV-2861 | Lakeside Banquet | VOID. No longer in open invoices. ✓
+
+  The list looks pretty clean for a Friday. Most of this week's invoices
+  are too new to be overdue.
+
+12:00 PM - 12:50 PM  [50 min] LUNCH
+
+  Actual proper lunch. Went out with two colleagues from logistics — Marcus
+  and Tia. I don't know them that well yet but it was nice to eat away from
+  my desk. They asked what AR was like. I said "spreadsheets and a lot of
+  very careful clicking." They laughed. I meant it seriously but I'll take it.
+
+12:50 PM - 02:00 PM  [70 min] QB ONLINE — WEEKLY OPEN INVOICES REVIEW
+
+  ⬛ QUICKBOOKS ONLINE SESSION 4  [12:54 PM – 01:31 PM, 37 min]
+
+  Ran a full open invoices report to close out the week:
+    Reports > Sales > Open Invoices
+
+  Current open invoices:
+    INV-2847  Meridian Kitchen Supply         $3,240.00   Due Mar 24
+    INV-2848  Blue Ridge Catering Co.         $1,875.50   Due Mar 24
+    INV-2849  Hartwell Grocery Group          $3,002.00   Due Apr 7  (partial)
+    INV-2850  Shoreline Food Service            $940.00   Due Mar 24
+    INV-2851  Crestwood Institutional          $2,566.75   Due Mar 24
+    INV-2852  Parkview Restaurant Group        $4,450.00   Due Mar 24
+    INV-2853  Dunmore Wholesale Foods          $7,800.00   Due Apr 7
+    INV-2854  Valley Fresh Distributors        $3,315.25   Due Mar 24
+    INV-2855  Shoreline Food Service           $1,100.00   DISPUTED (Raj)
+    INV-2856  Thornbury Market                   $588.00   Due Mar 24
+    INV-2857  Gorman & Associates              $5,290.00   Due Mar 24
+    INV-2858  Redstone Food Co.                $2,144.00   Due Mar 24
+    INV-2859  Meridian Kitchen Supply          $1,460.00   Due Mar 25
+    INV-2860  Pinehurst Catering               $2,890.00   Due Apr 14
+    INV-2862  Blue Ridge Catering Co.            $640.00   Due Mar 26
+    INV-2863  Shoreline Food Service           $2,210.00   HELD (Raj)
+    INV-2864  Hartwell Grocery Group           $4,775.00   Due Apr 26
+    INV-2865  Dunmore Wholesale Foods          $3,220.00   Due Apr 26
+    INV-2866  Meridian Kitchen Supply          $2,105.00   Due Mar 27
+    INV-2867  Gorman & Associates              $1,890.00   Due Mar 27
+    INV-2868  Mesa Pacific Goods               $4,650.00   Due Apr 27
+    INV-2869  Redstone Food Co.               $1,760.00   Due Mar 27
+    INV-2870  Valley Fresh Distributors        $3,400.00   Due Mar 27
+    INV-2871  Blue Ridge Catering Co.          $1,230.00   Due Mar 28
+    INV-2872  Crestwood Institutional          $3,875.00   Due Mar 28
+    INV-2694  Branford Catering                  $320.00   91+ days (Raj)
+
+  Total open AR: approximately $68,537.50 (rough Excel sum — I'll run the
+  proper aging report Monday if Raj asks for an updated one.)
+
+  A big cluster of invoices due next week (Mar 24-28). That means next week
+  I'll be monitoring a lot of them for payment. I should prep for that.
+
+  Printed the report. Filed in the binder.
+
+02:00 PM - 02:30 PM  [30 min] QB ONLINE — VERIFYING THE WEEK'S ENTRIES
+
+  ⬛ QUICKBOOKS ONLINE SESSION 5  [02:03 PM – 02:28 PM, 25 min]
+
+  I do this at end of week: spot-check a selection of this week's entries
+  against my Excel log to make sure everything saved correctly and nothing
+  mysteriously disappeared or changed.
+
+  Checked 10 invoices at random from my Excel log against QB:
+    INV-2847 (Meridian, $3,240) — in QB, status Sent ✓
+    INV-2850 (Shoreline, $940) — in QB, status Sent ✓
+    INV-2853 (Dunmore, $7,800) — in QB, status Sent ✓
+    INV-2857 (Gorman, $5,290) — in QB, status Sent ✓
+    INV-2861 (Lakeside, $775) — in QB, status VOID, amount $0.00 ✓
+    INV-2862 (Blue Ridge, $640) — in QB, status Sent ✓
+    INV-2864 (Hartwell, $4,775) — in QB, status Sent ✓
+    INV-2866 (Meridian, $2,105) — in QB, status Sent ✓
+    INV-2868 (Mesa Pacific, $4,650) — in QB, status Sent ✓
+    INV-2872 (Crestwood, $3,875) — in QB, status Sent ✓
+
+  All correct. Also verified the three PAID ones:
+    INV-2791 (Branford, $1,850) — PAID ✓
+    INV-2803 (Mesa Pacific, $3,400) — PAID ✓
+    INV-2812 (Cascade, $675) — PAID ✓
+
+  And the partial:
+    INV-2849 (Hartwell, $3,002 balance) — Partial, balance $3,002 ✓
+
+  Everything matches. The week is clean.
+
+02:30 PM - 03:30 PM  [60 min] WEEKLY TALLIES + PROCESS DOCUMENTATION
+
+  Compiled weekly totals in Excel (my informal end-of-week summary):
+    Invoices created and sent this week:     26
+    Total value invoiced this week:          $72,962.50 (approx.)
+    Payments received this week:             $5,925.00 ($3,400 + $675 + $1,850)
+    Partial payments:                        1 ($3,100 — $3,002 still open)
+    Invoices voided:                         1 (INV-2861, $775, authorized)
+    Disputes handled:                        1 (Shoreline — escalated, Raj handling)
+    Payment reminders sent this week:        9 total (across 4 customers)
+    Raj consultations:                       ~12 across the week
+    New entries on cheat sheet:              6 pages
+
+  That's a real week of AR work. Three months ago I didn't know what an
+  aging report was. This week I ran one, sent it to finance, and it was right.
+
+  Finished the process documentation Word doc. It's now 8 pages and covers:
+    - Daily invoice entry workflow
+    - Payment recording (full and partial)
+    - Overdue reminder workflow and escalation thresholds
+    - AR Aging report procedure
+    - Customer dispute protocol
+    - Invoice void procedure
+    - End-of-week checklist (new section, written today)
+    - Customer notes (Net 45 customers, credit holds, email quirks)
+
+  Saved it as "AR_Process_PriyaS_v1.docx." I'll share it with Raj when I
+  feel it's polished enough. Maybe next week.
+
+03:30 PM - 03:40 PM  [10 min] QB ONLINE — FINAL CLOSE OF WEEK
+
+  ⬛ QUICKBOOKS ONLINE SESSION 6  [03:32 PM – 03:41 PM, 9 min]
+
+  One last login. Verified no new transactions came in that I missed.
+  No new payment notifications. No new overdue flags beyond what I've already
+  seen. Good.
+
+  Logged out of QB. Properly.
+
+03:40 PM - 04:20 PM  [40 min] PHYSICAL FILING + DESK ORGANIZATION
+
+  Filed all of this week's paper sales orders by invoice number in the AR
+  binder. I was behind on this — some from Wednesday and Thursday still on
+  my desk. Everything filed now.
+
+  Organized my cheat sheet binder. It's getting thick. I might need a second
+  binder soon. That's a good sign, I think. More pages means more things I
+  know.
+
+  Cleared my desk. Left a sticky note for myself:
+    "Monday: Thornbury Market — 8 days overdue. Flag to Raj if still no reply.
+     Big due cluster: Mar 24 invoices start coming due next week.
+     Shoreline INV-2863 — still held. Check with Raj on release timing."
+
+04:20 PM - 04:30 PM  [10 min] BRIEF CHAT WITH RAJ BEFORE LEAVING
+
+  Stopped by Raj's desk on my way out. Told him:
+    - All this week's invoices processed and filed
+    - Three payments recorded (Mesa Pacific, Cascade, Branford)
+    - Hartwell partial recorded — $3,002 balance still open
+    - INV-2861 voided and documented
+    - Process documentation drafted (offered to share it when ready)
+    - Thornbury Market — 3 reminders sent, no response, I'll flag to him Monday
+
+  Raj: "Good week, Priya. Seriously. You're getting it."
+
+  I said thanks and walked to the elevator. In my head I said it again:
+  you're getting it. You're getting it.
+
+══════════════════════════════════════════════════════════════
+END OF DAY — PRIYA'S REFLECTION
+───────────────────────────────────────────────────────────
+  Friday. Week 1 (of tracking this way) done.
+
+  The void was the thing today. I was afraid of it all morning and it turned
+  out to be one click and a confirmation. The preparation took longer than
+  the action. That's been true a lot this week — the Hartwell partial, the
+  aging report, the Gorman PO situation. Fear takes more time than the task.
+
+  What I actually did this week:
+    - 26 invoices processed. No errors that I know of (the Gorman PO was
+      caught before entry; the pricing issue was the sales team's error,
+      not mine).
+    - 3 full payments recorded, 1 partial recorded.
+    - First AR aging report — run correctly, on time, flagged an anomaly.
+    - Customer dispute handled professionally — stayed calm, escalated properly.
+    - First void ever — done carefully, documented thoroughly.
+
+  What I'm still nervous about:
+    - The cluster of Mar 24 due dates coming next week. If several customers
+      pay late at once it'll be a lot of reminders and follow-ups.
+    - Thornbury Market not responding. What happens if they keep ignoring us?
+      I don't know what comes after reminders. Collections? Raj handles that?
+    - The Shoreline credit memo situation — I don't understand exactly how that
+      works in QB. Raj did it. I don't need to understand it. But the gap
+      in my knowledge still nags at me.
+    - What else is in QB that I don't know about? I keep finding things —
+      the credit hold flags, the cash vs. accrual toggle, the partial payment
+      behaviour. There's a whole accounting system in there and I'm using
+      maybe 10% of it. The other 90% is either Raj's territory or something
+      I'll need to learn eventually.
+
+  What I'm proud of:
+    - I caught the Gorman PO suffix and didn't just guess.
+    - I ran the aging report and got it right, and I flagged the right things.
+    - I stayed calm on the phone with Karen even when I was panicking inside.
+    - I did not void the wrong invoice. I did not click Delete. I did not
+      click Reconcile or Journal Entry or Adjusting Entry all week.
+    - Raj said "you're getting it." That has to count for something.
+
+  I've been in this job for 3 months. I don't feel like I know everything yet.
+  I feel like I'm standing on the edge of knowing something, and every week
+  the edge moves a little further out. That's probably what it's supposed
+  to feel like. I hope.
+
+  TO-DO FOR MONDAY:
+  □ Thornbury Market — check if they've paid over the weekend. If not,
+    flag to Raj. Third reminder already sent.
+  □ Start monitoring Mar 24 due-date cluster — 10 invoices due that day
+  □ Check on Shoreline INV-2863 (held) — ask Raj if dispute resolution is
+    complete and if I can send the invoice
+  □ Check Hartwell partial balance (INV-2849, $3,002) — getting closer to
+    Apr 7 due date but still 3 weeks out
+  □ Finish polishing process documentation for Raj review
+  □ Ask Raj: is there an end-of-month procedure I should be preparing for?
+    March 31 is two-and-a-half weeks away.

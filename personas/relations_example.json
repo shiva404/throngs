@@ -1,0 +1,19 @@
+{
+  "throngs": [
+    { "id": "Marcus_Plumbing_LLC",     "label": "Plumbing contractor business",       "persona_id": "Marcus_Mobile_Plumber" },
+    { "id": "Plumbing_Office",         "label": "Plumbing office admin",              "persona_id": "Diane_Office_Manager" },
+    { "id": "Stellar_Events_LLC",      "label": "Event planning company",             "persona_id": "Sofia_Event_Organizer" },
+    { "id": "Events_Assistant",        "label": "Event coordination assistant",       "persona_id": "Rachel_Event_Assistant" },
+    { "id": "Greenfield_Tax_Advisory", "label": "CPA and tax advisory firm",          "persona_id": "Carlos_CPA" },
+    { "id": "Tax_Bookkeeping",         "label": "Bookkeeping assistant at CPA firm",  "persona_id": "Martha_Tax_Assistant" }
+  ],
+  "relationships": [
+    { "owner_id": "Marcus_Plumbing_LLC",     "role": "admin",       "provider_id": "Plumbing_Office" },
+    { "owner_id": "Marcus_Plumbing_LLC",     "role": "accountant",  "provider_id": "Greenfield_Tax_Advisory" },
+    { "owner_id": "Stellar_Events_LLC",      "role": "assistant",   "provider_id": "Events_Assistant" },
+    { "owner_id": "Stellar_Events_LLC",      "role": "accountant",  "provider_id": "Greenfield_Tax_Advisory" },
+    { "owner_id": "Greenfield_Tax_Advisory", "role": "bookkeeper",  "provider_id": "Tax_Bookkeeping" },
+    { "owner_id": "Greenfield_Tax_Advisory", "role": "client",      "provider_id": "Marcus_Plumbing_LLC" },
+    { "owner_id": "Greenfield_Tax_Advisory", "role": "client",      "provider_id": "Stellar_Events_LLC" }
+  ]
+}

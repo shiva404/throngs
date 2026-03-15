@@ -1,0 +1,310 @@
+═══════════════════════════════════════════════════════════
+  NEXUS ANALYTICS — FOUNDER DIARY
+  Jake Okafor | Friday, Week 1
+  "Ship it. Then figure out if it worked."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      9h 15min
+Meetings:                2
+QB Online sessions:      1  (22 min total)
+Dashboard beta launch:   YES — shipped
+Accounting terms Googled: 3 ("deferred revenue" finally)
+Gift cards sent to Carol: 1 ($50 Starbucks)
+End-of-week energy level: 6.5/10 (respectable for a Thursday board week)
+
+07:30 AM - 08:15 AM  [45 min] MORNING — DEFERRED REVENUE RESEARCH + COFFEE
+  Friday. I actually slept until 7:15. Felt alien.
+
+  First thing (as promised to myself): look up deferred revenue.
+  Not because anyone is asking today, but because I keep nodding slowly
+  when investors say it and I'm running out of good nodding faces.
+
+  Googled: "deferred revenue SaaS simple explanation"
+
+  Okay. Here it is. When a customer pays you for 12 months upfront,
+  you can't call the whole thing revenue on day one — you have to
+  "recognize" it as revenue month by month as you deliver the service.
+  The unearned portion sits on the balance sheet as a liability called
+  "deferred revenue" because you technically owe them service you haven't
+  delivered yet.
+
+  This is... actually logical? If a customer paid us $24,000 for 12
+  months and then cancelled in month 2, we'd owe them a refund for
+  months 3-12. So yes. You're right to not count it all at once.
+
+  Googled: "do we have deferred revenue if all customers pay monthly"
+
+  Short answer: not really, or only a tiny bit (for invoices that cross
+  month-end). That's us — 90% of our customers are on monthly subscriptions
+  through Stripe. Almost no upfront annual payments yet. So deferred
+  revenue is basically negligible for us right now.
+
+  Filed this away. If we ever start selling annual contracts — which is
+  actually a Q2 goal, annual prepay at discount — this becomes relevant.
+  I'll tell Carol in advance so she can set it up correctly.
+
+  I feel 12% smarter about accounting than I did on Monday. This is the
+  most accounting knowledge I've absorbed in a single week since starting
+  the company. I'm not sure if I should be proud of this or concerned.
+
+  Sent Carol the Starbucks gift card. Subject line: "Week 1 survival bonus."
+  Carol replied: "You googled journal entries again didn't you."
+  I did not google journal entries this week. I'm growing.
+
+08:20 AM - 09:00 AM  [40 min] TEAM STANDUP + DASHBOARD LAUNCH PREP
+  Energy was high. Dashboard feature is in staging, tested by three
+  internal users overnight, no breaking bugs. Marcus (engineer) has the
+  feature flag ready to flip for the 5 beta customers.
+
+  Plan: flip the flag at 10am, send personal emails to the five beta
+  customers, monitor Intercom and Slack for feedback all afternoon.
+
+  Priya has a launch checklist. Marcus has a rollback plan. I have
+  a coffee. We're ready.
+
+09:05 AM - 10:00 AM  [55 min] QUICKBOOKS ONLINE — SESSION 1
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [09:05 AM – 09:27 AM, 22 min]
+
+  End-of-week financial check-in. This is the kind of QB session I
+  want every week — not a panicked "what's wrong" visit, just a
+  calm "what's the number" review.
+
+  Opened the Business Overview (I bookmarked it on Wednesday, and this
+  time the bookmark actually held). Beautiful. Cash flow line, revenue
+  bar, expense bar. Everything in one place.
+
+  Revenue for the week (incremental, cash basis): $1,300 (Thornwood
+  payment). Meridian and Prism still outstanding.
+
+  Operating account balance: $82,440 post-payroll. As expected.
+
+  Checked A/R aging. Quick look:
+    Thornwood: $0 (paid, closed, done)
+    Kellerton Group: $1,800 (Net 15, due next week — fine)
+    Meridian Data Corp: $3,300 (Net 30, still within window)
+    Prism Financial: $2,100 (Net 30, still within window)
+    Fulcrum Analytics: $3,200 (overdue 22 days — they said they'd expedite)
+    NovaBridge: $1,400 (overdue 45+ days — needs action)
+
+  Total outstanding: $11,800. This is fine but NovaBridge is annoying.
+
+  Texted Carol: "What do I do about NovaBridge? Two invoices, $1,400
+  total, 45 days overdue. At what point do I write them off?"
+
+  Carol (while I was still in QB): "Write-off is usually after 90 days
+  and when collection is unlikely. For now I'd send one more formal
+  collection notice and give them 15 days. If they don't pay, we write
+  it off as bad debt and I handle the accounting entry. It reduces your
+  taxable income, so it's not a total loss."
+
+  Me: "So writing it off is actually good for taxes?"
+
+  Carol: "It reduces your taxable income, yes. Which matters more when
+  you're profitable. Right now you're at a loss so it has less impact."
+
+  Me: "Right. Because we have $129K in losses to offset anyway."
+
+  Carol: "Exactly. You're learning."
+
+  I felt genuinely good about this interaction. I understood the context
+  and responded with an intelligent follow-on question. Monday-me
+  would not have been able to do that. Friday-me is 12% smarter.
+
+  Sent a polite but firm collection email to NovaBridge's AP contact.
+  15-day deadline. Done.
+
+  One more thing in QB: I tried to find the "Balance Sheet" for the
+  first time deliberately. Reports > Balance Sheet. Loaded. Okay.
+
+  Assets: Cash $1,970,200 (both accounts), Accounts Receivable $11,800,
+  prepaid expenses $4,200 (rent deposit). Total assets: ~$1,986,200.
+
+  Liabilities: Accounts Payable $2,400, some payroll liabilities $1,800.
+  Total liabilities: $4,200.
+
+  Equity: $1,982,000. This is mostly the Series A investment plus
+  accumulated losses.
+
+  I stared at this for a while. This is the "snapshot of everything"
+  that people talk about. Assets minus liabilities equals equity. That
+  actually makes sense. It's the accounting equation. I remember this
+  from the one finance class I took in college and immediately forgot.
+
+  I did not Google anything during this session. Personal record.
+
+09:30 AM - 10:00 AM  [30 min] BOARD FOLLOW-UP EMAIL
+  Drafted and sent the post-board follow-up to Ashley:
+
+  "Hi Ashley — great call yesterday. Per our discussion, key action items:
+  (1) auditor engagement before Series B process, target Q3;
+  (2) AWS infrastructure optimization in progress, saves ~$32K/year starting
+  Q2; (3) $80K MRR target by Q4 — Priya has modeled the path, will share
+  next month.
+
+  Next board call in 6 weeks. I'll have Q2 metrics ready by then.
+  Thanks for the strong questions — they sharpen the thinking."
+
+  Ashley replied within the hour: "Thanks Jake. One follow-up — ask Carol
+  to send me the Q1 P&L as a PDF when she has a clean version. For our
+  records."
+
+  Forwarded to Carol. Carol responded: "Already done. Sent it before you
+  even forwarded this." Carol is operating in a different time dimension
+  than the rest of us.
+
+10:00 AM - 10:15 AM  [15 min] DASHBOARD BETA LAUNCH
+  Marcus flipped the flag at 10:04 AM. Five beta customers now have
+  access to the new dashboard feature.
+
+  I sent five personal emails — one to each beta customer's main contact.
+  Subject: "New: the dashboard feature you've been asking for."
+  Personal, specific to each company, mention of the feature they'd
+  requested, request for honest feedback.
+
+  First response came in 9 minutes. Kellerton Group: "We've been
+  waiting for this. Loading it now."
+
+  Seven minutes after that: "Jake this is clean. Nice work."
+
+  This is what I'm here for. Not the reconciliation. Not the accrual
+  basis. Not the deferred revenue. This moment. The product working.
+
+10:20 AM - 12:30 PM  [130 min] DASHBOARD BETA MONITORING + FEEDBACK
+  Watched the Intercom queue. Answered questions. Four of the five
+  beta customers engaged within the first two hours. Zero critical bugs.
+  Two UI feedback items (minor). One feature request that's already
+  on the roadmap.
+
+  Marcus and I were in a continuous Slack thread the whole time, both
+  buzzing. This is the best part of the job.
+
+  One customer — Fulcrum Analytics, the one with the overdue invoice —
+  sent feedback: "Love it. The comparison view is exactly what we needed.
+  Hey, also sorry about the slow invoice — our AP person is back next
+  week and I'll get that pushed through personally."
+
+  Customer paying late because AP person is out but still sending product
+  feedback in the launch window. Classic. I appreciate both.
+
+12:30 PM - 01:30 PM  [60 min] LUNCH + WEEK RECAP WALK
+  Walked to lunch. Real restaurant. Sat down. Did not look at my phone
+  for 22 minutes. This is a personal achievement.
+
+  Thought about the week. Monday to Friday. Where I started (confused
+  about revenue, panicking about numbers, board deck in draft) vs where
+  I am now (numbers reconciled, board call done, deck submitted, product
+  shipped). Not bad.
+
+  The QB stuff is still hard. The terminology is still jarring. But
+  I know more than I did Monday. I know the difference between cash and
+  accrual basis reporting. I know what gross margin is and where it comes
+  from. I know what the A/R aging report tells me. I know that if I touch
+  the Journal Entries section, Carol will find out.
+
+  Is this how accounting is supposed to feel? Like a foreign language
+  that you're slowly developing a tourist vocabulary for? Probably.
+  Carol is my translator. The board is my test. Q1 is over and I passed.
+
+01:35 PM - 03:30 PM  [115 min] PRODUCT ROADMAP — Q2 PLANNING
+  With Marcus and Priya. Set the Q2 product priorities:
+    1. Salesforce integration (6 weeks, pending contract engineer hire)
+    2. CSV export improvements (1 week, customer top request)
+    3. Dashboard comparison mode v2 (based on today's beta feedback)
+    4. Data webhook reliability improvements (ongoing)
+
+  Also discussed: annual plan pricing. If we can move 20% of customers
+  to annual prepay at a 15% discount, cash flow improves significantly
+  and we get a nice deferred revenue balance on the books. I understand
+  what that means now. Growth.
+
+03:35 PM - 04:30 PM  [55 min] HIRING ADMIN + CONTRACT REVIEW
+  Reviewed three of the four promising resumes from the contract engineer
+  pool. Scheduled two phone screens for Monday morning. Sent the lawyer
+  the data provider contract for final review (he said end of week,
+  it's end of week, I'm following up).
+
+04:35 PM - 05:30 PM  [55 min] ASYNC CLEANUP + EMAIL
+  Inbox zero (ish). Responded to a referral intro for a potential new
+  customer. Followed up on the logistics PE firm — they're still
+  evaluating, said they'd have a decision by Monday. I believe this
+  about 60%.
+
+  Sent a Slack message to the whole team: "Big week. Board call done,
+  dashboard shipped to beta, payroll out, $8,500 in invoices sent.
+  Everyone's contributions made this happen. Signing off early today —
+  see you Monday."
+
+  "Early" = 5:30 PM.
+
+05:30 PM - 06:15 PM  [45 min] WRAP-UP / PLANNING NEXT WEEK
+  Quick review of my to-do list. Crossed off everything from Monday's
+  list except one item: "Figure out how Marcus (engineer) has a live
+  QB data feed." I will deal with this in Q2. I've decided it's a
+  feature, not a bug.
+
+  Week 2 priorities:
+    - Close one of the two late-stage pipeline deals
+    - Phone screens for contract engineer
+    - Finalize AWS reserved instance (Marcus should have this done)
+    - Annual plan pricing model — talk to Priya about a proposal
+    - Meridian + Prism invoices should land — watch A/R
+    - Get auditor recommendations from network
+
+  The financial picture for Q1:
+    Revenue (accrual): $57,300
+    Net Operating Loss: -$129,000
+    Cash (operating): $82,440 (post-payroll)
+    Cash (total incl. Series A reserve): ~$1.93M
+    Burn rate: $43K net / $57K gross
+    MRR: $61,240 (Stripe)
+    Outstanding A/R: $11,800
+    Runway: 30+ months conservatively
+
+  That's the number I'll carry into the weekend. $1.93M in the bank.
+  $61K in monthly recurring revenue growing. 107% NDR. A team that
+  shipped something good today.
+
+  We're fine. Actually more than fine.
+
+───────────────────────────────────────────────────────────
+END OF DAY — JAKE'S REFLECTION
+───────────────────────────────────────────────────────────
+  Week 1 done. That was a quarter-end week — the busiest QB week I'll
+  have for another three months. I think I handled it okay. The numbers
+  are right (Carol-certified). The board call went well. The deck was
+  honest. I said gross margin confidently and only looked it up twice.
+
+  Things I learned this week that I actually retained:
+    - Cash vs accrual basis (finally, after 18 months)
+    - Where the A/R aging report lives
+    - Gross margin formula and what a SaaS benchmark looks like
+    - What deferred revenue is and why it matters for annual contracts
+    - The balance sheet is a snapshot; the P&L is a period; cash flow
+      is the movie (I made this analogy up and I'm keeping it)
+    - Never, ever touch the Journal Entries section
+    - Carol is always watching
+
+  Things I still don't understand and am okay not understanding:
+    - Why the cash flow statement and P&L net loss are slightly different
+    - What depreciation has to do with anything
+    - Anything in the "Accountant Tools" menu
+    - General ledger (I have never opened this and I never will)
+
+  The product shipped today. That's the real metric.
+
+  Give me $80K MRR by year end and I'll figure out the rest.
+
+  TO-DO FOR NEXT WEEK:
+  □ Monday: phone screens for contract engineer (2 scheduled)
+  □ Follow up on logistics PE firm deal (expected decision Monday)
+  □ Watch for Meridian and Prism invoice payments (Net 30)
+  □ Send NovaBridge formal collection notice (already done, track response)
+  □ Annual plan pricing model with Priya — build a proposal
+  □ AWS reserved instance — confirm complete with Marcus (engineer)
+  □ Get auditor referrals from Dev and the Harrington network
+  □ Monthly investor update email (due by the 15th)
+  □ Look up what "amortization" means
+    (Optional. Low priority. Probably Carol's problem.)

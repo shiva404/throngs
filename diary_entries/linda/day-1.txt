@@ -1,0 +1,152 @@
+═══════════════════════════════════════════════════════════
+  SWEET SPOT BAKERY — OWNER DIARY
+  Linda Torres | Monday, Week 1
+  "I'll do the books after closing. I always say that."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      11h 20min
+Customers served:        ~47
+QB Online sessions:      1  (38 min total)
+Receipts in shoebox:     ~60 (entered today: 9)
+Password resets:         1
+Coffees consumed:        3
+
+04:45 AM - 05:10 AM  [25 min] OPEN BAKERY / PREP
+  Up early as always. Started the sourdough loaves I proofed overnight, got the display cases
+  wiped down, flipped the sign. Cold morning - the front door seal is still drafty. Made a
+  mental note to ask Dani about weather stripping. Again.
+
+05:10 AM - 07:30 AM  [140 min] MORNING BAKE & OPENING RUSH
+  Croissants came out beautifully. The almond ones sold out by 7:15. Dani (my part-time girl,
+  works Mon/Wed/Fri mornings) came in at 6:00 on the dot, which I appreciate. She handled the
+  register while I pulled the second round of muffins. Good rush today - Monday always surprises
+  me with how many people need something sweet before they face the week.
+
+  Register tally around 7:30: approximately $218 for the morning window.
+
+07:30 AM - 09:00 AM  [90 min] MID-MORNING BAKE & FLOOR WORK
+  Slower stretch. Restocked the display, started a batch of snickerdoodles for the afternoon.
+  Chatted with Mr. Ferreira who comes in every Monday for a plain croissant and a large dark
+  roast - he's been coming since my second month open. That kind of thing still makes my day.
+
+  Paid Dani in cash for her hours ($11.50/hr x 5 hrs = $57.50). She left at 11. Reminded myself
+  I need to write that down somewhere official. I always forget to record her wages.
+
+09:00 AM - 12:30 PM  [210 min] BAKING, SALES FLOOR, LUNCH RUSH
+  Lunch crowd came in a little early - the office building two blocks over must've had something
+  going on. Sold a lot of ham-and-cheese croissants and my lemon loaf. A woman bought six of
+  the snickerdoodles for a birthday at work. Those little moments.
+
+  Rough register count at 12:30 puts today around $510-520 total so far.
+
+12:30 PM - 01:15 PM  [45 min] LUNCH BREAK (sort of)
+  Ate a heel of sourdough with butter standing at the counter because I forgot to actually sit
+  down. Checked my phone - text from Robert (my accountant). It just said: "Linda - Q1 ends
+  this week. Hope your books are in order. Call me if you need anything."
+
+  My stomach dropped. Q1. Right. I knew it was coming. I've been knowing it was coming. I just...
+  every time I open QuickBooks I feel like I'm walking into a room where everyone's already mad
+  at me.
+
+  I dug the shoebox out from under the office desk. I buy a new one every year - last year's is
+  in the closet, sealed with rubber bands. This one is maybe 60% full. Receipts going back to,
+  I think, February? Maybe late January? A lot of them. I counted roughly 60-something loose
+  receipts plus some bank statements I printed and never looked at.
+
+01:15 PM - 03:30 PM  [135 min] AFTERNOON BAKE & SALES
+  Made a second batch of muffins (blueberry, lemon poppy) and pulled the focaccia I'd been
+  proofing. Afternoon is always slower. A few regulars, some foot traffic. Sold the last of the
+  almond croissants that I'd held back. Good day overall.
+
+03:30 PM - 04:15 PM  [45 min] CLOSE PREP & DAILY CLEAN
+  Dani's not here afternoons so I do the clean myself. Wipe the cases, sweep, pull the chairs,
+  lock the register. Counted the drawer: $531.00 for the day. Good Monday.
+
+04:15 PM - 05:00 PM  [45 min] SUPPLY ORDER & PHONE CALLS
+  Called the flour supplier - I'm almost out of bread flour and the pastry flour is low. Placed
+  an order: 50lb bread flour ($42.00), 25lb pastry flour ($24.50), 10lb almond flour ($38.00).
+  Delivery Thursday. Also called about the oven belt - it's been making a noise. They said
+  they'd come Wednesday maybe. Maybe.
+
+05:00 PM - 06:00 PM  [60 min] DINNER BREAK AT HOME
+  Walked the two blocks home. Made scrambled eggs. Watched 15 minutes of TV. Felt guilty the
+  whole time because I knew I needed to do the books. Got back up.
+
+06:00 PM - 06:38 PM  [38 min] QUICKBOOKS SESSION
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1  [06:00 PM – 06:38 PM, 38 min]
+
+  Sat down at the kitchen table with the shoebox, my laptop, and a glass of water.
+
+  First problem: couldn't remember my password. I KNOW I wrote it down somewhere. Checked the
+  little notebook by the coffee maker - nothing useful. Checked the notes app on my phone -
+  found "QB password2023" which was definitely not right anymore. Had to do "Forgot Password."
+  The reset email took about 4 minutes to show up and I almost gave up and went to bed.
+
+  Got in. The dashboard came up and it said my Profit & Loss was... something. I honestly
+  don't fully understand what I'm looking at when I first land there. There's "Money In,"
+  "Money Out," some graph. It said something about an overdue task. I clicked away from it.
+
+  Decided to start simple: just enter some receipts. Went to Expenses > Add Expense. This part
+  I sort of remember.
+
+  Entered 9 receipts before my eyes started going:
+    - Gordon's Food Service receipt, Jan 14: $89.40 (butter, eggs, heavy cream)
+      → put under "Cost of Goods Sold" - I think that's right?
+    - Gordon's Food Service receipt, Jan 22: $67.15 (assorted dry goods)
+      → put under "Cost of Goods Sold"
+    - Gas station receipt, Jan 18: $54.00 (filled the van for a catering delivery)
+      → put under... I wasn't sure. Put it under "Automobile" which seemed fine
+    - PG&E utility bill, Jan: $188.00 (electric for the bakery)
+      → put under "Utilities"
+    - Republic Services trash, Jan: $42.00
+      → put under "Office Supplies" (I know that's probably wrong but I couldn't find
+        "Waste/Janitorial" and I got tired of looking)
+    - Gordon's Food Service, Feb 3: $112.30 (flour - 50lb bread, 25lb pastry, sugar)
+      → I started to put it under "Cost of Goods Sold" but then second-guessed myself
+        and put it under "Office Supplies" because that's where I've been putting most
+        of the food supply stuff for a while now I think
+    - Amazon receipt, Feb 7: $23.18 (parchment paper, plastic wrap, piping bags)
+      → put under "Office Supplies" — feels right for this one at least
+    - Staples receipt, Feb 10: $14.99 (printer ink)
+      → put under "Office Supplies"
+    - Receipt from the plumber, Feb 14: $175.00 (fixed the prep sink drain)
+      → wasn't sure. Put under "Repairs and Maintenance" - felt right
+
+  That's 9 receipts. I still have at least 50 more in the box.
+
+  The problem was I went to do the 10th receipt and it was from Gordon's again but for almost
+  the same amount as the Jan 22 one, and I couldn't tell if I'd already entered it or if it was
+  a different one. I stared at it for a while. Set it aside. Didn't want to put it in twice.
+
+  Went back to the dashboard. It still showed that overdue task notification. I hovered over
+  it - it said something about "bank reconciliation." I have no idea what that means exactly.
+  It sounds serious. I closed the tab.
+
+  Set an alarm for tomorrow: "QB after dinner - DO IT LINDA"
+
+END OF DAY — LINDA'S REFLECTION
+───────────────────────────────────────────────────────────
+  Good sales day, honestly. $531 is a solid Monday. Dani was great, the croissants were
+  perfect, Mr. Ferreira made me smile. That part of my life I feel good about.
+
+  The books are a different story. I got in there tonight, which counts for something. Nine
+  receipts in 38 minutes. That shoebox has maybe 50+ more. And Robert's message is sitting
+  in my stomach like a stone. Q1 closes at the end of this week. I've got to move faster.
+
+  I know I put some things in the wrong categories. The flour going into Office Supplies has
+  been bothering me since I hit save - that doesn't seem right. But I didn't know where else
+  to put it and I was already tired of looking at the screen.
+
+  The password thing every single time. Every. Single. Time. I need to write it down somewhere
+  I'll actually look.
+
+  TO-DO FOR TOMORROW:
+  □ Start QB earlier - not 6pm, more like right after close
+  □ Figure out if flour/food supplies should be in Cost of Goods or something else
+  □ That duplicate Gordon's receipt - figure out if I already entered it
+  □ Dani's wages - I need to actually record those somewhere in QB
+  □ At least 15 more receipts tomorrow
+  □ Write password inside the shoebox lid (just the bakery QB one)

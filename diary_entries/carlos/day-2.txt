@@ -1,0 +1,311 @@
+═══════════════════════════════════════════════════════════
+  RODRIGUEZ & ASSOCIATES CPA — ACCOUNTANT DIARY
+  Carlos Rodriguez, CPA | Tuesday, Week 1
+  "Tax planning is just storytelling about the future — with numbers."
+═══════════════════════════════════════════════════════════
+
+DAY SUMMARY
+───────────
+Total hours worked:      8h 55min
+Clients handled:         4
+QB Online sessions:      6  (134 min total)
+Billable hours logged:   6.75h
+Billable revenue (est.): $1,181.25
+Advisory/planning hours: 4.5h (at $225/hour advisory rate)
+QB loading failures:     4 (documented)
+Scheduled reports that ran correctly overnight: 0 of 4
+
+07:45 AM - 08:30 AM  [45 min] MORNING PREP — TAX PLANNING SESSIONS
+  In early. Coffee on. Opened QB Accountant dashboard to pull reports for the two
+  advisory sessions today. Ken Nakamura (9 AM) and Sarah Westbrook (2 PM). Both are
+  high-value clients, both are paying the $225/hour advisory rate for these sessions.
+  I need to walk in — or dial in, Ken does video call — prepared.
+
+  First: checked if the QB scheduled reports ran overnight. They did not. Zero for four.
+  This feature has been unreliable since at least the 2022 interface overhaul. I have
+  stopped expecting it to work and yet I keep trying, apparently.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 1 (CLIENT: Nakamura Restaurant Group)  [07:50 AM – 08:25 AM, 35 min]
+
+  Pulled all reports manually for Nakamura:
+  - Profit & Loss: 2022, 2023, 2024 annual comparison
+  - P&L by Location (Class): Eastside Ramen vs. Harbor Fusion separately
+  - Cash Flow Statement (accrual basis, annual)
+  - Owner Draw Summary (from equity section)
+  - Accounts Payable Aging (current)
+  - Food cost as % of revenue by quarter (custom report I saved in QB — took me 45 min
+    to build when I first set it up 2 years ago, now runs in seconds)
+
+  The 3-year comparison P&L loaded quickly. So did the location-based P&L. Good start.
+
+  Then I tried to run the quarterly cash flow breakdown. QB showed: "Please wait while
+  we load your report." 3 minutes, 12 seconds. I timed it on my phone. The report
+  is not complex — it's a standard indirect method cash flow statement, one account,
+  12 months. This is not a computationally difficult task. There is no reason this
+  should take 3 minutes.
+
+  When it finally loaded, the numbers were correct. But I had already pulled out a
+  legal pad and sketched the key figures manually from the P&L while I waited, because
+  I could not afford to lose prep time before a 9 AM client call.
+
+  Second loading failure: tried to export all reports to PDF in a batch. QB crashed the
+  export — "An error occurred while generating your report. Please try again." Tried
+  again. Same error. Third attempt succeeded. I've learned to try twice before escalating,
+  because roughly 60% of these export errors resolve on retry.
+
+  Had all reports ready by 8:25. Printed a clean summary sheet. Poured a second coffee.
+
+08:30 AM - 08:58 AM  [28 min] INBOX + ADMIN
+
+  Dave Kowalski (Pioneer Auto Parts) sent the hotel receipt. $840 at the Marriott
+  Magnificent Mile, Chicago. Vendor conference receipt attached. Legit. Categorized as
+  Travel & Entertainment, noted conference name in memo field for audit trail. Cleared
+  that pending transaction.
+
+  QB Community: took 10 minutes to log the incorrect upgrade prompt bug I encountered
+  yesterday on Chen's Bakery account. Posted in the "QuickBooks Online Bugs & Issues"
+  board. Described the issue precisely: user on QBO Plus, running Profit & Loss by
+  Product/Service from the Reports center, upgrade banner appears stating this is an
+  Advanced feature, but the report runs correctly after dismissal — meaning the entitlement
+  check and the banner logic are inconsistent. Asked if others had replicated this.
+  Two upvotes within 20 minutes. Not the first time someone's seen it.
+
+  Also checked on support ticket QB-448821 (Pioneer bank feed alias bug). Status:
+  "Under Review." It has been "Under Review" for 6 weeks. I added an update to the
+  ticket noting that the bug persists, with February's specific example as evidence.
+
+09:00 AM - 11:45 AM  [165 min] TAX PLANNING SESSION — NAKAMURA RESTAURANT GROUP
+  Video call with Ken Nakamura. Ken runs two restaurants: Eastside Ramen (7 years old,
+  mature and profitable) and Harbor Fusion (18 months old, growing but still burning
+  cash). He's a smart operator but not a numbers person — I have to translate everything
+  into plain language.
+
+  WHAT WE COVERED:
+
+  1. Year-over-year P&L comparison.
+     2022 net income: $148,000 (combined)
+     2023 net income: $171,000 (combined, Harbor Fusion opened mid-year)
+     2024 net income: $127,000 (combined — Harbor Fusion's startup costs drag the total)
+
+  Ken was alarmed by the 2024 drop. I walked him through it: Harbor Fusion had $94,000
+  in startup and ramp-up costs in 2024 (lease improvements, equipment, initial staffing
+  overhang). On a standalone basis, Eastside Ramen posted $162,000 in net income in 2024,
+  up from $157,000 in 2023 — strong. Harbor Fusion lost $35,000 in 2024, but that's
+  actually ahead of Ken's original projections by about $18,000. He hadn't looked at
+  it that way. That's why he needs an accountant, not just a bookkeeper.
+
+  2. Cash flow — where does the money go?
+  This was Ken's main question from yesterday's call. The answer is: accounts payable
+  timing, food inventory build-up, and owner distributions that don't match net income.
+
+  In Q3 2024, Ken drew $48,000 from the business. Net income that quarter: $31,200.
+  He drew $16,800 more than the business earned that quarter. His cash balance dropped
+  $22,000 in Q3. He didn't understand why. Now he does.
+
+  We built a simple cash flow projection for 2025 together. Recommendation: limit owner
+  draws to no more than 80% of trailing 3-month average net income. I'll build him a
+  simple rolling calculator in Excel.
+
+  3. 2024 tax liability estimate.
+  Ken is a sole proprietor (Schedule C, not S-Corp). I've been suggesting he elect
+  S-Corp status for two years. At his current net income level (~$162,000 from Eastside
+  alone), the self-employment tax savings from an S-Corp structure would be meaningful —
+  roughly $8,000–$12,000 per year, depending on how we set reasonable compensation.
+  He always says "let me think about it." Today I put the numbers in front of him on
+  screen: SE tax on $162,000 as a sole prop = $22,876. SE tax equivalent if structured
+  as S-Corp with $85,000 salary = $12,003. Savings: $10,873 per year. Plus the payroll
+  tax costs of running an S-Corp (maybe $1,200/year). Net annual savings: approximately
+  $9,600.
+
+  He said he wants to do it. Told him I'll send an S-Corp election checklist and the
+  Form 2553 instructions. This is a meaningful win — I've been patient on this one.
+
+  4. Quarterly estimates for Q1 2025.
+  We confirmed the $9,400 federal / $2,350 state amounts I calculated yesterday. Ken
+  will send the checks today.
+
+  ⬛ QUICKBOOKS ONLINE SESSION 2 (CLIENT: Nakamura Restaurant Group)  [09:15 AM – 11:40 AM, 145 min — active during session]
+
+  During the session I had QB open on a second monitor, walking Ken through the reports
+  in screen-share. QB performed well for the first 45 minutes. The P&L comparison report
+  was clear, the class-based location breakdown was useful, and Ken could see exactly
+  which line items I was pointing to.
+
+  Then: "Loading" spinner while navigating from the Cash Flow Statement to the General
+  Ledger detail for owner draws. Took 2 minutes 18 seconds. I filled the silence by
+  talking through the concept — "Ken, while that loads, let me explain what the owner
+  draw account represents on the equity side of the balance sheet..."
+
+  I am skilled at covering QB's loading times with improvised education. This should not
+  be a skill I need.
+
+  Third loading failure of the day: tried to drill into Harbor Fusion's transaction detail
+  for a specific food cost line item (I wanted to show Ken a specific supplier invoice
+  that was high). QB returned: "We're having trouble loading this data. Please refresh."
+  Refreshed. Loaded fine. 90 seconds lost.
+
+  Despite the hiccups, the session was excellent. Ken left with a clear picture of his
+  business, a concrete action item (S-Corp election), and a cash flow management framework.
+  I billed 2.5 hours at the advisory rate.
+
+11:45 AM - 12:30 PM  [45 min] LUNCH AND REPORT PREP FOR WESTBROOK FITNESS
+
+  ⬛ QUICKBOOKS ONLINE SESSION 3 (CLIENT: Westbrook Fitness)  [12:00 PM – 12:25 PM, 25 min]
+
+  Pulled Westbrook Fitness reports during lunch. Sarah Westbrook runs a boutique fitness
+  studio with 3 locations. She elected S-Corp status last year on my recommendation —
+  smart decision, she's saving approximately $11,000 annually in SE tax.
+
+  Reports needed:
+  - YTD P&L through February 2025
+  - 2024 annual P&L for comparison
+  - Officer compensation summary (Sarah's W-2 wages from the S-Corp)
+  - Estimated tax payment history for 2024
+  - Projected 2025 income scenario
+
+  All reports pulled without issue. QB actually ran clean for this entire session. No
+  loading problems, no crashes. I want to record this: when QB works, it is a genuinely
+  capable platform. The reports are clear, the data is accurate, the navigation is
+  logical. I don't hate this software. I hate when it underperforms.
+
+  One thing I do hate right now: QB changed the location of the "Reconcile" function
+  in the left nav menu. Again. It was under "Accounting" for 18 months, which is exactly
+  where it should be, logically and alphabetically. Now it's under "Bookkeeping." These
+  are not the same thing and the distinction matters. Reconciliation is a step in the
+  bookkeeping process but it is also a core accounting control. Moving it under a vague
+  "Bookkeeping" umbrella is a UX decision made by someone who has never closed a month
+  under time pressure.
+
+  I know where it is now. But I wasted 25 seconds looking for it today on muscle memory.
+  And I will waste 25 seconds looking for it again tomorrow. This will continue for
+  approximately 3 weeks until my muscle memory updates. Multiplied across the industry —
+  tens of thousands of accountants losing 25 seconds — this is a statistically significant
+  waste of human time caused by an unnecessary UI change.
+
+12:30 PM - 01:58 PM  [88 min] ADMIN, INVOICING, QB COMMUNITY
+
+  Prepared invoices for Monday's work: Ramirez Landscaping (2.75h × $175 = $481.25),
+  Chen's Bakery (1.75h × $175 = $306.25), Pioneer Auto Parts (2.75h × $175 = $481.25).
+  Sent through the portal.
+
+  Reviewed QB Community response to my bug report from this morning. Six upvotes now,
+  two other users confirmed they'd seen the same incorrect upgrade prompt on QBO Plus.
+  One user suggested it's tied to a recent UI rollout in the Reports section. A QB
+  Community Moderator responded: "Thank you for the detailed report. We've forwarded
+  this to our product team for review." That's the standard response. I've seen it
+  many times. Sometimes the bug gets fixed. Sometimes it doesn't. The tracking is opaque.
+
+  Reviewed bank statements that arrived in the portal for three quarterly clients. Filed
+  for later this week. Noted one client (Henderson Plumbing) has a $7,400 outstanding
+  check from Q4 2024 that still hasn't cleared. Need to ask about that.
+
+02:00 PM - 04:45 PM  [165 min] TAX PLANNING SESSION — WESTBROOK FITNESS
+  In-person meeting with Sarah Westbrook. She came to the office. Sarah is my most
+  financially sophisticated client — she has an MBA and reads her own reports. Sessions
+  with her move fast.
+
+  ⬛ QUICKBOOKS ONLINE SESSIONS 4–5 (CLIENT: Westbrook Fitness)  [02:05 PM – 04:40 PM, 155 min]
+
+  S-CORP REASONABLE COMPENSATION ANALYSIS:
+  Sarah's 2024 W-2 wages from Westbrook Fitness LLC (S-Corp): $82,000.
+  I had set this at $82,000 based on a comparable fitness studio manager's market rate.
+  For 2025, I'm recommending we move it to $88,000 — her business has grown, the
+  comparable rate has moved up slightly, and we want to stay clearly within IRS
+  reasonable compensation guidelines. She agreed immediately. No argument. This is
+  what it's like working with a sophisticated client.
+
+  2024 TAX PROJECTION:
+  S-Corp net income (after $82,000 salary): $93,400
+  Pass-through to Sarah's personal return: $93,400
+  Combined taxable income (Sarah + S-Corp): approximately $168,000
+  Federal estimated taxes paid in 2024: $31,200
+  Projected actual federal liability: $33,800
+  Estimated underpayment: approximately $2,600
+
+  Not a serious underpayment — under the safe harbor threshold. She won't owe a penalty.
+  But she should have a check ready. I drafted a summary sheet showing the calculation.
+
+  2025 PROJECTIONS AND PLANNING:
+  Westbrook Fitness is expanding — she's opening a fourth location in September.
+  Start-up costs will be significant (I estimated $65,000–$80,000 in leasehold
+  improvements alone). We discussed timing of expenditures for Section 179 purposes
+  — if the location opens before December 31, 2025, she can expense a significant
+  portion of the equipment under Section 179. Target: get the equipment invoiced and
+  placed in service by December 15, giving us some buffer.
+
+  RETIREMENT PLANNING:
+  Sarah maxed her SEP-IRA in 2024 ($66,000 contribution limit for self-employed).
+  For 2025, we discussed opening a Solo 401(k) instead — the contribution limits are
+  structured differently and she can also make employee deferrals from her W-2 wages,
+  which may allow for a higher total contribution depending on how 2025 income develops.
+  I'll run a comparison analysis and send it to her by next week.
+
+  QB USAGE DURING SESSION:
+  Ran smoothly for the first 90 minutes. Drill-down transaction views loaded fast.
+  The P&L by class (three fitness studio locations) was clear and useful. Sarah can
+  see exactly which location is pulling its weight and which one needs attention
+  (Location 2 — Millbrook — has the weakest margins; we discussed why).
+
+  Then: fourth loading failure of the day. Tried to pull the payroll summary from
+  within the QB Payroll module to cross-reference her W-2 wages. "Please wait..."
+  It spun for 4 minutes and 7 seconds. I had prepared for this possibility by
+  having the payroll PDF open in a separate tab already. Used that. Session continued
+  without interruption. But I should not need a workaround for a module that is core
+  to the product.
+
+  Sarah asked me: "Is QB always this slow?" I told her honestly: no, sometimes it's
+  fine. Today is a bad day. She asked if she should switch platforms. I told her I
+  don't recommend switching lightly — the migration cost and data restatement work
+  is substantial. But I told her I'm watching the performance pattern and if it
+  continues, I'll have a recommendation. I'm watching you, QB.
+
+  Excellent session overall. Billed 2.25 hours at $225. Sarah left with a clear
+  2025 tax strategy, a retirement plan comparison coming next week, and an S-Corp
+  salary adjustment ready to implement.
+
+04:45 PM - 05:40 PM  [55 min] EOD ADMIN & DOCUMENTATION
+  Updated all client files. Logged all billable time. Sent Nakamura the S-Corp election
+  checklist and a brief explanation of Form 2553 requirements and the March 15 deadline
+  for fiscal-year elections (though for a calendar-year business, the effective date
+  will be January 1, 2026 if we file now — I noted this carefully).
+
+  Reviewed tomorrow's calendar: no advisory sessions scheduled, but I have four
+  quarterly clients whose bank feeds need review, and I want to get into the general
+  ledger detail for two of them. Also: Westbrook Fitness's general ledger for the
+  third location needs a deeper look — margins were thin and I want to understand
+  the expense side better.
+
+  And I need to follow up on the recurring QB categorization issues I've been noticing
+  across a few clients. I have a feeling something changed in QB's ML categorization
+  model. I've seen more misfires than usual in the past three weeks. Tomorrow I'll
+  dig in.
+
+END OF DAY — CARLOS'S REFLECTION
+───────────────────────────────────────────────────────────
+  Two strong advisory sessions. The Ken Nakamura breakthrough on S-Corp structure is
+  genuinely satisfying — I've been recommending it for two years and the numbers finally
+  convinced him. When a client sees $9,600 in annual tax savings on a clear chart, the
+  abstract conversation becomes concrete. That's the value of detailed planning.
+
+  Four QB loading failures today. I'm going to start logging these more systematically.
+  Not because I expect Intuit to read my diary, but because if I ever formally complain
+  to a QB account rep, I want data. "Four failures totaling approximately 12 minutes
+  on Tuesday alone" is a different conversation than "it's slow sometimes."
+
+  The "Reconcile" move under "Bookkeeping" is still bothering me. It's a small thing
+  but small things compound. Every UI change that doesn't add value adds friction.
+  I have 30 clients. I am in and out of QB menus hundreds of times per week. Friction
+  is expensive.
+
+  Tomorrow is going to be a deep-dive day. I need to figure out what's happening with
+  the auto-categorization system. Something feels off and I don't like feeling off about
+  the accuracy of client data.
+
+  TO-DO FOR TOMORROW:
+  □ Investigate QB auto-categorization anomalies — run a spot audit across 4–5 clients
+  □ Deep review of Westbrook Fitness Location 2 expense detail (QB ledger)
+  □ Quarterly review prep for Henderson Plumbing, Ortega Medical Supply (start of Q reviews)
+  □ Ask Henderson Plumbing about $7,400 outstanding check from Q4 2024
+  □ Send Sarah Westbrook SEP-IRA vs. Solo 401(k) comparison (due by Friday)
+  □ Follow up with Ken Nakamura — confirm Q1 estimated tax payments sent
+  □ Check QB Community for updates on the upgrade prompt bug report
